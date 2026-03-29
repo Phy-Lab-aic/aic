@@ -28,11 +28,14 @@ def wait_for_process(proc, timeout_sec):
 
 
 def run_collection(bag_dir, target_episodes, trial_mode="static", trials=None, timeout_sec=600):
-    """Run the auto_data_collector node directly (not via launch — sim must be running)."""
-    cmd = [
-        "ros2", "run", "aic_data_collection", "auto_data_collector",
+    """Run the auto_data_collector node directly (sim must be running).
+
+    Uses ros2 run if available, falls back to direct script execution.
+    """
+    config_file = os.environ.get("AIC_CONFIG", "")
+    ros_args = [
         "--ros-args",
-        "-p", f"config_file:={os.environ.get('AIC_CONFIG', '')}",
+        "-p", f"config_file:={config_file}",
         "-p", f"target_episodes:={target_episodes}",
         "-p", f"max_attempts:={target_episodes * 3}",
         "-p", f"task_timeout_sec:=120.0",
@@ -42,7 +45,15 @@ def run_collection(bag_dir, target_episodes, trial_mode="static", trials=None, t
     ]
     if trials:
         trials_str = str(trials)
-        cmd.extend(["-p", f"trials:={trials_str}"])
+        ros_args.extend(["-p", f"trials:={trials_str}"])
+
+    # Find executable: check isolated install bin/, then ros2 run fallback
+    cmd = ["ros2", "run", "aic_data_collection", "auto_data_collector"] + ros_args
+    for prefix in os.environ.get("AMENT_PREFIX_PATH", "").split(":"):
+        candidate = os.path.join(prefix, "bin", "auto_data_collector")
+        if os.path.isfile(candidate) and os.access(candidate, os.X_OK):
+            cmd = [candidate] + ros_args
+            break
 
     print(f"\n{'='*60}")
     print(f"Running: {' '.join(cmd)}")

@@ -60,18 +60,22 @@ class SceneManager:
         """Spawn a single entity in Gazebo."""
         req = SpawnEntity.Request()
         req.name = name
-        req.xml = sdf_xml
-        req.initial_pose.position.x = x
-        req.initial_pose.position.y = y
-        req.initial_pose.position.z = z
+        req.resource_string = sdf_xml
+        req.uri = ""
+        req.allow_renaming = True
+        req.entity_namespace = ""
+        req.initial_pose.header.frame_id = "world"
+        req.initial_pose.pose.position.x = x
+        req.initial_pose.pose.position.y = y
+        req.initial_pose.pose.position.z = z
         # Convert RPY to quaternion for initial_pose.orientation
         cy, sy = math.cos(yaw * 0.5), math.sin(yaw * 0.5)
         cp, sp = math.cos(pitch * 0.5), math.sin(pitch * 0.5)
         cr, sr = math.cos(roll * 0.5), math.sin(roll * 0.5)
-        req.initial_pose.orientation.w = cr * cp * cy + sr * sp * sy
-        req.initial_pose.orientation.x = sr * cp * cy - cr * sp * sy
-        req.initial_pose.orientation.y = cr * sp * cy + sr * cp * sy
-        req.initial_pose.orientation.z = cr * cp * sy - sr * sp * cy
+        req.initial_pose.pose.orientation.w = cr * cp * cy + sr * sp * sy
+        req.initial_pose.pose.orientation.x = sr * cp * cy - cr * sp * sy
+        req.initial_pose.pose.orientation.y = cr * sp * cy + sr * cp * sy
+        req.initial_pose.pose.orientation.z = cr * cp * sy - sr * sp * cy
 
         future = self._spawn_client.call_async(req)
         # Poll-based wait (avoids executor threading issues per devlog lesson #5)

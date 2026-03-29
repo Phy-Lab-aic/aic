@@ -12,7 +12,7 @@ from rclpy.callback_groups import ReentrantCallbackGroup
 
 from aic_task_interfaces.action import InsertCable
 from aic_task_interfaces.msg import Task
-from lifecycle_msgs.srv import ChangeState
+from lifecycle_msgs.srv import ChangeState, GetState
 from lifecycle_msgs.msg import Transition
 from sensor_msgs.msg import Image
 from std_msgs.msg import String
@@ -97,7 +97,8 @@ class AutoDataCollector(Node):
         self._tf_buffer = tf2_ros.Buffer()
         self._tf_listener = tf2_ros.TransformListener(self._tf_buffer, self)
 
-        # aic_model lifecycle client
+        # aic_model lifecycle clients
+        self._model_get_state = self.create_client(GetState, "/aic_model/get_state")
         self._model_change_state = self.create_client(ChangeState, "/aic_model/change_state")
 
         # Stats
@@ -109,29 +110,52 @@ class AutoDataCollector(Node):
         self._insertion_event_received = True
         self.get_logger().info(f"Insertion event received: {msg.data}")
 
+    def _get_model_state(self) -> int:
+        """Get aic_model lifecycle state. Returns state id or -1 on failure."""
+        if not self._model_get_state.wait_for_service(timeout_sec=10.0):
+            return -1
+        req = GetState.Request()
+        future = self._model_get_state.call_async(req)
+        self._poll_future(future, 10.0)
+        if not future.done() or future.result() is None:
+            return -1
+        return future.result().current_state.id
+
     def _activate_model(self) -> bool:
-        """Configure and activate aic_model lifecycle node."""
+        """Configure and activate aic_model lifecycle node.
+
+        Checks current state first — skips transitions if already active.
+        """
         if not self._model_change_state.wait_for_service(timeout_sec=30.0):
             self.get_logger().error("aic_model lifecycle service not available")
             return False
 
-        # Configure
-        req = ChangeState.Request()
-        req.transition = Transition(id=Transition.TRANSITION_CONFIGURE)
-        future = self._model_change_state.call_async(req)
-        self._poll_future(future, 30.0)
-        if not future.done() or not future.result().success:
-            self.get_logger().error("Failed to configure aic_model")
-            return False
+        current_state = self._get_model_state()
+        # State IDs: 1=unconfigured, 2=inactive, 3=active
+        if current_state == 3:
+            self.get_logger().info("aic_model already active, skipping lifecycle transitions")
+            return True
 
-        # Activate
-        req = ChangeState.Request()
-        req.transition = Transition(id=Transition.TRANSITION_ACTIVATE)
-        future = self._model_change_state.call_async(req)
-        self._poll_future(future, 30.0)
-        if not future.done() or not future.result().success:
-            self.get_logger().error("Failed to activate aic_model")
-            return False
+        if current_state <= 1:
+            # Configure (unconfigured → inactive)
+            req = ChangeState.Request()
+            req.transition = Transition(id=Transition.TRANSITION_CONFIGURE)
+            future = self._model_change_state.call_async(req)
+            self._poll_future(future, 30.0)
+            if not future.done() or not future.result().success:
+                self.get_logger().error("Failed to configure aic_model")
+                return False
+
+        current_state = self._get_model_state()
+        if current_state == 2:
+            # Activate (inactive → active)
+            req = ChangeState.Request()
+            req.transition = Transition(id=Transition.TRANSITION_ACTIVATE)
+            future = self._model_change_state.call_async(req)
+            self._poll_future(future, 30.0)
+            if not future.done() or not future.result().success:
+                self.get_logger().error("Failed to activate aic_model")
+                return False
 
         self.get_logger().info("aic_model activated")
         return True
