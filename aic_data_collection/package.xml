@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>aic_data_collection</name>
+  <version>0.0.1</version>
+  <description>Automated data collection pipeline for AIC cable insertion task</description>
+  <maintainer email="user@example.com">AIC User</maintainer>
+  <license>Apache-2.0</license>
+
+  <depend>rclpy</depend>
+  <depend>aic_task_interfaces</depend>
+  <depend>aic_engine_interfaces</depend>
+  <depend>controller_manager_msgs</depend>
+  <depend>lifecycle_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>simulation_interfaces</depend>
+  <depend>tf2_ros</depend>
+  <depend>std_srvs</depend>
+
+  <test_depend>pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
