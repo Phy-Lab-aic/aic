@@ -95,6 +95,13 @@ def launch_setup(context, *args, **kwargs):
     start_aic_engine = LaunchConfiguration("start_aic_engine")
     shutdown_on_aic_engine_exit = LaunchConfiguration("shutdown_on_aic_engine_exit")
     aic_engine_config_file = LaunchConfiguration("aic_engine_config_file")
+    engine_type = LaunchConfiguration("engine_type")
+    trial_mode = LaunchConfiguration("trial_mode")
+    target_episodes = LaunchConfiguration("target_episodes")
+    max_attempts = LaunchConfiguration("max_attempts")
+    bag_output_dir = LaunchConfiguration("bag_output_dir")
+    task_timeout_sec = LaunchConfiguration("task_timeout_sec")
+    dc_trials = LaunchConfiguration("dc_trials")
 
     gripper_initial_pos = "0.00655"
     cable_type_str = LaunchConfiguration("cable_type").perform(context)
@@ -235,10 +242,21 @@ def launch_setup(context, *args, **kwargs):
 
     aic_engine = Node(
         package="aic_engine",
-        executable="aic_engine",
+        executable=engine_type,
+        name=engine_type,
         output="screen",
         parameters=[
-            {"config_file_path": aic_engine_config_file, "use_sim_time": True},
+            {
+                "config_file_path": aic_engine_config_file,
+                "config_file": aic_engine_config_file,
+                "use_sim_time": True,
+                "trial_mode": trial_mode,
+                "target_episodes": target_episodes,
+                "max_attempts": max_attempts,
+                "bag_output_dir": bag_output_dir,
+                "task_timeout_sec": task_timeout_sec,
+                "trials": dc_trials,
+            },
         ],
         condition=IfCondition(start_aic_engine),
     )
@@ -734,6 +752,56 @@ def generate_launch_description():
             "ground_truth",
             default_value="false",
             description="Whether to include ground truth poses in TF topics",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "engine_type",
+            default_value="aic_engine",
+            choices=["aic_engine", "auto_data_collector"],
+            description="Which engine executable to launch (aic_engine or auto_data_collector).",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "trial_mode",
+            default_value="static",
+            description="Trial mode for auto_data_collector: static or dynamic.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "target_episodes",
+            default_value="10",
+            description="Number of successful episodes to collect (auto_data_collector only).",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "max_attempts",
+            default_value="0",
+            description="Max attempts, 0 = 3x target_episodes (auto_data_collector only).",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "bag_output_dir",
+            default_value="bags",
+            description="Output directory for rosbag recordings (auto_data_collector only).",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "task_timeout_sec",
+            default_value="180.0",
+            description="Task execution timeout in seconds (auto_data_collector only).",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "dc_trials",
+            default_value="['']",
+            description="Trial names to collect, empty = all (auto_data_collector only).",
         )
     )
     declared_arguments.append(
