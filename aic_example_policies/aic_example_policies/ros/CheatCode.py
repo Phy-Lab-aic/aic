@@ -218,6 +218,8 @@ class CheatCode(Policy):
 
         # Over five seconds, smoothly interpolate from the current position to
         # a position above the port.
+        max_tf_failures = 10
+        tf_fail_count = 0
         for t in range(0, 100):
             interp_fraction = t / 100.0
             try:
@@ -231,11 +233,21 @@ class CheatCode(Policy):
                         reset_xy_integrator=True,
                     ),
                 )
+                tf_fail_count = 0
             except TransformException as ex:
-                self.get_logger().warn(f"TF lookup failed during interpolation: {ex}")
+                tf_fail_count += 1
+                self.get_logger().warn(
+                    f"TF lookup failed during interpolation ({tf_fail_count}/{max_tf_failures}): {ex}"
+                )
+                if tf_fail_count >= max_tf_failures:
+                    self.get_logger().error(
+                        f"TF failures exceeded threshold ({max_tf_failures}) during interpolation, aborting"
+                    )
+                    return False
             self.sleep_for(0.05)
 
         # Descend until the cable is inserted into the port.
+        tf_fail_count = 0
         while True:
             if z_offset < -0.015:
                 break
@@ -247,8 +259,17 @@ class CheatCode(Policy):
                     move_robot=move_robot,
                     pose=self.calc_gripper_pose(port_transform, z_offset=z_offset),
                 )
+                tf_fail_count = 0
             except TransformException as ex:
-                self.get_logger().warn(f"TF lookup failed during insertion: {ex}")
+                tf_fail_count += 1
+                self.get_logger().warn(
+                    f"TF lookup failed during insertion ({tf_fail_count}/{max_tf_failures}): {ex}"
+                )
+                if tf_fail_count >= max_tf_failures:
+                    self.get_logger().error(
+                        f"TF failures exceeded threshold ({max_tf_failures}) during insertion, aborting"
+                    )
+                    return False
             self.sleep_for(0.05)
 
         self.get_logger().info("Waiting for connector to stabilize...")
