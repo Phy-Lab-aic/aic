@@ -5,6 +5,7 @@
 #include <sstream>
 
 #include "aic_task_interfaces/msg/task.hpp"
+#include "lifecycle_msgs/msg/state.hpp"
 #include "lifecycle_msgs/msg/transition.hpp"
 
 namespace aic {
@@ -108,12 +109,13 @@ bool AutoDataCollector::activate_model() {
   }
 
   int current_state = get_model_state();
-  if (current_state == 3) {
+  if (current_state == lifecycle_msgs::msg::State::PRIMARY_STATE_ACTIVE) {
     RCLCPP_INFO(get_logger(), "aic_model already active");
     return true;
   }
 
-  if (current_state <= 1) {
+  if (current_state == lifecycle_msgs::msg::State::PRIMARY_STATE_UNCONFIGURED ||
+      current_state == lifecycle_msgs::msg::State::PRIMARY_STATE_UNKNOWN) {
     auto req = std::make_shared<lifecycle_msgs::srv::ChangeState::Request>();
     req->transition.id = lifecycle_msgs::msg::Transition::TRANSITION_CONFIGURE;
     auto future = model_change_state_->async_send_request(req);
@@ -124,7 +126,7 @@ bool AutoDataCollector::activate_model() {
   }
 
   current_state = get_model_state();
-  if (current_state == 2) {
+  if (current_state == lifecycle_msgs::msg::State::PRIMARY_STATE_INACTIVE) {
     auto req = std::make_shared<lifecycle_msgs::srv::ChangeState::Request>();
     req->transition.id = lifecycle_msgs::msg::Transition::TRANSITION_ACTIVATE;
     auto future = model_change_state_->async_send_request(req);
@@ -250,9 +252,11 @@ void AutoDataCollector::run_collection() {
     std::string trial_id = trial["trial_id"].as<std::string>();
 
     auto now = std::chrono::system_clock::now();
-    auto time_t = std::chrono::system_clock::to_time_t(now);
+    auto time_t_val = std::chrono::system_clock::to_time_t(now);
+    struct tm tm_buf;
+    localtime_r(&time_t_val, &tm_buf);
     std::ostringstream ts;
-    ts << std::put_time(std::localtime(&time_t), "%Y%m%d_%H%M%S");
+    ts << std::put_time(&tm_buf, "%Y%m%d_%H%M%S");
     std::string episode_id = trial_id + "_" + ts.str();
 
     RCLCPP_INFO(get_logger(), "\n==================================================");

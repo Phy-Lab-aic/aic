@@ -1,6 +1,7 @@
 #ifndef AIC_ENGINE_AUTO_DATA_COLLECTOR_HPP_
 #define AIC_ENGINE_AUTO_DATA_COLLECTOR_HPP_
 
+#include <atomic>
 #include <map>
 #include <memory>
 #include <string>
@@ -64,7 +65,7 @@ private:
   std::vector<rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr> camera_subs_;
 
   // State
-  bool insertion_event_received_ = false;
+  std::atomic<bool> insertion_event_received_{false};
   int target_episodes_;
   int max_attempts_;
   double task_timeout_sec_;
