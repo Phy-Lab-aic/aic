@@ -2,7 +2,6 @@
 """Parse benchmark scoring results and update the leaderboard."""
 import argparse
 import os
-import subprocess
 from datetime import date
 from pathlib import Path
 
@@ -22,6 +21,13 @@ TOTAL_TRIALS = NUM_CONFIGS * TRIALS_PER_CONFIG
 def extract_class_name(policy_module: str) -> str:
     """Extract class name from module path. e.g. 'pkg.ros.CheatCode' -> 'CheatCode'"""
     return policy_module.rsplit(".", 1)[-1]
+
+
+def normalize_entry(entry: dict) -> dict:
+    """Remove deprecated fields from leaderboard entries."""
+    normalized = dict(entry)
+    normalized.pop("branch", None)
+    return normalized
 
 
 def parse_scoring_yaml(path: str) -> list[dict]:
@@ -82,6 +88,8 @@ def update_leaderboard(lb_path: str, entry: dict) -> None:
         lb = {}
     if "entries" not in lb:
         lb["entries"] = []
+    lb["entries"] = [normalize_entry(e) for e in lb["entries"]]
+    entry = normalize_entry(entry)
     existing = [e for e in lb["entries"] if e["policy"] == entry["policy"]]
     if existing and existing[0]["avg_score"] >= entry["avg_score"]:
         print(f"  Existing score ({existing[0]['avg_score']}) >= new score ({entry['avg_score']}), leaderboard unchanged.")
@@ -108,8 +116,8 @@ def generate_markdown(lb: dict) -> str:
         "",
         f"**Baseline (CheatCode): {baseline} / 100**",
         "",
-        "| Rank | Policy | Author | Avg | Min | Max | T1 | T2 | T3 | Trials | Date | Branch |",
-        "|------|--------|--------|-----|-----|-----|----|----|----|--------|------|--------|",
+        "| Rank | Policy | Author | Avg | Min | Max | T1 | T2 | T3 | Trials | Date |",
+        "|------|--------|--------|-----|-----|-----|----|----|----|--------|------|",
     ]
     for i, e in enumerate(lb.get("entries", []), 1):
         name = extract_class_name(e["policy"])
@@ -119,7 +127,7 @@ def generate_markdown(lb: dict) -> str:
             f"| {i} | {name} | {author} | {e['avg_score']} | {e['min_score']} | "
             f"{e['max_score']} | {e['tier1_avg']} | {e['tier2_avg']} | "
             f"{e['tier3_avg']} | {e['trials_completed']}/{e['trials_total']} | "
-            f"{e['date']} | {e['branch']} |"
+            f"{e['date']} |"
         )
     lines.extend([
         "",
@@ -146,15 +154,6 @@ def main():
 
     class_name = extract_class_name(args.policy)
     results_path = RESULTS_DIR / class_name
-
-    branch = args.branch
-    if branch is None:
-        try:
-            branch = subprocess.check_output(
-                ["git", "branch", "--show-current"], text=True
-            ).strip()
-        except Exception:
-            branch = "unknown"
 
     github_id = args.github_id
     if github_id is None:
@@ -187,7 +186,6 @@ def main():
         "max_score": avg["max_score"],
         "date": str(date.today()),
         "github_id": github_id,
-        "branch": branch,
         "trials_completed": avg["trials_completed"],
         "trials_total": TOTAL_TRIALS,
     }

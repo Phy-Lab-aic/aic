@@ -22,6 +22,13 @@ def extract_class_name(policy_module: str) -> str:
     return policy_module.rsplit(".", 1)[-1]
 
 
+def normalize_entry(entry: dict) -> dict:
+    """Remove deprecated fields from leaderboard entries."""
+    normalized = dict(entry)
+    normalized.pop("branch", None)
+    return normalized
+
+
 def load_submissions() -> list[dict]:
     """Load all submission YAML files, keeping only the highest score per policy."""
     by_policy: dict[str, dict] = {}
@@ -29,6 +36,7 @@ def load_submissions() -> list[dict]:
         with open(path) as f:
             data = yaml.safe_load(f)
         if data and "policy" in data:
+            data = normalize_entry(data)
             policy = data["policy"]
             if policy not in by_policy or data.get("avg_score", 0) > by_policy[policy].get("avg_score", 0):
                 by_policy[policy] = data
@@ -41,15 +49,16 @@ def load_existing_leaderboard() -> list[dict]:
         return []
     with open(LEADERBOARD_YAML) as f:
         lb = yaml.safe_load(f) or {}
-    return lb.get("entries", [])
+    return [normalize_entry(entry) for entry in lb.get("entries", [])]
 
 
 def merge_entries(existing: list[dict], submissions: list[dict]) -> list[dict]:
     """Merge submissions into existing entries. Highest avg_score wins per policy."""
     by_policy: dict[str, dict] = {}
     for entry in existing:
-        by_policy[entry["policy"]] = entry
+        by_policy[entry["policy"]] = normalize_entry(entry)
     for entry in submissions:
+        entry = normalize_entry(entry)
         policy = entry["policy"]
         if policy in by_policy:
             existing_entry = by_policy[policy]
@@ -87,8 +96,8 @@ def generate_markdown(entries: list[dict], baseline) -> str:
         "",
         f"**Baseline (CheatCode): {baseline if baseline is not None else 'N/A'} / 100**",
         "",
-        "| Rank | Policy | Author | Avg | Min | Max | T1 | T2 | T3 | Trials | Date | Branch |",
-        "|------|--------|--------|-----|-----|-----|----|----|----|--------|------|--------|",
+        "| Rank | Policy | Author | Avg | Min | Max | T1 | T2 | T3 | Trials | Date |",
+        "|------|--------|--------|-----|-----|-----|----|----|----|--------|------|",
     ]
     for i, e in enumerate(entries, 1):
         name = extract_class_name(e["policy"])
@@ -98,7 +107,7 @@ def generate_markdown(entries: list[dict], baseline) -> str:
             f"| {i} | {name} | {author} | {e['avg_score']} | {e['min_score']} | "
             f"{e['max_score']} | {e['tier1_avg']} | {e['tier2_avg']} | "
             f"{e['tier3_avg']} | {e['trials_completed']}/{e['trials_total']} | "
-            f"{e['date']} | {e['branch']} |"
+            f"{e['date']} |"
         )
     if not entries:
         lines.append("")

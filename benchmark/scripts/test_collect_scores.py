@@ -95,7 +95,6 @@ def test_update_leaderboard_new_entry():
             "min_score": 70.0,
             "max_score": 90.0,
             "date": "2026-04-04",
-            "branch": "test-branch",
             "trials_completed": 15,
             "trials_total": 15,
         }
@@ -118,18 +117,16 @@ def test_update_leaderboard_replaces_existing():
             "min_score": 70.0,
             "max_score": 90.0,
             "date": "2026-04-04",
-            "branch": "branch-1",
             "trials_completed": 15,
             "trials_total": 15,
         }
-        entry2 = {**entry1, "avg_score": 90.0, "branch": "branch-2"}
+        entry2 = {**entry1, "avg_score": 90.0}
         update_leaderboard(lb_path, entry1)
         update_leaderboard(lb_path, entry2)
         with open(lb_path) as f:
             lb = yaml.safe_load(f)
         assert len(lb["entries"]) == 1
         assert lb["entries"][0]["avg_score"] == 90.0
-        assert lb["entries"][0]["branch"] == "branch-2"
 
 
 def test_update_leaderboard_keeps_higher_score():
@@ -145,18 +142,16 @@ def test_update_leaderboard_keeps_higher_score():
             "min_score": 80.0,
             "max_score": 95.0,
             "date": "2026-04-04",
-            "branch": "branch-high",
             "trials_completed": 15,
             "trials_total": 15,
         }
-        entry_low = {**entry_high, "avg_score": 50.0, "branch": "branch-low"}
+        entry_low = {**entry_high, "avg_score": 50.0}
         update_leaderboard(lb_path, entry_high)
         update_leaderboard(lb_path, entry_low)
         with open(lb_path) as f:
             lb = yaml.safe_load(f)
         assert len(lb["entries"]) == 1
         assert lb["entries"][0]["avg_score"] == 90.0
-        assert lb["entries"][0]["branch"] == "branch-high"
 
 
 def test_generate_markdown():
@@ -172,7 +167,6 @@ def test_generate_markdown():
                 "min_score": 70.0,
                 "max_score": 95.0,
                 "date": "2026-04-04",
-                "branch": "main",
                 "trials_completed": 15,
                 "trials_total": 15,
             }
@@ -183,3 +177,4 @@ def test_generate_markdown():
     assert "| 1 |" in md
     assert "CheatCode" in md
     assert "85.0" in md
+    assert "Branch" not in md
