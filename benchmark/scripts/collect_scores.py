@@ -11,6 +11,7 @@ import yaml
 
 BENCHMARK_DIR = Path(__file__).resolve().parent.parent
 RESULTS_DIR = BENCHMARK_DIR / "results"
+SUBMISSIONS_DIR = BENCHMARK_DIR / "submissions"
 LEADERBOARD_YAML = BENCHMARK_DIR / "leaderboard.yaml"
 LEADERBOARD_MD = BENCHMARK_DIR / "LEADERBOARD.md"
 NUM_CONFIGS = 5
@@ -172,8 +173,15 @@ def main():
         "trials_total": TOTAL_TRIALS,
     }
 
+    # Write submission file for PR-based merge workflow
+    SUBMISSIONS_DIR.mkdir(exist_ok=True)
+    submission_path = SUBMISSIONS_DIR / f"{class_name}.yaml"
+    with open(submission_path, "w") as f:
+        yaml.dump(entry, f, default_flow_style=False, sort_keys=False)
+    print(f"\nSubmission written: {submission_path}")
+
     update_leaderboard(str(LEADERBOARD_YAML), entry)
-    print(f"\nLeaderboard updated: {LEADERBOARD_YAML}")
+    print(f"Leaderboard updated: {LEADERBOARD_YAML}")
 
     with open(LEADERBOARD_YAML) as f:
         lb = yaml.safe_load(f)
