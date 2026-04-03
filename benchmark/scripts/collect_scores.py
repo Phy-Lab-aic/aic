@@ -154,8 +154,7 @@ def main():
             branch = "unknown"
 
     all_trials = []
-    for config_idx in range(1, NUM_CONFIGS + 1):
-        scoring_file = results_path / f"benchmark_{config_idx:02d}_scoring.yaml"
+    for scoring_file in sorted(results_path.glob("*_scoring.yaml")):
         trials = parse_scoring_yaml(str(scoring_file))
         all_trials.extend(trials)
 
