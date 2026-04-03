@@ -6,32 +6,18 @@
 
 | Rank | Policy | Author | Avg | Min | Max | T1 | T2 | T3 | Trials | Date |
 |------|--------|--------|-----|-----|-----|----|----|----|--------|------|
-| 1 | AutoCode | [@unknown](https://github.com/unknown) | 63.64 | 33.068283986011146 | 93.93391504782474 | 1.0 | 17.3 | 45.34 | 15/15 | 2026-04-04 |
+| 1 | AutoCode | [@weedmo](https://github.com/weedmo) | 63.64 | 33.068283986011146 | 93.93391504782474 | 1.0 | 17.3 | 45.34 | 15/15 | 2026-04-04 |
 | 2 | CheatCode | [@weedmo](https://github.com/weedmo) | 58.98 | 24.559954128460088 | 93.29406747263644 | 1.0 | 16.92 | 41.06 | 15/15 | 2026-04-04 |
 
 ## Score History
 
-### AutoCode
-
-```mermaid
-xychart-beta
-    title "AutoCode Score History"
-    x-axis "Submission" ["20260404-041523"]
-    y-axis "Avg Score" 0 --> 100
-    line "AutoCode" [63.64]
-```
-
-### CheatCode
-
-```mermaid
-xychart-beta
-    title "CheatCode Score History"
-    x-axis "Submission" ["20260404-032039", "20260404-034810"]
-    y-axis "Avg Score" 0 --> 100
-    line "CheatCode" [0.0, 58.98]
-```
+![Policy Score History](score_history.svg)
 
 ## How to Run
+
+1. Create a policy module under your package, for example `your_package/ros/MyPolicy.py`.
+2. Make sure the policy is importable as `your_package.ros.MyPolicy` from the benchmark environment.
+3. Run the full benchmark runner to build, launch simulation, execute all 5 configs, and collect scores.
 
 ```bash
 # Run benchmark for your policy
@@ -39,4 +25,19 @@ xychart-beta
 
 # CheatCode baseline (needs --ground-truth)
 ./benchmark/scripts/run_benchmark.sh aic_example_policies.ros.CheatCode --ground-truth
+```
+
+4. Inspect generated artifacts:
+   - Per-config scoring: `benchmark/results/<PolicyName>/`
+   - Submission history: `benchmark/submissions/`
+   - Leaderboard files: `benchmark/leaderboard.yaml`, `benchmark/LEADERBOARD.md`, `benchmark/score_history.svg`
+5. Commit your policy, submission YAML, and regenerated leaderboard files to your branch.
+6. Push the branch and open a PR, or merge according to your repository workflow.
+
+```bash
+# Example: commit benchmark outputs and push your branch
+git add benchmark/submissions benchmark/leaderboard.yaml benchmark/LEADERBOARD.md benchmark/score_history.svg
+git add your_package
+git commit -m "Add MyPolicy benchmark submission"
+git push origin <your-branch>
 ```

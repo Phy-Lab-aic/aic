@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-label="Policy score history">
+<rect width="100%" height="100%" fill="white"/>
+<text x="80" y="28" font-size="20" font-family="Arial, sans-serif" fill="#111827">Policy Score History</text>
+<line x1="80" y1="50" x2="80" y2="450" stroke="#374151" stroke-width="2"/>
+<line x1="80" y1="450" x2="980" y2="450" stroke="#374151" stroke-width="2"/>
+<line x1="80" y1="450.0" x2="980" y2="450.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="68" y="455.0" text-anchor="end" font-size="12" font-family="Arial, sans-serif" fill="#4b5563">0</text>
+<line x1="80" y1="370.0" x2="980" y2="370.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="68" y="375.0" text-anchor="end" font-size="12" font-family="Arial, sans-serif" fill="#4b5563">20</text>
+<line x1="80" y1="290.0" x2="980" y2="290.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="68" y="295.0" text-anchor="end" font-size="12" font-family="Arial, sans-serif" fill="#4b5563">40</text>
+<line x1="80" y1="210.0" x2="980" y2="210.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="68" y="215.0" text-anchor="end" font-size="12" font-family="Arial, sans-serif" fill="#4b5563">60</text>
+<line x1="80" y1="130.0" x2="980" y2="130.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="68" y="135.0" text-anchor="end" font-size="12" font-family="Arial, sans-serif" fill="#4b5563">80</text>
+<line x1="80" y1="50.0" x2="980" y2="50.0" stroke="#e5e7eb" stroke-width="1"/>
+<text x="68" y="55.0" text-anchor="end" font-size="12" font-family="Arial, sans-serif" fill="#4b5563">100</text>
+<line x1="80.0" y1="50" x2="80.0" y2="450" stroke="#f3f4f6" stroke-width="1"/>
+<text x="80.0" y="472" text-anchor="end" transform="rotate(-35 80.0 472)" font-size="11" font-family="Arial, sans-serif" fill="#4b5563">20260404-032039</text>
+<line x1="530.0" y1="50" x2="530.0" y2="450" stroke="#f3f4f6" stroke-width="1"/>
+<text x="530.0" y="472" text-anchor="end" transform="rotate(-35 530.0 472)" font-size="11" font-family="Arial, sans-serif" fill="#4b5563">20260404-034810</text>
+<line x1="980.0" y1="50" x2="980.0" y2="450" stroke="#f3f4f6" stroke-width="1"/>
+<text x="980.0" y="472" text-anchor="end" transform="rotate(-35 980.0 472)" font-size="11" font-family="Arial, sans-serif" fill="#4b5563">20260404-041523</text>
+<path d="M 980.00 195.44" fill="none" stroke="hsl(0, 70%, 45%)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="980.00" cy="195.44" r="4.5" fill="hsl(0, 70%, 45%)" stroke="white" stroke-width="1.5"/>
+<path d="M 80.00 450.00 L 530.00 214.08" fill="none" stroke="hsl(180, 70%, 45%)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="80.00" cy="450.00" r="4.5" fill="hsl(180, 70%, 45%)" stroke="white" stroke-width="1.5"/>
+<circle cx="530.00" cy="214.08" r="4.5" fill="hsl(180, 70%, 45%)" stroke="white" stroke-width="1.5"/>
+<line x1="1004" y1="60" x2="1022" y2="60" stroke="hsl(0, 70%, 45%)" stroke-width="3"/>
+<circle cx="1013" cy="60" r="4" fill="hsl(0, 70%, 45%)" stroke="white" stroke-width="1"/>
+<text x="1030" y="64" font-size="12" font-family="Arial, sans-serif" fill="#111827">AutoCode</text>
+<line x1="1004" y1="82" x2="1022" y2="82" stroke="hsl(180, 70%, 45%)" stroke-width="3"/>
+<circle cx="1013" cy="82" r="4" fill="hsl(180, 70%, 45%)" stroke="white" stroke-width="1"/>
+<text x="1030" y="86" font-size="12" font-family="Arial, sans-serif" fill="#111827">CheatCode</text>
+</svg>

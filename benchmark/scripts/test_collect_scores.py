@@ -9,12 +9,15 @@ from pathlib import Path
 import sys
 sys.path.insert(0, os.path.dirname(__file__))
 from collect_scores import (
+    DEFAULT_GITHUB_IDS,
     parse_scoring_yaml,
     compute_averages,
     update_leaderboard,
     generate_markdown,
     extract_class_name,
     load_submission_history,
+    normalize_entry,
+    generate_score_history_svg,
 )
 
 
@@ -173,12 +176,13 @@ def test_generate_markdown():
             }
         ],
     }
-    md = generate_markdown(lb)
+    md = generate_markdown(lb, {})
     assert "# Cheatcode Benchmark Leaderboard" in md
     assert "| 1 |" in md
     assert "CheatCode" in md
     assert "85.0" in md
     assert "Branch" not in md
+    assert "![Policy Score History](score_history.svg)" not in md
 
 
 def test_load_submission_history():
@@ -198,3 +202,52 @@ def test_load_submission_history():
                 {"label": "20260404-034810", "avg_score": 58.98},
             ]
         }
+
+
+def test_normalize_entry_sets_default_github_id():
+    entry = normalize_entry({"policy": "aic_example_policies.ros.AutoCode"})
+    assert entry["github_id"] == DEFAULT_GITHUB_IDS["aic_example_policies.ros.AutoCode"]
+
+
+def test_generate_markdown_includes_score_history_image():
+    lb = {
+        "baseline_score": 58.98,
+        "entries": [
+            {
+                "policy": "aic_example_policies.ros.AutoCode",
+                "avg_score": 63.64,
+                "tier1_avg": 1.0,
+                "tier2_avg": 17.3,
+                "tier3_avg": 45.34,
+                "min_score": 33.0,
+                "max_score": 93.9,
+                "date": "2026-04-04",
+                "github_id": "weedmo",
+                "trials_completed": 15,
+                "trials_total": 15,
+            }
+        ],
+    }
+    history = {
+        "aic_example_policies.ros.AutoCode": [
+            {"label": "20260404-100000", "avg_score": 63.64},
+        ]
+    }
+    md = generate_markdown(lb, history)
+    assert "score_history.svg" in md
+
+
+def test_generate_score_history_svg_has_points_and_legend():
+    svg = generate_score_history_svg({
+        "aic_example_policies.ros.AutoCode": [
+            {"label": "20260404-100000", "avg_score": 63.64},
+            {"label": "20260404-110000", "avg_score": 70.0},
+        ],
+        "aic_example_policies.ros.CheatCode": [
+            {"label": "20260404-100000", "avg_score": 58.98},
+        ],
+    })
+    assert "<svg" in svg
+    assert "<circle" in svg
+    assert "AutoCode" in svg
+    assert "CheatCode" in svg

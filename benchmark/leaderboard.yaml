@@ -8,7 +8,7 @@ entries:
   min_score: 33.068283986011146
   max_score: 93.93391504782474
   date: '2026-04-04'
-  github_id: unknown
+  github_id: weedmo
   trials_completed: 15
   trials_total: 15
 - policy: aic_example_policies.ros.CheatCode
