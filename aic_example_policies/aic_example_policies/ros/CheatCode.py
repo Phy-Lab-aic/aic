@@ -216,10 +216,10 @@ class CheatCode(Policy):
 
         z_offset = 0.2
 
-        # Over five seconds, smoothly interpolate from the current position to
+        # Over 3.75 seconds, smoothly interpolate from the current position to
         # a position above the port.
-        for t in range(0, 100):
-            interp_fraction = t / 100.0
+        for t in range(0, 75):
+            interp_fraction = t / 75.0
             try:
                 self.set_pose_target(
                     move_robot=move_robot,
@@ -252,7 +252,7 @@ class CheatCode(Policy):
             self.sleep_for(0.05)
 
         self.get_logger().info("Waiting for connector to stabilize...")
-        self.sleep_for(5.0)
+        self.sleep_for(2.0)
 
         self.get_logger().info("CheatCode.insert_cable() exiting...")
         return True
