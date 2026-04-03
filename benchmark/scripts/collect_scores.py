@@ -113,7 +113,8 @@ def generate_markdown(lb: dict) -> str:
     ]
     for i, e in enumerate(lb.get("entries", []), 1):
         name = extract_class_name(e["policy"])
-        author = e.get("github_id", "")
+        github_id = e.get("github_id", "")
+        author = f"[@{github_id}](https://github.com/{github_id})" if github_id else ""
         lines.append(
             f"| {i} | {name} | {author} | {e['avg_score']} | {e['min_score']} | "
             f"{e['max_score']} | {e['tier1_avg']} | {e['tier2_avg']} | "

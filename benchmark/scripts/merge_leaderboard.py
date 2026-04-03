@@ -51,6 +51,13 @@ def merge_entries(existing: list[dict], submissions: list[dict]) -> list[dict]:
         by_policy[entry["policy"]] = entry
     for entry in submissions:
         policy = entry["policy"]
+        if policy in by_policy:
+            existing_entry = by_policy[policy]
+            # Backfill github_id in whichever direction has it
+            if entry.get("github_id") and not existing_entry.get("github_id"):
+                existing_entry["github_id"] = entry["github_id"]
+            elif existing_entry.get("github_id") and not entry.get("github_id"):
+                entry["github_id"] = existing_entry["github_id"]
         if policy not in by_policy or entry.get("avg_score", 0) > by_policy[policy].get("avg_score", 0):
             by_policy[policy] = entry
     merged = list(by_policy.values())
@@ -85,7 +92,8 @@ def generate_markdown(entries: list[dict], baseline) -> str:
     ]
     for i, e in enumerate(entries, 1):
         name = extract_class_name(e["policy"])
-        author = e.get("github_id", "")
+        github_id = e.get("github_id", "")
+        author = f"[@{github_id}](https://github.com/{github_id})" if github_id else ""
         lines.append(
             f"| {i} | {name} | {author} | {e['avg_score']} | {e['min_score']} | "
             f"{e['max_score']} | {e['tier1_avg']} | {e['tier2_avg']} | "
