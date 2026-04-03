@@ -1,14 +1,14 @@
-baseline_score: 70.46
+baseline_score: 58.98
 entries:
 - policy: aic_example_policies.ros.CheatCode
-  avg_score: 70.46
+  avg_score: 58.98
   tier1_avg: 1.0
-  tier2_avg: 16.84
-  tier3_avg: 52.62
-  min_score: 25.244954956583868
-  max_score: 93.37511998463496
+  tier2_avg: 16.92
+  tier3_avg: 41.06
+  min_score: 24.559954128460088
+  max_score: 93.29406747263644
   date: '2026-04-04'
+  github_id: weedmo
   branch: cheatcode-leaderboard
   trials_completed: 15
   trials_total: 15
-  github_id: weedmo
