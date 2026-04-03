@@ -246,12 +246,16 @@ class CheatCode(Policy):
                 self.get_logger().warn(f"TF lookup failed during hold: {ex}")
             self.sleep_for(0.05)
 
-        # Descend until the cable is inserted into the port.
+        # Descend with adaptive pause: if XY error grows, hold to re-align.
+        baseline_err = max(abs(self._tip_x_error_integrator),
+                           abs(self._tip_y_error_integrator))
+        descent_step = 0
         while True:
             if z_offset < -0.015:
                 break
 
             z_offset -= 0.0005
+            descent_step += 1
             self.get_logger().info(f"z_offset: {z_offset:0.5}")
             try:
                 self.set_pose_target(
@@ -261,6 +265,25 @@ class CheatCode(Policy):
             except TransformException as ex:
                 self.get_logger().warn(f"TF lookup failed during insertion: {ex}")
             self.sleep_for(0.05)
+
+            # Every 80 steps (~4s), check alignment and pause if degraded
+            if descent_step % 80 == 0:
+                current_err = max(abs(self._tip_x_error_integrator),
+                                  abs(self._tip_y_error_integrator))
+                if current_err > baseline_err * 1.3:
+                    self.get_logger().info(
+                        f"Alignment degraded ({current_err:.4f} > {baseline_err:.4f}), re-aligning...")
+                    for _ in range(10):
+                        try:
+                            self.set_pose_target(
+                                move_robot=move_robot,
+                                pose=self.calc_gripper_pose(port_transform, z_offset=z_offset),
+                            )
+                        except TransformException:
+                            pass
+                        self.sleep_for(0.05)
+                    baseline_err = max(abs(self._tip_x_error_integrator),
+                                       abs(self._tip_y_error_integrator))
 
         self.get_logger().info("Waiting for connector to stabilize...")
         self.sleep_for(2.0)
