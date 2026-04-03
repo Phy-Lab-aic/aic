@@ -132,6 +132,33 @@ def test_update_leaderboard_replaces_existing():
         assert lb["entries"][0]["branch"] == "branch-2"
 
 
+def test_update_leaderboard_keeps_higher_score():
+    """Lower score should NOT replace existing higher score."""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        lb_path = os.path.join(tmpdir, "leaderboard.yaml")
+        entry_high = {
+            "policy": "pkg.ros.TestPolicy",
+            "avg_score": 90.0,
+            "tier1_avg": 1.0,
+            "tier2_avg": 19.0,
+            "tier3_avg": 70.0,
+            "min_score": 80.0,
+            "max_score": 95.0,
+            "date": "2026-04-04",
+            "branch": "branch-high",
+            "trials_completed": 15,
+            "trials_total": 15,
+        }
+        entry_low = {**entry_high, "avg_score": 50.0, "branch": "branch-low"}
+        update_leaderboard(lb_path, entry_high)
+        update_leaderboard(lb_path, entry_low)
+        with open(lb_path) as f:
+            lb = yaml.safe_load(f)
+        assert len(lb["entries"]) == 1
+        assert lb["entries"][0]["avg_score"] == 90.0
+        assert lb["entries"][0]["branch"] == "branch-high"
+
+
 def test_generate_markdown():
     lb = {
         "baseline_score": 85.0,

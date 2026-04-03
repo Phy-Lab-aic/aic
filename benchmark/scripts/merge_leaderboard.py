@@ -23,14 +23,16 @@ def extract_class_name(policy_module: str) -> str:
 
 
 def load_submissions() -> list[dict]:
-    """Load all submission YAML files."""
-    entries = []
+    """Load all submission YAML files, keeping only the highest score per policy."""
+    by_policy: dict[str, dict] = {}
     for path in sorted(SUBMISSIONS_DIR.glob("*.yaml")):
         with open(path) as f:
             data = yaml.safe_load(f)
         if data and "policy" in data:
-            entries.append(data)
-    return entries
+            policy = data["policy"]
+            if policy not in by_policy or data.get("avg_score", 0) > by_policy[policy].get("avg_score", 0):
+                by_policy[policy] = data
+    return list(by_policy.values())
 
 
 def load_existing_leaderboard() -> list[dict]:
@@ -43,13 +45,13 @@ def load_existing_leaderboard() -> list[dict]:
 
 
 def merge_entries(existing: list[dict], submissions: list[dict]) -> list[dict]:
-    """Merge submissions into existing entries. Latest date wins per policy."""
+    """Merge submissions into existing entries. Highest avg_score wins per policy."""
     by_policy: dict[str, dict] = {}
     for entry in existing:
         by_policy[entry["policy"]] = entry
     for entry in submissions:
         policy = entry["policy"]
-        if policy not in by_policy or entry.get("date", "") >= by_policy[policy].get("date", ""):
+        if policy not in by_policy or entry.get("avg_score", 0) > by_policy[policy].get("avg_score", 0):
             by_policy[policy] = entry
     merged = list(by_policy.values())
     merged.sort(key=lambda e: e.get("avg_score", 0), reverse=True)

@@ -71,7 +71,10 @@ def compute_averages(all_trials: list[dict]) -> dict:
 
 
 def update_leaderboard(lb_path: str, entry: dict) -> None:
-    """Update or insert an entry in the leaderboard YAML."""
+    """Update or insert an entry in the leaderboard YAML.
+
+    Only updates if the new entry has a higher avg_score than the existing one.
+    """
     if os.path.isfile(lb_path):
         with open(lb_path) as f:
             lb = yaml.safe_load(f) or {}
@@ -79,6 +82,10 @@ def update_leaderboard(lb_path: str, entry: dict) -> None:
         lb = {}
     if "entries" not in lb:
         lb["entries"] = []
+    existing = [e for e in lb["entries"] if e["policy"] == entry["policy"]]
+    if existing and existing[0]["avg_score"] >= entry["avg_score"]:
+        print(f"  Existing score ({existing[0]['avg_score']}) >= new score ({entry['avg_score']}), leaderboard unchanged.")
+        return
     lb["entries"] = [e for e in lb["entries"] if e["policy"] != entry["policy"]]
     lb["entries"].append(entry)
     lb["entries"].sort(key=lambda e: e["avg_score"], reverse=True)
@@ -173,9 +180,11 @@ def main():
         "trials_total": TOTAL_TRIALS,
     }
 
-    # Write submission file for PR-based merge workflow
+    # Write timestamped submission file (accumulates history per policy)
     SUBMISSIONS_DIR.mkdir(exist_ok=True)
-    submission_path = SUBMISSIONS_DIR / f"{class_name}.yaml"
+    timestamp = date.today().isoformat().replace("-", "") + "_" + \
+        __import__("time").strftime("%H%M%S")
+    submission_path = SUBMISSIONS_DIR / f"{class_name}_{timestamp}.yaml"
     with open(submission_path, "w") as f:
         yaml.dump(entry, f, default_flow_style=False, sort_keys=False)
     print(f"\nSubmission written: {submission_path}")
