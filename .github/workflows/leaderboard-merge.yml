@@ -8,7 +8,7 @@ on:
       - 'benchmark/submissions/*.yaml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   merge-leaderboard:
@@ -41,20 +41,20 @@ jobs:
             git diff benchmark/LEADERBOARD.md
           fi
 
-      - name: Upload leaderboard artifact
+      - name: Commit leaderboard update
         if: steps.changes.outputs.changed == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: leaderboard-update
-          path: |
-            benchmark/leaderboard.yaml
-            benchmark/LEADERBOARD.md
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add benchmark/leaderboard.yaml benchmark/LEADERBOARD.md
+          git commit -m "Update leaderboard"
+          git push
 
       - name: Summary
         run: |
           if [ "${{ steps.changes.outputs.changed }}" = "true" ]; then
             echo "## Leaderboard Updated" >> "$GITHUB_STEP_SUMMARY"
-            echo "New high score detected. Download the \`leaderboard-update\` artifact and commit manually." >> "$GITHUB_STEP_SUMMARY"
+            echo "New high score detected and committed to the branch automatically." >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> "$GITHUB_STEP_SUMMARY"
             cat benchmark/LEADERBOARD.md >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> "$GITHUB_STEP_SUMMARY"
