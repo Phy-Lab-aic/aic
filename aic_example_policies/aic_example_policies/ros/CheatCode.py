@@ -235,6 +235,17 @@ class CheatCode(Policy):
                 self.get_logger().warn(f"TF lookup failed during interpolation: {ex}")
             self.sleep_for(0.05)
 
+        # Hold position above port for 1s to let PI controller settle XY
+        for _ in range(20):
+            try:
+                self.set_pose_target(
+                    move_robot=move_robot,
+                    pose=self.calc_gripper_pose(port_transform, z_offset=z_offset),
+                )
+            except TransformException as ex:
+                self.get_logger().warn(f"TF lookup failed during hold: {ex}")
+            self.sleep_for(0.05)
+
         # Descend until the cable is inserted into the port.
         while True:
             if z_offset < -0.015:
