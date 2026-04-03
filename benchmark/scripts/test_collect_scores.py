@@ -17,7 +17,6 @@ from collect_scores import (
     extract_class_name,
     load_submission_history,
     normalize_entry,
-    generate_score_history_svg,
 )
 
 
@@ -228,26 +227,6 @@ def test_generate_markdown_includes_score_history_image():
             }
         ],
     }
-    history = {
-        "aic_example_policies.ros.AutoCode": [
-            {"label": "20260404-100000", "avg_score": 63.64},
-        ]
-    }
-    md = generate_markdown(lb, history)
-    assert "score_history.svg" in md
-
-
-def test_generate_score_history_svg_has_points_and_legend():
-    svg = generate_score_history_svg({
-        "aic_example_policies.ros.AutoCode": [
-            {"label": "20260404-100000", "avg_score": 63.64},
-            {"label": "20260404-110000", "avg_score": 70.0},
-        ],
-        "aic_example_policies.ros.CheatCode": [
-            {"label": "20260404-100000", "avg_score": 58.98},
-        ],
-    })
-    assert "<svg" in svg
-    assert "<circle" in svg
-    assert "AutoCode" in svg
-    assert "CheatCode" in svg
+    md = generate_markdown(lb, {})
+    assert "Score History" not in md
+    assert "score_history.svg" not in md
