@@ -108,13 +108,14 @@ def generate_markdown(lb: dict) -> str:
         "",
         f"**Baseline (CheatCode): {baseline} / 100**",
         "",
-        "| Rank | Policy | Avg | Min | Max | T1 | T2 | T3 | Trials | Date | Branch |",
-        "|------|--------|-----|-----|-----|----|----|----|--------|------|--------|",
+        "| Rank | Policy | Author | Avg | Min | Max | T1 | T2 | T3 | Trials | Date | Branch |",
+        "|------|--------|--------|-----|-----|-----|----|----|----|--------|------|--------|",
     ]
     for i, e in enumerate(lb.get("entries", []), 1):
         name = extract_class_name(e["policy"])
+        author = e.get("github_id", "")
         lines.append(
-            f"| {i} | {name} | {e['avg_score']} | {e['min_score']} | "
+            f"| {i} | {name} | {author} | {e['avg_score']} | {e['min_score']} | "
             f"{e['max_score']} | {e['tier1_avg']} | {e['tier2_avg']} | "
             f"{e['tier3_avg']} | {e['trials_completed']}/{e['trials_total']} | "
             f"{e['date']} | {e['branch']} |"
@@ -139,6 +140,7 @@ def main():
     parser = argparse.ArgumentParser(description="Collect benchmark scores and update leaderboard")
     parser.add_argument("policy", help="Full policy module path (e.g. aic_example_policies.ros.CheatCode)")
     parser.add_argument("--branch", default=None, help="Branch name (auto-detected if not provided)")
+    parser.add_argument("--github-id", default=None, help="GitHub username (auto-detected from git config if not provided)")
     args = parser.parse_args()
 
     class_name = extract_class_name(args.policy)
@@ -152,6 +154,15 @@ def main():
             ).strip()
         except Exception:
             branch = "unknown"
+
+    github_id = args.github_id
+    if github_id is None:
+        try:
+            github_id = subprocess.check_output(
+                ["git", "config", "user.name"], text=True
+            ).strip()
+        except Exception:
+            github_id = "unknown"
 
     all_trials = []
     for scoring_file in sorted(results_path.glob("*_scoring.yaml")):
@@ -174,6 +185,7 @@ def main():
         "min_score": avg["min_score"],
         "max_score": avg["max_score"],
         "date": str(date.today()),
+        "github_id": github_id,
         "branch": branch,
         "trials_completed": avg["trials_completed"],
         "trials_total": TOTAL_TRIALS,

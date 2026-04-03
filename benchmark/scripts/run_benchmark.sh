@@ -100,7 +100,7 @@ for config_file in "${CONFIGS_DIR}"/benchmark_*.yaml; do
     fi
 
     # Kill leftover processes (host + container) for clean state
-    pkill -f "aic_model aic_model" 2>/dev/null || true
+    pkill -9 -f "aic_model" 2>/dev/null || true
     pkill -f "ros2 run aic_engine" 2>/dev/null || true
     pkill -f "rmw_zenohd" 2>/dev/null || true
     pkill -f "entrypoint.sh" 2>/dev/null || true

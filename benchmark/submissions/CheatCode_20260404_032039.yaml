@@ -1,0 +1,11 @@
+policy: aic_example_policies.ros.CheatCode
+avg_score: 0.0
+tier1_avg: 0.0
+tier2_avg: 0.0
+tier3_avg: 0.0
+min_score: 0.0
+max_score: 0.0
+date: '2026-04-04'
+branch: cheatcode-leaderboard
+trials_completed: 0
+trials_total: 15

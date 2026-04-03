@@ -80,13 +80,14 @@ def generate_markdown(entries: list[dict], baseline) -> str:
         "",
         f"**Baseline (CheatCode): {baseline if baseline is not None else 'N/A'} / 100**",
         "",
-        "| Rank | Policy | Avg | Min | Max | T1 | T2 | T3 | Trials | Date | Branch |",
-        "|------|--------|-----|-----|-----|----|----|----|--------|------|--------|",
+        "| Rank | Policy | Author | Avg | Min | Max | T1 | T2 | T3 | Trials | Date | Branch |",
+        "|------|--------|--------|-----|-----|-----|----|----|----|--------|------|--------|",
     ]
     for i, e in enumerate(entries, 1):
         name = extract_class_name(e["policy"])
+        author = e.get("github_id", "")
         lines.append(
-            f"| {i} | {name} | {e['avg_score']} | {e['min_score']} | "
+            f"| {i} | {name} | {author} | {e['avg_score']} | {e['min_score']} | "
             f"{e['max_score']} | {e['tier1_avg']} | {e['tier2_avg']} | "
             f"{e['tier3_avg']} | {e['trials_completed']}/{e['trials_total']} | "
             f"{e['date']} | {e['branch']} |"
