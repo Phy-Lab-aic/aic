@@ -29,6 +29,26 @@ def normalize_entry(entry: dict) -> dict:
     return normalized
 
 
+def load_submission_history(submissions_dir: Path = SUBMISSIONS_DIR) -> dict[str, list[dict]]:
+    """Load timestamped submission history grouped by policy."""
+    history: dict[str, list[dict]] = {}
+    for path in sorted(submissions_dir.glob("*.yaml")):
+        stem = path.stem
+        parts = stem.rsplit("_", 2)
+        if len(parts) != 3:
+            continue
+        with open(path) as f:
+            data = yaml.safe_load(f)
+        if not data or "policy" not in data:
+            continue
+        policy = data["policy"]
+        history.setdefault(policy, []).append({
+            "label": f"{parts[1]}-{parts[2]}",
+            "avg_score": round(float(data.get("avg_score", 0.0)), 2),
+        })
+    return history
+
+
 def load_submissions() -> list[dict]:
     """Load all submission YAML files, keeping only the highest score per policy."""
     by_policy: dict[str, dict] = {}
@@ -88,6 +108,7 @@ def write_leaderboard(entries: list[dict]) -> None:
 
 def generate_markdown(entries: list[dict], baseline) -> str:
     """Generate LEADERBOARD.md content."""
+    history = load_submission_history()
     lines = [
         "# Cheatcode Benchmark Leaderboard",
         "",
@@ -112,6 +133,27 @@ def generate_markdown(entries: list[dict], baseline) -> str:
     if not entries:
         lines.append("")
         lines.append("*No entries yet. Run the benchmark to populate.*")
+    if history:
+        lines.extend([
+            "",
+            "## Score History",
+        ])
+        for policy, points in sorted(history.items()):
+            name = extract_class_name(policy)
+            labels = ", ".join(f'"{point["label"]}"' for point in points)
+            values = ", ".join(str(point["avg_score"]) for point in points)
+            lines.extend([
+                "",
+                f"### {name}",
+                "",
+                "```mermaid",
+                "xychart-beta",
+                f'    title "{name} Score History"',
+                f'    x-axis "Submission" [{labels}]',
+                '    y-axis "Avg Score" 0 --> 100',
+                f'    line "{name}" [{values}]',
+                "```",
+            ])
     lines.extend([
         "",
         "## How to Run",

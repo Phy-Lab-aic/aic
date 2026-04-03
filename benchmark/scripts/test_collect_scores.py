@@ -14,6 +14,7 @@ from collect_scores import (
     update_leaderboard,
     generate_markdown,
     extract_class_name,
+    load_submission_history,
 )
 
 
@@ -178,3 +179,22 @@ def test_generate_markdown():
     assert "CheatCode" in md
     assert "85.0" in md
     assert "Branch" not in md
+
+
+def test_load_submission_history():
+    with tempfile.TemporaryDirectory() as tmpdir:
+        submissions_dir = Path(tmpdir)
+        for name, score in [
+            ("CheatCode_20260404_032039.yaml", 0.0),
+            ("CheatCode_20260404_034810.yaml", 58.98),
+            ("CheatCode.yaml", 99.0),
+        ]:
+            with open(submissions_dir / name, "w") as f:
+                yaml.dump({"policy": "pkg.ros.CheatCode", "avg_score": score}, f)
+        history = load_submission_history(submissions_dir)
+        assert history == {
+            "pkg.ros.CheatCode": [
+                {"label": "20260404-032039", "avg_score": 0.0},
+                {"label": "20260404-034810", "avg_score": 58.98},
+            ]
+        }

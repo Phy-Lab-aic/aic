@@ -1,5 +1,16 @@
 baseline_score: 58.98
 entries:
+- policy: aic_example_policies.ros.AutoCode
+  avg_score: 63.64
+  tier1_avg: 1.0
+  tier2_avg: 17.3
+  tier3_avg: 45.34
+  min_score: 33.068283986011146
+  max_score: 93.93391504782474
+  date: '2026-04-04'
+  github_id: unknown
+  trials_completed: 15
+  trials_total: 15
 - policy: aic_example_policies.ros.CheatCode
   avg_score: 58.98
   tier1_avg: 1.0
