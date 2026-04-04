@@ -38,7 +38,7 @@ class AutoCode(Policy):
     def __init__(self, parent_node):
         self._tip_x_error_integrator = 0.0
         self._tip_y_error_integrator = 0.0
-        self._max_integrator_windup = 0.05
+        self._max_integrator_windup = 0.08
         self._task = None
         super().__init__(parent_node)
 
@@ -258,10 +258,15 @@ class AutoCode(Policy):
             descent_step += 1
             self.get_logger().info(f"z_offset: {z_offset:0.5}")
             try:
-                self.set_pose_target(
-                    move_robot=move_robot,
-                    pose=self.calc_gripper_pose(port_transform, z_offset=z_offset),
-                )
+                pose = self.calc_gripper_pose(port_transform, z_offset=z_offset)
+                if z_offset < 0.02:
+                    self.set_pose_target(
+                        move_robot=move_robot,
+                        pose=pose,
+                        stiffness=[20.0, 20.0, 150.0, 50.0, 50.0, 50.0],
+                    )
+                else:
+                    self.set_pose_target(move_robot=move_robot, pose=pose)
             except TransformException as ex:
                 self.get_logger().warn(f"TF lookup failed during insertion: {ex}")
             self.sleep_for(0.05)
