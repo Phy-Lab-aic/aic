@@ -1,0 +1,44 @@
+# PILZ Cartesian/Joint limits for trajectory planning.
+#
+# === 근거 ===
+# aic_controller 실제 제한 (aic_bringup/config/aic_ros2_controllers.yaml):
+#   max_translational_velocity: ±0.25 m/s  (L96-102)
+#   max_rotational_velocity:     2.0 rad/s  (L111)
+#
+# UR5e 공식 사양 (ur_description/config/ur5e/joint_limits.yaml):
+#   max_velocity: 180 deg/s = 3.14 rad/s (모든 관절)
+#   acceleration limits: 공식 비공개 (has_acceleration_limits: false)
+#
+# 실측 로그 기반 판단:
+#   fast(1.396 rad/s²) → 실행 중 max_err 0.10+ rad (controller 못 따라감)
+#   slow(0.05 rad/s²)  → 실행 중 max_err 0.006~0.028 rad (양호하나 9초 소요)
+#   → 목표: 실행 중 max_err < 0.03 rad, trajectory 2~5초
+
+robot_description_planning:
+  cartesian_limits:
+    max_trans_vel:  0.15   # controller 0.25 m/s의 60% — headroom 확보
+    max_trans_acc:  0.50   # fast 2.25 / slow 0.01 사이 중간값
+    max_trans_dec: -0.50   # 가속도와 대칭
+    max_rot_vel:    0.80   # controller 2.0 rad/s의 40%
+  # UR5e acceleration limits 비공개 → PILZ 작동 위해 직접 설정.
+  # 0.30 rad/s²: slow(0.05)의 6배, fast(1.396)의 22%.
+  # 첫 테스트 후 max_err 로그 기반 미세 조정 필요.
+  joint_limits:
+    shoulder_pan_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.30
+    shoulder_lift_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.30
+    elbow_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.30
+    wrist_1_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.30
+    wrist_2_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.30
+    wrist_3_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.30

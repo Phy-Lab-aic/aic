@@ -1,0 +1,37 @@
+# Cartesian velocity/acceleration limits for PILZ LIN and CIRC motions.
+# Per-plan velocity_scale / acceleration_scale multiplies these values.
+#
+# aic_controller Cartesian limits (from aic_ros2_controllers.yaml):
+#   max_translational_velocity: 0.25 m/s
+#   max_rotational_velocity:    2.0  rad/s
+#
+# Set PILZ limits below controller limits to give headroom for the
+# aic_controller's internal interpolation step.
+
+robot_description_planning:
+  cartesian_limits:
+    max_trans_vel:  0.05   # m/s   (~80% of controller limit 0.25)
+    max_trans_acc:  0.01   # m/s²
+    max_trans_dec: -0.05   # m/s²  (negative = deceleration magnitude)
+    max_rot_vel:    0.05   # rad/s (~50% of controller limit 2.0)
+  # PILZ requires joint acceleration limits. UR5e official spec does not publish
+  # these, so we set safe conservative values (80 deg/s² = 1.396 rad/s²).
+  joint_limits:
+    shoulder_pan_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.05 # 1.396
+    shoulder_lift_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.05
+    elbow_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.05
+    wrist_1_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.05
+    wrist_2_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.05
+    wrist_3_joint:
+      has_acceleration_limits: true
+      max_acceleration: 0.05

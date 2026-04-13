@@ -1,0 +1,15 @@
+<package format="3">
+  <name>my_policy</name>
+  <version>0.0.1</version>
+  <description>Custom policies for AIC cable insertion</description>
+  <maintainer email="jinhyeong0801@naver.com">participant</maintainer>
+  <license>Apache-2.0</license>
+  <depend>aic_model</depend>
+  <depend>aic_task_interfaces</depend>
+  <depend>aic_control_interfaces</depend>
+  <depend>aic_model_interfaces</depend>
+  <depend>moveit_py</depend>
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

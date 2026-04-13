@@ -11,6 +11,56 @@ This repository contains the official toolkit to help participants start develop
 
 ---
 
+## Modifications
+
+아래 항목이 추가/수정되었습니다.
+
+### 추가된 패키지
+
+| 패키지 | 설명 |
+|--------|------|
+| **`my_policy/`** | 커스텀 케이블 삽입 policy (PilzPolicy) — MoveIt2 PILZ planner + impedance control + force-based 완료 감지 |
+| **`custom_tools/`** | 학습 데이터 수집 파이프라인 (config 생성, 자동 수집), 올려주신 레포기반으로 수정 (LeRobot 변환) |
+
+### 수정된 파일
+
+| 파일 | 변경 내용 |
+|------|-----------|
+| `pixi.toml` (root) | `my_policy` 의존성 추가, MoveIt2/PILZ/ur_description 등 runtime 의존성 추가 |
+| `.gitignore` | `benchmark/`, `tmp/`, `*.log` 제외 추가 |
+| `aic_scoring/` (`ScoringTier2.hh`, `ScoringTier2.cc`) | `record_all_topics` 기능 복원 — 카메라/관측/액션 토픽 기록 + zstd 압축 (로컬 데이터 수집 전용, 기본값 `false`) |
+| `aic_engine/src/aic_engine.cpp` | `record_all_topics` 파라미터 선언 및 `SetRecordAllTopics()` 호출 복원 |
+
+### 추가된 문서
+
+| 파일 | 설명 |
+|------|------|
+| [`my_policy/README.md`](./my_policy/README.md) | PilzPolicy 방법론, 상세 동작 과정, 파라미터 정의 |
+| [`custom_tools/README.md`](./custom_tools/README.md) | 데이터 수집 파이프라인 전체 가이드 |
+| [`custom_tools/collect_training_data/README.md`](./custom_tools/collect_training_data/README.md) | 데이터 수집 스크립트 상세 |
+| [`custom_tools/gen_training_configs/gen_config.md`](./custom_tools/gen_training_configs/gen_config.md) | 학습 Config 자동 생성 설계 |
+| [`custom_tools/rosbag-to-lerobot/README.md`](./custom_tools/rosbag-to-lerobot/README.md) | LeRobot 변환 + HuggingFace 업로드 |
+| [`custom_tools/curation-tools/README.md`](./custom_tools/curation-tools/README.md) | 데이터 품질 검수 도구 |
+| [`custom_docs/logs/progress.md`](./custom_docs/logs/progress.md) | 개발 진행 로그 |
+| [`custom_docs/guides/test_guide.md`](./custom_docs/guides/test_guide.md) | 테스트 실행 가이드 |
+
+### Quick Start
+
+```bash
+# pixi 환경 설치
+cd aic
+pixi install
+
+# 터미널 1: distrobox → 시뮬레이션 시작
+export DBX_CONTAINER_MANAGER=docker
+distrobox enter -r aic_eval -- /entrypoint.sh ground_truth:=true start_aic_engine:=true
+
+# 터미널 2: policy 실행
+pixi run ros2 run aic_model aic_model --ros-args -p use_sim_time:=true -p policy:=my_policy.PilzPolicy
+```
+
+---
+
 ## Toolkit Guide
 
 Welcome to the AIC toolkit documentation. This guide walks you through the complete workflow for participating in the challenge — from understanding the requirements to submitting your solution.
@@ -104,8 +154,11 @@ aic/
 ├── aic_model/            # Template for participant policy implementation
 ├── aic_scoring/          # Scoring system implementation
 ├── aic_utils/            # Utility packages and tools
+├── custom_docs/          # Team documentation (logs, guides, presentations)
+├── custom_tools/         # Data collection pipeline tools
 ├── docker/               # Docker container definitions
-└── docs/                 # Comprehensive documentation
+├── docs/                 # Comprehensive documentation (upstream)
+└── my_policy/            # Custom cable insertion policy (PilzPolicy)
 ```
 
 ---

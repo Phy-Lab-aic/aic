@@ -1,0 +1,12 @@
+[Unit]
+Description=Auto-mount HuggingFace repos for Phy-lab
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /home/jjhyeongg/0_Project/intrinsic_challenge/ws_aic/src/aic/custom_tools/curation-tools/scripts/hf_auto_mount.py
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

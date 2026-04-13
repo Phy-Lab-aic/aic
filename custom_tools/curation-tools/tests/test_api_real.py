@@ -1,0 +1,217 @@
+"""API integration tests against real LeRobot v3.0 datasets using FastAPI TestClient."""
+
+import pytest
+import pytest_asyncio
+from httpx import AsyncClient, ASGITransport
+
+from backend.main import app
+from backend.services.dataset_service import DatasetService
+import backend.services.dataset_service as ds_mod
+import backend.services.episode_service as ep_mod
+import backend.services.task_service as ts_mod
+
+BASIC_AIC = "/tmp/hf-mounts/Phy-lab/dataset/basic_aic_cheetcode_dataset"
+HOJUN = "/tmp/hf-mounts/Phy-lab/dataset/hojun"
+
+
+@pytest.fixture(autouse=True)
+def reset_singleton():
+    """Reset all module-level singleton references to a fresh instance per test."""
+    from backend.routers import datasets as datasets_router
+
+    orig_ds = ds_mod.dataset_service
+    orig_ep = ep_mod.dataset_service
+    orig_ts = ts_mod.dataset_service
+    orig_router = datasets_router.dataset_service
+
+    fresh = DatasetService()
+    ds_mod.dataset_service = fresh
+    ep_mod.dataset_service = fresh
+    ts_mod.dataset_service = fresh
+    datasets_router.dataset_service = fresh
+    yield
+    ds_mod.dataset_service = orig_ds
+    ep_mod.dataset_service = orig_ep
+    ts_mod.dataset_service = orig_ts
+    datasets_router.dataset_service = orig_router
+
+
+@pytest_asyncio.fixture
+async def client():
+    transport = ASGITransport(app=app)
+    async with AsyncClient(transport=transport, base_url="http://test") as c:
+        yield c
+
+
+# ---------------------------------------------------------------------------
+# Health
+# ---------------------------------------------------------------------------
+
+class TestHealth:
+    @pytest.mark.asyncio
+    async def test_health_returns_ok(self, client):
+        resp = await client.get("/api/health")
+        assert resp.status_code == 200
+        assert resp.json() == {"status": "ok"}
+
+
+# ---------------------------------------------------------------------------
+# POST /api/datasets/load
+# ---------------------------------------------------------------------------
+
+class TestLoadDatasetAPI:
+    @pytest.mark.asyncio
+    async def test_load_basic_aic(self, client, reset_singleton):
+        resp = await client.post("/api/datasets/load", json={"path": BASIC_AIC})
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["fps"] == 20
+        assert data["total_episodes"] == 40
+        assert data["total_tasks"] == 2
+        assert data["robot_type"] == "ur5e"
+        assert "features" in data
+
+    @pytest.mark.asyncio
+    async def test_load_hojun(self, client, reset_singleton):
+        resp = await client.post("/api/datasets/load", json={"path": HOJUN})
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["total_tasks"] == 1
+
+    @pytest.mark.asyncio
+    async def test_load_nonexistent_returns_404(self, client, reset_singleton):
+        resp = await client.post("/api/datasets/load", json={"path": "/tmp/hf-mounts/nonexistent"})
+        assert resp.status_code == 404
+
+    @pytest.mark.asyncio
+    async def test_load_disallowed_path_returns_400(self, client, reset_singleton):
+        resp = await client.post("/api/datasets/load", json={"path": "/etc/passwd"})
+        assert resp.status_code == 400
+
+
+# ---------------------------------------------------------------------------
+# GET /api/datasets/info
+# ---------------------------------------------------------------------------
+
+class TestGetInfoAPI:
+    @pytest.mark.asyncio
+    async def test_info_after_load(self, client, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": BASIC_AIC})
+        resp = await client.get("/api/datasets/info")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["fps"] == 20
+        assert data["robot_type"] == "ur5e"
+
+    @pytest.mark.asyncio
+    async def test_info_before_load_returns_400(self, client):
+        # autouse reset_singleton already provides a fresh unloaded service
+        resp = await client.get("/api/datasets/info")
+        assert resp.status_code == 400
+
+
+# ---------------------------------------------------------------------------
+# GET /api/episodes
+# ---------------------------------------------------------------------------
+
+class TestEpisodesAPI:
+    @pytest.mark.asyncio
+    async def test_list_episodes(self, client, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": BASIC_AIC})
+        resp = await client.get("/api/episodes")
+        assert resp.status_code == 200
+        episodes = resp.json()
+        assert len(episodes) == 40
+
+    @pytest.mark.asyncio
+    async def test_episode_schema(self, client, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": BASIC_AIC})
+        resp = await client.get("/api/episodes")
+        ep = resp.json()[0]
+        assert "episode_index" in ep
+        assert "length" in ep
+        assert "task_index" in ep
+        assert "task_instruction" in ep
+        assert "grade" in ep
+        assert "tags" in ep
+
+    @pytest.mark.asyncio
+    async def test_get_single_episode(self, client, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": BASIC_AIC})
+        resp = await client.get("/api/episodes/0")
+        assert resp.status_code == 200
+        assert resp.json()["episode_index"] == 0
+
+    @pytest.mark.asyncio
+    async def test_get_nonexistent_episode_returns_404(self, client, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": BASIC_AIC})
+        resp = await client.get("/api/episodes/9999")
+        assert resp.status_code == 404
+
+
+# ---------------------------------------------------------------------------
+# PATCH /api/episodes/{episode_index}
+# ---------------------------------------------------------------------------
+
+class TestUpdateEpisodeAPI:
+    @pytest.mark.asyncio
+    async def test_update_episode_grade(self, client, writable_basic_aic, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": str(writable_basic_aic)})
+        resp = await client.patch("/api/episodes/0", json={"grade": "Good", "tags": ["test"]})
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["grade"] == "Good"
+        assert data["tags"] == ["test"]
+
+    @pytest.mark.asyncio
+    async def test_update_invalid_grade_returns_422(self, client, writable_basic_aic, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": str(writable_basic_aic)})
+        resp = await client.patch("/api/episodes/0", json={"grade": "Z"})
+        assert resp.status_code == 422
+
+    @pytest.mark.asyncio
+    async def test_update_nonexistent_episode_returns_404(self, client, writable_basic_aic, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": str(writable_basic_aic)})
+        resp = await client.patch("/api/episodes/9999", json={"grade": "Good"})
+        assert resp.status_code == 404
+
+
+# ---------------------------------------------------------------------------
+# GET /api/tasks
+# ---------------------------------------------------------------------------
+
+class TestTasksAPI:
+    @pytest.mark.asyncio
+    async def test_list_tasks(self, client, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": BASIC_AIC})
+        resp = await client.get("/api/tasks")
+        assert resp.status_code == 200
+        tasks = resp.json()
+        assert len(tasks) == 2
+
+    @pytest.mark.asyncio
+    async def test_task_schema(self, client, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": BASIC_AIC})
+        resp = await client.get("/api/tasks")
+        t = resp.json()[0]
+        assert "task_index" in t
+        assert "task_instruction" in t
+
+
+# ---------------------------------------------------------------------------
+# PATCH /api/tasks/{task_index}
+# ---------------------------------------------------------------------------
+
+class TestUpdateTaskAPI:
+    @pytest.mark.asyncio
+    async def test_update_task_instruction(self, client, writable_basic_aic, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": str(writable_basic_aic)})
+        resp = await client.patch("/api/tasks/0", json={"task_instruction": "updated task"})
+        assert resp.status_code == 200
+        assert resp.json()["task_instruction"] == "updated task"
+
+    @pytest.mark.asyncio
+    async def test_update_nonexistent_task_returns_404(self, client, writable_basic_aic, reset_singleton):
+        await client.post("/api/datasets/load", json={"path": str(writable_basic_aic)})
+        resp = await client.patch("/api/tasks/9999", json={"task_instruction": "nope"})
+        assert resp.status_code == 404

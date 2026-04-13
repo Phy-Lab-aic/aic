@@ -1,0 +1,35 @@
+[project]
+name = "rosbag-to-lerobot"
+version = "0.1.0"
+description = "MCAP to LeRobot v3 dataset converter"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[dependencies]
+python = "3.12.*"
+ffmpeg = ">=6.0"
+pip = "*"
+packaging = ">=24.2, <26.0"
+setuptools = ">=71.0.0, <81.0.0"
+
+[pypi-dependencies]
+numpy = "==2.2.6"
+opencv-python-headless = ">=4.9.0, <4.13.0"
+av = ">=15.0.0, <16.0.0"
+pyarrow = ">=15.0.0"
+imageio = ">=2.34.0, <3.0.0"
+pillow = ">=10.0.0"
+pyyaml = ">=6.0"
+pandas = ">=2.0.0"
+mcap = ">=0.0.10"
+mcap-ros2-support = ">=0.5.0"
+datasets = "*"
+requests = "*"
+tqdm = "*"
+fsspec = "*"
+torch-stub = { path = "docker/torch-stub", editable = true }
+lerobot = { path = "lerobot", editable = true }
+
+[tasks]
+convert = { cmd = "PYTHONNOUSERSITE=1 PYTHONPATH=src:lerobot/src python3 src/main.py", description = "Run MCAP to LeRobot conversion" }
+setup-submodule = { cmd = "git submodule update --init --recursive lerobot", description = "Initialize lerobot git submodule" }

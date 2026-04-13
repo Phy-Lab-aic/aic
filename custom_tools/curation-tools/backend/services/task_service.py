@@ -1,0 +1,66 @@
+"""Service for reading and writing task instructions in meta/tasks.parquet."""
+
+from __future__ import annotations
+
+import os
+import tempfile
+
+import pyarrow as pa
+import pyarrow.parquet as pq
+
+from backend.services.dataset_service import dataset_service
+
+
+def get_tasks() -> list[dict]:
+    """Return all tasks as list of {task_index, task_instruction} dicts."""
+    return [
+        {"task_index": int(t["task_index"]), "task_instruction": str(t.get("task", ""))}
+        for t in dataset_service.tasks
+    ]
+
+
+def get_task(task_index: int) -> dict:
+    """Return a single task by index. Raises KeyError if not found."""
+    for t in dataset_service.tasks:
+        if int(t["task_index"]) == task_index:
+            return {"task_index": int(t["task_index"]), "task_instruction": str(t.get("task", ""))}
+    raise KeyError(f"task_index {task_index!r} not found")
+
+
+async def update_task(task_index: int, task_instruction: str) -> dict:
+    """Update task instruction in meta/tasks.parquet atomically."""
+    file_path = dataset_service.dataset_path / "meta" / "tasks.parquet"
+    lock = dataset_service.get_file_lock(file_path)
+
+    async with lock:
+        table: pa.Table = pq.read_table(file_path)
+        task_indices = table.column("task_index").to_pylist()
+
+        if task_index not in task_indices:
+            raise KeyError(f"task_index {task_index!r} not found")
+
+        row_pos = task_indices.index(task_index)
+        old_tasks: list[str] = table.column("task").to_pylist()
+        old_tasks[row_pos] = task_instruction
+
+        updated_table = table.set_column(
+            table.schema.get_field_index("task"),
+            "task",
+            pa.array(old_tasks, type=pa.string()),
+        )
+
+        tmp_fd, tmp_path = tempfile.mkstemp(dir=file_path.parent, suffix=".tmp")
+        os.close(tmp_fd)
+        try:
+            pq.write_table(updated_table, tmp_path)
+            os.replace(tmp_path, file_path)
+        except Exception:
+            try:
+                os.unlink(tmp_path)
+            except OSError:
+                pass
+            raise
+
+        dataset_service.reload_tasks()
+
+    return {"task_index": task_index, "task_instruction": task_instruction}

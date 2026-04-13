@@ -1,0 +1,17 @@
+[workspace]
+name = "aic-tools"
+version = "0.1.0"
+description = "AIC development utilities (config generation, data tools)"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[dependencies]
+python = ">=3.10"
+pyyaml = ">=6.0"
+openpyxl = ">=3.1,<4"
+
+[pypi-dependencies]
+customtkinter = ">=5.2"
+
+[tasks]
+gen-config = "python gen_training_configs/gen_scene_config.py"

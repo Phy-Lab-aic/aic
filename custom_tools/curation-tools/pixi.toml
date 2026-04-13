@@ -1,0 +1,25 @@
+[workspace]
+name = "curation-tools"
+version = "0.1.0"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[dependencies]
+python = ">=3.10"
+nodejs = ">=18"
+numpy = "*"
+
+[pypi-dependencies]
+fastapi = ">=0.115.0"
+uvicorn = { version = ">=0.30.0", extras = ["standard"] }
+pyarrow = ">=17.0.0"
+rerun-sdk = ">=0.22.0"
+pydantic = ">=2.0.0"
+pydantic-settings = ">=2.0.0"
+opencv-python = ">=4.8.0"
+
+[tasks]
+setup = "cd frontend && npm install"
+backend = "uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload"
+frontend = "cd frontend && npm run dev"
+start = { cmd = "bash start_pixi.sh", description = "Start backend + frontend" }

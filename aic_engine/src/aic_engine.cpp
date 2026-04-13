@@ -317,6 +317,7 @@ Engine::Engine(const rclcpp::NodeOptions& options)
   node_->declare_parameter("model_deactivate_timeout_seconds", 60);
   node_->declare_parameter("model_cleanup_timeout_seconds", 60);
   node_->declare_parameter("model_shutdown_timeout_seconds", 60);
+  node_->declare_parameter("record_all_topics", false);
 
   // Set scoring output directory from AIC_RESULTS_DIR environment variable
   // If not set or empty, default to $HOME/aic_results
@@ -543,6 +544,8 @@ EngineState Engine::initialize() {
   }
   scoring_tier2_->SetGripperFrame(
       node_->get_parameter("gripper_frame_name").as_string());
+  scoring_tier2_->SetRecordAllTopics(
+      node_->get_parameter("record_all_topics").as_bool());
 
   // Create output directory for bag files.
   std::error_code ec;

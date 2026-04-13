@@ -171,6 +171,10 @@ namespace aic_scoring
     /// \param[in] _gripperFrame Gripper frame name.
     public: void SetGripperFrame(const std::string &_gripperFrame);
 
+    /// \brief Enable recording all available topics (not just scoring topics).
+    /// \param[in] _enable True to record all topics.
+    public: void SetRecordAllTopics(bool _enable);
+
     /// \brief Start recording all scoring topics.
     /// \return True if the bag was opened correctly and it's ready to record.
     /// \param[in] _filename The path to the bag.
@@ -310,6 +314,9 @@ namespace aic_scoring
 
     /// \brief Topics to subscribe to.
     private: std::vector<TopicInfo> topics;
+
+    /// \brief When true, record all available topics (not just scoring topics).
+    private: bool recordAllTopics = false;
 
     /// \brief Connections.
     private: std::vector<Connection> connections;

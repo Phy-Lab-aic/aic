@@ -74,6 +74,11 @@ void ScoringTier2::SetGripperFrame(const std::string &_gripperFrame) {
 }
 
 //////////////////////////////////////////////////
+void ScoringTier2::SetRecordAllTopics(bool _enable) {
+  this->recordAllTopics = _enable;
+}
+
+//////////////////////////////////////////////////
 bool ScoringTier2::StartRecording(const std::string &_filename,
                                   const std::vector<Connection> &_connections,
                                   const std::chrono::seconds &_max_task_time) {
@@ -89,6 +94,11 @@ bool ScoringTier2::StartRecording(const std::string &_filename,
     try {
       rosbag2_storage::StorageOptions storage_options;
       storage_options.uri = _filename;
+      if (this->recordAllTopics) {
+        // Use MCAP zstd compression for training data collection
+        // to reduce file size (~5-10x smaller).
+        storage_options.storage_preset_profile = "zstd_fast";
+      }
       this->bagWriter.open(storage_options);
     } catch (const std::exception &e) {
       RCLCPP_ERROR(this->node->get_logger(), "Failed to open bag: %s",
@@ -99,8 +109,66 @@ bool ScoringTier2::StartRecording(const std::string &_filename,
     this->bagUri = _filename;
   }
 
-  // Subscribe to all topics relevant for scoring.
-  for (const auto &topic : this->topics) {
+  // Build the list of topics to subscribe to.
+  // Start with scoring topics (always needed for score computation).
+  std::vector<TopicInfo> topics_to_record = this->topics;
+
+  // If record_all is enabled, add extra topics for training data collection.
+  if (this->recordAllTopics) {
+    // Collect names of scoring topics to avoid duplicates.
+    std::set<std::string> scoring_topic_names;
+    for (const auto &t : this->topics) {
+      scoring_topic_names.insert(t.name);
+    }
+
+    // Explicit list of extra topics to record (cameras, observations, actions).
+    // We avoid recording noisy/unnecessary topics like /clock,
+    // /controller_manager/*, /rosout, /parameter_events, /diagnostics.
+    static const std::vector<std::pair<std::string, std::string>> kExtraTopics = {
+        {"/observations", "aic_model_interfaces/msg/Observation"},
+        {"/left_camera/image", "sensor_msgs/msg/Image"},
+        {"/left_camera/camera_info", "sensor_msgs/msg/CameraInfo"},
+        {"/center_camera/image", "sensor_msgs/msg/Image"},
+        {"/center_camera/camera_info", "sensor_msgs/msg/CameraInfo"},
+        {"/right_camera/image", "sensor_msgs/msg/Image"},
+        {"/right_camera/camera_info", "sensor_msgs/msg/CameraInfo"},
+    };
+
+    for (const auto &[name, type] : kExtraTopics) {
+      if (scoring_topic_names.count(name) == 0) {
+        TopicInfo extra;
+        extra.name = name;
+        extra.type = type;
+        extra.latched = false;
+        topics_to_record.push_back(extra);
+      }
+    }
+
+    // Also discover action topics (hidden topics like /insert_cable/_action/*)
+    auto topic_names_and_types = this->node->get_topic_names_and_types();
+    for (const auto &[name, types] : topic_names_and_types) {
+      if (scoring_topic_names.count(name) > 0) {
+        continue;
+      }
+      // Only add action-related hidden topics
+      if (name.find("/_action/") != std::string::npos && !types.empty()) {
+        TopicInfo extra;
+        extra.name = name;
+        extra.type = types[0];
+        extra.latched = false;
+        topics_to_record.push_back(extra);
+      }
+    }
+
+    RCLCPP_INFO(this->node->get_logger(),
+                "Record all topics enabled: %zu scoring + %zu extra = %zu total",
+                this->topics.size(),
+                topics_to_record.size() - this->topics.size(),
+                topics_to_record.size());
+  }
+
+  // Subscribe to all topics.
+  for (const auto &topic : topics_to_record) {
     auto qos = topic.latched
                    ? rclcpp::QoS(rclcpp::KeepLast(100)).transient_local()
                    : rclcpp::QoS(rclcpp::KeepLast(10)).reliable();

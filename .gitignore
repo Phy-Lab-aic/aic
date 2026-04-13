@@ -2,11 +2,21 @@
 __pycache__/
 *.egg-info/
 build/
+install/
+log/
 files.txt
 
 # pixi environments
 .pixi/*
 !.pixi/config.toml
+pixi.lock
+
+# benchmark (제외)
+benchmark/
+
+# debug logs
+tmp/
+*.log
 
 # Ignore mesh/texture assets in aic_mujoco mjcf, keep only .xml
 aic_utils/aic_mujoco/mjcf/*.obj

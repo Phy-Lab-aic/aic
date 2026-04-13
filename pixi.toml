@@ -26,6 +26,9 @@ ros-kilted-control-msgs = "*"                                                   
 ros-kilted-geometry-msgs = "*"                                                         # lerobot_robot_ros
 ros-kilted-lerobot-robot-aic = { path = "aic_utils/lerobot_robot_aic" }
 ros-kilted-moveit-msgs = "*"                                                           # lerobot_robot_ros
+ros-kilted-moveit-ros-move-group = "*"                                                 # move_group runtime
+ros-kilted-my-policy = { path = "my_policy" }                                          # custom policies
+ros-kilted-pilz-industrial-motion-planner = "*"                                        # PILZ planner plugin
 ros-kilted-rclpy = "*"
 ros-kilted-rmw-zenoh-cpp = "*"
 ros-kilted-ros-core = "*"
@@ -33,6 +36,8 @@ ros-kilted-sensor-msgs = "*"                                                    
 ros-kilted-std-msgs = "*"                                                              # lerobot_robot_ros
 ros-kilted-std-srvs = "*"
 ros-kilted-tf2-ros-py = "*"
+ros-kilted-tf2-tools = "*"
+ros-kilted-ur-description = "*"
 setuptools = ">=71.0.0,<81.0.0"                                                        # required by lerobot==0.4.3
 
 [pypi-dependencies]
