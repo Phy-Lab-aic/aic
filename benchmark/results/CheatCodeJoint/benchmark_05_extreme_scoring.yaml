@@ -1,0 +1,79 @@
+total: 110.97059908955504
+trial_1:
+  tier_1:
+    score: 1
+    message: Model validation succeeded.
+  tier_2:
+    score: 13.558537924574111
+    message: Scoring succeeded.
+    categories:
+      contacts:
+        score: 0
+        message: No contact detected.
+      duration:
+        score: 4.1170909090909085
+        message: "Task duration: 41.13 seconds."
+      insertion force:
+        score: 0
+        message: "Insertion force above 20.00 N, detected for a time of 0.06 seconds. Max detected force: 32.14N. This is below the threshold of 1.00 seconds. Penalty not applied."
+      trajectory efficiency:
+        score: 5.1262745406227541
+        message: "Total end-effector path length: 0.35 m, initial plug-port distance: 0.21 m"
+      trajectory smoothness:
+        score: 4.3151724748604483
+        message: "Average linear jerk magnitude of the end effector: 14.04 m/s^3"
+  tier_3:
+    score: 23.280281227110635
+    message: "No insertion detected. Final plug port distance: 0.05m."
+trial_2:
+  tier_1:
+    score: 1
+    message: Model validation succeeded.
+  tier_2:
+    score: 13.088651328226046
+    message: Scoring succeeded.
+    categories:
+      contacts:
+        score: 0
+        message: No contact detected.
+      duration:
+        score: 4.1149090909090908
+        message: "Task duration: 41.14 seconds."
+      insertion force:
+        score: 0
+        message: "Insertion force above 20.00 N, detected for a time of 0.02 seconds. Max detected force: 24.79N. This is below the threshold of 1.00 seconds. Penalty not applied."
+      trajectory efficiency:
+        score: 4.9325652843266727
+        message: "Total end-effector path length: 0.56 m, initial plug-port distance: 0.38 m"
+      trajectory smoothness:
+        score: 4.0411769529902832
+        message: "Average linear jerk magnitude of the end effector: 16.32 m/s^3"
+  tier_3:
+    score: 21.017108347976105
+    message: "No insertion detected. Final plug port distance: 0.05m."
+trial_3:
+  tier_1:
+    score: 1
+    message: Model validation succeeded.
+  tier_2:
+    score: 12.50760316232931
+    message: Scoring succeeded.
+    categories:
+      contacts:
+        score: 0
+        message: No contact detected.
+      duration:
+        score: 4.1096727272727271
+        message: "Task duration: 41.16 seconds."
+      insertion force:
+        score: 0
+        message: "Insertion force above 20.00 N, detected for a time of 0.02 seconds. Max detected force: 24.77N. This is below the threshold of 1.00 seconds. Penalty not applied."
+      trajectory efficiency:
+        score: 5.3774958980383296
+        message: "Total end-effector path length: 0.49 m, initial plug-port distance: 0.39 m"
+      trajectory smoothness:
+        score: 3.0204345370182537
+        message: "Average linear jerk magnitude of the end effector: 24.83 m/s^3"
+  tier_3:
+    score: 24.518417099338826
+    message: "No insertion detected. Final plug port distance: 0.02m."

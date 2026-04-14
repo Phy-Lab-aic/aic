@@ -1,0 +1,570 @@
+- class_name: AutoCodeJoint1
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint1
+  tier1: 0.0
+  tier2: 0.0
+  tier3: 0.0
+  timestamp: '20260408_222110'
+  total: 0.0
+  trials:
+  - name: Trial 3
+    t1: 0.0
+    t2: 0.0
+    t3: 0.0
+    tier2_categories: {}
+    tier3_message: Task execution failed
+    total: 0.0
+- class_name: CheatCode
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.CheatCode
+  tier1: 1.0
+  tier2: 16.61
+  tier3: 75.0
+  timestamp: '20260408_202902'
+  total: 92.61
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 16.61
+    t3: 75.0
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 34.15 seconds.'
+        score: 5.64
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.35 m, initial plug-port distance:
+          0.32 m'
+        score: 5.79
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 6.83 m/s^3'
+        score: 5.18
+    tier3_message: Cable insertion successful.
+    total: 92.61
+- class_name: AutoCode
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCode
+  tier1: 1.0
+  tier2: 17.14
+  tier3: 75.0
+  timestamp: '20260408_195627'
+  total: 93.14
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 17.14
+    t3: 75.0
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 31.11 seconds.'
+        score: 6.3
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.36 m, initial plug-port distance:
+          0.32 m'
+        score: 5.78
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 7.90 m/s^3'
+        score: 5.05
+    tier3_message: Cable insertion successful.
+    total: 93.14
+- class_name: AutoCode
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCode
+  tier1: 1.0
+  tier2: 16.76
+  tier3: 46.05
+  timestamp: '20260408_195346'
+  total: 63.81
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 16.76
+    t3: 46.05
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 33.08 seconds.'
+        score: 5.87
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.35 m, initial plug-port distance:
+          0.32 m'
+        score: 5.82
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 7.78 m/s^3'
+        score: 5.07
+    tier3_message: Partial insertion detected with distance of 0.01m.
+    total: 63.81
+- class_name: AutoCodeJoint1
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint1
+  tier1: 1.0
+  tier2: 13.8375
+  tier3: 2.9285
+  timestamp: '20260408_225307'
+  total: 17.7659
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 13.837484673515586
+    t3: 2.9284639303174917
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 38.17 seconds.'
+        score: 4.762036363636364
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.22 m, initial plug-port distance:
+          0.32 m'
+        score: 6.0
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 24.37 m/s^3'
+        score: 3.0754483098792234
+    tier3_message: 'No insertion detected. Final plug port distance: 0.16m.'
+    total: 17.765948603833078
+- class_name: AutoCodeJoint1
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint1
+  tier1: 1.0
+  tier2: 11.6513
+  tier3: 23.4212
+  timestamp: '20260408_225943'
+  total: 36.0724
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 11.65125308574146
+    t3: 23.4211817424339
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 40.18 seconds.'
+        score: 4.324363636363636
+      insertion force:
+        message: 'Insertion force above 20.00 N, detected for a time of 0.08 seconds.
+          Max detected force: 107.97N. This is below the threshold of 1.00 seconds.
+          Penalty not applied.'
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.40 m, initial plug-port distance:
+          0.32 m'
+        score: 5.488478197081414
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 34.68 m/s^3'
+        score: 1.8384112522964107
+    tier3_message: 'No insertion detected. Final plug port distance: 0.03m.'
+    total: 36.07243482817536
+- class_name: AutoCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint
+  tier1: 1.0
+  tier2: 18.5182
+  tier3: 39.6713
+  timestamp: '20260408_230542'
+  total: 59.1895
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 18.51816356481658
+    t3: 39.671294692113825
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 24.19 seconds.'
+        score: 7.813527272727272
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.36 m, initial plug-port distance:
+          0.32 m'
+        score: 5.747100092511326
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 8.69 m/s^3'
+        score: 4.957536199577979
+    tier3_message: Partial insertion detected with distance of 0.01m.
+    total: 59.18945825693041
+- class_name: AutoCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint
+  tier1: 1.0
+  tier2: 19.9438
+  tier3: 25.0
+  timestamp: '20260408_233423'
+  total: 45.9438
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 19.943760168590536
+    t3: 25.0
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 5.04 seconds.'
+        score: 11.991272727272728
+      insertion force:
+        message: 'Insertion force above 20.00 N, detected for a time of 0.04 seconds.
+          Max detected force: 32.72N. This is below the threshold of 1.00 seconds.
+          Penalty not applied.'
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.35 m, initial plug-port distance:
+          0.32 m'
+        score: 5.843306275479936
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 32.42 m/s^3'
+        score: 2.109181165837875
+    tier3_message: 'No insertion detected. Final plug port distance: 0.01m.'
+    total: 45.943760168590536
+- class_name: AutoCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint
+  tier1: 1.0
+  tier2: 20.6903
+  tier3: 39.6711
+  timestamp: '20260408_233911'
+  total: 61.3614
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 20.690346861355014
+    t3: 39.67105301113667
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 10.07 seconds.'
+        score: 10.893381818181817
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.34 m, initial plug-port distance:
+          0.32 m'
+        score: 5.8515334853190755
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 17.12 m/s^3'
+        score: 3.9454315578541204
+    tier3_message: Partial insertion detected with distance of 0.01m.
+    total: 61.36139987249169
+- class_name: AutoCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint
+  tier1: 1.0
+  tier2: 20.7487
+  tier3: 39.6725
+  timestamp: '20260409_230559'
+  total: 61.4212
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 20.748691320239217
+    t3: 39.67251628273913
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 10.09 seconds.'
+        score: 10.889454545454544
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.35 m, initial plug-port distance:
+          0.32 m'
+        score: 5.840859689127806
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 16.51 m/s^3'
+        score: 4.018377085656866
+    tier3_message: Partial insertion detected with distance of 0.01m.
+    total: 61.42120760297835
+- class_name: CheatCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.CheatCodeJoint
+  tier1: 1.0
+  tier2: 14.3662
+  tier3: 40.3445
+  timestamp: '20260410_120755'
+  total: 55.7107
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 14.366185083974141
+    t3: 40.34450170796221
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 41.13 seconds.'
+        score: 4.117527272727273
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.37 m, initial plug-port distance:
+          0.32 m'
+        score: 5.6801284304116795
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 11.93 m/s^3'
+        score: 4.568529380835188
+    tier3_message: Partial insertion detected with distance of 0.01m.
+    total: 55.710686791936354
+- class_name: AutoCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint
+  tier1: 1.0
+  tier2: 21.1589
+  tier3: 49.9492
+  timestamp: '20260410_121828'
+  total: 72.108
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 21.15886585256893
+    t3: 49.94918237922182
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 11.04 seconds.'
+        score: 10.682618181818183
+      insertion force:
+        message: 'Insertion force above 20.00 N, detected for a time of 0.02 seconds.
+          Max detected force: 27.32N. This is below the threshold of 1.00 seconds.
+          Penalty not applied.'
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.35 m, initial plug-port distance:
+          0.32 m'
+        score: 5.7927234315998835
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 10.97 m/s^3'
+        score: 4.683524239150861
+    tier3_message: Partial insertion detected with distance of 0.00m.
+    total: 72.10804823179075
+- class_name: AutoCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint
+  tier1: 1.0
+  tier2: 20.4698
+  tier3: 46.0495
+  timestamp: '20260410_123000'
+  total: 67.5193
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 20.46982955409746
+    t3: 46.04946390485186
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 14.09 seconds.'
+        score: 10.016727272727271
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.35 m, initial plug-port distance:
+          0.32 m'
+        score: 5.8245974154185305
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 11.43 m/s^3'
+        score: 4.628504865951658
+    tier3_message: Partial insertion detected with distance of 0.01m.
+    total: 67.51929345894932
+- class_name: AutoCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint
+  tier1: 1.0
+  tier2: 20.3862
+  tier3: 39.6734
+  timestamp: '20260410_130251'
+  total: 61.0596
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 20.38622494931442
+    t3: 39.673423224462944
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 14.03 seconds.'
+        score: 10.02938181818182
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.34 m, initial plug-port distance:
+          0.32 m'
+        score: 5.887507778510554
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 12.76 m/s^3'
+        score: 4.469335352622046
+    tier3_message: Partial insertion detected with distance of 0.01m.
+    total: 61.05964817377736
+- class_name: AutoCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint
+  tier1: 1.0
+  tier2: 21.2082
+  tier3: 49.9478
+  timestamp: '20260410_130404'
+  total: 72.156
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 21.208169664023927
+    t3: 49.94780320030747
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 11.01 seconds.'
+        score: 10.6896
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.35 m, initial plug-port distance:
+          0.32 m'
+        score: 5.806420180891729
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 10.73 m/s^3'
+        score: 4.7121494831321975
+    tier3_message: Partial insertion detected with distance of 0.00m.
+    total: 72.1559728643314
+- class_name: AutoCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint
+  tier1: 1.0
+  tier2: 21.1871
+  tier3: 49.9485
+  timestamp: '20260410_130523'
+  total: 72.1356
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 21.18713429291716
+    t3: 49.948472981303915
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 11.03 seconds.'
+        score: 10.6848
+      insertion force:
+        message: No excessive force detected
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.35 m, initial plug-port distance:
+          0.32 m'
+        score: 5.802769486692438
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 10.84 m/s^3'
+        score: 4.699564806224724
+    tier3_message: Partial insertion detected with distance of 0.00m.
+    total: 72.13560727422107
+- class_name: AutoCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint
+  tier1: 1.0
+  tier2: 20.4383
+  tier3: 39.6714
+  timestamp: '20260410_130639'
+  total: 61.1098
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 20.438304599758528
+    t3: 39.671446417301894
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 14.02 seconds.'
+        score: 10.032872727272728
+      insertion force:
+        message: 'Insertion force above 20.00 N, detected for a time of 0.02 seconds.
+          Max detected force: 53.32N. This is below the threshold of 1.00 seconds.
+          Penalty not applied.'
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.34 m, initial plug-port distance:
+          0.32 m'
+        score: 5.876474359417554
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 12.26 m/s^3'
+        score: 4.528957513068246
+    tier3_message: Partial insertion detected with distance of 0.01m.
+    total: 61.10975101706042
+- class_name: AutoCodeJoint
+  ground_truth: 'true'
+  policy: aic_example_policies.ros.AutoCodeJoint
+  tier1: 1.0
+  tier2: 20.3936
+  tier3: 39.6705
+  timestamp: '20260410_130803'
+  total: 61.0641
+  trials:
+  - name: Trial 3
+    t1: 1.0
+    t2: 20.393590150351116
+    t3: 39.67053297535219
+    tier2_categories:
+      contacts:
+        message: No contact detected.
+        score: 0.0
+      duration:
+        message: 'Task duration: 14.05 seconds.'
+        score: 10.025018181818183
+      insertion force:
+        message: 'Insertion force above 20.00 N, detected for a time of 0.02 seconds.
+          Max detected force: 21.05N. This is below the threshold of 1.00 seconds.
+          Penalty not applied.'
+        score: 0.0
+      trajectory efficiency:
+        message: 'Total end-effector path length: 0.34 m, initial plug-port distance:
+          0.32 m'
+        score: 5.8762846098454045
+      trajectory smoothness:
+        message: 'Average linear jerk magnitude of the end effector: 12.56 m/s^3'
+        score: 4.4922873586875305
+    tier3_message: Partial insertion detected with distance of 0.01m.
+    total: 61.064123125703304

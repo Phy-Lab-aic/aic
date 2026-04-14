@@ -1,0 +1,439 @@
+bash: line 3: /home/yujin/ws_aic/install/setup.bash: No such file or directory
+[INFO] [1775643350.840692366] [aic_model]: Loading policy module: aic_example_policies.ros.CheatCodeHybrid
+[INFO] [1775643350.851841179] [aic_model]: Loaded policy module aic_example_policies.ros.CheatCodeHybrid
+[INFO] [1775643350.852229804] [aic_model]: Using policy: CheatCodeHybrid
+[INFO] [1775643360.605452640] [aic_model]: on_configure(LifecycleState(label='unconfigured', state_id=1))
+[INFO] [1775643360.605770745] [aic_model]: Instantiating policy...
+[INFO] [1775643360.611233619] [aic_model]: Policy.__init__()
+[ERROR] [1775643360.613391440] [aic_model]: aic_model lifecycle is not in the active state
+[INFO] [1775643361.615390991] [aic_model]: on_activate()
+[INFO] [1775643371.761694734] [aic_model]: Goal accepted
+[INFO] [1775643371.763166643] [aic_model]: Entering insert_cable_execute_callback()
+[INFO] [1775643371.774707749] [aic_model]: insert_cable execute loop
+[INFO] [1775643371.779274666] [aic_model]: CheatCodeHybrid.insert_cable() task: aic_task_interfaces.msg.Task(id='task_1', cable_type='sfp_sc', cable_name='cable_1', plug_type='sc', plug_name='sc_tip', port_type='sc', port_name='sc_port_base', target_module_name='sc_port_0', time_limit=180)
+[INFO] [1775643371.785674407] [aic_model]: Phase 1: Joint approach (world Z hover + slerp)...
+[INFO] [1775643371.799062904] [aic_model]: Setting joint mode...
+[INFO] [1775643371.810662096] [aic_model]: Successfully set target mode
+[INFO] [1775643372.797667499] [aic_model]: insert_cable execute loop
+[INFO] [1775643373.808713723] [aic_model]: insert_cable execute loop
+[INFO] [1775643374.818372277] [aic_model]: insert_cable execute loop
+[INFO] [1775643375.603827569] [aic_model]: Phase 1.5: Hover stabilization...
+[INFO] [1775643375.823315356] [aic_model]: insert_cable execute loop
+[INFO] [1775643376.615921477] [aic_model]: FT tare...
+[INFO] [1775643376.827035667] [aic_model]: insert_cable execute loop
+[INFO] [1775643377.125365685] [aic_model]: FT tare: [-0.6, -9.9, 18.4] N
+[INFO] [1775643377.125815634] [aic_model]: Phase 2: Cartesian insertion...
+[INFO] [1775643377.132612227] [aic_model]: step=0 z=0.1990  dist=156.7mm  contact=0.6N  penalty_t=0.00s
+[INFO] [1775643377.133399887] [aic_model]: Setting cartesian mode...
+[INFO] [1775643377.149064949] [aic_model]: Successfully set target mode
+[INFO] [1775643377.208989267] [aic_model]: step=1 z=0.1980  dist=156.6mm  contact=0.3N  penalty_t=0.00s
+[INFO] [1775643377.271825918] [aic_model]: step=2 z=0.1970  dist=156.3mm  contact=0.3N  penalty_t=0.00s
+[INFO] [1775643377.337034786] [aic_model]: step=3 z=0.1960  dist=155.9mm  contact=0.3N  penalty_t=0.00s
+[INFO] [1775643377.393597566] [aic_model]: step=4 z=0.1950  dist=155.5mm  contact=0.1N  penalty_t=0.00s
+[INFO] [1775643377.445905171] [aic_model]: step=5 z=0.1940  dist=155.0mm  contact=0.8N  penalty_t=0.00s
+[INFO] [1775643377.504215528] [aic_model]: step=6 z=0.1930  dist=154.5mm  contact=0.1N  penalty_t=0.00s
+[INFO] [1775643377.565119992] [aic_model]: step=7 z=0.1920  dist=153.8mm  contact=0.4N  penalty_t=0.00s
+[INFO] [1775643377.619531441] [aic_model]: step=8 z=0.1910  dist=153.1mm  contact=0.2N  penalty_t=0.00s
+[INFO] [1775643377.677138112] [aic_model]: step=9 z=0.1900  dist=152.4mm  contact=0.3N  penalty_t=0.00s
+[INFO] [1775643377.730105382] [aic_model]: step=10 z=0.1890  dist=151.8mm  contact=0.2N  penalty_t=0.00s
+[INFO] [1775643377.784174651] [aic_model]: step=11 z=0.1880  dist=151.0mm  contact=0.4N  penalty_t=0.00s
+[INFO] [1775643377.835290903] [aic_model]: step=12 z=0.1870  dist=150.1mm  contact=0.2N  penalty_t=0.00s
+[INFO] [1775643377.843677203] [aic_model]: insert_cable execute loop
+[INFO] [1775643377.883752757] [aic_model]: step=13 z=0.1860  dist=149.4mm  contact=0.4N  penalty_t=0.00s
+[INFO] [1775643377.944270268] [aic_model]: step=14 z=0.1850  dist=148.7mm  contact=0.2N  penalty_t=0.00s
+[INFO] [1775643377.996950650] [aic_model]: step=15 z=0.1840  dist=147.8mm  contact=0.7N  penalty_t=0.00s
+[INFO] [1775643378.046922276] [aic_model]: step=16 z=0.1830  dist=147.0mm  contact=0.3N  penalty_t=0.00s
+[INFO] [1775643378.103510275] [aic_model]: step=17 z=0.1820  dist=146.2mm  contact=0.5N  penalty_t=0.00s
+[INFO] [1775643378.153644832] [aic_model]: step=18 z=0.1810  dist=145.3mm  contact=0.3N  penalty_t=0.00s
+[INFO] [1775643378.218729103] [aic_model]: step=19 z=0.1800  dist=144.5mm  contact=0.3N  penalty_t=0.00s
+[INFO] [1775643378.274692973] [aic_model]: step=20 z=0.1790  dist=143.5mm  contact=0.5N  penalty_t=0.00s
+[INFO] [1775643378.337024326] [aic_model]: step=21 z=0.1780  dist=142.5mm  contact=0.6N  penalty_t=0.00s
+[INFO] [1775643378.387621865] [aic_model]: step=22 z=0.1770  dist=141.4mm  contact=0.5N  penalty_t=0.00s
+[INFO] [1775643378.441866118] [aic_model]: step=23 z=0.1760  dist=140.5mm  contact=0.5N  penalty_t=0.00s
+[INFO] [1775643378.504587980] [aic_model]: step=24 z=0.1750  dist=139.9mm  contact=0.4N  penalty_t=0.00s
+[INFO] [1775643378.554371250] [aic_model]: step=25 z=0.1740  dist=138.8mm  contact=0.8N  penalty_t=0.00s
+[INFO] [1775643378.603038275] [aic_model]: step=26 z=0.1730  dist=137.8mm  contact=0.8N  penalty_t=0.00s
+[INFO] [1775643378.652884080] [aic_model]: step=27 z=0.1720  dist=136.9mm  contact=0.6N  penalty_t=0.00s
+[INFO] [1775643378.717234661] [aic_model]: step=28 z=0.1710  dist=136.1mm  contact=0.1N  penalty_t=0.00s
+[INFO] [1775643378.778557267] [aic_model]: step=29 z=0.1700  dist=135.1mm  contact=0.8N  penalty_t=0.00s
+[INFO] [1775643378.827541706] [aic_model]: step=30 z=0.1690  dist=133.9mm  contact=0.9N  penalty_t=0.00s
+[INFO] [1775643378.844954526] [aic_model]: insert_cable execute loop
+[INFO] [1775643378.878682425] [aic_model]: step=31 z=0.1680  dist=133.0mm  contact=0.5N  penalty_t=0.00s
+[INFO] [1775643378.928528029] [aic_model]: step=32 z=0.1670  dist=132.2mm  contact=0.2N  penalty_t=0.00s
+[INFO] [1775643378.976976512] [aic_model]: step=33 z=0.1660  dist=131.5mm  contact=5.2N  penalty_t=0.00s
+[INFO] [1775643379.035578219] [aic_model]: step=34 z=0.1650  dist=130.7mm  contact=1.9N  penalty_t=0.00s
+[INFO] [1775643379.094938615] [aic_model]: step=35 z=0.1640  dist=130.0mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643379.152440729] [aic_model]: step=36 z=0.1630  dist=129.1mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643379.201741864] [aic_model]: step=37 z=0.1620  dist=128.3mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643379.254792231] [aic_model]: step=38 z=0.1610  dist=127.7mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643379.315851294] [aic_model]: step=39 z=0.1600  dist=126.9mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643379.370458609] [aic_model]: step=40 z=0.1590  dist=126.1mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643379.435607692] [aic_model]: step=41 z=0.1580  dist=125.3mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643379.496919842] [aic_model]: step=42 z=0.1570  dist=124.2mm  contact=1.8N  penalty_t=0.00s
+[INFO] [1775643379.552080144] [aic_model]: step=43 z=0.1560  dist=123.3mm  contact=2.0N  penalty_t=0.00s
+[INFO] [1775643379.608265063] [aic_model]: step=44 z=0.1550  dist=122.4mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643379.657741240] [aic_model]: step=45 z=0.1540  dist=121.5mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643379.709689207] [aic_model]: step=46 z=0.1530  dist=120.7mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643379.760238870] [aic_model]: step=47 z=0.1520  dist=119.9mm  contact=1.7N  penalty_t=0.00s
+[INFO] [1775643379.811323178] [aic_model]: step=48 z=0.1510  dist=119.0mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643379.857040574] [aic_model]: insert_cable execute loop
+[INFO] [1775643379.872247443] [aic_model]: step=49 z=0.1500  dist=118.1mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643379.932147432] [aic_model]: step=50 z=0.1490  dist=117.1mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643379.994190648] [aic_model]: step=51 z=0.1480  dist=116.0mm  contact=1.9N  penalty_t=0.00s
+[INFO] [1775643380.045325310] [aic_model]: step=52 z=0.1470  dist=115.0mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643380.101937327] [aic_model]: step=53 z=0.1460  dist=114.1mm  contact=1.7N  penalty_t=0.00s
+[INFO] [1775643380.159024821] [aic_model]: step=54 z=0.1450  dist=113.0mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643380.220910308] [aic_model]: step=55 z=0.1440  dist=112.1mm  contact=1.0N  penalty_t=0.00s
+[INFO] [1775643380.301055537] [aic_model]: step=56 z=0.1430  dist=111.0mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643380.357993315] [aic_model]: step=57 z=0.1420  dist=109.7mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643380.415640729] [aic_model]: step=58 z=0.1410  dist=108.7mm  contact=1.1N  penalty_t=0.00s
+[INFO] [1775643380.470484881] [aic_model]: step=59 z=0.1400  dist=107.7mm  contact=1.1N  penalty_t=0.00s
+[INFO] [1775643380.525343551] [aic_model]: step=60 z=0.1390  dist=106.8mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643380.576347443] [aic_model]: step=61 z=0.1380  dist=105.8mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643380.627893843] [aic_model]: step=62 z=0.1370  dist=104.8mm  contact=1.8N  penalty_t=0.00s
+[INFO] [1775643380.694740906] [aic_model]: step=63 z=0.1360  dist=104.0mm  contact=1.1N  penalty_t=0.00s
+[INFO] [1775643380.755012352] [aic_model]: step=64 z=0.1350  dist=102.6mm  contact=1.1N  penalty_t=0.00s
+[INFO] [1775643380.819264127] [aic_model]: step=65 z=0.1340  dist=101.5mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643380.873617977] [aic_model]: step=66 z=0.1330  dist=100.4mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643380.925906774] [aic_model]: insert_cable execute loop
+[INFO] [1775643380.936468060] [aic_model]: step=67 z=0.1320  dist=99.4mm  contact=1.0N  penalty_t=0.00s
+[INFO] [1775643380.996766616] [aic_model]: step=68 z=0.1310  dist=98.4mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643381.054778483] [aic_model]: step=69 z=0.1300  dist=97.1mm  contact=0.9N  penalty_t=0.00s
+[INFO] [1775643381.109227561] [aic_model]: step=70 z=0.1290  dist=96.1mm  contact=1.0N  penalty_t=0.00s
+[INFO] [1775643381.168059419] [aic_model]: step=71 z=0.1280  dist=95.1mm  contact=0.9N  penalty_t=0.00s
+[INFO] [1775643381.223774037] [aic_model]: step=72 z=0.1270  dist=94.1mm  contact=1.0N  penalty_t=0.00s
+[INFO] [1775643381.282122003] [aic_model]: step=73 z=0.1260  dist=93.0mm  contact=1.0N  penalty_t=0.00s
+[INFO] [1775643381.338424493] [aic_model]: step=74 z=0.1250  dist=92.0mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643381.400302279] [aic_model]: step=75 z=0.1240  dist=91.0mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643381.475754430] [aic_model]: step=76 z=0.1230  dist=89.8mm  contact=1.0N  penalty_t=0.00s
+[INFO] [1775643381.533693624] [aic_model]: step=77 z=0.1220  dist=88.6mm  contact=0.9N  penalty_t=0.00s
+[INFO] [1775643381.599726982] [aic_model]: step=78 z=0.1210  dist=87.6mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643381.659646963] [aic_model]: step=79 z=0.1200  dist=86.2mm  contact=1.1N  penalty_t=0.00s
+[INFO] [1775643381.718785946] [aic_model]: step=80 z=0.1190  dist=85.3mm  contact=0.8N  penalty_t=0.00s
+[INFO] [1775643381.776603125] [aic_model]: step=81 z=0.1180  dist=84.1mm  contact=0.9N  penalty_t=0.00s
+[INFO] [1775643381.834419713] [aic_model]: step=82 z=0.1170  dist=83.1mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643381.886634425] [aic_model]: step=83 z=0.1160  dist=82.3mm  contact=1.0N  penalty_t=0.00s
+[INFO] [1775643381.941763533] [aic_model]: step=84 z=0.1150  dist=81.4mm  contact=0.7N  penalty_t=0.00s
+[INFO] [1775643382.001727515] [aic_model]: step=85 z=0.1140  dist=80.6mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643382.015941378] [aic_model]: insert_cable execute loop
+[INFO] [1775643382.059427120] [aic_model]: step=86 z=0.1130  dist=79.8mm  contact=1.8N  penalty_t=0.00s
+[INFO] [1775643382.113707800] [aic_model]: step=87 z=0.1120  dist=79.1mm  contact=2.6N  penalty_t=0.00s
+[INFO] [1775643382.176724907] [aic_model]: step=88 z=0.1110  dist=78.3mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643382.235463726] [aic_model]: step=89 z=0.1100  dist=77.4mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643382.294348694] [aic_model]: step=90 z=0.1090  dist=76.5mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643382.351814148] [aic_model]: step=91 z=0.1080  dist=75.5mm  contact=1.8N  penalty_t=0.00s
+[INFO] [1775643382.403942265] [aic_model]: step=92 z=0.1070  dist=74.7mm  contact=1.8N  penalty_t=0.00s
+[INFO] [1775643382.461346125] [aic_model]: step=93 z=0.1060  dist=73.8mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643382.515383477] [aic_model]: step=94 z=0.1050  dist=72.8mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643382.568213436] [aic_model]: step=95 z=0.1040  dist=72.0mm  contact=1.7N  penalty_t=0.00s
+[INFO] [1775643382.629948692] [aic_model]: step=96 z=0.1030  dist=71.0mm  contact=1.9N  penalty_t=0.00s
+[INFO] [1775643382.684360373] [aic_model]: step=97 z=0.1020  dist=70.0mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643382.740183634] [aic_model]: step=98 z=0.1010  dist=69.1mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643382.793772139] [aic_model]: step=99 z=0.1000  dist=68.2mm  contact=1.7N  penalty_t=0.00s
+[INFO] [1775643382.850833399] [aic_model]: step=100 z=0.0990  dist=67.2mm  contact=1.9N  penalty_t=0.00s
+[INFO] [1775643382.910082618] [aic_model]: step=101 z=0.0980  dist=66.2mm  contact=1.7N  penalty_t=0.00s
+[INFO] [1775643382.980464085] [aic_model]: step=102 z=0.0970  dist=65.2mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643383.041221893] [aic_model]: step=103 z=0.0960  dist=63.9mm  contact=1.7N  penalty_t=0.00s
+[INFO] [1775643383.085103457] [aic_model]: insert_cable execute loop
+[INFO] [1775643383.096501344] [aic_model]: step=104 z=0.0950  dist=62.9mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643383.146938189] [aic_model]: step=105 z=0.0940  dist=61.9mm  contact=1.7N  penalty_t=0.00s
+[INFO] [1775643383.204160908] [aic_model]: step=106 z=0.0930  dist=61.0mm  contact=1.8N  penalty_t=0.00s
+[INFO] [1775643383.259870482] [aic_model]: step=107 z=0.0920  dist=59.9mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643383.317417549] [aic_model]: step=108 z=0.0910  dist=58.8mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643383.371695456] [aic_model]: step=109 z=0.0900  dist=57.9mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643383.430431843] [aic_model]: step=110 z=0.0890  dist=56.9mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643383.484791390] [aic_model]: step=111 z=0.0880  dist=56.1mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643383.552156075] [aic_model]: step=112 z=0.0870  dist=55.2mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643383.612830932] [aic_model]: step=113 z=0.0860  dist=54.4mm  contact=1.8N  penalty_t=0.00s
+[INFO] [1775643383.668008496] [aic_model]: step=114 z=0.0850  dist=53.3mm  contact=1.8N  penalty_t=0.00s
+[INFO] [1775643383.721336153] [aic_model]: step=115 z=0.0840  dist=52.5mm  contact=2.0N  penalty_t=0.00s
+[INFO] [1775643383.776426476] [aic_model]: step=116 z=0.0830  dist=51.7mm  contact=2.0N  penalty_t=0.00s
+[INFO] [1775643383.832221597] [aic_model]: step=117 z=0.0820  dist=50.8mm  contact=1.9N  penalty_t=0.00s
+[INFO] [1775643383.891119021] [aic_model]: step=118 z=0.0810  dist=49.8mm  contact=2.0N  penalty_t=0.00s
+[INFO] [1775643383.947231706] [aic_model]: step=119 z=0.0800  dist=48.9mm  contact=2.3N  penalty_t=0.00s
+[INFO] [1775643384.002071268] [aic_model]: step=120 z=0.0790  dist=48.0mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643384.062993613] [aic_model]: step=121 z=0.0780  dist=47.0mm  contact=1.8N  penalty_t=0.00s
+[INFO] [1775643384.118500034] [aic_model]: step=122 z=0.0770  dist=46.2mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643384.140978246] [aic_model]: insert_cable execute loop
+[INFO] [1775643384.172948418] [aic_model]: step=123 z=0.0760  dist=45.3mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643384.227901120] [aic_model]: step=124 z=0.0750  dist=44.4mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643384.293919058] [aic_model]: step=125 z=0.0740  dist=43.5mm  contact=2.5N  penalty_t=0.00s
+[INFO] [1775643384.357034541] [aic_model]: step=126 z=0.0730  dist=42.4mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643384.417377800] [aic_model]: step=127 z=0.0720  dist=41.3mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643384.482953634] [aic_model]: step=128 z=0.0710  dist=40.3mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643384.542838358] [aic_model]: step=129 z=0.0705  dist=39.2mm  contact=2.0N  penalty_t=0.00s
+[INFO] [1775643384.612007589] [aic_model]: step=130 z=0.0700  dist=38.3mm  contact=1.7N  penalty_t=0.00s
+[INFO] [1775643384.671480645] [aic_model]: step=131 z=0.0695  dist=37.3mm  contact=1.9N  penalty_t=0.00s
+[INFO] [1775643384.731236271] [aic_model]: step=132 z=0.0690  dist=36.4mm  contact=1.8N  penalty_t=0.00s
+[INFO] [1775643384.786869286] [aic_model]: step=133 z=0.0685  dist=35.5mm  contact=1.1N  penalty_t=0.00s
+[INFO] [1775643384.842426421] [aic_model]: step=134 z=0.0680  dist=34.6mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643384.896054644] [aic_model]: step=135 z=0.0675  dist=33.7mm  contact=1.1N  penalty_t=0.00s
+[INFO] [1775643384.958873231] [aic_model]: step=136 z=0.0670  dist=32.9mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643385.033774529] [aic_model]: step=137 z=0.0665  dist=32.0mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643385.097588211] [aic_model]: step=138 z=0.0660  dist=31.0mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643385.158262682] [aic_model]: step=139 z=0.0655  dist=30.1mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643385.218884616] [aic_model]: step=140 z=0.0650  dist=29.3mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643385.274534885] [aic_model]: insert_cable execute loop
+[INFO] [1775643385.277572419] [aic_model]: step=141 z=0.0645  dist=28.5mm  contact=1.7N  penalty_t=0.00s
+[INFO] [1775643385.334875491] [aic_model]: step=142 z=0.0640  dist=27.8mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643385.395113308] [aic_model]: step=143 z=0.0635  dist=27.1mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643385.452962387] [aic_model]: step=144 z=0.0630  dist=26.4mm  contact=1.8N  penalty_t=0.00s
+[INFO] [1775643385.516958685] [aic_model]: step=145 z=0.0625  dist=25.7mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643385.572733854] [aic_model]: step=146 z=0.0620  dist=24.9mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643385.628808454] [aic_model]: step=147 z=0.0615  dist=24.2mm  contact=1.6N  penalty_t=0.00s
+[INFO] [1775643385.684596126] [aic_model]: step=148 z=0.0610  dist=23.6mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643385.739136261] [aic_model]: step=149 z=0.0605  dist=23.0mm  contact=0.8N  penalty_t=0.00s
+[INFO] [1775643385.796976292] [aic_model]: step=150 z=0.0600  dist=22.3mm  contact=1.0N  penalty_t=0.00s
+[INFO] [1775643385.856419947] [aic_model]: step=151 z=0.0595  dist=21.8mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643385.910578038] [aic_model]: step=152 z=0.0590  dist=21.1mm  contact=0.7N  penalty_t=0.00s
+[INFO] [1775643385.988362367] [aic_model]: step=153 z=0.0585  dist=20.6mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643386.049394258] [aic_model]: step=154 z=0.0580  dist=19.7mm  contact=1.9N  penalty_t=0.00s
+[INFO] [1775643386.117468458] [aic_model]: step=155 z=0.0575  dist=19.2mm  contact=1.1N  penalty_t=0.00s
+[INFO] [1775643386.174617921] [aic_model]: step=156 z=0.0570  dist=18.5mm  contact=1.4N  penalty_t=0.00s
+[INFO] [1775643386.236019984] [aic_model]: step=157 z=0.0565  dist=17.9mm  contact=0.8N  penalty_t=0.00s
+[INFO] [1775643386.290095285] [aic_model]: step=158 z=0.0560  dist=17.3mm  contact=1.2N  penalty_t=0.00s
+[INFO] [1775643386.348514967] [aic_model]: step=159 z=0.0555  dist=16.8mm  contact=0.8N  penalty_t=0.00s
+[INFO] [1775643386.385189113] [aic_model]: insert_cable execute loop
+[INFO] [1775643386.415503648] [aic_model]: step=160 z=0.0550  dist=16.3mm  contact=0.8N  penalty_t=0.00s
+[INFO] [1775643386.466333513] [aic_model]: step=161 z=0.0545  dist=15.6mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643386.523581006] [aic_model]: step=162 z=0.0540  dist=15.0mm  contact=1.5N  penalty_t=0.00s
+[INFO] [1775643386.587010112] [aic_model]: step=163 z=0.0535  dist=14.5mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643386.642455646] [aic_model]: step=164 z=0.0530  dist=13.9mm  contact=1.3N  penalty_t=0.00s
+[INFO] [1775643386.702963804] [aic_model]: step=165 z=0.0525  dist=13.7mm  contact=1.1N  penalty_t=0.00s
+[INFO] [1775643386.763723624] [aic_model]: step=166 z=0.0520  dist=13.7mm  contact=3.0N  penalty_t=0.00s
+[INFO] [1775643386.823988163] [aic_model]: step=167 z=0.0515  dist=13.7mm  contact=3.5N  penalty_t=0.00s
+[INFO] [1775643386.884020043] [aic_model]: step=168 z=0.0510  dist=13.7mm  contact=4.1N  penalty_t=0.00s
+[INFO] [1775643386.942690016] [aic_model]: step=169 z=0.0505  dist=13.7mm  contact=2.0N  penalty_t=0.00s
+[INFO] [1775643387.004567866] [aic_model]: step=170 z=0.0500  dist=13.7mm  contact=2.9N  penalty_t=0.00s
+[INFO] [1775643387.059840284] [aic_model]: step=171 z=0.0495  dist=13.7mm  contact=2.7N  penalty_t=0.00s
+[INFO] [1775643387.125347760] [aic_model]: step=172 z=0.0490  dist=13.7mm  contact=2.7N  penalty_t=0.00s
+[INFO] [1775643387.187201819] [aic_model]: step=173 z=0.0485  dist=13.7mm  contact=2.8N  penalty_t=0.00s
+[INFO] [1775643387.248496738] [aic_model]: step=174 z=0.0480  dist=13.7mm  contact=3.2N  penalty_t=0.00s
+[INFO] [1775643387.313769973] [aic_model]: step=175 z=0.0475  dist=13.7mm  contact=3.5N  penalty_t=0.00s
+[INFO] [1775643387.375896453] [aic_model]: step=176 z=0.0470  dist=13.7mm  contact=3.9N  penalty_t=0.00s
+[INFO] [1775643387.439723966] [aic_model]: step=177 z=0.0465  dist=13.7mm  contact=4.2N  penalty_t=0.00s
+[INFO] [1775643387.499699425] [aic_model]: step=178 z=0.0460  dist=13.8mm  contact=3.9N  penalty_t=0.00s
+[INFO] [1775643387.554130654] [aic_model]: insert_cable execute loop
+[INFO] [1775643387.558307356] [aic_model]: step=179 z=0.0455  dist=13.8mm  contact=4.0N  penalty_t=0.00s
+[INFO] [1775643387.614908741] [aic_model]: step=180 z=0.0450  dist=13.8mm  contact=4.0N  penalty_t=0.00s
+[INFO] [1775643387.670026354] [aic_model]: step=181 z=0.0445  dist=13.8mm  contact=3.7N  penalty_t=0.00s
+[INFO] [1775643387.733521394] [aic_model]: step=182 z=0.0440  dist=13.9mm  contact=4.7N  penalty_t=0.00s
+[INFO] [1775643387.797443141] [aic_model]: step=183 z=0.0435  dist=13.9mm  contact=4.6N  penalty_t=0.00s
+[INFO] [1775643387.853062428] [aic_model]: step=184 z=0.0430  dist=13.9mm  contact=4.9N  penalty_t=0.00s
+[INFO] [1775643387.912987905] [aic_model]: step=185 z=0.0425  dist=14.0mm  contact=4.7N  penalty_t=0.00s
+[INFO] [1775643387.979491085] [aic_model]: step=186 z=0.0420  dist=14.0mm  contact=5.2N  penalty_t=0.00s
+[INFO] [1775643388.037649419] [aic_model]: step=187 z=0.0415  dist=14.1mm  contact=5.5N  penalty_t=0.00s
+[INFO] [1775643388.093987893] [aic_model]: step=188 z=0.0410  dist=14.1mm  contact=5.4N  penalty_t=0.00s
+[INFO] [1775643388.147897343] [aic_model]: step=189 z=0.0405  dist=14.2mm  contact=5.1N  penalty_t=0.00s
+[INFO] [1775643388.213470363] [aic_model]: step=190 z=0.0400  dist=14.2mm  contact=4.7N  penalty_t=0.00s
+[INFO] [1775643388.279960001] [aic_model]: step=191 z=0.0395  dist=14.3mm  contact=5.5N  penalty_t=0.00s
+[INFO] [1775643388.349882131] [aic_model]: step=192 z=0.0390  dist=14.3mm  contact=5.4N  penalty_t=0.00s
+[INFO] [1775643388.415857242] [aic_model]: step=193 z=0.0385  dist=14.3mm  contact=6.5N  penalty_t=0.00s
+[INFO] [1775643388.480203412] [aic_model]: step=194 z=0.0380  dist=14.3mm  contact=6.3N  penalty_t=0.00s
+[INFO] [1775643388.540950535] [aic_model]: step=195 z=0.0375  dist=14.3mm  contact=8.1N  penalty_t=0.00s
+[INFO] [1775643388.608870808] [aic_model]: step=196 z=0.0370  dist=14.3mm  contact=6.0N  penalty_t=0.00s
+[INFO] [1775643388.677041933] [aic_model]: step=197 z=0.0365  dist=14.3mm  contact=2.7N  penalty_t=0.00s
+[INFO] [1775643388.743231989] [aic_model]: step=198 z=0.0360  dist=14.4mm  contact=3.1N  penalty_t=0.00s
+[INFO] [1775643388.762233783] [aic_model]: insert_cable execute loop
+[INFO] [1775643388.809045151] [aic_model]: step=199 z=0.0355  dist=14.4mm  contact=8.1N  penalty_t=0.00s
+[INFO] [1775643388.879543582] [aic_model]: step=200 z=0.0350  dist=14.4mm  contact=7.4N  penalty_t=0.00s
+[INFO] [1775643388.946129838] [aic_model]: step=201 z=0.0345  dist=14.4mm  contact=2.6N  penalty_t=0.00s
+[INFO] [1775643389.028553742] [aic_model]: step=202 z=0.0340  dist=14.4mm  contact=2.1N  penalty_t=0.00s
+[INFO] [1775643389.100603163] [aic_model]: step=203 z=0.0335  dist=14.4mm  contact=6.5N  penalty_t=0.00s
+[INFO] [1775643389.168703500] [aic_model]: step=204 z=0.0330  dist=14.4mm  contact=7.7N  penalty_t=0.00s
+[INFO] [1775643389.241224459] [aic_model]: step=205 z=0.0325  dist=14.5mm  contact=6.7N  penalty_t=0.00s
+[INFO] [1775643389.319013419] [aic_model]: step=206 z=0.0320  dist=14.5mm  contact=7.3N  penalty_t=0.00s
+[INFO] [1775643389.396193248] [aic_model]: step=207 z=0.0315  dist=14.5mm  contact=7.1N  penalty_t=0.00s
+[INFO] [1775643389.467964997] [aic_model]: step=208 z=0.0310  dist=14.5mm  contact=7.7N  penalty_t=0.00s
+[INFO] [1775643389.542119694] [aic_model]: step=209 z=0.0305  dist=14.5mm  contact=7.0N  penalty_t=0.00s
+[INFO] [1775643389.612724845] [aic_model]: step=210 z=0.0300  dist=14.5mm  contact=7.7N  penalty_t=0.00s
+[INFO] [1775643389.684020136] [aic_model]: step=211 z=0.0295  dist=14.5mm  contact=7.6N  penalty_t=0.00s
+[INFO] [1775643389.757760150] [aic_model]: step=212 z=0.0290  dist=14.5mm  contact=8.8N  penalty_t=0.00s
+[INFO] [1775643389.835495652] [aic_model]: step=213 z=0.0285  dist=14.5mm  contact=8.5N  penalty_t=0.00s
+[INFO] [1775643389.905755566] [aic_model]: step=214 z=0.0280  dist=14.5mm  contact=8.5N  penalty_t=0.00s
+[INFO] [1775643389.980031106] [aic_model]: step=215 z=0.0275  dist=14.6mm  contact=9.0N  penalty_t=0.00s
+[INFO] [1775643390.051748618] [aic_model]: step=216 z=0.0270  dist=14.6mm  contact=8.3N  penalty_t=0.00s
+[INFO] [1775643390.139480012] [aic_model]: step=217 z=0.0265  dist=14.6mm  contact=8.5N  penalty_t=0.00s
+[INFO] [1775643390.174708893] [aic_model]: insert_cable execute loop
+[INFO] [1775643390.220346664] [aic_model]: step=218 z=0.0260  dist=14.6mm  contact=8.7N  penalty_t=0.00s
+[INFO] [1775643390.298160263] [aic_model]: step=219 z=0.0255  dist=14.6mm  contact=8.9N  penalty_t=0.00s
+[INFO] [1775643390.363598842] [aic_model]: step=220 z=0.0250  dist=14.7mm  contact=8.8N  penalty_t=0.00s
+[INFO] [1775643390.428978111] [aic_model]: step=221 z=0.0245  dist=14.7mm  contact=9.8N  penalty_t=0.00s
+[INFO] [1775643390.495601471] [aic_model]: step=222 z=0.0240  dist=14.7mm  contact=8.9N  penalty_t=0.00s
+[INFO] [1775643390.557116984] [aic_model]: step=223 z=0.0235  dist=14.7mm  contact=9.4N  penalty_t=0.00s
+[INFO] [1775643390.624011313] [aic_model]: step=224 z=0.0230  dist=14.7mm  contact=8.8N  penalty_t=0.00s
+[INFO] [1775643390.686763995] [aic_model]: step=225 z=0.0225  dist=14.7mm  contact=9.9N  penalty_t=0.00s
+[INFO] [1775643390.756680089] [aic_model]: step=226 z=0.0220  dist=14.7mm  contact=9.5N  penalty_t=0.00s
+[INFO] [1775643390.827729250] [aic_model]: step=227 z=0.0215  dist=14.7mm  contact=10.0N  penalty_t=0.00s
+[INFO] [1775643390.899231957] [aic_model]: step=228 z=0.0210  dist=14.7mm  contact=9.9N  penalty_t=0.00s
+[INFO] [1775643390.968340784] [aic_model]: step=229 z=0.0205  dist=14.7mm  contact=9.7N  penalty_t=0.00s
+[INFO] [1775643391.035976711] [aic_model]: step=230 z=0.0200  dist=14.7mm  contact=10.3N  penalty_t=0.00s
+[INFO] [1775643391.109709548] [aic_model]: step=231 z=0.0195  dist=14.7mm  contact=10.3N  penalty_t=0.00s
+[INFO] [1775643391.183309409] [aic_model]: step=232 z=0.0190  dist=14.7mm  contact=10.6N  penalty_t=0.00s
+[INFO] [1775643391.274615722] [aic_model]: step=233 z=0.0185  dist=14.7mm  contact=10.9N  penalty_t=0.00s
+[INFO] [1775643391.345927720] [aic_model]: step=234 z=0.0180  dist=14.7mm  contact=10.4N  penalty_t=0.00s
+[INFO] [1775643391.422042053] [aic_model]: step=235 z=0.0175  dist=14.7mm  contact=10.6N  penalty_t=0.00s
+[INFO] [1775643391.490822960] [aic_model]: step=236 z=0.0170  dist=14.7mm  contact=10.9N  penalty_t=0.00s
+[INFO] [1775643391.512855899] [aic_model]: insert_cable execute loop
+[INFO] [1775643391.568230875] [aic_model]: step=237 z=0.0165  dist=14.7mm  contact=11.1N  penalty_t=0.00s
+[INFO] [1775643391.647306212] [aic_model]: step=238 z=0.0160  dist=14.7mm  contact=11.0N  penalty_t=0.00s
+[INFO] [1775643391.718382937] [aic_model]: step=239 z=0.0155  dist=14.7mm  contact=11.2N  penalty_t=0.00s
+[INFO] [1775643391.788478364] [aic_model]: step=240 z=0.0150  dist=14.7mm  contact=11.1N  penalty_t=0.00s
+[INFO] [1775643391.857451325] [aic_model]: step=241 z=0.0145  dist=14.7mm  contact=11.6N  penalty_t=0.00s
+[INFO] [1775643391.928119447] [aic_model]: step=242 z=0.0140  dist=14.7mm  contact=12.0N  penalty_t=0.00s
+[INFO] [1775643391.995796701] [aic_model]: step=243 z=0.0135  dist=14.7mm  contact=11.3N  penalty_t=0.00s
+[INFO] [1775643392.066218092] [aic_model]: step=244 z=0.0130  dist=14.7mm  contact=12.0N  penalty_t=0.00s
+[INFO] [1775643392.138429760] [aic_model]: step=245 z=0.0125  dist=14.7mm  contact=12.6N  penalty_t=0.00s
+[INFO] [1775643392.219540859] [aic_model]: step=246 z=0.0120  dist=14.7mm  contact=11.9N  penalty_t=0.00s
+[INFO] [1775643392.299218418] [aic_model]: step=247 z=0.0115  dist=14.7mm  contact=12.5N  penalty_t=0.00s
+[INFO] [1775643392.376825734] [aic_model]: step=248 z=0.0110  dist=14.7mm  contact=12.9N  penalty_t=0.00s
+[INFO] [1775643392.454437719] [aic_model]: step=249 z=0.0105  dist=14.7mm  contact=12.6N  penalty_t=0.00s
+[INFO] [1775643392.532610556] [aic_model]: step=250 z=0.0100  dist=14.7mm  contact=13.0N  penalty_t=0.00s
+[INFO] [1775643392.611984556] [aic_model]: step=251 z=0.0095  dist=14.8mm  contact=12.8N  penalty_t=0.00s
+[INFO] [1775643392.693231476] [aic_model]: step=252 z=0.0090  dist=14.8mm  contact=13.1N  penalty_t=0.00s
+[INFO] [1775643392.773643157] [aic_model]: step=253 z=0.0085  dist=14.8mm  contact=12.7N  penalty_t=0.00s
+[INFO] [1775643392.852687409] [aic_model]: step=254 z=0.0080  dist=14.8mm  contact=12.8N  penalty_t=0.00s
+[INFO] [1775643392.931308602] [aic_model]: step=255 z=0.0075  dist=14.9mm  contact=12.5N  penalty_t=0.00s
+[INFO] [1775643393.009954201] [aic_model]: step=256 z=0.0070  dist=15.0mm  contact=13.0N  penalty_t=0.00s
+[INFO] [1775643393.017420272] [aic_model]: insert_cable execute loop
+[INFO] [1775643393.095717422] [aic_model]: step=257 z=0.0065  dist=15.1mm  contact=12.8N  penalty_t=0.00s
+[INFO] [1775643393.181228729] [aic_model]: step=258 z=0.0060  dist=15.1mm  contact=12.9N  penalty_t=0.00s
+[INFO] [1775643393.267258501] [aic_model]: step=259 z=0.0055  dist=15.1mm  contact=13.0N  penalty_t=0.00s
+[INFO] [1775643393.358785458] [aic_model]: step=260 z=0.0050  dist=15.1mm  contact=12.1N  penalty_t=0.00s
+[INFO] [1775643393.435029486] [aic_model]: step=261 z=0.0045  dist=15.1mm  contact=12.7N  penalty_t=0.00s
+[INFO] [1775643393.514670691] [aic_model]: step=262 z=0.0040  dist=15.1mm  contact=12.6N  penalty_t=0.00s
+[INFO] [1775643393.584544497] [aic_model]: step=263 z=0.0035  dist=15.1mm  contact=12.7N  penalty_t=0.00s
+[INFO] [1775643393.645574774] [aic_model]: step=264 z=0.0030  dist=15.0mm  contact=12.9N  penalty_t=0.00s
+[INFO] [1775643393.705609828] [aic_model]: step=265 z=0.0025  dist=15.0mm  contact=12.9N  penalty_t=0.00s
+[INFO] [1775643393.764170136] [aic_model]: step=266 z=0.0020  dist=15.0mm  contact=12.8N  penalty_t=0.00s
+[INFO] [1775643393.827421855] [aic_model]: step=267 z=0.0015  dist=15.0mm  contact=12.8N  penalty_t=0.00s
+[INFO] [1775643393.885021123] [aic_model]: step=268 z=0.0010  dist=15.1mm  contact=12.4N  penalty_t=0.00s
+[INFO] [1775643393.949693288] [aic_model]: step=269 z=0.0005  dist=15.2mm  contact=14.1N  penalty_t=0.00s
+[INFO] [1775643394.025601088] [aic_model]: step=270 z=-0.0000  dist=15.3mm  contact=12.1N  penalty_t=0.00s
+[INFO] [1775643394.089972021] [aic_model]: step=271 z=-0.0005  dist=15.4mm  contact=13.8N  penalty_t=0.00s
+[INFO] [1775643394.150705093] [aic_model]: step=272 z=-0.0010  dist=15.5mm  contact=13.2N  penalty_t=0.00s
+[INFO] [1775643394.211056913] [aic_model]: step=273 z=-0.0015  dist=15.6mm  contact=12.8N  penalty_t=0.00s
+[INFO] [1775643394.274771898] [aic_model]: step=274 z=-0.0020  dist=15.7mm  contact=12.7N  penalty_t=0.00s
+[INFO] [1775643394.337577628] [aic_model]: step=275 z=-0.0025  dist=15.9mm  contact=13.1N  penalty_t=0.00s
+[INFO] [1775643394.348755647] [aic_model]: insert_cable execute loop
+[INFO] [1775643394.395856129] [aic_model]: step=276 z=-0.0030  dist=16.0mm  contact=12.1N  penalty_t=0.00s
+[INFO] [1775643394.454922321] [aic_model]: step=277 z=-0.0035  dist=16.1mm  contact=13.1N  penalty_t=0.00s
+[INFO] [1775643394.517078645] [aic_model]: step=278 z=-0.0040  dist=16.2mm  contact=13.2N  penalty_t=0.00s
+[INFO] [1775643394.580967951] [aic_model]: step=279 z=-0.0045  dist=15.6mm  contact=14.0N  penalty_t=0.00s
+[INFO] [1775643394.638265716] [aic_model]: step=280 z=-0.0050  dist=13.9mm  contact=6.0N  penalty_t=0.00s
+[INFO] [1775643394.696890265] [aic_model]: step=281 z=-0.0055  dist=12.2mm  contact=9.1N  penalty_t=0.00s
+[INFO] [1775643394.749871780] [aic_model]: step=282 z=-0.0060  dist=10.8mm  contact=6.8N  penalty_t=0.00s
+[INFO] [1775643394.808215431] [aic_model]: step=283 z=-0.0065  dist=10.2mm  contact=7.7N  penalty_t=0.00s
+[INFO] [1775643394.887779839] [aic_model]: step=284 z=-0.0070  dist=10.2mm  contact=5.5N  penalty_t=0.00s
+[INFO] [1775643394.961247707] [aic_model]: step=285 z=-0.0075  dist=10.5mm  contact=14.5N  penalty_t=0.00s
+[INFO] [1775643395.031749754] [aic_model]: step=286 z=-0.0080  dist=10.5mm  contact=15.5N  penalty_t=0.00s
+[INFO] [1775643395.099712064] [aic_model]: step=287 z=-0.0085  dist=10.6mm  contact=13.0N  penalty_t=0.00s
+[INFO] [1775643395.162186857] [aic_model]: step=288 z=-0.0090  dist=10.8mm  contact=12.7N  penalty_t=0.00s
+[INFO] [1775643395.224084638] [aic_model]: step=289 z=-0.0095  dist=11.0mm  contact=12.9N  penalty_t=0.00s
+[INFO] [1775643395.283792444] [aic_model]: step=290 z=-0.0100  dist=11.2mm  contact=12.8N  penalty_t=0.00s
+[INFO] [1775643395.344136843] [aic_model]: step=291 z=-0.0105  dist=11.3mm  contact=12.9N  penalty_t=0.00s
+[INFO] [1775643395.407568830] [aic_model]: step=292 z=-0.0110  dist=11.5mm  contact=13.1N  penalty_t=0.00s
+[INFO] [1775643395.465865888] [aic_model]: step=293 z=-0.0115  dist=11.7mm  contact=13.1N  penalty_t=0.00s
+[INFO] [1775643395.525715315] [aic_model]: step=294 z=-0.0120  dist=11.6mm  contact=13.4N  penalty_t=0.00s
+[INFO] [1775643395.538076073] [aic_model]: insert_cable execute loop
+[INFO] [1775643395.585990727] [aic_model]: step=295 z=-0.0125  dist=11.6mm  contact=13.1N  penalty_t=0.00s
+[INFO] [1775643395.645990151] [aic_model]: step=296 z=-0.0130  dist=11.6mm  contact=13.1N  penalty_t=0.00s
+[INFO] [1775643395.710474485] [aic_model]: step=297 z=-0.0135  dist=11.6mm  contact=12.9N  penalty_t=0.00s
+[INFO] [1775643395.778360385] [aic_model]: step=298 z=-0.0140  dist=11.6mm  contact=13.2N  penalty_t=0.00s
+[INFO] [1775643395.835432717] [aic_model]: step=299 z=-0.0145  dist=11.5mm  contact=13.2N  penalty_t=0.00s
+[INFO] [1775643395.897507353] [aic_model]: step=300 z=-0.0150  dist=11.4mm  contact=13.1N  penalty_t=0.00s
+[WARN] [1775643395.951671489] [aic_model]: z_offset safety limit reached.
+[INFO] [1775643395.952181168] [aic_model]: Waiting for connector to stabilize...
+[INFO] [1775643396.764344825] [aic_model]: insert_cable execute loop
+[INFO] [1775643398.128589024] [aic_model]: insert_cable execute loop
+[INFO] [1775643398.616761266] [aic_model]: CheatCodeHybrid.insert_cable() done.
+[INFO] [1775643399.453694740] [aic_model]: insert_cable() returned True
+[INFO] [1775643399.956475212] [aic_model]: on_deactivate(LifecycleState(label='active', state_id=3))
+[INFO] [1775643400.815673009] [aic_model]: on_activate()
+[INFO] [1775643405.150582969] [aic_model]: Goal accepted
+[INFO] [1775643405.151924110] [aic_model]: Entering insert_cable_execute_callback()
+[INFO] [1775643405.162424004] [aic_model]: CheatCodeHybrid.insert_cable() task: aic_task_interfaces.msg.Task(id='task_1', cable_type='sfp_sc', cable_name='cable_1', plug_type='sc', plug_name='sc_tip', port_type='sc', port_name='sc_port_base', target_module_name='sc_port_1', time_limit=180)
+[INFO] [1775643405.163916243] [aic_model]: insert_cable execute loop
+[INFO] [1775643405.170584669] [aic_model]: Phase 1: Joint approach (world Z hover + slerp)...
+[INFO] [1775643405.177966819] [aic_model]: Setting joint mode...
+[INFO] [1775643405.185741323] [aic_model]: Successfully set target mode
+[INFO] [1775643406.332526406] [aic_model]: insert_cable execute loop
+[INFO] [1775643407.773167559] [aic_model]: insert_cable execute loop
+[INFO] [1775643409.293284943] [aic_model]: insert_cable execute loop
+[INFO] [1775643410.832788000] [aic_model]: Phase 1.5: Hover stabilization...
+[INFO] [1775643411.292143703] [aic_model]: insert_cable execute loop
+[INFO] [1775643412.232814796] [aic_model]: FT tare...
+[INFO] [1775643412.417945422] [aic_model]: insert_cable execute loop
+[INFO] [1775643412.781393800] [aic_model]: FT tare: [-2411.3, -572.4, -1015.8] N
+[INFO] [1775643412.781854789] [aic_model]: Phase 2: Cartesian insertion...
+[INFO] [1775643412.788182710] [aic_model]: step=0 z=0.1990  dist=147.8mm  contact=411.3N  penalty_t=0.05s
+[INFO] [1775643412.821419873] [aic_model]: Setting cartesian mode...
+[INFO] [1775643412.831516016] [aic_model]: Successfully set target mode
+[INFO] [1775643412.972329813] [aic_model]: step=1 z=0.1980  dist=120.1mm  contact=782.9N  penalty_t=0.10s
+[INFO] [1775643413.127578703] [aic_model]: step=2 z=0.1970  dist=122.5mm  contact=234.5N  penalty_t=0.15s
+[INFO] [1775643413.288016727] [aic_model]: step=3 z=0.1960  dist=122.1mm  contact=537.7N  penalty_t=0.20s
+[INFO] [1775643413.455392263] [aic_model]: step=4 z=0.1950  dist=102.7mm  contact=945.1N  penalty_t=0.25s
+[INFO] [1775643413.637546082] [aic_model]: step=5 z=0.1940  dist=80.8mm  contact=674.8N  penalty_t=0.30s
+[INFO] [1775643413.845516431] [aic_model]: step=6 z=0.1930  dist=103.3mm  contact=3189.5N  penalty_t=0.35s
+[INFO] [1775643413.972351826] [aic_model]: step=7 z=0.1920  dist=100.5mm  contact=3189.5N  penalty_t=0.40s
+[INFO] [1775643414.086350060] [aic_model]: step=8 z=0.1910  dist=89.3mm  contact=3114.9N  penalty_t=0.45s
+[INFO] [1775643414.200712286] [aic_model]: step=9 z=0.1900  dist=87.4mm  contact=2778.7N  penalty_t=0.50s
+[INFO] [1775643414.331833994] [aic_model]: step=10 z=0.1890  dist=84.4mm  contact=3049.6N  penalty_t=0.55s
+[INFO] [1775643414.469008396] [aic_model]: step=11 z=0.1880  dist=82.9mm  contact=3128.7N  penalty_t=0.60s
+[INFO] [1775643414.566740086] [aic_model]: insert_cable execute loop
+[INFO] [1775643414.599986610] [aic_model]: step=12 z=0.1870  dist=82.5mm  contact=3176.9N  penalty_t=0.65s
+[INFO] [1775643414.702804102] [aic_model]: step=13 z=0.1860  dist=84.8mm  contact=2897.1N  penalty_t=0.70s
+[INFO] [1775643414.807630146] [aic_model]: step=14 z=0.1850  dist=86.4mm  contact=3009.6N  penalty_t=0.75s
+[WARN] [1775643414.921757299] [aic_model]: Force budget reached (0.80s) — stopping.
+[INFO] [1775643414.922229459] [aic_model]: Waiting for connector to stabilize...
+[INFO] [1775643416.650717485] [aic_model]: insert_cable execute loop
+[INFO] [1775643418.692387303] [aic_model]: insert_cable execute loop
+[INFO] [1775643419.058888679] [aic_model]: CheatCodeHybrid.insert_cable() done.
+[INFO] [1775643421.023405956] [aic_model]: insert_cable() returned True
+[INFO] [1775643421.567985260] [aic_model]: on_deactivate(LifecycleState(label='active', state_id=3))
+[INFO] [1775643422.240918569] [aic_model]: on_activate()
+[INFO] [1775643448.339262009] [aic_model]: Goal accepted
+[INFO] [1775643448.340909126] [aic_model]: Entering insert_cable_execute_callback()
+[INFO] [1775643448.343388278] [aic_model]: CheatCodeHybrid.insert_cable() task: aic_task_interfaces.msg.Task(id='task_1', cable_type='sfp_sc', cable_name='cable_1', plug_type='sc', plug_name='sc_tip', port_type='sc', port_name='sc_port_base', target_module_name='sc_port_0', time_limit=180)
+[INFO] [1775643448.343800969] [aic_model]: insert_cable execute loop
+[INFO] [1775643448.344225172] [aic_model]: Phase 1: Joint approach (world Z hover + slerp)...
+[INFO] [1775643448.344812625] [aic_model]: Setting joint mode...
+[INFO] [1775643448.348306327] [aic_model]: Successfully set target mode
+[INFO] [1775643450.263473551] [aic_model]: insert_cable execute loop
+[INFO] [1775643451.748111791] [aic_model]: insert_cable execute loop
+[INFO] [1775643453.686745894] [aic_model]: insert_cable execute loop
+[INFO] [1775643454.850110395] [aic_model]: Phase 1.5: Hover stabilization...
+[INFO] [1775643455.199253340] [aic_model]: insert_cable execute loop
+[INFO] [1775643456.710655852] [aic_model]: FT tare...
+[INFO] [1775643457.262192802] [aic_model]: insert_cable execute loop
+[INFO] [1775643457.947026384] [aic_model]: FT tare: [25.0, -57.2, 93.3] N
+[INFO] [1775643457.947994449] [aic_model]: Phase 2: Cartesian insertion...
+[INFO] [1775643457.948999643] [aic_model]: step=0 z=0.1990  dist=54.6mm  contact=0.4N  penalty_t=0.00s
+[INFO] [1775643457.949700836] [aic_model]: Setting cartesian mode...
+[INFO] [1775643457.951765023] [aic_model]: Successfully set target mode
+[INFO] [1775643458.083005836] [aic_model]: step=1 z=0.1980  dist=50.2mm  contact=2.5N  penalty_t=0.00s
+[INFO] [1775643458.218304946] [aic_model]: step=2 z=0.1970  dist=45.0mm  contact=51.9N  penalty_t=0.05s
+[INFO] [1775643458.354540322] [aic_model]: step=3 z=0.1960  dist=42.3mm  contact=61.8N  penalty_t=0.10s
+[INFO] [1775643458.485126750] [aic_model]: step=4 z=0.1950  dist=40.2mm  contact=65.5N  penalty_t=0.15s
+[INFO] [1775643458.615073057] [aic_model]: step=5 z=0.1950  dist=39.3mm  contact=65.0N  penalty_t=0.20s
+[INFO] [1775643458.745520698] [aic_model]: step=6 z=0.1950  dist=38.9mm  contact=64.4N  penalty_t=0.25s
+[INFO] [1775643458.873460304] [aic_model]: step=7 z=0.1950  dist=39.1mm  contact=63.7N  penalty_t=0.30s
+[INFO] [1775643458.999789960] [aic_model]: step=8 z=0.1950  dist=39.5mm  contact=63.7N  penalty_t=0.35s
+[INFO] [1775643459.122943062] [aic_model]: step=9 z=0.1950  dist=39.9mm  contact=64.3N  penalty_t=0.40s
+[INFO] [1775643459.252344228] [aic_model]: step=10 z=0.1940  dist=40.3mm  contact=64.2N  penalty_t=0.45s
+[INFO] [1775643459.380232384] [aic_model]: step=11 z=0.1930  dist=40.7mm  contact=63.9N  penalty_t=0.50s
+[INFO] [1775643459.506314398] [aic_model]: step=12 z=0.1920  dist=41.1mm  contact=64.9N  penalty_t=0.55s
+[INFO] [1775643459.632105055] [aic_model]: step=13 z=0.1910  dist=41.4mm  contact=65.5N  penalty_t=0.60s
+[INFO] [1775643459.751971695] [aic_model]: step=14 z=0.1900  dist=41.5mm  contact=66.5N  penalty_t=0.65s
+[INFO] [1775643459.830920894] [aic_model]: insert_cable execute loop
+[INFO] [1775643459.875812896] [aic_model]: step=15 z=0.1890  dist=41.5mm  contact=71.9N  penalty_t=0.70s
+[INFO] [1775643459.995852986] [aic_model]: step=16 z=0.1880  dist=41.5mm  contact=43.7N  penalty_t=0.75s
+[WARN] [1775643460.112229793] [aic_model]: Force budget reached (0.80s) — stopping.
+[INFO] [1775643460.113135735] [aic_model]: Waiting for connector to stabilize...
+[INFO] [1775643462.338516783] [aic_model]: insert_cable execute loop
+[INFO] [1775643465.079847818] [aic_model]: insert_cable execute loop
+[INFO] [1775643465.424409808] [aic_model]: CheatCodeHybrid.insert_cable() done.
+[INFO] [1775643467.915906835] [aic_model]: insert_cable() returned True
+[INFO] [1775643468.545759135] [aic_model]: on_deactivate(LifecycleState(label='active', state_id=3))
+[INFO] [1775643468.973573548] [aic_model]: on_cleanup(LifecycleState(label='inactive', state_id=2))
+[INFO] [1775643468.974972829] [aic_model]: on_shutdown(LifecycleState(label='unconfigured', state_id=1))

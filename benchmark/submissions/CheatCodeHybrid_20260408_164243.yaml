@@ -1,0 +1,11 @@
+policy: aic_example_policies.ros.CheatCodeHybrid
+avg_score: 48.63
+tier1_avg: 1.0
+tier2_avg: 13.32
+tier3_avg: 34.32
+min_score: -35.0
+max_score: 97.09735624446428
+date: '2026-04-08'
+github_id: yujin114
+trials_completed: 27
+trials_total: 15

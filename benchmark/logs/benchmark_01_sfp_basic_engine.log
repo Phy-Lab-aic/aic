@@ -1,0 +1,274 @@
+[INFO] [1775642585.582442138] [aic_engine]: Creating AIC Engine...
+[INFO] [1775642585.582589574] [aic_engine]: Scoring output directory set to: /home/yujin/aic_drive/aic_results
+[INFO] [1775642585.582679963] [aic_engine]: [1;36m╔════════════════════════════════════════╗[0m
+[INFO] [1775642585.582691966] [aic_engine]: [1;36m║   Initializing AIC Engine...           ║[0m
+[INFO] [1775642585.582696695] [aic_engine]: [1;36m╚════════════════════════════════════════╝[0m
+[INFO] [1775642585.583924377] [aic_engine]: Successfully parsed trial 'trial_1'
+[INFO] [1775642585.584092081] [aic_engine]: Successfully parsed trial 'trial_2'
+[INFO] [1775642585.584126986] [aic_engine]: Successfully parsed trial 'trial_3'
+[INFO] [1775642585.584132547] [aic_engine]: Successfully parsed 3 trial(s)
+[INFO] [1775642585.584149008] [aic_engine]: Waiting for clock
+[INFO] [1775642585.584187560] [aic_engine]: Clock found successfully.
+[INFO] [1775642585.591851758] [aic_engine]: Retrieved home joint position from config: [shoulder_pan_joint]: -0.159700
+[INFO] [1775642585.591905439] [aic_engine]: Retrieved home joint position from config: [shoulder_lift_joint]: -1.354200
+[INFO] [1775642585.591915828] [aic_engine]: Retrieved home joint position from config: [elbow_joint]: -1.664800
+[INFO] [1775642585.591920237] [aic_engine]: Retrieved home joint position from config: [wrist_1_joint]: -1.693300
+[INFO] [1775642585.591924525] [aic_engine]: Retrieved home joint position from config: [wrist_2_joint]: 1.571000
+[INFO] [1775642585.591930286] [aic_engine]: Retrieved home joint position from config: [wrist_3_joint]: 1.411000
+[INFO] [1775642585.591938020] [aic_engine]: Pre-built home messages for robot homing.
+[INFO] [1775642585.592594381] [aic_engine]: Bag output directory: /home/yujin/aic_drive/aic_results
+[INFO] [1775642585.592606503] [aic_engine]: [1;32m✓ AIC Engine initialized successfully![0m
+[INFO] [1775642585.592612274] [aic_engine]:  
+[INFO] [1775642585.592617925] [aic_engine]: [1;35m╔════════════════════════════════════════╗[0m
+[INFO] [1775642585.592621922] [aic_engine]: [1;35m║      Starting AIC Engine Run           ║[0m
+[INFO] [1775642585.592625840] [aic_engine]: [1;35m║   Total Trials: 3                      ║[0m
+[INFO] [1775642585.592628665] [aic_engine]: [1;35m╚════════════════════════════════════════╝[0m
+[INFO] [1775642585.592632081] [aic_engine]:  
+[INFO] [1775642585.592636710] [aic_engine]:  
+[INFO] [1775642585.592639205] [aic_engine]: [1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[INFO] [1775642585.592642250] [aic_engine]: [1;33m  Trial 1/3: trial_1[0m
+[INFO] [1775642585.592645156] [aic_engine]: [1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[INFO] [1775642585.592648131] [aic_engine]: [1;36m→ Starting trial 'trial_1'...[0m
+[INFO] [1775642585.592652119] [aic_engine]: Checking participant model readiness...
+[INFO] [1775642585.592687084] [aic_engine]: Found 1 node(s) with name 'aic_model'. Checking if it is a lifecycle node...
+[INFO] [1775642585.592704417] [aic_engine]: Service '/aic_model/get_state' is available. Participant model discovered.
+[INFO] [1775642585.592709797] [aic_engine]: Lifecycle node 'aic_model' is available. Checking if it is in 'unconfigured' state...
+[INFO] [1775642585.595735019] [aic_engine]: Lifecycle node 'aic_model' is in 'unconfigured' state
+[INFO] [1775642585.595778811] [aic_engine]: Configuring lifecycle node 'aic_model'...
+[INFO] [1775642585.595790833] [aic_engine]: Transitioning model node 'aic_model' to transition 'configure'...
+[INFO] [1775642585.602127333] [aic_engine]: Successfully transition model node 'aic_model' to state 'configure'
+[INFO] [1775642585.615734974] [aic_engine]: Insert cable action goal was rejected by the server as expected.
+[INFO] [1775642586.604478804] [aic_engine]: Lifecycle node 'aic_model' is in 'configured' state and meets all expectations.
+[INFO] [1775642586.604523017] [aic_engine]: Transitioning model node 'aic_model' to transition 'activate'...
+[INFO] [1775642586.606545218] [aic_engine]: Successfully transition model node 'aic_model' to state 'activate'
+[INFO] [1775642586.606581496] [aic_engine]: [1;32m  ✓ Model Ready for trial 'trial_1'[0m
+[INFO] [1775642586.606588319] [aic_engine]: Checking required endpoints...
+[INFO] [1775642586.616464334] [aic_engine]: All required endpoints are available.
+[INFO] [1775642586.616501764] [aic_engine]: [1;32m  ✓ Endpoints Ready for trial 'trial_1'[0m
+[INFO] [1775642586.616506353] [aic_engine]: Readying simulator for trial 'trial_1'...
+[INFO] [1775642586.616510781] [aic_engine]: Spawning task board.
+[INFO] [1775642586.810358191] [aic_engine]: Successfully spawned task_board as 'task_board'
+[INFO] [1775642586.810412964] [aic_engine]: Task board spawned successfully.
+[INFO] [1775642586.810995506] [aic_engine]: Spawning cable.
+[INFO] [1775642586.811089983] [aic_engine]: Spawning cable 'cable_0'...
+[INFO] [1775642590.705055737] [aic_engine]: Successfully spawned cable_0 as 'cable_0'
+[INFO] [1775642590.705112433] [aic_engine]: Cable cable_0 spawned successfully.
+[INFO] [1775642595.786244111] [aic_engine]: Waiting for robot arm to stabilize.
+[INFO] [1775642598.330519014] [aic_engine]: [1;32m  ✓ Simulator Ready for trial 'trial_1'[0m
+[INFO] [1775642598.330555382] [aic_engine]: Checking scoring system readiness...
+[INFO] [1775642598.433406645] [aic_engine]: Started recording to '/home/yujin/aic_drive/aic_results/bag_trial_1_20260408_190318_330'.
+[INFO] [1775642598.433450798] [aic_engine]: [1;32m  ✓ Scoring Ready for trial 'trial_1'[0m
+[INFO] [1775642598.433456699] [aic_engine]: Starting tasks for active trial...
+[INFO] [1775642598.433466307] [aic_engine]: Sending InsertCable goal for task [task_1]
+[INFO] [1775642598.441874421] [aic_engine]: TrialState: TasksExecuting
+[INFO] [1775642598.441955623] [aic_engine]: Waiting for result...
+[INFO] [1775642612.868669132] [aic_engine]: Task [task_1] succeeded.
+[INFO] [1775642612.868743641] [aic_engine]: All tasks have been processed.
+[INFO] [1775642612.868751526] [aic_engine]: [1;36m  ⟳ Tasks Executing for trial 'trial_1'...[0m
+[INFO] [1775642612.868756165] [aic_engine]: Checking if all tasks were completed successfully...
+[INFO] [1775642612.868760713] [aic_engine]: [1;32m  ✓ All Tasks Completed for trial 'trial_1'![0m
+[INFO] [1775642613.213332652] [aic_engine]: Finished scoring trial, total score is: 97.059525
+[INFO] [1775642613.213411400] [aic_engine]: Resetting after trial completion...
+[INFO] [1775642613.213431117] [aic_engine]: Transitioning model node 'aic_model' to transition 'deactivate'...
+[INFO] [1775642613.217110125] [aic_engine]: Successfully transition model node 'aic_model' to state 'deactivate'
+[INFO] [1775642613.220489811] [aic_engine]: Successfully deleted entity 'task_board'
+[INFO] [1775642613.255830557] [aic_engine]: Successfully deleted entity 'cable_0'
+[INFO] [1775642613.255872336] [aic_engine]: Homing robot to initial positions...
+[INFO] [1775642613.259989614] [aic_engine]: aic_controller deactivated successfully.
+[INFO] [1775642613.695911515] [aic_engine]: aic_controller activated successfully.
+[INFO] [1775642613.695952562] [aic_engine]: Successfully reset joints to home position, robot homed successfully.
+[INFO] [1775642613.695960006] [aic_engine]: Reset after trial completed.
+[INFO] [1775642613.695972229] [aic_engine]: [1;32m✓ Trial 'trial_1' completed successfully! Score: 97.059525[0m
+[INFO] [1775642613.695981707] [aic_engine]:  
+[INFO] [1775642613.695986065] [aic_engine]: [1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[INFO] [1775642613.695991014] [aic_engine]: [1;33m  Trial 2/3: trial_2[0m
+[INFO] [1775642613.695997406] [aic_engine]: [1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[INFO] [1775642613.696002656] [aic_engine]: [1;36m→ Starting trial 'trial_2'...[0m
+[INFO] [1775642613.696007806] [aic_engine]: Checking participant model readiness...
+[INFO] [1775642613.696059032] [aic_engine]: Found 1 node(s) with name 'aic_model'. Checking if it is a lifecycle node...
+[INFO] [1775642613.696070714] [aic_engine]: Service '/aic_model/get_state' is available. Participant model discovered.
+[INFO] [1775642613.696077947] [aic_engine]: Transitioning model node 'aic_model' to transition 'activate'...
+[INFO] [1775642613.697183540] [aic_engine]: Successfully transition model node 'aic_model' to state 'activate'
+[INFO] [1775642613.697199811] [aic_engine]: [1;32m  ✓ Model Ready for trial 'trial_2'[0m
+[INFO] [1775642613.697206042] [aic_engine]: Checking required endpoints...
+[INFO] [1775642613.708835074] [aic_engine]: All required endpoints are available.
+[INFO] [1775642613.708880129] [aic_engine]: [1;32m  ✓ Endpoints Ready for trial 'trial_2'[0m
+[INFO] [1775642613.708884978] [aic_engine]: Readying simulator for trial 'trial_2'...
+[INFO] [1775642613.708901809] [aic_engine]: Spawning task board.
+[INFO] [1775642613.864329634] [aic_engine]: Successfully spawned task_board as 'task_board'
+[INFO] [1775642613.864381351] [aic_engine]: Task board spawned successfully.
+[INFO] [1775642613.864839390] [aic_engine]: Spawning cable.
+[INFO] [1775642613.864916795] [aic_engine]: Spawning cable 'cable_0'...
+[INFO] [1775642614.437241773] [aic_engine]: Successfully spawned cable_0 as 'cable_0'
+[INFO] [1775642614.437285615] [aic_engine]: Cable cable_0 spawned successfully.
+[INFO] [1775642614.900803914] [aic_engine]: Waiting for robot arm to stabilize.
+[INFO] [1775642619.283439445] [aic_engine]: [1;32m  ✓ Simulator Ready for trial 'trial_2'[0m
+[INFO] [1775642619.283477707] [aic_engine]: Checking scoring system readiness...
+[INFO] [1775642619.418368208] [aic_engine]: Started recording to '/home/yujin/aic_drive/aic_results/bag_trial_2_20260408_190339_283'.
+[INFO] [1775642619.418412572] [aic_engine]: [1;32m  ✓ Scoring Ready for trial 'trial_2'[0m
+[INFO] [1775642619.418418342] [aic_engine]: Starting tasks for active trial...
+[INFO] [1775642619.418424654] [aic_engine]: Sending InsertCable goal for task [task_1]
+[INFO] [1775642619.439605644] [aic_engine]: TrialState: TasksExecuting
+[INFO] [1775642619.439691014] [aic_engine]: Waiting for result...
+[INFO] [1775642643.332195244] [aic_engine]: Task [task_1] succeeded.
+[INFO] [1775642643.332284251] [aic_engine]: All tasks have been processed.
+[INFO] [1775642643.332291986] [aic_engine]: [1;36m  ⟳ Tasks Executing for trial 'trial_2'...[0m
+[INFO] [1775642643.332298378] [aic_engine]: Checking if all tasks were completed successfully...
+[INFO] [1775642643.332303587] [aic_engine]: [1;32m  ✓ All Tasks Completed for trial 'trial_2'![0m
+[INFO] [1775642644.067395330] [aic_engine]: Finished scoring trial, total score is: 45.353234
+[INFO] [1775642644.067443490] [aic_engine]: Resetting after trial completion...
+[INFO] [1775642644.067454601] [aic_engine]: Transitioning model node 'aic_model' to transition 'deactivate'...
+[INFO] [1775642644.069446075] [aic_engine]: Successfully transition model node 'aic_model' to state 'deactivate'
+[INFO] [1775642644.074207291] [aic_engine]: Successfully deleted entity 'task_board'
+[INFO] [1775642644.108462002] [aic_engine]: Successfully deleted entity 'cable_0'
+[INFO] [1775642644.108501917] [aic_engine]: Homing robot to initial positions...
+[INFO] [1775642644.112578399] [aic_engine]: aic_controller deactivated successfully.
+[INFO] [1775642644.875452740] [aic_engine]: aic_controller activated successfully.
+[INFO] [1775642644.875486964] [aic_engine]: Successfully reset joints to home position, robot homed successfully.
+[INFO] [1775642644.875491863] [aic_engine]: Reset after trial completed.
+[INFO] [1775642644.875501010] [aic_engine]: [1;32m✓ Trial 'trial_2' completed successfully! Score: 45.353234[0m
+[INFO] [1775642644.875516940] [aic_engine]:  
+[INFO] [1775642644.875521158] [aic_engine]: [1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[INFO] [1775642644.875525867] [aic_engine]: [1;33m  Trial 3/3: trial_3[0m
+[INFO] [1775642644.875531347] [aic_engine]: [1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[INFO] [1775642644.875536617] [aic_engine]: [1;36m→ Starting trial 'trial_3'...[0m
+[INFO] [1775642644.875541837] [aic_engine]: Checking participant model readiness...
+[INFO] [1775642644.875570130] [aic_engine]: Found 1 node(s) with name 'aic_model'. Checking if it is a lifecycle node...
+[INFO] [1775642644.875578355] [aic_engine]: Service '/aic_model/get_state' is available. Participant model discovered.
+[INFO] [1775642644.875584056] [aic_engine]: Transitioning model node 'aic_model' to transition 'activate'...
+[INFO] [1775642644.877232597] [aic_engine]: Successfully transition model node 'aic_model' to state 'activate'
+[INFO] [1775642644.877300875] [aic_engine]: [1;32m  ✓ Model Ready for trial 'trial_3'[0m
+[INFO] [1775642644.877309180] [aic_engine]: Checking required endpoints...
+[INFO] [1775642644.886645725] [aic_engine]: All required endpoints are available.
+[INFO] [1775642644.886684477] [aic_engine]: [1;32m  ✓ Endpoints Ready for trial 'trial_3'[0m
+[INFO] [1775642644.886689356] [aic_engine]: Readying simulator for trial 'trial_3'...
+[INFO] [1775642644.886694015] [aic_engine]: Spawning task board.
+[INFO] [1775642645.027785353] [aic_engine]: Successfully spawned task_board as 'task_board'
+[INFO] [1775642645.027842310] [aic_engine]: Task board spawned successfully.
+[INFO] [1775642645.028250395] [aic_engine]: Spawning cable.
+[INFO] [1775642645.028310608] [aic_engine]: Spawning cable 'cable_1'...
+[INFO] [1775642645.300327477] [aic_engine]: Successfully spawned cable_1 as 'cable_1'
+[INFO] [1775642645.300379985] [aic_engine]: Cable cable_1 spawned successfully.
+[INFO] [1775642645.770266941] [aic_engine]: Waiting for robot arm to stabilize.
+[INFO] [1775642650.049957402] [aic_engine]: [1;32m  ✓ Simulator Ready for trial 'trial_3'[0m
+[INFO] [1775642650.049997617] [aic_engine]: Checking scoring system readiness...
+[INFO] [1775642650.200556536] [aic_engine]: Started recording to '/home/yujin/aic_drive/aic_results/bag_trial_3_20260408_190410_050'.
+[INFO] [1775642650.200614986] [aic_engine]: [1;32m  ✓ Scoring Ready for trial 'trial_3'[0m
+[INFO] [1775642650.200622359] [aic_engine]: Starting tasks for active trial...
+[INFO] [1775642650.200630174] [aic_engine]: Sending InsertCable goal for task [task_1]
+[INFO] [1775642650.213003061] [aic_engine]: TrialState: TasksExecuting
+[INFO] [1775642650.213077691] [aic_engine]: Waiting for result...
+[INFO] [1775642683.634641244] [aic_engine]: Task [task_1] succeeded.
+[INFO] [1775642683.634705107] [aic_engine]: All tasks have been processed.
+[INFO] [1775642683.634715285] [aic_engine]: [1;36m  ⟳ Tasks Executing for trial 'trial_3'...[0m
+[INFO] [1775642683.634723700] [aic_engine]: Checking if all tasks were completed successfully...
+[INFO] [1775642683.634734159] [aic_engine]: [1;32m  ✓ All Tasks Completed for trial 'trial_3'![0m
+[INFO] [1775642684.798831501] [aic_engine]: Finished scoring trial, total score is: 59.647371
+[INFO] [1775642684.798868146] [aic_engine]: Resetting after trial completion...
+[INFO] [1775642684.798877543] [aic_engine]: Transitioning model node 'aic_model' to transition 'deactivate'...
+[INFO] [1775642684.800130339] [aic_engine]: Successfully transition model node 'aic_model' to state 'deactivate'
+[INFO] [1775642684.801618933] [aic_engine]: Successfully deleted entity 'task_board'
+[INFO] [1775642684.816186912] [aic_engine]: Successfully deleted entity 'cable_1'
+[INFO] [1775642684.816231050] [aic_engine]: Homing robot to initial positions...
+[INFO] [1775642684.821607571] [aic_engine]: aic_controller deactivated successfully.
+[INFO] [1775642685.858589574] [aic_engine]: aic_controller activated successfully.
+[INFO] [1775642685.858625869] [aic_engine]: Successfully reset joints to home position, robot homed successfully.
+[INFO] [1775642685.858632681] [aic_engine]: Reset after trial completed.
+[INFO] [1775642685.858643290] [aic_engine]: [1;32m✓ Trial 'trial_3' completed successfully! Score: 59.647371[0m
+[INFO] [1775642685.858659068] [aic_engine]: Transitioning model node 'aic_model' to transition 'cleanup'...
+[INFO] [1775642685.865075998] [aic_engine]: Successfully transition model node 'aic_model' to state 'cleanup'
+[INFO] [1775642685.865133550] [aic_engine]: Transitioning model node 'aic_model' to transition 'shutdown'...
+[INFO] [1775642685.869718065] [aic_engine]: Successfully transition model node 'aic_model' to state 'shutdown'
+[INFO] [1775642685.871915429] [aic_engine]:  
+[INFO] [1775642685.871956652] [aic_engine]: [1;32m╔════════════════════════════════════════╗[0m
+[INFO] [1775642685.871963474] [aic_engine]: [1;32m║   ✓ All Trials Processed!              ║[0m
+[INFO] [1775642685.871968032] [aic_engine]: [1;32m║   Successful: 3  Failed: 0             ║[0m
+[INFO] [1775642685.871974043] [aic_engine]: [1;32m║   Total Score: 202.060                     ║[0m
+[INFO] [1775642685.871982257] [aic_engine]: [1;32m╚════════════════════════════════════════╝[0m
+[INFO] [1775642685.871987707] [aic_engine]:  
+[INFO] [1775642685.872521636] [aic_engine]: [1;36m╔════════════════════════════════════════╗[0m
+[INFO] [1775642685.872544606] [aic_engine]: [1;36m║        Complete Scoring Results        ║[0m
+[INFO] [1775642685.872548674] [aic_engine]: [1;36m╚════════════════════════════════════════╝[0m
+[INFO] [1775642685.872554724] [aic_engine]: [1;36mtotal: 202.06013017748319[0m
+[INFO] [1775642685.872559363] [aic_engine]: [1;36mtrial_1:[0m
+[INFO] [1775642685.872563680] [aic_engine]: [1;36m  tier_1:[0m
+[INFO] [1775642685.872567477] [aic_engine]: [1;36m    score: 1[0m
+[INFO] [1775642685.872571384] [aic_engine]: [1;36m    message: Model validation succeeded.[0m
+[INFO] [1775642685.872574710] [aic_engine]: [1;36m  tier_2:[0m
+[INFO] [1775642685.872578757] [aic_engine]: [1;36m    score: 21.059524668311603[0m
+[INFO] [1775642685.872581903] [aic_engine]: [1;36m    message: Scoring succeeded.[0m
+[INFO] [1775642685.872585279] [aic_engine]: [1;36m    categories:[0m
+[INFO] [1775642685.872588765] [aic_engine]: [1;36m      contacts:[0m
+[INFO] [1775642685.872592982] [aic_engine]: [1;36m        score: 0[0m
+[INFO] [1775642685.872596418] [aic_engine]: [1;36m        message: No contact detected.[0m
+[INFO] [1775642685.872599875] [aic_engine]: [1;36m      duration:[0m
+[INFO] [1775642685.872603491] [aic_engine]: [1;36m        score: 10.2432[0m
+[INFO] [1775642685.872607288] [aic_engine]: [1;36m        message: "Task duration: 13.05 seconds."[0m
+[INFO] [1775642685.872611255] [aic_engine]: [1;36m      insertion force:[0m
+[INFO] [1775642685.872620131] [aic_engine]: [1;36m        score: 0[0m
+[INFO] [1775642685.872623887] [aic_engine]: [1;36m        message: "Insertion force above 20.00 N, detected for a time of 0.02 seconds. Max detected force: 26.89N. This is below the threshold of 1.00 seconds. Penalty not applied."[0m
+[INFO] [1775642685.872629257] [aic_engine]: [1;36m      trajectory efficiency:[0m
+[INFO] [1775642685.872633033] [aic_engine]: [1;36m        score: 5.9174805242517348[0m
+[INFO] [1775642685.872637101] [aic_engine]: [1;36m        message: "Total end-effector path length: 0.15 m, initial plug-port distance: 0.13 m"[0m
+[INFO] [1775642685.872640807] [aic_engine]: [1;36m      trajectory smoothness:[0m
+[INFO] [1775642685.872644053] [aic_engine]: [1;36m        score: 4.8988441440598702[0m
+[INFO] [1775642685.872668577] [aic_engine]: [1;36m        message: "Average linear jerk magnitude of the end effector: 9.18 m/s^3"[0m
+[INFO] [1775642685.872673766] [aic_engine]: [1;36m  tier_3:[0m
+[INFO] [1775642685.872676841] [aic_engine]: [1;36m    score: 75[0m
+[INFO] [1775642685.872680488] [aic_engine]: [1;36m    message: Cable insertion successful.[0m
+[INFO] [1775642685.872684014] [aic_engine]: [1;36mtrial_2:[0m
+[INFO] [1775642685.872687400] [aic_engine]: [1;36m  tier_1:[0m
+[INFO] [1775642685.872691177] [aic_engine]: [1;36m    score: 1[0m
+[INFO] [1775642685.872695354] [aic_engine]: [1;36m    message: Model validation succeeded.[0m
+[INFO] [1775642685.872699141] [aic_engine]: [1;36m  tier_2:[0m
+[INFO] [1775642685.872702837] [aic_engine]: [1;36m    score: 19.514160496519157[0m
+[INFO] [1775642685.872706344] [aic_engine]: [1;36m    message: Scoring succeeded.[0m
+[INFO] [1775642685.872710261] [aic_engine]: [1;36m    categories:[0m
+[INFO] [1775642685.872712825] [aic_engine]: [1;36m      contacts:[0m
+[INFO] [1775642685.872715219] [aic_engine]: [1;36m        score: 0[0m
+[INFO] [1775642685.872717754] [aic_engine]: [1;36m        message: No contact detected.[0m
+[INFO] [1775642685.872720329] [aic_engine]: [1;36m      duration:[0m
+[INFO] [1775642685.872722793] [aic_engine]: [1;36m        score: 8.9231999999999996[0m
+[INFO] [1775642685.872725217] [aic_engine]: [1;36m        message: "Task duration: 19.10 seconds."[0m
+[INFO] [1775642685.872727551] [aic_engine]: [1;36m      insertion force:[0m
+[INFO] [1775642685.872729976] [aic_engine]: [1;36m        score: 0[0m
+[INFO] [1775642685.872732590] [aic_engine]: [1;36m        message: No excessive force detected[0m
+[INFO] [1775642685.872734914] [aic_engine]: [1;36m      trajectory efficiency:[0m
+[INFO] [1775642685.872737990] [aic_engine]: [1;36m        score: 6[0m
+[INFO] [1775642685.872741727] [aic_engine]: [1;36m        message: "Total end-effector path length: 0.13 m, initial plug-port distance: 0.14 m"[0m
+[INFO] [1775642685.872746575] [aic_engine]: [1;36m      trajectory smoothness:[0m
+[INFO] [1775642685.872750512] [aic_engine]: [1;36m        score: 4.5909604965191582[0m
+[INFO] [1775642685.872753988] [aic_engine]: [1;36m        message: "Average linear jerk magnitude of the end effector: 11.74 m/s^3"[0m
+[INFO] [1775642685.872758446] [aic_engine]: [1;36m  tier_3:[0m
+[INFO] [1775642685.872761692] [aic_engine]: [1;36m    score: 24.839073535555126[0m
+[INFO] [1775642685.872765008] [aic_engine]: [1;36m    message: "No insertion detected. Final plug port distance: 0.05m."[0m
+[INFO] [1775642685.872767943] [aic_engine]: [1;36mtrial_3:[0m
+[INFO] [1775642685.872771289] [aic_engine]: [1;36m  tier_1:[0m
+[INFO] [1775642685.872774324] [aic_engine]: [1;36m    score: 1[0m
+[INFO] [1775642685.872777630] [aic_engine]: [1;36m    message: Model validation succeeded.[0m
+[INFO] [1775642685.872780716] [aic_engine]: [1;36m  tier_2:[0m
+[INFO] [1775642685.872784052] [aic_engine]: [1;36m    score: 18.790202792574888[0m
+[INFO] [1775642685.872787197] [aic_engine]: [1;36m    message: Scoring succeeded.[0m
+[INFO] [1775642685.872789712] [aic_engine]: [1;36m    categories:[0m
+[INFO] [1775642685.872792557] [aic_engine]: [1;36m      contacts:[0m
+[INFO] [1775642685.872796203] [aic_engine]: [1;36m        score: 0[0m
+[INFO] [1775642685.872798678] [aic_engine]: [1;36m        message: No contact detected.[0m
+[INFO] [1775642685.872801332] [aic_engine]: [1;36m      duration:[0m
+[INFO] [1775642685.872803727] [aic_engine]: [1;36m        score: 8.0504727272727266[0m
+[INFO] [1775642685.872814295] [aic_engine]: [1;36m        message: "Task duration: 23.10 seconds."[0m
+[INFO] [1775642685.872818533] [aic_engine]: [1;36m      insertion force:[0m
+[INFO] [1775642685.872822099] [aic_engine]: [1;36m        score: 0[0m
+[INFO] [1775642685.872825836] [aic_engine]: [1;36m        message: No excessive force detected[0m
+[INFO] [1775642685.872830013] [aic_engine]: [1;36m      trajectory efficiency:[0m
+[INFO] [1775642685.872833800] [aic_engine]: [1;36m        score: 5.809558197843919[0m
+[INFO] [1775642685.872844389] [aic_engine]: [1;36m        message: "Total end-effector path length: 0.35 m, initial plug-port distance: 0.32 m"[0m
+[INFO] [1775642685.872849849] [aic_engine]: [1;36m      trajectory smoothness:[0m
+[INFO] [1775642685.872853976] [aic_engine]: [1;36m        score: 4.9301718674582435[0m
+[INFO] [1775642685.872857723] [aic_engine]: [1;36m        message: "Average linear jerk magnitude of the end effector: 8.92 m/s^3"[0m
+[INFO] [1775642685.872862711] [aic_engine]: [1;36m  tier_3:[0m
+[INFO] [1775642685.872866478] [aic_engine]: [1;36m    score: 39.857168684522414[0m
+[INFO] [1775642685.872871056] [aic_engine]: [1;36m    message: Partial insertion detected with distance of 0.01m.[0m
+[INFO] [1775642685.872874973] [aic_engine]:  
+[ERROR] [1775642685.956710213] [rmw_zenoh_cpp]: SubscriberCallback triggered over 0/joint_states/sensor_msgs::msg::dds_::JointState_/RIHS01_a13ee3a330e346c9d87b5aa18d24e11690752bd33a0350f11c5882bc9179260e.
+[ERROR] [1775642685.956833421] [rmw_zenoh_cpp]: SubscriberCallback triggered over 0/tf/tf2_msgs::msg::dds_::TFMessage_/RIHS01_e369d0f05a23ae52508854b66f6aa0437f3449d652e8cbf22d5abe85d020f087.
+[ERROR] [1775642685.957523117] [rmw_zenoh_cpp]: SubscriberCallback triggered over 0/aic_controller/controller_state/aic_control_interfaces::msg::dds_::ControllerState_/RIHS01_2c327810f97c344f802e4700c65ee0a2a14c6d7a648d612b502f7a5268bcc742.

@@ -1,0 +1,11 @@
+policy: aic_example_policies.ros.CheatCodeJointSoft
+avg_score: 35.06
+tier1_avg: 1.0
+tier2_avg: 13.11
+tier3_avg: 20.95
+min_score: -11.0
+max_score: 54.49025339821307
+date: '2026-04-06'
+github_id: yujin114
+trials_completed: 27
+trials_total: 15

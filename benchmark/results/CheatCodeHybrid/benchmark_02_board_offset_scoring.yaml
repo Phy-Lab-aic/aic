@@ -1,0 +1,79 @@
+total: 92.419154730595565
+trial_1:
+  tier_1:
+    score: 1
+    message: Model validation succeeded.
+  tier_2:
+    score: 19.641527464445687
+    message: Scoring succeeded.
+    categories:
+      contacts:
+        score: 0
+        message: No contact detected.
+      duration:
+        score: 8.9127272727272739
+        message: "Task duration: 19.15 seconds."
+      insertion force:
+        score: 0
+        message: No excessive force detected
+      trajectory efficiency:
+        score: 6
+        message: "Total end-effector path length: 0.11 m, initial plug-port distance: 0.14 m"
+      trajectory smoothness:
+        score: 4.7288001917184141
+        message: "Average linear jerk magnitude of the end effector: 10.59 m/s^3"
+  tier_3:
+    score: 38.020709406192168
+    message: Partial insertion detected with distance of 0.05m.
+trial_2:
+  tier_1:
+    score: 1
+    message: Model validation succeeded.
+  tier_2:
+    score: 18.976714165542727
+    message: Scoring succeeded.
+    categories:
+      contacts:
+        score: 0
+        message: No contact detected.
+      duration:
+        score: 8.9314909090909094
+        message: "Task duration: 19.06 seconds."
+      insertion force:
+        score: 0
+        message: No excessive force detected
+      trajectory efficiency:
+        score: 5.793911913046653
+        message: "Total end-effector path length: 0.25 m, initial plug-port distance: 0.22 m"
+      trajectory smoothness:
+        score: 4.2513113434051641
+        message: "Average linear jerk magnitude of the end effector: 14.57 m/s^3"
+  tier_3:
+    score: 24.780203694414983
+    message: "No insertion detected. Final plug port distance: 0.05m."
+trial_3:
+  tier_1:
+    score: 1
+    message: Model validation succeeded.
+  tier_2:
+    score: -12
+    message: Scoring succeeded.
+    categories:
+      contacts:
+        score: 0
+        message: No contact detected.
+      duration:
+        score: 0
+        message: Plug is not within max bounding radius from target port, not assigning time bonus
+      insertion force:
+        score: -12
+        message: "Insertion force above 20.00 N, detected for a time of 2.94 seconds. Max detected force: 37.22N. This is above the threshold of 1.00 seconds. Penalty applied."
+      trajectory efficiency:
+        score: 0
+        message: Plug is not within max bounding radius from target port, not assigning efficiency bonus
+      trajectory smoothness:
+        score: 0
+        message: Plug is not within max bounding radius from target port, not assigning jerk bonus
+  tier_3:
+    score: 0
+    message: "No insertion detected. Final plug port distance: 0.16m."

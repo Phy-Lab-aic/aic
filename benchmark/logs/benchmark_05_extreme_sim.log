@@ -1,0 +1,944 @@
+ZENOH_CONFIG_OVERRIDE_ROUTER=mode="router";listen/endpoints=["tcp/[::]:7447"];connect/endpoints=[];routing/router/peers_failover_brokering=true;transport/shared_memory/enabled=false
+ZENOH_CONFIG_OVERRIDE_PEER=;transport/shared_memory/enabled=false
+[2m2026-04-08T09:40:33.719665Z[0m [32m INFO[0m ThreadId(02) [2mzenoh::net::runtime[0m[2m:[0m Using ZID: 20b01648330f4819d0d1c6238026df0
+[2m2026-04-08T09:40:33.719714Z[0m [33m WARN[0m ThreadId(02) [2mzenoh::net::routing::interceptor::authorization[0m[2m:[0m Rule 'deny_rule' flows list is not set. Setting it to both Ingress and Egress
+[2m2026-04-08T09:40:33.720236Z[0m [32m INFO[0m ThreadId(02) [2mzenoh::net::runtime::orchestrator[0m[2m:[0m Zenoh can be reached at: tcp/210.223.109.207:7447
+[2m2026-04-08T09:40:33.720242Z[0m [32m INFO[0m ThreadId(02) [2mzenoh::net::runtime::orchestrator[0m[2m:[0m Zenoh can be reached at: tcp/[fe80::e421:aab3:b545:6713]:7447
+[INFO] [launch]: All log files can be found below /home/yujin/.ros/log/2026-04-08-18-40-33-772384-yujin-ASUS-TUF-Gaming-A14-FA401UV-FA401UV-272673
+[INFO] [launch]: Default logging verbosity is set to INFO
+[2m2026-04-08T09:40:34.079141Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 320dfadf4bb6856017cf872c09e283ba did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[INFO] [robot_state_publisher-1]: process started with pid [273163]
+[INFO] [aic_adapter-2]: process started with pid [273164]
+[INFO] [component_container-3]: process started with pid [273165]
+[INFO] [gz-4]: process started with pid [273166]
+[INFO] [create-5]: process started with pid [273167]
+[INFO] [relay-6]: process started with pid [273168]
+[INFO] [static_transform_publisher-7]: process started with pid [273169]
+Started Zenoh router with id 20b01648330f4819d0d1c6238026df0
+[2m2026-04-08T09:40:34.226665Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m cc01646af753e0f88eaa07d6b269b59d did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[2m2026-04-08T09:40:34.226765Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m ac9eec3d0015cfd8d75c0201aa542b95 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[2m2026-04-08T09:40:34.226861Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 56b1e25acd0901ab31f0e53fc52f773d did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[2m2026-04-08T09:40:34.228725Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 9d90ceb9bb70750428dbe060ea8d0ff9 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[2m2026-04-08T09:40:34.229783Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 82b63bc3462df96601ca91f36d70e668 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[static_transform_publisher-7] [INFO] [1775641234.235913009] [ground_truth_static_tf_publisher]: Spinning until stopped - publishing transform
+[static_transform_publisher-7] translation: ('0.000000', '0.000000', '0.000000')
+[static_transform_publisher-7] rotation: ('0.000000', '0.000000', '0.000000', '1.000000')
+[static_transform_publisher-7] from 'world' to 'aic_world'
+[2m2026-04-08T09:40:34.238583Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 5aee5e5409f149be8c1030620bbc5f43 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[aic_adapter-2] [INFO] [1775641234.239761810] [aic_adapter_node]: Adapter node initialization complete.
+[robot_state_publisher-1] [INFO] [1775641234.241865576] [robot_state_publisher]: Robot initialized
+[create-5] [INFO] [1775641234.246118663] [ros_gz_sim]: Requesting list of world names.
+[gz-4] qt.qpa.xcb: could not connect to display 
+[gz-4] qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+[gz-4] This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+[gz-4] 
+[gz-4] Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, xcb.
+[gz-4] 
+[gz-4] Stack trace (most recent call last):
+[gz-4] #29   Object "[0xffffffffffffffff]", at 0xffffffffffffffff, in 
+[gz-4] #28   Object "gz sim -g", at 0x64acccaf91d4, in _start
+[gz-4] #27   Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x7f976262f28a, in __libc_start_main
+[gz-4] #26   Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x7f976262f1c9, in 
+[gz-4] #25   Object "gz sim -g", at 0x64acccaf9186, in 
+[gz-4] #24   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x7f9762a95152, in ruby_run_node
+[gz-4] #23   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x7f9762a90e2b, in 
+[gz-4] #22   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x7f9762c33b49, in rb_vm_exec
+[gz-4] #21   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x7f9762c3062b, in 
+[gz-4] #20   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x7f9762c2c13e, in 
+[gz-4] #19   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x7f9762c2992f, in 
+[gz-4] #18   Object "/usr/lib/x86_64-linux-gnu/ruby/3.2.0/fiddle.so", at 0x7f975d8f7b13, in 
+[gz-4] #17   Object "/lib/x86_64-linux-gnu/libruby-3.2.so.3.2", at 0x7f9762bf237b, in rb_nogvl
+[gz-4] #16   Object "/usr/lib/x86_64-linux-gnu/ruby/3.2.0/fiddle.so", at 0x7f975d8f743b, in 
+[gz-4] #15   Object "/lib/x86_64-linux-gnu/libffi.so.8", at 0x7f975d7eb0bd, in ffi_call
+[gz-4] #14   Object "/lib/x86_64-linux-gnu/libffi.so.8", at 0x7f975d7e83ee, in 
+[gz-4] #13   Object "/lib/x86_64-linux-gnu/libffi.so.8", at 0x7f975d7ebb15, in 
+[gz-4] #12   Object "/ws_aic/install/lib/libgz-sim9-gz.so.9.5.0", at 0x7f975cce3a65, in runGui
+[gz-4] #11   Object "/ws_aic/install/lib/libgz-sim9-gui.so.9", at 0x7f975cb16c8c, in gz::sim::v9::gui::runGui(int&, char**, char const*, char const*, int, char const*, char const*)
+[gz-4] #10   Object "/ws_aic/install/lib/libgz-sim9-gui.so.9", at 0x7f975cb13970, in gz::sim::v9::gui::createGui(int&, char**, char const*, char const*, bool, char const*, int, char const*, char const*)
+[gz-4] #9    Object "/ws_aic/install/lib/libgz-gui9.so.9", at 0x7f975b6e866b, in gz::gui::Application::Application(int&, char**, gz::gui::WindowType, char const*)
+[gz-4] #8    Object "/lib/x86_64-linux-gnu/libQt5Widgets.so.5", at 0x7f975a76b5b4, in QApplicationPrivate::init()
+[gz-4] #7    Object "/lib/x86_64-linux-gnu/libQt5Gui.so.5", at 0x7f975a041b9e, in QGuiApplicationPrivate::init()
+[gz-4] #6    Object "/lib/x86_64-linux-gnu/libQt5Core.so.5", at 0x7f975ba48ff4, in QCoreApplicationPrivate::init()
+[gz-4] #5    Object "/lib/x86_64-linux-gnu/libQt5Gui.so.5", at 0x7f975a03ec1f, in QGuiApplicationPrivate::createEventDispatcher()
+[gz-4] #4    Object "/lib/x86_64-linux-gnu/libQt5Gui.so.5", at 0x7f975a03e6dc, in QGuiApplicationPrivate::createPlatformIntegration()
+[gz-4] #3    Object "/lib/x86_64-linux-gnu/libQt5Core.so.5", at 0x7f975b7fb103, in QMessageLogger::fatal(char const*, ...) const
+[gz-4] #2    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x7f976262d8fe, in abort
+[gz-4] #1    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x7f976264a27d, in gsignal
+[gz-4] #0    Object "/lib/x86_64-linux-gnu/libc.so.6", at 0x7f97626a3b2c, in pthread_kill
+[gz-4] Aborted (Signal sent by tkill() 273166 0)
+[component_container-3] [INFO] [1775641234.347777532] [ros_gz_container]: Load Library: /ws_aic/install/lib/libgzserver_component.so
+[component_container-3] [INFO] [1775641234.372065383] [ros_gz_container]: Found class: rclcpp_components::NodeFactoryTemplate<ros_gz_sim::GzServer>
+[component_container-3] [INFO] [1775641234.372118572] [ros_gz_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<ros_gz_sim::GzServer>
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/gz_server' in container '/ros_gz_container'
+[component_container-3] [INFO] [1775641234.373778097] [ros_gz_container]: Load Library: /ws_aic/install/lib/libros_gz_bridge.so
+[ERROR] [gz-4]: process has died [pid 273166, exit code -6, cmd 'gz sim -g'].
+[component_container-3] [INFO] [1775641234.395654226] [ros_gz_container]: Found class: rclcpp_components::NodeFactoryTemplate<ros_gz_bridge::RosGzBridge>
+[component_container-3] [INFO] [1775641234.395704060] [ros_gz_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<ros_gz_bridge::RosGzBridge>
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/ros_gz_bridge' in container 'ros_gz_container'
+[component_container-3] (2026-04-08 18:40:34.408) [info] [ServerPrivate.cc:664] Loading SDF world file[/ws_aic/install/share/aic_description/world/aic.sdf].
+[component_container-3] [INFO] [1775641235.398579560] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[component_container-3] [INFO] [1775641235.399647098] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/left_camera/image (gz.msgs.Image) -> /left_camera/image (sensor_msgs/msg/Image)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.400547262] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/center_camera/image (gz.msgs.Image) -> /center_camera/image (sensor_msgs/msg/Image)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.400654493] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/right_camera/image (gz.msgs.Image) -> /right_camera/image (sensor_msgs/msg/Image)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.400771602] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/left_camera/camera_info (gz.msgs.CameraInfo) -> /left_camera/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.400944325] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/center_camera/camera_info (gz.msgs.CameraInfo) -> /center_camera/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.401090158] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/right_camera/camera_info (gz.msgs.CameraInfo) -> /right_camera/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.401216664] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/aic/gazebo/contacts/off_limit (gz.msgs.Contacts) -> /aic/gazebo/contacts/off_limit (ros_gz_interfaces/msg/Contacts)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.401687375] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/cable_0/pose (gz.msgs.Pose_V) -> /scoring/tf (tf2_msgs/msg/TFMessage)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.402138509] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/cable_1/pose (gz.msgs.Pose_V) -> /scoring/tf (tf2_msgs/msg/TFMessage)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.402283119] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/cable_2/pose (gz.msgs.Pose_V) -> /scoring/tf (tf2_msgs/msg/TFMessage)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.402366566] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/cable_3/pose (gz.msgs.Pose_V) -> /scoring/tf (tf2_msgs/msg/TFMessage)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.402444251] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/cable_4/pose (gz.msgs.Pose_V) -> /scoring/tf (tf2_msgs/msg/TFMessage)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.402520063] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/task_board/pose_static (gz.msgs.Pose_V) -> /scoring/tf (tf2_msgs/msg/TFMessage)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.402592508] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/cable_0/insertion_event (gz.msgs.StringMsg) -> /scoring/insertion_event (std_msgs/msg/String)] (Lazy 1)
+[component_container-3] [INFO] [1775641235.402746857] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/cable_1/insertion_event (gz.msgs.StringMsg) -> /scoring/insertion_event (std_msgs/msg/String)] (Lazy 1)
+[component_container-3] (2026-04-08 18:40:36.397) [info] [SystemManager.cc:54] Serving entity system service on [/entity/system/add]
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:752] Create service on [/world/aic_world/create_multiple] (async)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:754] Create service on [/world/aic_world/create_multiple/blocking] (blocking)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:752] Remove service on [/world/aic_world/remove] (async)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:754] Remove service on [/world/aic_world/remove/blocking] (blocking)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:752] Pose service on [/world/aic_world/set_pose] (async)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:754] Pose service on [/world/aic_world/set_pose/blocking] (blocking)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:752] Pose service on [/world/aic_world/set_pose_vector] (async)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:754] Pose service on [/world/aic_world/set_pose_vector/blocking] (blocking)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:752] Light configuration service on [/world/aic_world/light_config] (async)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:754] Light configuration service on [/world/aic_world/light_config/blocking] (blocking)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:752] Physics service on [/world/aic_world/set_physics] (async)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:754] Physics service on [/world/aic_world/set_physics/blocking] (blocking)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:752] SphericalCoordinates service on [/world/aic_world/set_spherical_coordinates] (async)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:754] SphericalCoordinates service on [/world/aic_world/set_spherical_coordinates/blocking] (blocking)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:752] Enable collision service on [/world/aic_world/enable_collision] (async)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:754] Enable collision service on [/world/aic_world/enable_collision/blocking] (blocking)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:752] Disable collision service on [/world/aic_world/disable_collision] (async)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:754] Disable collision service on [/world/aic_world/disable_collision/blocking] (blocking)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:752] Material service on [/world/aic_world/visual_config] (async)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:754] Material service on [/world/aic_world/visual_config/blocking] (blocking)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:752] Material service on [/world/aic_world/wheel_slip] (async)
+[component_container-3] (2026-04-08 18:40:36.401) [info] [UserCommands.cc:754] Material service on [/world/aic_world/wheel_slip/blocking] (blocking)
+[component_container-3] (2026-04-08 18:40:36.401) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::UserCommands] for entity [1]
+[component_container-3] (2026-04-08 18:40:36.422) [debug] [Physics.cc:967] Loaded [gz::physics::bullet_featherstone::Plugin] from library [/ws_aic/install/lib/gz-physics-8/engine-plugins/libgz-physics-bullet-featherstone-plugin.so]
+[component_container-3] (2026-04-08 18:40:36.422) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::Physics] for entity [1]
+[component_container-3] (2026-04-08 18:40:36.425) [debug] [Sensors.cc:697] Configuring Sensors system
+[component_container-3] (2026-04-08 18:40:36.425) [debug] [Sensors.cc:557] SensorsPrivate::Run
+[component_container-3] (2026-04-08 18:40:36.425) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::Sensors] for entity [1]
+[component_container-3] (2026-04-08 18:40:36.425) [debug] [Sensors.cc:532] SensorsPrivate::RenderThread started
+[component_container-3] (2026-04-08 18:40:36.425) [debug] [Sensors.cc:337] Waiting for init
+[component_container-3] (2026-04-08 18:40:36.426) [debug] [ScoringPlugin.cc:45] aic_gazebo::ScoringPlugin::Configure on entity: 1
+[component_container-3] (2026-04-08 18:40:36.426) [debug] [SystemManager.cc:80] Loaded system [aic_gazebo::ScoringPlugin] for entity [1]
+[component_container-3] (2026-04-08 18:40:36.427) [debug] [WorldSdfGeneratorPlugin.cc:47] aic_gazebo::WorldSdfGeneratorPlugin::Configure
+[component_container-3] (2026-04-08 18:40:36.427) [debug] [SystemManager.cc:80] Loaded system [aic_gazebo::WorldSdfGeneratorPlugin] for entity [1]
+[component_container-3] (2026-04-08 18:40:36.427) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::Contact] for entity [1]
+[component_container-3] (2026-04-08 18:40:36.427) [info] [LevelManager.cc:646] Loaded level [default]
+[component_container-3] (2026-04-08 18:40:36.427) [debug] [ServerConfig.cc:1025] Loading (3) plugins from file [/home/yujin/.gz/sim/9/server.config]
+[component_container-3] (2026-04-08 18:40:36.427) [debug] [SimulationRunner.cc:1696] Additional plugins to load:
+[component_container-3] (2026-04-08 18:40:36.427) [debug] [SimulationRunner.cc:1699] gz::sim::systems::SceneBroadcaster gz-sim-scene-broadcaster-system
+[component_container-3] (2026-04-08 18:40:36.428) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::SceneBroadcaster] for entity [1]
+[component_container-3] (2026-04-08 18:40:36.428) [info] [SimulationRunner.cc:275] Serving world controls on [/world/aic_world/control], [/world/aic_world/control/state] and [/world/aic_world/playback/control]
+[component_container-3] (2026-04-08 18:40:36.429) [info] [SimulationRunner.cc:301] Serving GUI information on [/world/aic_world/gui/info]
+[component_container-3] (2026-04-08 18:40:36.429) [info] [SimulationRunner.cc:304] World [aic_world] initialized with [2ms] physics profile.
+[component_container-3] (2026-04-08 18:40:36.429) [info] [SimulationRunner.cc:311] Serving world SDF generation service on [/world/aic_world/generate_world_sdf]
+[component_container-3] (2026-04-08 18:40:36.429) [info] [ServerPrivate.cc:344] Serving world names on [/gazebo/worlds]
+[component_container-3] (2026-04-08 18:40:36.429) [info] [ServerPrivate.cc:357] Resource path add service on [/gazebo/resource_paths/add].
+[component_container-3] (2026-04-08 18:40:36.429) [info] [ServerPrivate.cc:370] Resource path get service on [/gazebo/resource_paths/get].
+[component_container-3] (2026-04-08 18:40:36.429) [info] [ServerPrivate.cc:385] Resource path resolve service on [/gazebo/resource_paths/resolve].
+[component_container-3] (2026-04-08 18:40:36.429) [info] [ServerPrivate.cc:399] Resource paths published on [/gazebo/resource_paths].
+[component_container-3] (2026-04-08 18:40:36.429) [info] [ServerPrivate.cc:412] Server control service on [/server_control].
+[component_container-3] (2026-04-08 18:40:36.429) [info] [SimulationRunner.cc:769] Found no publishers on /stats, adding root stats topic
+[component_container-3] (2026-04-08 18:40:36.529) [info] [SimulationRunner.cc:803] Found no publishers on /clock, adding root clock topic
+[component_container-3] (2026-04-08 18:40:36.530) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 5
+[component_container-3] (2026-04-08 18:40:36.530) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:40:36.530) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:40:36.530) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:40:36.530) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[create-5] [INFO] [1775641236.530915185] [ros_gz_sim]: Entity creation successful.
+[component_container-3] (2026-04-08 18:40:36.533) [debug] [Physics.cc:1171] Attempting to set physics options, but the physics engine doesn't support feature [CollisionPairMaxContacts]. Options will be ignored.
+[component_container-3] (2026-04-08 18:40:36.534) [info] [SceneBroadcaster.cc:634] Serving scene information on [/world/aic_world/scene/info]
+[component_container-3] (2026-04-08 18:40:36.534) [info] [SceneBroadcaster.cc:643] Serving graph information on [/world/aic_world/scene/graph]
+[component_container-3] (2026-04-08 18:40:36.534) [info] [SceneBroadcaster.cc:654] Serving full state on [/world/aic_world/state]
+[component_container-3] (2026-04-08 18:40:36.534) [info] [SceneBroadcaster.cc:663] Serving full state (async) on [/world/aic_world/state_async]
+[component_container-3] (2026-04-08 18:40:36.534) [info] [SceneBroadcaster.cc:671] Publishing scene information on [/world/aic_world/scene/info]
+[component_container-3] (2026-04-08 18:40:36.534) [info] [SceneBroadcaster.cc:680] Publishing entity deletions on [/world/aic_world/scene/deletion]
+[component_container-3] (2026-04-08 18:40:36.534) [info] [SceneBroadcaster.cc:689] Publishing state changes on [/world/aic_world/state]
+[component_container-3] (2026-04-08 18:40:36.534) [info] [SceneBroadcaster.cc:700] Publishing pose messages on [/world/aic_world/pose/info]
+[component_container-3] (2026-04-08 18:40:36.534) [info] [SceneBroadcaster.cc:711] Publishing dynamic pose messages on [/world/aic_world/dynamic_pose/info]
+[INFO] [create-5]: process has finished cleanly [pid 273167]
+[INFO] [spawner-8]: process started with pid [273306]
+[INFO] [spawner-9]: process started with pid [273307]
+[component_container-3] [1;33mWarning [Utils.cc:119][0m [/sdf/model[@name="ur"]/link[@name="center_camera/sensor_link"]/sensor[@name="center_camera"]/camera[@name="center_camera"]/optical_frame_id]: SDF Element[optical_frame_id] is deprecated
+[component_container-3] [1;33mWarning [Utils.cc:119][0m [/sdf/model[@name="ur"]/link[@name="left_camera/sensor_link"]/sensor[@name="left_camera"]/camera[@name="left_camera"]/optical_frame_id]: SDF Element[optical_frame_id] is deprecated
+[component_container-3] [1;33mWarning [Utils.cc:119][0m [/sdf/model[@name="ur"]/link[@name="right_camera/sensor_link"]/sensor[@name="right_camera"]/camera[@name="right_camera"]/optical_frame_id]: SDF Element[optical_frame_id] is deprecated
+[component_container-3] [WARN] [1775641236.627789904] [rcl.logging_rosout]: Publisher already registered for node name: 'ros_gz_container'. If this is due to multiple nodes with the same name then all logs for the logger named 'ros_gz_container' will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[component_container-3] [INFO] [1775641236.628827184] [ros_gz_container]: [gz_ros2_control] Fixed joint [tabletop_joint] (Entity=101)] is skipped
+[component_container-3] [INFO] [1775641236.628861999] [ros_gz_container]: [gz_ros2_control] Fixed joint [center_camera/attach_sensor_link] (Entity=108)] is skipped
+[component_container-3] [INFO] [1775641236.628889541] [ros_gz_container]: [gz_ros2_control] Fixed joint [center_camera/attach_optical] (Entity=109)] is skipped
+[component_container-3] [INFO] [1775641236.628908747] [ros_gz_container]: [gz_ros2_control] Fixed joint [ati/attach_joint] (Entity=110)] is skipped
+[component_container-3] [INFO] [1775641236.628914267] [ros_gz_container]: [gz_ros2_control] Fixed joint [left_camera/attach_sensor_link] (Entity=114)] is skipped
+[component_container-3] [INFO] [1775641236.628917724] [ros_gz_container]: [gz_ros2_control] Fixed joint [left_camera/attach_optical] (Entity=115)] is skipped
+[component_container-3] [INFO] [1775641236.628921050] [ros_gz_container]: [gz_ros2_control] Fixed joint [right_camera/attach_sensor_link] (Entity=116)] is skipped
+[component_container-3] [INFO] [1775641236.628924096] [ros_gz_container]: [gz_ros2_control] Fixed joint [right_camera/attach_optical] (Entity=117)] is skipped
+[component_container-3] [INFO] [1775641236.629757224] [ros_gz_container]: Loading controller_manager
+[component_container-3] [INFO] [1775641236.634965148] [controller_manager]: Using ROS clock for triggering controller manager cycles.
+[component_container-3] [INFO] [1775641236.636243099] [controller_manager]: Subscribing to '/robot_description' topic for robot description.
+[component_container-3] [INFO] [1775641236.637570332] [controller_manager]: Enforcing command limits is enabled...
+[component_container-3] [WARN] [1775641236.637598175] [ros_gz_container]: Waiting RM to load and initialize hardware...
+[component_container-3] [INFO] [1775641236.637739319] [controller_manager]: Received robot description from topic.
+[component_container-3] [INFO] [1775641236.639984519] [ros_gz_container]: Using JointLimiter for joint 'gripper/left_finger_joint' in hardware 'gripper' : '  has position limits: true [0, 0.025]
+[component_container-3]   has velocity limits: true [0.05]
+[component_container-3]   has acceleration limits: false [nan]
+[component_container-3]   has deceleration limits: false [nan]
+[component_container-3]   has jerk limits: false [nan]
+[component_container-3]   has effort limits: true [20]
+[component_container-3]   angle wraparound: false'
+[component_container-3] [INFO] [1775641236.640014535] [ros_gz_container]: Creating JointSaturationLimiter for joint 'gripper/left_finger_joint' in hardware 'gripper'
+[component_container-3] [INFO] [1775641236.640043279] [ros_gz_container]: Using JointLimiter for joint 'wrist_3_joint' in hardware 'ControlSystem' : '  has position limits: true [-6.28319, 6.28319]
+[component_container-3]   has velocity limits: true [3.14159]
+[component_container-3]   has acceleration limits: false [nan]
+[component_container-3]   has deceleration limits: false [nan]
+[component_container-3]   has jerk limits: false [nan]
+[component_container-3]   has effort limits: true [28]
+[component_container-3]   angle wraparound: false'
+[component_container-3] [INFO] [1775641236.640049621] [ros_gz_container]: Creating JointSaturationLimiter for joint 'wrist_3_joint' in hardware 'ControlSystem'
+[component_container-3] [INFO] [1775641236.640057606] [ros_gz_container]: Using JointLimiter for joint 'wrist_2_joint' in hardware 'ControlSystem' : '  has position limits: true [-6.28319, 6.28319]
+[component_container-3]   has velocity limits: true [3.14159]
+[component_container-3]   has acceleration limits: false [nan]
+[component_container-3]   has deceleration limits: false [nan]
+[component_container-3]   has jerk limits: false [nan]
+[component_container-3]   has effort limits: true [28]
+[component_container-3]   angle wraparound: false'
+[component_container-3] [INFO] [1775641236.640062295] [ros_gz_container]: Creating JointSaturationLimiter for joint 'wrist_2_joint' in hardware 'ControlSystem'
+[component_container-3] [INFO] [1775641236.640068987] [ros_gz_container]: Using JointLimiter for joint 'wrist_1_joint' in hardware 'ControlSystem' : '  has position limits: true [-6.28319, 6.28319]
+[component_container-3]   has velocity limits: true [3.14159]
+[component_container-3]   has acceleration limits: false [nan]
+[component_container-3]   has deceleration limits: false [nan]
+[component_container-3]   has jerk limits: false [nan]
+[component_container-3]   has effort limits: true [28]
+[component_container-3]   angle wraparound: false'
+[component_container-3] [INFO] [1775641236.640073836] [ros_gz_container]: Creating JointSaturationLimiter for joint 'wrist_1_joint' in hardware 'ControlSystem'
+[component_container-3] [INFO] [1775641236.640081210] [ros_gz_container]: Using JointLimiter for joint 'elbow_joint' in hardware 'ControlSystem' : '  has position limits: true [-3.14159, 3.14159]
+[component_container-3]   has velocity limits: true [3.14159]
+[component_container-3]   has acceleration limits: false [nan]
+[component_container-3]   has deceleration limits: false [nan]
+[component_container-3]   has jerk limits: false [nan]
+[component_container-3]   has effort limits: true [150]
+[component_container-3]   angle wraparound: false'
+[component_container-3] [INFO] [1775641236.640086891] [ros_gz_container]: Creating JointSaturationLimiter for joint 'elbow_joint' in hardware 'ControlSystem'
+[component_container-3] [INFO] [1775641236.640094455] [ros_gz_container]: Using JointLimiter for joint 'shoulder_lift_joint' in hardware 'ControlSystem' : '  has position limits: true [-6.28319, 6.28319]
+[component_container-3]   has velocity limits: true [3.14159]
+[component_container-3]   has acceleration limits: false [nan]
+[component_container-3]   has deceleration limits: false [nan]
+[component_container-3]   has jerk limits: false [nan]
+[component_container-3]   has effort limits: true [150]
+[component_container-3]   angle wraparound: false'
+[component_container-3] [INFO] [1775641236.640122638] [ros_gz_container]: Creating JointSaturationLimiter for joint 'shoulder_lift_joint' in hardware 'ControlSystem'
+[component_container-3] [INFO] [1775641236.640132777] [ros_gz_container]: Using JointLimiter for joint 'shoulder_pan_joint' in hardware 'ControlSystem' : '  has position limits: true [-6.28319, 6.28319]
+[component_container-3]   has velocity limits: true [3.14159]
+[component_container-3]   has acceleration limits: false [nan]
+[component_container-3]   has deceleration limits: false [nan]
+[component_container-3]   has jerk limits: false [nan]
+[component_container-3]   has effort limits: true [150]
+[component_container-3]   angle wraparound: false'
+[component_container-3] [INFO] [1775641236.640138177] [ros_gz_container]: Creating JointSaturationLimiter for joint 'shoulder_pan_joint' in hardware 'ControlSystem'
+[component_container-3] [INFO] [1775641236.642901106] [ros_gz_container]: The position_proportional_gain has been set to: 0.1
+[component_container-3] [INFO] [1775641236.643001144] [ros_gz_container]: Loading joint: gripper/left_finger_joint
+[component_container-3] [INFO] [1775641236.643009519] [ros_gz_container]: 	State:
+[component_container-3] [INFO] [1775641236.643014779] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.643028665] [ros_gz_container]: 			 found initial value: 0.007300
+[component_container-3] [INFO] [1775641236.643034837] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.643043964] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.643049003] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.643055084] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.643059342] [ros_gz_container]: 	Command:
+[component_container-3] [INFO] [1775641236.643062969] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.643078939] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.643183996] [ros_gz_container]: Loading sensor: AtiForceTorqueSensor
+[component_container-3] [INFO] [1775641236.643196820] [ros_gz_container]: 	State:
+[component_container-3] [INFO] [1775641236.643284634] [ros_gz_container]: Initialize hardware 'gripper' 
+[component_container-3] [WARN] [1775641236.643461916] [rcl.logging_rosout]: Publisher already registered for node name: 'ros_gz_container'. If this is due to multiple nodes with the same name then all logs for the logger named 'ros_gz_container' will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[component_container-3] [INFO] [1775641236.644096573] [ros_gz_container.hardware_component.system.gripper]: `status_publish_rate` is set to 0.0, hardware status publisher will not be created.
+[component_container-3] [INFO] [1775641236.644197021] [ros_gz_container]: Successful initialization of hardware 'gripper'
+[component_container-3] [INFO] [1775641236.644387738] [ros_gz_container]: The position_proportional_gain has been set to: 0.1
+[component_container-3] [INFO] [1775641236.644429255] [ros_gz_container]: Loading joint: shoulder_pan_joint
+[component_container-3] [INFO] [1775641236.644434826] [ros_gz_container]: 	State:
+[component_container-3] [INFO] [1775641236.644439174] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644447860] [ros_gz_container]: 			 found initial value: -0.159700
+[component_container-3] [INFO] [1775641236.644453120] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644458340] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644463519] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644468629] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644473378] [ros_gz_container]: 	Command:
+[component_container-3] [INFO] [1775641236.644477465] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644490099] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644495559] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644511018] [ros_gz_container]: Loading joint: shoulder_lift_joint
+[component_container-3] [INFO] [1775641236.644515396] [ros_gz_container]: 	State:
+[component_container-3] [INFO] [1775641236.644519614] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644524874] [ros_gz_container]: 			 found initial value: -1.354200
+[component_container-3] [INFO] [1775641236.644529683] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644535484] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644540023] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644561342] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644566422] [ros_gz_container]: 	Command:
+[component_container-3] [INFO] [1775641236.644570269] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644581129] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644587161] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644600075] [ros_gz_container]: Loading joint: elbow_joint
+[component_container-3] [INFO] [1775641236.644604513] [ros_gz_container]: 	State:
+[component_container-3] [INFO] [1775641236.644608491] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644613380] [ros_gz_container]: 			 found initial value: -1.664800
+[component_container-3] [INFO] [1775641236.644618048] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644622487] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644626865] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644632385] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644636994] [ros_gz_container]: 	Command:
+[component_container-3] [INFO] [1775641236.644640751] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644649748] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644654537] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644667220] [ros_gz_container]: Loading joint: wrist_1_joint
+[component_container-3] [INFO] [1775641236.644671278] [ros_gz_container]: 	State:
+[component_container-3] [INFO] [1775641236.644675596] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644680375] [ros_gz_container]: 			 found initial value: -1.693300
+[component_container-3] [INFO] [1775641236.644684894] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644689302] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644693640] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644697958] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644702156] [ros_gz_container]: 	Command:
+[component_container-3] [INFO] [1775641236.644705933] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644713798] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644718476] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644729377] [ros_gz_container]: Loading joint: wrist_2_joint
+[component_container-3] [INFO] [1775641236.644733384] [ros_gz_container]: 	State:
+[component_container-3] [INFO] [1775641236.644737362] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644742441] [ros_gz_container]: 			 found initial value: 1.571000
+[component_container-3] [INFO] [1775641236.644747370] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644751628] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644755987] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644760234] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644764843] [ros_gz_container]: 	Command:
+[component_container-3] [INFO] [1775641236.644768961] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644777186] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644782326] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644794228] [ros_gz_container]: Loading joint: wrist_3_joint
+[component_container-3] [INFO] [1775641236.644797905] [ros_gz_container]: 	State:
+[component_container-3] [INFO] [1775641236.644801562] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644806541] [ros_gz_container]: 			 found initial value: 1.411000
+[component_container-3] [INFO] [1775641236.644811250] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644817201] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644821840] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644826318] [ros_gz_container]: 			 found initial value: 0.000000
+[component_container-3] [INFO] [1775641236.644830546] [ros_gz_container]: 	Command:
+[component_container-3] [INFO] [1775641236.644834273] [ros_gz_container]: 		 position
+[component_container-3] [INFO] [1775641236.644843019] [ros_gz_container]: 		 velocity
+[component_container-3] [INFO] [1775641236.644849582] [ros_gz_container]: 		 effort
+[component_container-3] [INFO] [1775641236.644868697] [ros_gz_container]: Loading sensor: AtiForceTorqueSensor
+[component_container-3] [INFO] [1775641236.644873677] [ros_gz_container]: 	State:
+[component_container-3] [INFO] [1775641236.644881211] [ros_gz_container]: 		 force.x
+[component_container-3] [INFO] [1775641236.644885449] [ros_gz_container]: 		 force.y
+[component_container-3] [INFO] [1775641236.644889617] [ros_gz_container]: 		 force.z
+[component_container-3] [INFO] [1775641236.644893965] [ros_gz_container]: 		 torque.x
+[component_container-3] [INFO] [1775641236.644898092] [ros_gz_container]: 		 torque.y
+[component_container-3] [INFO] [1775641236.644908312] [ros_gz_container]: 		 torque.z
+[component_container-3] [INFO] [1775641236.644974706] [ros_gz_container]: Initialize hardware 'ControlSystem' 
+[component_container-3] [WARN] [1775641236.645103176] [rcl.logging_rosout]: Publisher already registered for node name: 'ros_gz_container'. If this is due to multiple nodes with the same name then all logs for the logger named 'ros_gz_container' will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[component_container-3] [INFO] [1775641236.646165734] [ros_gz_container.hardware_component.system.ControlSystem]: `status_publish_rate` is set to 0.0, hardware status publisher will not be created.
+[component_container-3] [INFO] [1775641236.646254020] [ros_gz_container]: Successful initialization of hardware 'ControlSystem'
+[component_container-3] [INFO] [1775641236.646419579] [resource_manager]: 'configure' hardware 'ControlSystem' 
+[component_container-3] [INFO] [1775641236.646423507] [ros_gz_container]: System Successfully configured!
+[component_container-3] [INFO] [1775641236.646428045] [resource_manager]: Successful 'configure' of hardware 'ControlSystem'
+[component_container-3] [INFO] [1775641236.646437242] [resource_manager]: 'activate' hardware 'ControlSystem' 
+[component_container-3] [INFO] [1775641236.646447702] [resource_manager]: Successful 'activate' of hardware 'ControlSystem'
+[component_container-3] [INFO] [1775641236.646504308] [resource_manager]: 'configure' hardware 'gripper' 
+[component_container-3] [INFO] [1775641236.646506051] [ros_gz_container]: System Successfully configured!
+[component_container-3] [INFO] [1775641236.646509017] [resource_manager]: Successful 'configure' of hardware 'gripper'
+[component_container-3] [INFO] [1775641236.646510910] [resource_manager]: 'activate' hardware 'gripper' 
+[component_container-3] [INFO] [1775641236.646512693] [resource_manager]: Successful 'activate' of hardware 'gripper'
+[component_container-3] [WARN] [1775641236.646523003] [controller_manager]: Component 'ControlSystem' does not have read or write statistics initialized, skipping registration.
+[component_container-3] [WARN] [1775641236.646532310] [controller_manager]: Component 'gripper' does not have read or write statistics initialized, skipping registration.
+[component_container-3] [INFO] [1775641236.646538592] [controller_manager]: Resource Manager has been successfully initialized. Starting Controller Manager services...
+[2m2026-04-08T09:40:36.672524Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 2866f33baa8633019e3745fc267dcd86 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[2m2026-04-08T09:40:36.673943Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 192df5b013c9534e4faa6e65072e1ae9 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[component_container-3] [INFO] [1775641236.700172409] [controller_manager]: Loading controller : 'fts_broadcaster' of type 'force_torque_sensor_broadcaster/ForceTorqueSensorBroadcaster'
+[component_container-3] [INFO] [1775641236.700249533] [controller_manager]: Loading controller 'fts_broadcaster'
+[component_container-3] [INFO] [1775641236.701496145] [controller_manager]: Controller 'fts_broadcaster' node arguments: --ros-args --params-file /ws_aic/install/share/aic_bringup/config/aic_ros2_controllers.yaml -p use_sim_time:=true --param use_sim_time:=true 
+[spawner-9] [INFO] [1775641236.715773007] [spawner_fts_broadcaster]: Loaded fts_broadcaster
+[component_container-3] [INFO] [1775641236.716415118] [controller_manager]: Configuring controller: 'fts_broadcaster'
+[component_container-3] [INFO] [1775641236.718412565] [fts_broadcaster]: configure successful
+[component_container-3] [INFO] [1775641236.719464063] [controller_manager]: Activating controllers: [ fts_broadcaster ]
+[component_container-3] [INFO] [1775641236.719511051] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1775641236.719568218] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-04-08 18:40:38.637) [debug] [SystemManager.cc:80] Loaded system [gz_ros2_control::GazeboSimROS2ControlPlugin] for entity [31]
+[component_container-3] (2026-04-08 18:40:38.639) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::ForceTorque] for entity [31]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:41] aic_gazebo::OffLimitContactsPlugin::Configure on entity: 31
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [34]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [37]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [40]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [43]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [46]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [49]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [57]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [58]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [59]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [60]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [61]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [62]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [63]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [64]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [65]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [66]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [67]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [68]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [69]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [70]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [71]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [72]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [73]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [74]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [75]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [81]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [82]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [85]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [86]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [87]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [88]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [91]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [92]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [93]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [OffLimitContactsPlugin.cc:165] Enabled collision [94]
+[component_container-3] (2026-04-08 18:40:38.640) [debug] [SystemManager.cc:80] Loaded system [aic_gazebo::OffLimitContactsPlugin] for entity [31]
+[component_container-3] (2026-04-08 18:40:38.641) [debug] [ResetJointsPlugin.cc:40] aic_gazebo::ResetJointsPlugin::Configure on entity: 31
+[component_container-3] [WARN] [1775641238.641935496] [rcl.logging_rosout]: Publisher already registered for node name: 'ros_gz_container'. If this is due to multiple nodes with the same name then all logs for the logger named 'ros_gz_container' will go out over the existing publisher. As soon as any node with that name is destructed it will unregister the publisher, preventing any further logs for that name from being published on the rosout topic.
+[component_container-3] (2026-04-08 18:40:38.643) [info] [ResetJointsPlugin.cc:117] Initialized ResetJointsPlugin!
+[component_container-3] (2026-04-08 18:40:38.643) [debug] [SystemManager.cc:80] Loaded system [aic_gazebo::ResetJointsPlugin] for entity [31]
+[component_container-3] (2026-04-08 18:40:38.643) [debug] [UserCommands.cc:1108] Created entity [31] named [ur5e]
+[component_container-3] (2026-04-08 18:40:38.656) [debug] [Sensors.cc:953] Initialization needed
+[component_container-3] (2026-04-08 18:40:38.656) [debug] [Sensors.cc:349] Initializing render context
+[component_container-3] (2026-04-08 18:40:38.656) [info] [RenderEngineManager.cc:514] Loading plugin [gz-rendering-ogre2]
+[component_container-3] (2026-04-08 18:40:38.657) [debug] [EntityComponentManager.cc:1676] Updated state thread iterators: 16 threads processing around 8 entities each.
+[component_container-3] (2026-04-08 18:40:38.666) [warning] [Ogre2RenderEngine.cc:556] Unable to open display: . Trying to run in headless mode.
+[component_container-3] (2026-04-08 18:40:38.667) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:40:38.667) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:40:38.667) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:40:38.667) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:40:38.667) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 6
+[component_container-3] (2026-04-08 18:40:38.667) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:40:38.668) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:40:38.668) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:40:38.668) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:40:38.668) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[spawner-9] [INFO] [1775641238.671455307] [spawner_fts_broadcaster]: Configured and activated fts_broadcaster
+[component_container-3] [1;33mWarning [Utils.cc:119][0m [/sdf/model[@name="ur"]/link[@name="center_camera/sensor_link"]/sensor[@name="center_camera"]/camera[@name="center_camera"]/optical_frame_id]: SDF Element[optical_frame_id] is deprecated
+[component_container-3] [INFO] [1775641238.717186138] [controller_manager]: Loading controller : 'joint_state_broadcaster' of type 'joint_state_broadcaster/JointStateBroadcaster'
+[component_container-3] [INFO] [1775641238.717222867] [controller_manager]: Loading controller 'joint_state_broadcaster'
+[component_container-3] [INFO] [1775641238.718272140] [controller_manager]: Controller 'joint_state_broadcaster' node arguments: --ros-args --params-file /ws_aic/install/share/aic_bringup/config/aic_ros2_controllers.yaml -p use_sim_time:=true --param use_sim_time:=true 
+[component_container-3] [1;33mWarning [Utils.cc:119][0m [/sdf/model[@name="ur"]/link[@name="left_camera/sensor_link"]/sensor[@name="left_camera"]/camera[@name="left_camera"]/optical_frame_id]: SDF Element[optical_frame_id] is deprecated
+[component_container-3] [1;33mWarning [Utils.cc:119][0m [/sdf/model[@name="ur"]/link[@name="right_camera/sensor_link"]/sensor[@name="right_camera"]/camera[@name="right_camera"]/optical_frame_id]: SDF Element[optical_frame_id] is deprecated
+[INFO] [spawner-9]: process has finished cleanly [pid 273307]
+[component_container-3] [INFO] [1775641238.761374584] [gz_server]: InitializeCanonicalLinks
+[component_container-3] [INFO] [1775641238.761615565] [gz_server]: Creating services on gz_server
+[component_container-3] [INFO] [1775641238.762674817] [gz_server]: Created service /gz_server/delete_entity
+[component_container-3] [INFO] [1775641238.762972664] [gz_server]: Created service /gz_server/get_entities
+[component_container-3] [INFO] [1775641238.763137713] [gz_server]: Created service /gz_server/get_entity_info
+[component_container-3] [INFO] [1775641238.763363094] [gz_server]: Created service /gz_server/get_entity_state
+[component_container-3] [INFO] [1775641238.763505371] [gz_server]: Created service /gz_server/get_entities_states
+[component_container-3] [INFO] [1775641238.763638720] [gz_server]: Created service /gz_server/get_simulation_state
+[component_container-3] [INFO] [1775641238.763787949] [gz_server]: Created service /gz_server/get_simulator_features
+[component_container-3] [INFO] [1775641238.763953188] [gz_server]: Created service /gz_server/reset_simulation
+[component_container-3] [INFO] [1775641238.764116404] [gz_server]: Created service /gz_server/set_entity_state
+[component_container-3] [INFO] [1775641238.764277024] [gz_server]: Created service /gz_server/set_simulation_state
+[component_container-3] [INFO] [1775641238.764445790] [gz_server]: Created service /gz_server/spawn_entity
+[component_container-3] [INFO] [1775641238.764578729] [gz_server]: Created service /gz_server/step_simulation
+[component_container-3] [INFO] [1775641238.765536450] [gz_server]: Created action /gz_server/simulate_steps
+[component_container-3] libEGL warning: pci id for fd 70: 10de:28e0, driver (null)
+[component_container-3] 
+[component_container-3] pci id for fd 72: 10de:28e0, driver (null)
+[component_container-3] pci id for fd 73: 10de:28e0, driver (null)
+[component_container-3] libEGL warning: egl: failed to create dri2 screen
+[component_container-3] libEGL warning: pci id for fd 70: 10de:28e0, driver (null)
+[component_container-3] 
+[component_container-3] pci id for fd 72: 10de:28e0, driver (null)
+[component_container-3] pci id for fd 73: 10de:28e0, driver (null)
+[component_container-3] libEGL warning: egl: failed to create dri2 screen
+[component_container-3] libEGL warning: pci id for fd 70: 10de:28e0, driver (null)
+[component_container-3] 
+[component_container-3] (2026-04-08 18:40:38.905) [debug] [RenderUtil.cc:2646] Create scene [scene]
+[2m2026-04-08T09:40:39.001559Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 258855fc7a5743491a0c04fbff785086 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[2m2026-04-08T09:40:39.141469Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m bd91bf4d2c22181815a3478f9d5d77ef did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[component_container-3] (2026-04-08 18:40:39.237) [debug] [Sensors.cc:391] Rendering Thread initialized
+[component_container-3] (2026-04-08 18:40:39.237) [debug] [Sensors.cc:953] Initialization needed
+[component_container-3] (2026-04-08 18:40:39.239) [debug] [ForceTorque.cc:162] Adding JointTransmittedWrench to: 110
+[component_container-3] [INFO] [1775641239.240396236] [ros_gz_container]: ForceTorque AtiForceTorqueSensor has a topic name: /axia80_m20/wrench
+[component_container-3] [INFO] [1775641239.240589998] [ros_gz_container]: ForceTorque AtiForceTorqueSensor has a topic name: /axia80_m20/wrench
+[spawner-8] [INFO] [1775641239.252794553] [spawner_joint_state_broadcaster]: Loaded joint_state_broadcaster
+[component_container-3] [INFO] [1775641239.253638712] [controller_manager]: Configuring controller: 'joint_state_broadcaster'
+[component_container-3] [INFO] [1775641239.253752445] [joint_state_broadcaster]: 'joints' or 'interfaces' parameter is empty. All available state interfaces will be published
+[component_container-3] (2026-04-08 18:40:39.730) [debug] [CameraSensor.cc:342] Camera images for [ur5e::center_camera/sensor_link::center_camera] advertised on [/center_camera/image]
+[component_container-3] (2026-04-08 18:40:39.730) [debug] [CameraSensor.cc:632] Camera info for [ur5e::center_camera/sensor_link::center_camera] advertised on [/center_camera/camera_info]
+[component_container-3] (2026-04-08 18:40:39.730) [warning] [Ogre2Camera.cc:423] Ogre2Camera::SetVisibilityMask: Mask bits c0000000 are set but will be ignored as they conflict with the reserved bits used internally by the ogre2 backend.
+[component_container-3] (2026-04-08 18:40:39.730) [debug] [CameraSensor.cc:342] Camera images for [ur5e::left_camera/sensor_link::left_camera] advertised on [/left_camera/image]
+[component_container-3] (2026-04-08 18:40:39.730) [debug] [CameraSensor.cc:632] Camera info for [ur5e::left_camera/sensor_link::left_camera] advertised on [/left_camera/camera_info]
+[component_container-3] (2026-04-08 18:40:39.730) [warning] [Ogre2Camera.cc:423] Ogre2Camera::SetVisibilityMask: Mask bits c0000000 are set but will be ignored as they conflict with the reserved bits used internally by the ogre2 backend.
+[component_container-3] (2026-04-08 18:40:39.731) [debug] [CameraSensor.cc:342] Camera images for [ur5e::right_camera/sensor_link::right_camera] advertised on [/right_camera/image]
+[component_container-3] (2026-04-08 18:40:39.731) [debug] [CameraSensor.cc:632] Camera info for [ur5e::right_camera/sensor_link::right_camera] advertised on [/right_camera/camera_info]
+[component_container-3] (2026-04-08 18:40:39.731) [warning] [Ogre2Camera.cc:423] Ogre2Camera::SetVisibilityMask: Mask bits c0000000 are set but will be ignored as they conflict with the reserved bits used internally by the ogre2 backend.
+[component_container-3] (2026-04-08 18:40:40.390) [debug] [CameraSensor.cc:441] Enabling camera sensor: 'ur5e::center_camera/sensor_link::center_camera' data generation.
+[component_container-3] (2026-04-08 18:40:40.424) [debug] [CameraSensor.cc:441] Enabling camera sensor: 'ur5e::left_camera/sensor_link::left_camera' data generation.
+[component_container-3] (2026-04-08 18:40:40.434) [debug] [CameraSensor.cc:441] Enabling camera sensor: 'ur5e::right_camera/sensor_link::right_camera' data generation.
+[component_container-3] [INFO] [1775641240.447255708] [controller_manager]: Activating controllers: [ joint_state_broadcaster ]
+[component_container-3] [INFO] [1775641240.447368279] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1775641240.447543717] [controller_manager]: Successfully switched controllers!
+[spawner-8] [INFO] [1775641240.448535743] [spawner_joint_state_broadcaster]: Configured and activated joint_state_broadcaster
+[INFO] [spawner-8]: process has finished cleanly [pid 273306]
+[INFO] [spawner-10]: process started with pid [273552]
+[2m2026-04-08T09:40:40.636979Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 390afa9d70e09d02a1a91b30feb000d7 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[component_container-3] [INFO] [1775641240.667871810] [controller_manager]: Loading controller : 'aic_controller' of type 'aic/Controller'
+[component_container-3] [INFO] [1775641240.667910463] [controller_manager]: Loading controller 'aic_controller'
+[component_container-3] [INFO] [1775641240.670128673] [controller_manager]: Controller 'aic_controller' node arguments: --ros-args --params-file /ws_aic/install/share/aic_bringup/config/aic_ros2_controllers.yaml -p use_sim_time:=true --param use_sim_time:=true 
+[component_container-3] (2026-04-08 18:40:40.734) [debug] [WorldSdfGeneratorPlugin.cc:79] Saving world: aic_world to: /tmp/aic.sdf
+[component_container-3] (2026-04-08 18:40:40.734) [info] [WorldSdfGeneratorPlugin.cc:84] World saved to /tmp/aic.sdf
+[spawner-10] [INFO] [1775641240.749102944] [spawner_aic_controller]: Loaded aic_controller
+[component_container-3] [INFO] [1775641240.749957282] [controller_manager]: Configuring controller: 'aic_controller'
+[component_container-3] [INFO] [1775641240.750472095] [aic_controller]: Control mode set to impedance
+[component_container-3] [INFO] [1775641240.750515396] [aic_controller]: Target mode set to Cartesian. Accepting MotionUpdate targets.
+[component_container-3] [INFO] [1775641240.757953683] [controller_manager]: Activating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641240.758049613] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1775641240.758146284] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-04-08 18:40:40.759) [warning] [Component.hh:144] Trying to serialize component with data type [St6vectorIdSaIdEE], which doesn't have `operator<<`. Component will not be serialized.
+[component_container-3] (2026-04-08 18:40:40.759) [warning] [Component.hh:189] Trying to deserialize component with data type [St6vectorIdSaIdEE], which doesn't have `operator>>`. Component will not be deserialized.
+[spawner-10] [INFO] [1775641240.759866803] [spawner_aic_controller]: Configured and activated all the parsed controllers list : ['aic_controller']!
+[INFO] [spawner-10]: process has finished cleanly [pid 273552]
+[INFO] [rviz2-11]: process started with pid [273577]
+[rviz2-11] qt.qpa.xcb: could not connect to display 
+[rviz2-11] qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+[rviz2-11] This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+[rviz2-11] 
+[rviz2-11] Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, xcb.
+[rviz2-11] 
+[ERROR] [rviz2-11]: process has died [pid 273577, exit code -6, cmd '/opt/ros/kilted/lib/rviz2/rviz2 -d /ws_aic/install/share/aic_bringup/rviz/aic.rviz --ros-args -r __node:=rviz2 --params-file /tmp/launch_params_07jq87pf'].
+[2m2026-04-08T09:40:43.246542Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 8ae6e80e636064683fbdf487ecab95d6 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[2m2026-04-08T09:40:53.096033Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 21f6e2676a1b89e95a36a63cebfa3ed3 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[component_container-3] (2026-04-08 18:40:54.295) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: sc_port_0::sc_port_link
+[component_container-3] (2026-04-08 18:40:54.295) [debug] [SdfEntityCreator.cc:549]   pose: 1.88554e-19 -0.00100271 0.000137321 0 0 0
+[component_container-3] (2026-04-08 18:40:54.295) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-04-08 18:40:54.295) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 1.86262e-06 5.50332e-06 6.55187e-06
+[component_container-3] (2026-04-08 18:40:54.295) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -7.41324e-15 4.19415e-23 -5.5077e-09
+[component_container-3] (2026-04-08 18:40:54.295) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: nic_card_mount_0::nic_card_link
+[component_container-3] (2026-04-08 18:40:54.295) [debug] [SdfEntityCreator.cc:549]   pose: 0.00150732 -0.00850988 0.00340281 0 0 0
+[component_container-3] (2026-04-08 18:40:54.295) [debug] [SdfEntityCreator.cc:550]   mass: 0.15
+[component_container-3] (2026-04-08 18:40:54.295) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 0.000185176 4.95164e-05 0.000228127
+[component_container-3] (2026-04-08 18:40:54.295) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -1.61776e-06 6.54063e-07 1.04636e-07
+[component_container-3] (2026-04-08 18:40:54.297) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [118]
+[component_container-3] (2026-04-08 18:40:54.297) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::TouchPlugin] for entity [165]
+[component_container-3] (2026-04-08 18:40:54.298) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::TouchPlugin] for entity [188]
+[component_container-3] (2026-04-08 18:40:54.298) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::TouchPlugin] for entity [188]
+[component_container-3] (2026-04-08 18:40:54.298) [debug] [UserCommands.cc:1108] Created entity [118] named [task_board]
+[component_container-3] (2026-04-08 18:40:54.303) [info] [Contact.cc:125] Contact system publishing on world/aic_world/model/task_board/model/sc_port_0/link/sc_port_link/sensor/sc_port_sensor/contact
+[component_container-3] (2026-04-08 18:40:54.303) [info] [Contact.cc:125] Contact system publishing on world/aic_world/model/task_board/model/nic_card_mount_0/link/nic_card_link/sensor/sfp_port_sensor/contact
+[component_container-3] [INFO] [1775641254.303284802] [aic_controller]: Received service request to tare force torque sensor!
+[component_container-3] [INFO] [1775641254.303312414] [aic_controller]: Successfully tared force torque sensor.
+[component_container-3] (2026-04-08 18:40:54.305) [warning] [Component.hh:127] Trying to serialize component with data type [St10shared_ptrIN3sdf3v157ElementEE], which doesn't have `operator<<`. Component will not be serialized.
+[component_container-3] [INFO] [1775641254.305595435] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 10
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:40:54.307) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:40:54.308) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (7)
+[component_container-3] (2026-04-08 18:40:54.307) [warning] [Component.hh:172] Trying to deserialize component with data type [St10shared_ptrIN3sdf3v157ElementEE], which doesn't have `operator>>`. Component will not be deserialized.
+[component_container-3] (2026-04-08 18:40:54.308) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (8)
+[component_container-3] (2026-04-08 18:40:54.308) [debug] [TouchPlugin.cc:267] Started touch plugin [sc_port_0/sc_port_base]
+[component_container-3] (2026-04-08 18:40:54.309) [debug] [TouchPlugin.cc:267] Started touch plugin [nic_card_mount_0/sfp_port_0]
+[component_container-3] (2026-04-08 18:40:54.309) [debug] [TouchPlugin.cc:267] Started touch plugin [nic_card_mount_0/sfp_port_1]
+[component_container-3] (2026-04-08 18:40:57.870) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_0::lc_plug_link
+[component_container-3] (2026-04-08 18:40:57.870) [debug] [SdfEntityCreator.cc:549]   pose: 0 0.0197 0 0 0 0
+[component_container-3] (2026-04-08 18:40:57.870) [debug] [SdfEntityCreator.cc:550]   mass: 0.01
+[component_container-3] (2026-04-08 18:40:57.870) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 8.49658e-09 9.96094e-08 1.06153e-07
+[component_container-3] (2026-04-08 18:40:57.870) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 0 0 2.13837e-15
+[component_container-3] (2026-04-08 18:40:57.870) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_0::sc_plug_link
+[component_container-3] (2026-04-08 18:40:57.870) [debug] [SdfEntityCreator.cc:549]   pose: -0.00907511 4.9566e-05 8.71699e-06 0 0 0
+[component_container-3] (2026-04-08 18:40:57.870) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-04-08 18:40:57.870) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 2.12257e-06 7.17318e-06 8.85404e-06
+[component_container-3] (2026-04-08 18:40:57.871) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 1.24369e-08 -3.73363e-09 1.72827e-11
+[component_container-3] (2026-04-08 18:40:57.871) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_0::sfp_module_link
+[component_container-3] (2026-04-08 18:40:57.871) [debug] [SdfEntityCreator.cc:549]   pose: 0.00024115 0.00702224 0.000553372 0 0 0
+[component_container-3] (2026-04-08 18:40:57.871) [debug] [SdfEntityCreator.cc:550]   mass: 0.02
+[component_container-3] (2026-04-08 18:40:57.871) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 2.81022e-06 5.74024e-07 3.07134e-06
+[component_container-3] (2026-04-08 18:40:57.871) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 2.90452e-08 2.66891e-09 9.66165e-08
+[component_container-3] (2026-04-08 18:40:57.872) [debug] [CablePlugin.cc:86] aic_gazebo::CablePlugin::Configure on entity: 242
+[component_container-3] (2026-04-08 18:40:57.873) [info] [CablePlugin.cc:150] Cable transitioning to HARNESS state.
+[component_container-3] (2026-04-08 18:40:57.873) [debug] [SystemManager.cc:80] Loaded system [aic_gazebo::CablePlugin] for entity [242]
+[component_container-3] (2026-04-08 18:40:57.873) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [242]
+[component_container-3] (2026-04-08 18:40:57.873) [debug] [UserCommands.cc:1108] Created entity [242] named [cable_0]
+[component_container-3] [INFO] [1775641257.880736817] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-04-08 18:40:57.884) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:40:57.884) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (7)
+[component_container-3] (2026-04-08 18:40:57.884) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:40:57.884) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:40:57.884) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:40:57.884) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:40:57.884) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:40:57.884) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (8)
+[component_container-3] (2026-04-08 18:40:57.884) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 12
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (7)
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (8)
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (9)
+[component_container-3] (2026-04-08 18:40:57.885) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (10)
+[component_container-3] (2026-04-08 18:40:57.890) [info] [CablePlugin.cc:201] Cable transitioning to WAITING state.
+[component_container-3] (2026-04-08 18:40:57.890) [info] [CablePlugin.cc:213] Cable transitioning to CREATE_CONNECTIONS state.
+[component_container-3] (2026-04-08 18:40:57.890) [debug] [Physics.cc:2015] Creating detachable joint [418]
+[component_container-3] (2026-04-08 18:40:57.890) [debug] [Physics.cc:2015] Creating detachable joint [421]
+[component_container-3] (2026-04-08 18:40:57.891) [debug] [Physics.cc:2136] Detaching joint [418]
+[component_container-3] (2026-04-08 18:40:57.891) [debug] [Physics.cc:2136] Detaching joint [421]
+[component_container-3] (2026-04-08 18:40:57.892) [info] [CablePlugin.cc:247] Cable transitioning to CABLE_ATTACHED_TO_GRIPPER state.
+[component_container-3] (2026-04-08 18:40:57.892) [debug] [Physics.cc:2015] Creating detachable joint [422]
+[component_container-3] [INFO] [1775641257.951417609] [gz_server]: InitializeCanonicalLinks
+[component_container-3] [INFO] [1775641265.631933467] [aic_controller]: Received request to switch target mode to MODE_JOINT.
+[component_container-3] [INFO] [1775641270.939282166] [aic_controller]: Received request to switch target mode to MODE_CARTESIAN.
+[component_container-3] (2026-04-08 18:41:26.739) [debug] [UserCommands.cc:1158] Requesting removal of entity [118]
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (8)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (9)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (10)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (7)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 8
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:41:26.764) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:41:26.765) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:41:26.765) [debug] [UserCommands.cc:1158] Requesting removal of entity [242]
+[component_container-3] (2026-04-08 18:41:26.766) [info] [CablePlugin.cc:162] Cable transitioning to CABLE_REMOVED state.
+[component_container-3] [INFO] [1775641286.766715991] [controller_manager]: Deactivating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641286.766802864] [controller_manager]: Switch controller timeout is set to 0, using default 1s!
+[component_container-3] [INFO] [1775641286.766806701] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1775641286.766907650] [controller_manager]: Deactivated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641286.766912068] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-04-08 18:41:26.768) [debug] [Physics.cc:2136] Detaching joint [422]
+[component_container-3] (2026-04-08 18:41:26.770) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_pan_joint
+[component_container-3] (2026-04-08 18:41:26.770) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_lift_joint
+[component_container-3] (2026-04-08 18:41:26.770) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: elbow_joint
+[component_container-3] (2026-04-08 18:41:26.770) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_1_joint
+[component_container-3] (2026-04-08 18:41:26.770) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_2_joint
+[component_container-3] (2026-04-08 18:41:26.770) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_3_joint
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 6
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:41:26.804) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:41:27.053) [info] [ResetJointsPlugin.cc:149] Joint wrist_3_joint reset to initial position: 1.411
+[component_container-3] (2026-04-08 18:41:27.054) [info] [ResetJointsPlugin.cc:149] Joint wrist_2_joint reset to initial position: 1.571
+[component_container-3] (2026-04-08 18:41:27.054) [info] [ResetJointsPlugin.cc:149] Joint wrist_1_joint reset to initial position: -1.6933
+[component_container-3] (2026-04-08 18:41:27.054) [info] [ResetJointsPlugin.cc:149] Joint elbow_joint reset to initial position: -1.6648
+[component_container-3] (2026-04-08 18:41:27.054) [info] [ResetJointsPlugin.cc:149] Joint shoulder_lift_joint reset to initial position: -1.3542
+[component_container-3] (2026-04-08 18:41:27.054) [info] [ResetJointsPlugin.cc:149] Joint shoulder_pan_joint reset to initial position: -0.1597
+[component_container-3] (2026-04-08 18:41:27.054) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_pan_joint(Entity=102]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:41:27.054) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_lift_joint(Entity=103]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:41:27.054) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [elbow_joint(Entity=104]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:41:27.054) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_1_joint(Entity=105]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:41:27.054) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_2_joint(Entity=106]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:41:27.054) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_3_joint(Entity=107]). Ignoring JointVelocityCmd component.
+[component_container-3] [INFO] [1775641287.054380541] [controller_manager]: Activating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641287.054467354] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1775641287.054589633] [controller_manager]: Activated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641287.054598409] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-04-08 18:41:27.188) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: sc_port_1::sc_port_link
+[component_container-3] (2026-04-08 18:41:27.188) [debug] [SdfEntityCreator.cc:549]   pose: 1.88554e-19 -0.00100271 0.000137321 0 0 0
+[component_container-3] (2026-04-08 18:41:27.188) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-04-08 18:41:27.188) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 1.86262e-06 5.50332e-06 6.55187e-06
+[component_container-3] (2026-04-08 18:41:27.188) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -7.41324e-15 4.19415e-23 -5.5077e-09
+[component_container-3] (2026-04-08 18:41:27.189) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [423]
+[component_container-3] (2026-04-08 18:41:27.190) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::TouchPlugin] for entity [469]
+[component_container-3] (2026-04-08 18:41:27.190) [debug] [UserCommands.cc:1108] Created entity [423] named [task_board]
+[component_container-3] (2026-04-08 18:41:27.197) [info] [Contact.cc:125] Contact system publishing on world/aic_world/model/task_board/model/sc_port_1/link/sc_port_link/sensor/sc_port_sensor/contact
+[component_container-3] [INFO] [1775641287.197190950] [aic_controller]: Received service request to tare force torque sensor!
+[component_container-3] [INFO] [1775641287.197236014] [aic_controller]: Successfully tared force torque sensor.
+[component_container-3] [INFO] [1775641287.198773261] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-04-08 18:41:27.198) [warning] [Component.hh:127] Trying to serialize component with data type [St10shared_ptrIN3sdf3v157ElementEE], which doesn't have `operator<<`. Component will not be serialized.
+[component_container-3] (2026-04-08 18:41:27.199) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:41:27.199) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:41:27.199) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:41:27.199) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:41:27.199) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:41:27.200) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 8
+[component_container-3] (2026-04-08 18:41:27.200) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:41:27.200) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:41:27.200) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:41:27.200) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:41:27.200) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:41:27.200) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:41:27.200) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:41:27.200) [debug] [TouchPlugin.cc:267] Started touch plugin [sc_port_1/sc_port_base]
+[component_container-3] (2026-04-08 18:41:27.452) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::sc_plug_link
+[component_container-3] (2026-04-08 18:41:27.452) [debug] [SdfEntityCreator.cc:549]   pose: -0.00907511 4.9566e-05 8.71699e-06 0 0 0
+[component_container-3] (2026-04-08 18:41:27.452) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-04-08 18:41:27.452) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 2.12257e-06 7.17318e-06 8.85404e-06
+[component_container-3] (2026-04-08 18:41:27.452) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 1.24369e-08 -3.73363e-09 1.72827e-11
+[component_container-3] (2026-04-08 18:41:27.452) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::lc_plug_link
+[component_container-3] (2026-04-08 18:41:27.452) [debug] [SdfEntityCreator.cc:549]   pose: 0 -0.00428702 8.58528e-05 0 0 0
+[component_container-3] (2026-04-08 18:41:27.452) [debug] [SdfEntityCreator.cc:550]   mass: 0.01
+[component_container-3] (2026-04-08 18:41:27.452) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 1.73585e-06 1.30886e-07 1.82579e-06
+[component_container-3] (2026-04-08 18:41:27.452) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -3.13192e-14 3.63653e-15 -5.82954e-09
+[component_container-3] (2026-04-08 18:41:27.452) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::sfp_module_link
+[component_container-3] (2026-04-08 18:41:27.453) [debug] [SdfEntityCreator.cc:549]   pose: 0.000140388 0.0140944 0.000755794 0 0 0
+[component_container-3] (2026-04-08 18:41:27.453) [debug] [SdfEntityCreator.cc:550]   mass: 0.02
+[component_container-3] (2026-04-08 18:41:27.453) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 3.52972e-06 5.95336e-07 3.76244e-06
+[component_container-3] (2026-04-08 18:41:27.453) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 3.87677e-08 3.1005e-09 9.04204e-09
+[component_container-3] (2026-04-08 18:41:27.454) [debug] [CablePlugin.cc:86] aic_gazebo::CablePlugin::Configure on entity: 492
+[component_container-3] (2026-04-08 18:41:27.454) [info] [CablePlugin.cc:150] Cable transitioning to HARNESS state.
+[component_container-3] (2026-04-08 18:41:27.454) [debug] [SystemManager.cc:80] Loaded system [aic_gazebo::CablePlugin] for entity [492]
+[component_container-3] (2026-04-08 18:41:27.454) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [492]
+[component_container-3] (2026-04-08 18:41:27.455) [debug] [UserCommands.cc:1108] Created entity [492] named [cable_1]
+[component_container-3] [INFO] [1775641287.462728975] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-04-08 18:41:27.466) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:41:27.466) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:41:27.466) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:41:27.466) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:41:27.466) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:41:27.466) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:41:27.466) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:41:27.466) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 10
+[component_container-3] (2026-04-08 18:41:27.466) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:41:27.467) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:41:27.467) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:41:27.467) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:41:27.467) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:41:27.467) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:41:27.467) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:41:27.467) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (7)
+[component_container-3] (2026-04-08 18:41:27.467) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (8)
+[component_container-3] (2026-04-08 18:41:27.467) [info] [CablePlugin.cc:201] Cable transitioning to WAITING state.
+[component_container-3] (2026-04-08 18:41:27.467) [info] [CablePlugin.cc:213] Cable transitioning to CREATE_CONNECTIONS state.
+[component_container-3] (2026-04-08 18:41:27.468) [debug] [Physics.cc:2015] Creating detachable joint [690]
+[component_container-3] (2026-04-08 18:41:27.468) [debug] [Physics.cc:2015] Creating detachable joint [693]
+[component_container-3] (2026-04-08 18:41:27.468) [debug] [Physics.cc:2136] Detaching joint [690]
+[component_container-3] (2026-04-08 18:41:27.468) [debug] [Physics.cc:2136] Detaching joint [693]
+[component_container-3] (2026-04-08 18:41:27.469) [info] [CablePlugin.cc:247] Cable transitioning to CABLE_ATTACHED_TO_GRIPPER state.
+[component_container-3] (2026-04-08 18:41:27.470) [debug] [Physics.cc:2015] Creating detachable joint [694]
+[component_container-3] [INFO] [1775641287.496090326] [gz_server]: InitializeCanonicalLinks
+[component_container-3] [INFO] [1775641292.076081232] [aic_controller]: Received request to switch target mode to MODE_JOINT.
+[component_container-3] [INFO] [1775641297.379143120] [aic_controller]: Received request to switch target mode to MODE_CARTESIAN.
+[component_container-3] (2026-04-08 18:42:00.880) [debug] [UserCommands.cc:1158] Requesting removal of entity [423]
+[component_container-3] (2026-04-08 18:42:00.893) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (8)
+[component_container-3] (2026-04-08 18:42:00.893) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:00.893) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:42:00.893) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:00.893) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:00.893) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:00.893) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (7)
+[component_container-3] (2026-04-08 18:42:00.893) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:00.893) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:42:00.893) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 8
+[component_container-3] (2026-04-08 18:42:00.894) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:00.894) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:00.894) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:00.894) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:00.894) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:00.894) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:42:00.894) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:42:00.894) [debug] [UserCommands.cc:1158] Requesting removal of entity [492]
+[component_container-3] (2026-04-08 18:42:00.895) [info] [CablePlugin.cc:162] Cable transitioning to CABLE_REMOVED state.
+[component_container-3] [INFO] [1775641320.896453792] [controller_manager]: Deactivating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641320.896557125] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1775641320.896673834] [controller_manager]: Deactivated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641320.896680196] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-04-08 18:42:00.899) [debug] [Physics.cc:2136] Detaching joint [694]
+[component_container-3] (2026-04-08 18:42:00.901) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_pan_joint
+[component_container-3] (2026-04-08 18:42:00.901) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_lift_joint
+[component_container-3] (2026-04-08 18:42:00.901) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: elbow_joint
+[component_container-3] (2026-04-08 18:42:00.901) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_1_joint
+[component_container-3] (2026-04-08 18:42:00.901) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_2_joint
+[component_container-3] (2026-04-08 18:42:00.901) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_3_joint
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 6
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:00.926) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:01.092) [info] [ResetJointsPlugin.cc:149] Joint wrist_3_joint reset to initial position: 1.411
+[component_container-3] (2026-04-08 18:42:01.092) [info] [ResetJointsPlugin.cc:149] Joint wrist_2_joint reset to initial position: 1.571
+[component_container-3] (2026-04-08 18:42:01.092) [info] [ResetJointsPlugin.cc:149] Joint wrist_1_joint reset to initial position: -1.6933
+[component_container-3] (2026-04-08 18:42:01.092) [info] [ResetJointsPlugin.cc:149] Joint elbow_joint reset to initial position: -1.6648
+[component_container-3] (2026-04-08 18:42:01.092) [info] [ResetJointsPlugin.cc:149] Joint shoulder_lift_joint reset to initial position: -1.3542
+[component_container-3] (2026-04-08 18:42:01.092) [info] [ResetJointsPlugin.cc:149] Joint shoulder_pan_joint reset to initial position: -0.1597
+[component_container-3] (2026-04-08 18:42:01.092) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_pan_joint(Entity=102]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:42:01.092) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_lift_joint(Entity=103]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:42:01.092) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [elbow_joint(Entity=104]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:42:01.092) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_1_joint(Entity=105]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:42:01.092) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_2_joint(Entity=106]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:42:01.092) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_3_joint(Entity=107]). Ignoring JointVelocityCmd component.
+[component_container-3] [INFO] [1775641321.093076108] [controller_manager]: Activating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641321.093147301] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1775641321.093238752] [controller_manager]: Activated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641321.093244243] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-04-08 18:42:01.233) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: sc_port_0::sc_port_link
+[component_container-3] (2026-04-08 18:42:01.233) [debug] [SdfEntityCreator.cc:549]   pose: 1.88554e-19 -0.00100271 0.000137321 0 0 0
+[component_container-3] (2026-04-08 18:42:01.233) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-04-08 18:42:01.233) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 1.86262e-06 5.50332e-06 6.55187e-06
+[component_container-3] (2026-04-08 18:42:01.233) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -7.41324e-15 4.19415e-23 -5.5077e-09
+[component_container-3] (2026-04-08 18:42:01.233) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [695]
+[component_container-3] (2026-04-08 18:42:01.234) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::TouchPlugin] for entity [741]
+[component_container-3] (2026-04-08 18:42:01.234) [debug] [UserCommands.cc:1108] Created entity [695] named [task_board]
+[component_container-3] (2026-04-08 18:42:01.238) [info] [Contact.cc:125] Contact system publishing on world/aic_world/model/task_board/model/sc_port_0/link/sc_port_link/sensor/sc_port_sensor/contact
+[component_container-3] [INFO] [1775641321.238593958] [aic_controller]: Received service request to tare force torque sensor!
+[component_container-3] [INFO] [1775641321.238627731] [aic_controller]: Successfully tared force torque sensor.
+[component_container-3] [INFO] [1775641321.239976365] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 8
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:42:01.241) [debug] [TouchPlugin.cc:267] Started touch plugin [sc_port_0/sc_port_base]
+[component_container-3] (2026-04-08 18:42:01.483) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::sc_plug_link
+[component_container-3] (2026-04-08 18:42:01.483) [debug] [SdfEntityCreator.cc:549]   pose: -0.00907511 4.9566e-05 8.71699e-06 0 0 0
+[component_container-3] (2026-04-08 18:42:01.483) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-04-08 18:42:01.483) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 2.12257e-06 7.17318e-06 8.85404e-06
+[component_container-3] (2026-04-08 18:42:01.483) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 1.24369e-08 -3.73363e-09 1.72827e-11
+[component_container-3] (2026-04-08 18:42:01.483) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::lc_plug_link
+[component_container-3] (2026-04-08 18:42:01.483) [debug] [SdfEntityCreator.cc:549]   pose: 0 -0.00428702 8.58528e-05 0 0 0
+[component_container-3] (2026-04-08 18:42:01.483) [debug] [SdfEntityCreator.cc:550]   mass: 0.01
+[component_container-3] (2026-04-08 18:42:01.484) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 1.73585e-06 1.30886e-07 1.82579e-06
+[component_container-3] (2026-04-08 18:42:01.484) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -3.13192e-14 3.63653e-15 -5.82954e-09
+[component_container-3] (2026-04-08 18:42:01.484) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::sfp_module_link
+[component_container-3] (2026-04-08 18:42:01.484) [debug] [SdfEntityCreator.cc:549]   pose: 0.000140388 0.0140944 0.000755794 0 0 0
+[component_container-3] (2026-04-08 18:42:01.484) [debug] [SdfEntityCreator.cc:550]   mass: 0.02
+[component_container-3] (2026-04-08 18:42:01.484) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 3.52972e-06 5.95336e-07 3.76244e-06
+[component_container-3] (2026-04-08 18:42:01.484) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 3.87677e-08 3.1005e-09 9.04204e-09
+[component_container-3] (2026-04-08 18:42:01.485) [debug] [CablePlugin.cc:86] aic_gazebo::CablePlugin::Configure on entity: 764
+[component_container-3] (2026-04-08 18:42:01.485) [info] [CablePlugin.cc:150] Cable transitioning to HARNESS state.
+[component_container-3] (2026-04-08 18:42:01.485) [debug] [SystemManager.cc:80] Loaded system [aic_gazebo::CablePlugin] for entity [764]
+[component_container-3] (2026-04-08 18:42:01.486) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [764]
+[component_container-3] (2026-04-08 18:42:01.486) [debug] [UserCommands.cc:1108] Created entity [764] named [cable_1]
+[component_container-3] [INFO] [1775641321.493657463] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 10
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (7)
+[component_container-3] (2026-04-08 18:42:01.497) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (8)
+[component_container-3] (2026-04-08 18:42:01.498) [info] [CablePlugin.cc:201] Cable transitioning to WAITING state.
+[component_container-3] (2026-04-08 18:42:01.498) [info] [CablePlugin.cc:213] Cable transitioning to CREATE_CONNECTIONS state.
+[component_container-3] (2026-04-08 18:42:01.498) [debug] [Physics.cc:2015] Creating detachable joint [962]
+[component_container-3] (2026-04-08 18:42:01.498) [debug] [Physics.cc:2015] Creating detachable joint [965]
+[component_container-3] (2026-04-08 18:42:01.499) [debug] [Physics.cc:2136] Detaching joint [962]
+[component_container-3] (2026-04-08 18:42:01.499) [debug] [Physics.cc:2136] Detaching joint [965]
+[component_container-3] (2026-04-08 18:42:01.501) [info] [CablePlugin.cc:247] Cable transitioning to CABLE_ATTACHED_TO_GRIPPER state.
+[component_container-3] (2026-04-08 18:42:01.501) [debug] [Physics.cc:2015] Creating detachable joint [966]
+[component_container-3] [INFO] [1775641321.526007870] [gz_server]: InitializeCanonicalLinks
+[component_container-3] [INFO] [1775641326.028790550] [aic_controller]: Received request to switch target mode to MODE_JOINT.
+[component_container-3] [INFO] [1775641331.344063841] [aic_controller]: Received request to switch target mode to MODE_CARTESIAN.
+[component_container-3] (2026-04-08 18:42:33.268) [debug] [UserCommands.cc:1158] Requesting removal of entity [695]
+[component_container-3] (2026-04-08 18:42:33.281) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:33.281) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:33.281) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:33.281) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:33.281) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:42:33.281) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (7)
+[component_container-3] (2026-04-08 18:42:33.281) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (8)
+[component_container-3] (2026-04-08 18:42:33.281) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:42:33.281) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:33.282) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 8
+[component_container-3] (2026-04-08 18:42:33.282) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:33.282) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:33.282) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:33.282) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:33.282) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:33.282) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:42:33.282) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:42:33.283) [debug] [UserCommands.cc:1158] Requesting removal of entity [764]
+[component_container-3] (2026-04-08 18:42:33.284) [info] [CablePlugin.cc:162] Cable transitioning to CABLE_REMOVED state.
+[component_container-3] [INFO] [1775641353.285198677] [controller_manager]: Deactivating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641353.285274609] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1775641353.285413680] [controller_manager]: Deactivated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641353.285426263] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-04-08 18:42:33.287) [debug] [Physics.cc:2136] Detaching joint [966]
+[component_container-3] (2026-04-08 18:42:33.289) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_pan_joint
+[component_container-3] (2026-04-08 18:42:33.290) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_lift_joint
+[component_container-3] (2026-04-08 18:42:33.290) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: elbow_joint
+[component_container-3] (2026-04-08 18:42:33.290) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_1_joint
+[component_container-3] (2026-04-08 18:42:33.290) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_2_joint
+[component_container-3] (2026-04-08 18:42:33.290) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_3_joint
+[component_container-3] (2026-04-08 18:42:33.324) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:33.324) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:33.324) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:33.324) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:33.324) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-04-08 18:42:33.324) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-04-08 18:42:33.324) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:33.325) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 6
+[component_container-3] (2026-04-08 18:42:33.325) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-04-08 18:42:33.325) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-04-08 18:42:33.325) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-04-08 18:42:33.325) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-04-08 18:42:33.325) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-04-08 18:42:33.920) [info] [ResetJointsPlugin.cc:149] Joint wrist_3_joint reset to initial position: 1.411
+[component_container-3] (2026-04-08 18:42:33.920) [info] [ResetJointsPlugin.cc:149] Joint wrist_2_joint reset to initial position: 1.571
+[component_container-3] (2026-04-08 18:42:33.920) [info] [ResetJointsPlugin.cc:149] Joint wrist_1_joint reset to initial position: -1.6933
+[component_container-3] (2026-04-08 18:42:33.920) [info] [ResetJointsPlugin.cc:149] Joint elbow_joint reset to initial position: -1.6648
+[component_container-3] (2026-04-08 18:42:33.920) [info] [ResetJointsPlugin.cc:149] Joint shoulder_lift_joint reset to initial position: -1.3542
+[component_container-3] (2026-04-08 18:42:33.920) [info] [ResetJointsPlugin.cc:149] Joint shoulder_pan_joint reset to initial position: -0.1597
+[component_container-3] (2026-04-08 18:42:33.920) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_pan_joint(Entity=102]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:42:33.920) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_lift_joint(Entity=103]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:42:33.920) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [elbow_joint(Entity=104]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:42:33.920) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_1_joint(Entity=105]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:42:33.920) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_2_joint(Entity=106]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-04-08 18:42:33.920) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_3_joint(Entity=107]). Ignoring JointVelocityCmd component.
+[component_container-3] [INFO] [1775641353.922329000] [controller_manager]: Activating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641353.922409430] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1775641353.922489250] [controller_manager]: Activated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1775641353.922494289] [controller_manager]: Successfully switched controllers!

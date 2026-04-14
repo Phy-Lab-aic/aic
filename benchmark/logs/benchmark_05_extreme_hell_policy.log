@@ -1,0 +1,27 @@
+bash: line 3: /home/yujin/ws_aic/install/setup.bash: No such file or directory
+[INFO] [1775643490.743853631] [aic_model]: Loading policy module: aic_example_policies.ros.CheatCodeHybrid
+[INFO] [1775643490.752703464] [aic_model]: Loaded policy module aic_example_policies.ros.CheatCodeHybrid
+[INFO] [1775643490.753292601] [aic_model]: Using policy: CheatCodeHybrid
+[ros2run]: Received signal:  Interrupt
+[?25hreentrant call inside <_io.BufferedWriter name='<stdout>'>
+Exception in thread Thread-1 (run_func):
+Traceback (most recent call last):
+  File "/home/yujin/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/home/yujin/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/yujin/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/tf2_ros/transform_listener.py", line 115, in run_func
+    self.executor.spin()
+  File "/home/yujin/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 374, in spin
+    self.spin_once()
+  File "/home/yujin/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 968, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/home/yujin/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 951, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/yujin/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 921, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/yujin/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 827, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException

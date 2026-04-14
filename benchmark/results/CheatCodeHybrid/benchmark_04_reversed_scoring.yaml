@@ -1,0 +1,79 @@
+total: -17.803829445193692
+trial_1:
+  tier_1:
+    score: 1
+    message: Model validation succeeded.
+  tier_2:
+    score: -5.6385232952419875
+    message: Scoring succeeded.
+    categories:
+      contacts:
+        score: -24
+        message: Contacts detected (only first reported) between entity named [ur5e::gripper/hande_finger_link_r::gripper/hande_finger_link_r_fixed_joint_lump__finger_collider_box001_collision_1] and [task_board::sc_port_0::sc_port_link::cube_collider_box]. Penalty applied.
+      duration:
+        score: 7.8353454545454539
+        message: "Task duration: 24.09 seconds."
+      insertion force:
+        score: 0
+        message: No excessive force detected
+      trajectory efficiency:
+        score: 5.5590433384010032
+        message: "Total end-effector path length: 0.41 m, initial plug-port distance: 0.34 m"
+      trajectory smoothness:
+        score: 4.9670879118115545
+        message: "Average linear jerk magnitude of the end effector: 8.61 m/s^3"
+  tier_3:
+    score: 25
+    message: "No insertion detected. Final plug port distance: 0.01m."
+trial_2:
+  tier_1:
+    score: 1
+    message: Model validation succeeded.
+  tier_2:
+    score: -36
+    message: Scoring succeeded.
+    categories:
+      contacts:
+        score: -24
+        message: Contacts detected (only first reported) between entity named [ur5e::gripper/hande_finger_link_l::gripper/hande_finger_link_l_fixed_joint_lump__finger_collider_box_collision] and [enclosure::enclosure_link::v1015026001_collider_box]. Penalty applied.
+      duration:
+        score: 0
+        message: Plug is not within max bounding radius from target port, not assigning time bonus
+      insertion force:
+        score: -12
+        message: "Insertion force above 20.00 N, detected for a time of 8.01 seconds. Max detected force: 6745.18N. This is above the threshold of 1.00 seconds. Penalty applied."
+      trajectory efficiency:
+        score: 0
+        message: Plug is not within max bounding radius from target port, not assigning efficiency bonus
+      trajectory smoothness:
+        score: 0
+        message: Plug is not within max bounding radius from target port, not assigning jerk bonus
+  tier_3:
+    score: 0
+    message: "No insertion detected. Final plug port distance: 0.10m."
+trial_3:
+  tier_1:
+    score: 1
+    message: Model validation succeeded.
+  tier_2:
+    score: -19.716003089411245
+    message: Scoring succeeded.
+    categories:
+      contacts:
+        score: -24
+        message: Contacts detected (only first reported) between entity named [ur5e::gripper/hande_finger_link_r::gripper/hande_finger_link_r_fixed_joint_lump__finger_collider_box001_collision_1] and [enclosure::enclosure_link::v1015026001_collider_box]. Penalty applied.
+      duration:
+        score: 11.125527272727274
+        message: "Task duration: 9.01 seconds."
+      insertion force:
+        score: -12
+        message: "Insertion force above 20.00 N, detected for a time of 8.83 seconds. Max detected force: 675.79N. This is above the threshold of 1.00 seconds. Penalty applied."
+      trajectory efficiency:
+        score: 5.1584696378614812
+        message: "Total end-effector path length: 0.22 m, initial plug-port distance: 0.08 m"
+      trajectory smoothness:
+        score: 0
+        message: "Average linear jerk magnitude of the end effector: 238.70 m/s^3"
+  tier_3:
+    score: 15.550696939459543
+    message: "No insertion detected. Final plug port distance: 0.03m."
