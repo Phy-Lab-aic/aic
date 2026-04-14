@@ -1,0 +1,27 @@
+{
+  mode: "client",
+  connect: {
+    timeout_ms: { router: -1, peer: -1, client: -1 },
+    endpoints: [
+      "tcp/localhost:7447"
+    ],
+  },
+  listen: {
+    endpoints: [],
+  },
+  scouting: {
+    timeout: 3000,
+    delay: 200,
+    multicast: {
+      enabled: false,
+    },
+    gossip: {
+      enabled: true,
+    },
+  },
+  transport: {
+    shared_memory: {
+      enabled: false,
+    },
+  },
+}

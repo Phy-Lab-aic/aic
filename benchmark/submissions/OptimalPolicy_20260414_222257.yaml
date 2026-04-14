@@ -1,0 +1,12 @@
+policy: aic_example_policies.ros.OptimalPolicy
+avg_score: 96.89
+tier1_avg: 1.0
+tier2_avg: 20.89
+tier3_avg: 75.0
+min_score: 96.44755057928715
+max_score: 97.22302966175818
+date: '2026-04-14'
+github_id: JJhyeongg
+trials_completed: 20
+trials_total: 20
+configs: 20

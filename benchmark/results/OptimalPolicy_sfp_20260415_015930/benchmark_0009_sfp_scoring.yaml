@@ -1,0 +1,27 @@
+total: 97.029937284286191
+trial_1:
+  tier_1:
+    score: 1
+    message: Model validation succeeded.
+  tier_2:
+    score: 21.029937284286188
+    message: Scoring succeeded.
+    categories:
+      contacts:
+        score: 0
+        message: No contact detected.
+      duration:
+        score: 10.251490909090911
+        message: "Task duration: 13.01 seconds."
+      insertion force:
+        score: 0
+        message: No excessive force detected
+      trajectory efficiency:
+        score: 5.6085334658034185
+        message: "Total end-effector path length: 0.29 m, initial plug-port distance: 0.23 m"
+      trajectory smoothness:
+        score: 5.1699129093918579
+        message: "Average linear jerk magnitude of the end effector: 6.92 m/s^3"
+  tier_3:
+    score: 75
+    message: Cable insertion successful.

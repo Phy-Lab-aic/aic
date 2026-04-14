@@ -1,0 +1,12 @@
+policy: aic_example_policies.ros.AutoCode
+avg_score: 93.53
+tier1_avg: 1.0
+tier2_avg: 17.53
+tier3_avg: 75.0
+min_score: 93.28367222888124
+max_score: 93.92752455347886
+date: '2026-04-14'
+github_id: JJhyeongg
+trials_completed: 20
+trials_total: 20
+configs: 20

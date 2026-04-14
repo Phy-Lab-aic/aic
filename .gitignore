@@ -11,8 +11,8 @@ files.txt
 !.pixi/config.toml
 pixi.lock
 
-# benchmark (제외)
-benchmark/
+# benchmark logs
+benchmark/logs/
 
 # debug logs
 tmp/
