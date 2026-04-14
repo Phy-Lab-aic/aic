@@ -18,10 +18,9 @@ from pathlib import Path
 import numpy as np
 import PyKDL
 import yaml
-from geometry_msgs.msg import Point, Pose, Quaternion, PoseStamped, Vector3, Wrench
+from geometry_msgs.msg import Point, Pose, Quaternion, PoseStamped
 from moveit.planning import MoveItPy, PlanRequestParameters
-from aic_control_interfaces.msg import JointMotionUpdate, MotionUpdate, TrajectoryGenerationMode
-from std_msgs.msg import Header
+from aic_control_interfaces.msg import JointMotionUpdate, TrajectoryGenerationMode
 from aic_model.policy import (
     GetObservationCallback, MoveRobotCallback, Policy, SendFeedbackCallback,
 )
@@ -83,20 +82,9 @@ FORCE_LOW_THRESHOLD = 5.0        # 삽입 완료 force 한계 (N), 이 이하 + 
 FORCE_STOP_THRESHOLD = 20.0      # 안전 정지 |force| 기준 (N, 채점 penalty 기준과 동일)
 FORCE_PENALTY_DURATION = 1.5     # 20N 초과 시 정지 판정 대기 (초, 채점 1초 전 정지)
 
-# ── Phase 3 MotionUpdate Impedance ────────────────────────────────────
-INSERT_CART_STIFFNESS = [200.0, 200.0, 30.0, 50.0, 50.0, 50.0]
-INSERT_CART_DAMPING   = [150.0, 150.0, 25.0, 30.0, 30.0, 30.0]
-
-# ── F/T Feedback (Phase 3) ───────────────────────────────────────────
-FORCE_ALPHA = 0.3                # EMA filter alpha
-ADMITTANCE_GAIN = 0.0002         # lateral force → velocity 보정 (m/s/N)
-STALL_WINDOW = 50                # stall 감지 window (50 × 0.05s = 2.5초)
-STALL_DEPTH_THRESHOLD = 0.0005   # stall 판정 depth 변화 threshold (m)
-JAMMING_RETRIES = 10             # stall 시 최대 retry
-
 # ── Torque Safety (KDL gravity torque 검사) ───────────────────────────
 EFFORT_LIMITS = np.array([150.0, 150.0, 150.0, 28.0, 28.0, 28.0])  # UR5e 관절별 토크 한계 (Nm)
-TORQUE_SAFETY_MARGIN = 0.7       # 토크 한계의 50%를 안전 threshold로 사용
+TORQUE_SAFETY_MARGIN = 0.5       # 토크 한계의 50%를 안전 threshold로 사용
 
 # ── KDL Tool Chain ────────────────────────────────────────────────────
 CABLE_MASS_KG = 0.15             # 케이블 추정 무게 (kg, URDF 미포함)
@@ -136,12 +124,6 @@ class PilzPolicy(Policy):
         self._kdl_chain = None
         self._kdl_gravity_solver = None
         self._cached_urdf: str | None = None
-
-        # F/T filter state
-        self._f_filtered = np.zeros(3)
-        self._t_filtered = np.zeros(3)
-        self._f_baseline = np.zeros(3)
-        self._t_baseline = np.zeros(3)
 
         # 디버그 로그 파일
         ts = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -323,95 +305,7 @@ class PilzPolicy(Policy):
         self._log(f"  KDL: initialized, {chain.getNrOfJoints()} joints")
 
     # ══════════════════════════════════════════════════════════════════
-    # FK + MotionUpdate 헬퍼
-    # ══════════════════════════════════════════════════════════════════
-
-    def _joint_to_tcp_pose(self, joint_positions: list[float]) -> Pose | None:
-        """FK: joint positions → gripper/tcp pose (world 기준).
-        MoveItPy RobotState를 사용."""
-        psm = self._moveit.get_planning_scene_monitor()
-        try:
-            with psm.read_write() as scene:
-                rs = scene.current_state
-                rs.set_joint_group_positions("manipulator", joint_positions[:6])
-                rs.update_link_transforms()
-                transform = rs.get_global_link_transform("gripper/tcp")
-                # Isometry3d → 4x4 numpy array
-                pos = transform[:3, 3]
-                rot_mat = transform[:3, :3]
-                # rotation matrix → quaternion
-                q = self._rotation_matrix_to_quaternion(rot_mat)
-                return Pose(
-                    position=Point(x=float(pos[0]), y=float(pos[1]), z=float(pos[2])),
-                    orientation=Quaternion(x=q[0], y=q[1], z=q[2], w=q[3]),
-                )
-        except Exception as e:
-            self._log(f"  FK failed: {e}")
-            return None
-
-    @staticmethod
-    def _rotation_matrix_to_quaternion(R: np.ndarray) -> tuple:
-        """3x3 rotation matrix → (x, y, z, w) quaternion."""
-        trace = R[0, 0] + R[1, 1] + R[2, 2]
-        if trace > 0:
-            s = 0.5 / np.sqrt(trace + 1.0)
-            w = 0.25 / s
-            x = (R[2, 1] - R[1, 2]) * s
-            y = (R[0, 2] - R[2, 0]) * s
-            z = (R[1, 0] - R[0, 1]) * s
-        elif R[0, 0] > R[1, 1] and R[0, 0] > R[2, 2]:
-            s = 2.0 * np.sqrt(1.0 + R[0, 0] - R[1, 1] - R[2, 2])
-            w = (R[2, 1] - R[1, 2]) / s
-            x = 0.25 * s
-            y = (R[0, 1] + R[1, 0]) / s
-            z = (R[0, 2] + R[2, 0]) / s
-        elif R[1, 1] > R[2, 2]:
-            s = 2.0 * np.sqrt(1.0 + R[1, 1] - R[0, 0] - R[2, 2])
-            w = (R[0, 2] - R[2, 0]) / s
-            x = (R[0, 1] + R[1, 0]) / s
-            y = 0.25 * s
-            z = (R[1, 2] + R[2, 1]) / s
-        else:
-            s = 2.0 * np.sqrt(1.0 + R[2, 2] - R[0, 0] - R[1, 1])
-            w = (R[1, 0] - R[0, 1]) / s
-            x = (R[0, 2] + R[2, 0]) / s
-            y = (R[1, 2] + R[2, 1]) / s
-            z = 0.25 * s
-        return (x, y, z, w)
-
-    def _send_motion_update(self, move_robot, pose,
-                            stiffness=None, damping=None):
-        """MotionUpdate(position mode) 발행."""
-        stiffness = stiffness or [90.0, 90.0, 90.0, 50.0, 50.0, 50.0]
-        damping = damping or [50.0, 50.0, 50.0, 20.0, 20.0, 20.0]
-        msg = MotionUpdate(
-            header=Header(frame_id="base_link",
-                          stamp=self._parent_node.get_clock().now().to_msg()),
-            pose=pose,
-            trajectory_generation_mode=TrajectoryGenerationMode(
-                mode=TrajectoryGenerationMode.MODE_POSITION),
-            target_stiffness=np.diag(stiffness).flatten().tolist(),
-            target_damping=np.diag(damping).flatten().tolist(),
-            feedforward_wrench_at_tip=Wrench(
-                force=Vector3(x=0.0, y=0.0, z=0.0),
-                torque=Vector3(x=0.0, y=0.0, z=0.0)),
-            wrench_feedback_gains_at_tip=[0.5, 0.5, 0.5, 0.0, 0.0, 0.0],
-        )
-        move_robot(motion_update=msg)
-
-    @staticmethod
-    def _interpolate_pose(p0: Pose, p1: Pose, frac: float) -> Pose:
-        """두 Pose 사이를 선형 보간 (position: lerp, orientation: 고정=p1)."""
-        x = p0.position.x + frac * (p1.position.x - p0.position.x)
-        y = p0.position.y + frac * (p1.position.y - p0.position.y)
-        z = p0.position.z + frac * (p1.position.z - p0.position.z)
-        return Pose(
-            position=Point(x=x, y=y, z=z),
-            orientation=p1.orientation,  # 목표 orientation 유지
-        )
-
-    # ══════════════════════════════════════════════════════════════════
-    # 기타 헬퍼
+    # 헬퍼
     # ══════════════════════════════════════════════════════════════════
 
     def _wait_for_tf(self, target_frame: str, source_frame: str, timeout_sec: float = TF_WAIT_TIMEOUT_SEC) -> bool:
@@ -658,17 +552,10 @@ class PilzPolicy(Policy):
         send_feedback("registering planning scene")
         self._planning_scene_manager.setup(timeout_sec=PLANNING_SCENE_TIMEOUT_SEC)
 
-        # world 기준 — MoveIt planning용
         try:
-            port_tf_world = self._parent_node._tf_buffer.lookup_transform("world", port_frame, Time())
+            port_tf = self._parent_node._tf_buffer.lookup_transform("world", port_frame, Time())
         except TransformException as e:
-            self.get_logger().error(f"port TF (world) failed: {e}")
-            return False
-        # base_link 기준 — MotionUpdate 실행용
-        try:
-            port_tf_base = self._parent_node._tf_buffer.lookup_transform("base_link", port_frame, Time())
-        except TransformException as e:
-            self.get_logger().error(f"port TF (base_link) failed: {e}")
+            self.get_logger().error(f"port TF failed: {e}")
             return False
         try:
             plug_to_tcp_tf = self._parent_node._tf_buffer.lookup_transform(plug_frame, "gripper/tcp", Time())
@@ -679,49 +566,43 @@ class PilzPolicy(Policy):
         is_sc = "sc_port" in task.port_name or "sc_port" in task.target_module_name
         self._log(f"  port_type={'SC' if is_sc else 'SFP'}")
 
-        # ── Phase 1: Torque-aware PTP (MoveIt, world 좌표) ──
+        # ── Phase 1: Torque-aware PTP ──
         send_feedback("Phase 1: PTP approach")
-        tcp_approach_world = self._compute_tcp_target(
-            port_tf_world, plug_to_tcp_tf,
+        tcp_approach = self._compute_tcp_target(
+            port_tf, plug_to_tcp_tf,
             z_offset=Z_OFFSET_APPROACH_SC if is_sc else Z_OFFSET_APPROACH_SFP, is_sc=is_sc,
         )
-        self._log(f"  Phase 1 target (world): ({tcp_approach_world.position.x:.4f}, "
-                  f"{tcp_approach_world.position.y:.4f}, {tcp_approach_world.position.z:.4f})")
-        if not self._phase1_torque_aware(tcp_approach_world, move_robot, get_observation):
+        self._log(f"  Phase 1 target: ({tcp_approach.position.x:.4f}, "
+                  f"{tcp_approach.position.y:.4f}, {tcp_approach.position.z:.4f})")
+        if not self._phase1_torque_aware(tcp_approach, move_robot, get_observation):
             self.get_logger().error("Phase 1 failed")
             return False
         self._log("  Phase 1 complete")
 
-        # ── Phase 1.5: IK 보정 (TCP 수렴, MotionUpdate base_link 좌표) ──
-        send_feedback("Phase 1.5: convergence")
-        tcp_approach_base = self._compute_tcp_target(
-            port_tf_base, plug_to_tcp_tf,
-            z_offset=Z_OFFSET_APPROACH_SC if is_sc else Z_OFFSET_APPROACH_SFP, is_sc=is_sc,
-        )
-        converge_err = self._ik_converge(tcp_approach_base, get_observation, move_robot, label="Phase1.5")
+        # ── Phase 1.5: IK 보정 (TCP 수렴) ──
+        send_feedback("Phase 1.5: IK convergence")
+        converge_err = self._ik_converge(tcp_approach, get_observation, move_robot, label="Phase1.5")
         self._log(f"  Phase 1.5 final error: {converge_err:.4f}m")
 
-        # ── Phase 2: LIN → PTP fallback (MoveIt, world 좌표) ──
+        # ── Phase 2: LIN → PTP fallback ──
         send_feedback("Phase 2: LIN descent")
-        tcp_preinsert_world = self._compute_tcp_target(
-            port_tf_world, plug_to_tcp_tf,
+        tcp_preinsert = self._compute_tcp_target(
+            port_tf, plug_to_tcp_tf,
             z_offset=Z_OFFSET_PREINSERT_SC if is_sc else Z_OFFSET_PREINSERT_SFP, is_sc=is_sc,
         )
-        self._log(f"  Phase 2 target (world): ({tcp_preinsert_world.position.x:.4f}, "
-                  f"{tcp_preinsert_world.position.y:.4f}, {tcp_preinsert_world.position.z:.4f})")
-        if not self._plan_and_execute(tcp_preinsert_world, "LIN", PHASE2_LIN_VELOCITY_SCALE, move_robot, get_observation):
+        self._log(f"  Phase 2 target: ({tcp_preinsert.position.x:.4f}, "
+                  f"{tcp_preinsert.position.y:.4f}, {tcp_preinsert.position.z:.4f})")
+        if not self._plan_and_execute(tcp_preinsert, "LIN", PHASE2_LIN_VELOCITY_SCALE, move_robot, get_observation):
             self._log("  Phase 2 LIN failed, trying PTP")
-            if not self._plan_and_execute(tcp_preinsert_world, "PTP", PHASE2_PTP_VELOCITY_SCALE, move_robot, get_observation):
+            if not self._plan_and_execute(tcp_preinsert, "PTP", PHASE2_PTP_VELOCITY_SCALE, move_robot, get_observation):
                 self.get_logger().error("Phase 2 failed")
                 return False
         self._log("  Phase 2 complete")
 
-        # ── Phase 3: MotionUpdate velocity + F/T feedback (base_link 좌표) ──
-        send_feedback("F/T baseline calibration")
-        self._calibrate_wrench_baseline(get_observation)
+        # ── Phase 3: Joint IK 삽입 ──
         depth_threshold = DEPTH_THRESHOLD_SC if is_sc else DEPTH_THRESHOLD_SFP
-        send_feedback("Phase 3: force-guided insertion")
-        self._force_insert(port_tf_base, plug_to_tcp_tf, plug_frame,
+        send_feedback("Phase 3: insertion")
+        self._force_insert(port_tf, plug_to_tcp_tf, plug_frame,
                            get_observation, move_robot, depth_threshold)
         self._log("PilzPolicy.insert_cable() done")
         return True
@@ -750,100 +631,89 @@ class PilzPolicy(Policy):
             self._execute_waypoints(points, move_robot, get_observation)
 
     def _execute_waypoints(self, points, move_robot, get_observation=None):
-        """MoveIt waypoint 간을 AutoCode 방식으로 보간 이동 (MotionUpdate).
-        Global path: MoveIt waypoints, Local path: set_pose_target 연속 보간."""
         n_pts = len(points)
+        t_start = self.time_now()
 
-        # 모든 waypoint의 TCP pose를 FK로 사전 계산
-        wp_poses = []
-        for pt in points:
-            pose = self._joint_to_tcp_pose(list(pt.positions))
-            wp_poses.append(pose)
+        for i, point in enumerate(points):
+            t_sec = point.time_from_start.sec + point.time_from_start.nanosec * 1e-9
+            wait = (t_start + Duration(seconds=t_sec) - self.time_now()).nanoseconds * 1e-9
+            if wait > 0:
+                self.sleep_for(wait)
 
-        if not wp_poses or wp_poses[0] is None:
-            self._log("  Execute: FK failed for first waypoint, fallback to joint mode")
-            return
+            ju = JointMotionUpdate(
+                target_stiffness=EXEC_STIFFNESS,
+                target_damping=EXEC_DAMPING,
+                trajectory_generation_mode=TrajectoryGenerationMode(mode=TrajectoryGenerationMode.MODE_POSITION),
+            )
+            ju.target_state.positions = list(point.positions)
+            move_robot(joint_motion_update=ju)
 
-        self._log(f"  Execute(AutoCode-interp): {n_pts} waypoints")
-
-        # waypoint 간 AutoCode 방식 보간
-        interp_dt = 0.05  # 50ms per step (20Hz)
-        stiffness = list(EXEC_STIFFNESS)
-        damping = list(EXEC_DAMPING)
-
-        for i in range(n_pts - 1):
-            p0 = wp_poses[i]
-            p1 = wp_poses[i + 1]
-            if p0 is None or p1 is None:
-                continue
-
-            # waypoint 간 시간 계산
-            t0 = points[i].time_from_start.sec + points[i].time_from_start.nanosec * 1e-9
-            t1 = points[i+1].time_from_start.sec + points[i+1].time_from_start.nanosec * 1e-9
-            segment_duration = max(t1 - t0, interp_dt)
-            n_interp = max(int(segment_duration / interp_dt), 1)
-
-            for k in range(n_interp):
-                frac = (k + 1) / n_interp
-                interp_pose = self._interpolate_pose(p0, p1, frac)
-                self._send_motion_update(move_robot, pose=interp_pose,
-                                         stiffness=stiffness, damping=damping)
-                self.sleep_for(interp_dt)
-
-            # 로깅 (매 waypoint)
-            if get_observation and (i == 0 or i == n_pts - 2 or (i + 1) % 5 == 0):
+            # 첫/마지막/매 10번째만 로그
+            if get_observation and (i == 0 or i == n_pts - 1 or (i + 1) % 10 == 0):
                 obs = get_observation()
-                if obs:
+                if obs and obs.joint_states and obs.joint_states.position:
+                    actual = np.array(obs.joint_states.position[:6])
+                    jerr = np.abs(actual - np.array(point.positions[:6])).max()
                     fz = obs.wrist_wrench.wrench.force.z
+                    # 실제 joint effort
+                    effort = np.array(obs.joint_states.effort[:6]) if len(obs.joint_states.effort) >= 6 else None
+                    eff_str = ""
+                    if effort is not None:
+                        eff_ratio = np.abs(effort) / EFFORT_LIMITS
+                        peak_j = int(eff_ratio.argmax())
+                        eff_str = f" eff_peak=j{peak_j}:{effort[peak_j]:.1f}Nm({eff_ratio[peak_j]*100:.0f}%)"
                     try:
-                        tp = self._parent_node._tf_buffer.lookup_transform(
-                            "base_link", "gripper/tcp", Time()).transform.translation
-                        self._log(f"  wp[{i+1}/{n_pts}] pos=({tp.x:.4f},{tp.y:.4f},{tp.z:.4f}) fz={fz:.1f}N")
+                        tp = self._parent_node._tf_buffer.lookup_transform("world", "gripper/tcp", Time()).transform.translation
+                        self._log(f"  wp[{i}/{n_pts}] jerr={jerr:.5f} pos=({tp.x:.4f},{tp.y:.4f},{tp.z:.4f}) fz={fz:.1f}N{eff_str}")
                     except TransformException:
-                        pass
+                        self._log(f"  wp[{i}/{n_pts}] jerr={jerr:.5f} fz={fz:.1f}N{eff_str}")
 
-        # 안정화: 마지막 pose 유지
-        last_pose = wp_poses[-1]
-        if last_pose:
-            t0 = self.time_now()
-            while (self.time_now() - t0) < Duration(seconds=SETTLE_DURATION):
-                self._send_motion_update(move_robot, pose=last_pose,
-                                         stiffness=stiffness, damping=damping)
-                self.sleep_for(SETTLE_INTERVAL)
+        # 안정화
+        t0 = self.time_now()
+        while (self.time_now() - t0) < Duration(seconds=SETTLE_DURATION):
+            ju = JointMotionUpdate(
+                target_stiffness=EXEC_STIFFNESS, target_damping=EXEC_DAMPING,
+                trajectory_generation_mode=TrajectoryGenerationMode(mode=TrajectoryGenerationMode.MODE_POSITION),
+            )
+            ju.target_state.positions = list(points[-1].positions)
+            move_robot(joint_motion_update=ju)
+            self.sleep_for(SETTLE_INTERVAL)
 
     def _execute_fine_interpolated(self, points, move_robot):
-        """Torque violation 시 fine interpolation — 동일하게 MotionUpdate 보간."""
-        # 기존 joint 보간 → FK → TCP poses
         pos_list = [np.array(p.positions) for p in points]
-        interp_positions = []
+        t_list = [p.time_from_start.sec + p.time_from_start.nanosec * 1e-9 for p in points]
+
+        interp_pos, interp_t = [], []
         for i in range(len(pos_list) - 1):
             for k in range(FINE_INTERP_FACTOR):
                 f = k / FINE_INTERP_FACTOR
-                interp_positions.append(pos_list[i] + f * (pos_list[i+1] - pos_list[i]))
-        interp_positions.append(pos_list[-1])
+                interp_pos.append(pos_list[i] + f * (pos_list[i+1] - pos_list[i]))
+                interp_t.append(t_list[i] + f * (t_list[i+1] - t_list[i]))
+        interp_pos.append(pos_list[-1])
+        interp_t.append(t_list[-1])
 
-        self._log(f"  FineInterp(MotionUpdate): {len(points)} → {len(interp_positions)} wp")
+        self._log(f"  FineInterp: {len(points)} → {len(interp_pos)} wp")
+        t_start = self.time_now()
+        for pos, t_sec in zip(interp_pos, interp_t):
+            wait = (t_start + Duration(seconds=t_sec) - self.time_now()).nanoseconds * 1e-9
+            if wait > 0:
+                self.sleep_for(wait)
+            ju = JointMotionUpdate(
+                target_stiffness=EXEC_STIFFNESS, target_damping=EXEC_DAMPING,
+                trajectory_generation_mode=TrajectoryGenerationMode(mode=TrajectoryGenerationMode.MODE_POSITION),
+            )
+            ju.target_state.positions = pos.tolist()
+            move_robot(joint_motion_update=ju)
 
-        # FK → TCP poses로 변환 후 MotionUpdate 발행
-        stiffness = list(EXEC_STIFFNESS)
-        damping = list(EXEC_DAMPING)
-        last_pose = None
-
-        for pos in interp_positions:
-            tcp_pose = self._joint_to_tcp_pose(pos.tolist())
-            if tcp_pose is not None:
-                self._send_motion_update(move_robot, pose=tcp_pose,
-                                         stiffness=stiffness, damping=damping)
-                last_pose = tcp_pose
-            self.sleep_for(0.05)
-
-        # 안정화
-        if last_pose:
-            t0 = self.time_now()
-            while (self.time_now() - t0) < Duration(seconds=SETTLE_DURATION):
-                self._send_motion_update(move_robot, pose=last_pose,
-                                         stiffness=stiffness, damping=damping)
-                self.sleep_for(SETTLE_INTERVAL)
+        t0 = self.time_now()
+        while (self.time_now() - t0) < Duration(seconds=SETTLE_DURATION):
+            ju = JointMotionUpdate(
+                target_stiffness=EXEC_STIFFNESS, target_damping=EXEC_DAMPING,
+                trajectory_generation_mode=TrajectoryGenerationMode(mode=TrajectoryGenerationMode.MODE_POSITION),
+            )
+            ju.target_state.positions = interp_pos[-1].tolist()
+            move_robot(joint_motion_update=ju)
+            self.sleep_for(SETTLE_INTERVAL)
 
     # ══════════════════════════════════════════════════════════════════
     # IK 보정: 고정 목표 pose에 TCP 수렴
@@ -851,20 +721,44 @@ class PilzPolicy(Policy):
 
     def _ik_converge(self, target_pose: Pose, get_observation: GetObservationCallback,
                      move_robot: MoveRobotCallback, label: str = "IK_converge") -> float:
-        """목표 TCP pose로 set_pose_target 반복으로 수렴. MotionUpdate 사용."""
-        best_error = float("inf")
-        stiffness = list(EXEC_STIFFNESS)
-        damping = list(EXEC_DAMPING)
+        """고정 목표 TCP pose에 IK 반복으로 수렴. 최종 position error(m) 반환."""
+        psm = self._moveit.get_planning_scene_monitor()
+        last_joints = None
 
+        # 초기 joint state
+        obs = get_observation()
+        if obs and obs.joint_states and obs.joint_states.position:
+            last_joints = list(obs.joint_states.position[:6])
+
+        best_error = float("inf")
         for lc in range(1, IK_CONVERGE_MAX_LOOPS + 1):
-            # MotionUpdate로 목표 pose 발행 (controller가 IK 처리)
-            self._send_motion_update(move_robot, pose=target_pose,
-                                     stiffness=stiffness, damping=damping)
+            # IK 풀기
+            ik_ok = False
+            try:
+                with psm.read_only() as scene:
+                    rs = scene.current_state
+                    ik_ok = rs.set_from_ik("manipulator", target_pose, "gripper/tcp")
+                    if ik_ok:
+                        last_joints = list(rs.get_joint_group_positions("manipulator"))
+            except Exception:
+                pass
+
+            if last_joints is None:
+                self.sleep_for(IK_CONVERGE_DT)
+                continue
+
+            # joint command 발행
+            ju = JointMotionUpdate(
+                target_stiffness=EXEC_STIFFNESS, target_damping=EXEC_DAMPING,
+                trajectory_generation_mode=TrajectoryGenerationMode(mode=TrajectoryGenerationMode.MODE_POSITION),
+            )
+            ju.target_state.positions = last_joints
+            move_robot(joint_motion_update=ju)
             self.sleep_for(IK_CONVERGE_DT)
 
             # TCP error 측정
             try:
-                tcp_tf = self._parent_node._tf_buffer.lookup_transform("base_link", "gripper/tcp", Time())
+                tcp_tf = self._parent_node._tf_buffer.lookup_transform("world", "gripper/tcp", Time())
                 actual = np.array([tcp_tf.transform.translation.x,
                                    tcp_tf.transform.translation.y,
                                    tcp_tf.transform.translation.z])
@@ -887,156 +781,104 @@ class PilzPolicy(Policy):
         return best_error
 
     # ══════════════════════════════════════════════════════════════════
-    # F/T 헬퍼
-    # ══════════════════════════════════════════════════════════════════
-
-    def _read_wrench(self, obs):
-        """F/T 읽기 + baseline 보상 + EMA filtering."""
-        f_raw = np.array([obs.wrist_wrench.wrench.force.x,
-                          obs.wrist_wrench.wrench.force.y,
-                          obs.wrist_wrench.wrench.force.z]) - self._f_baseline
-        t_raw = np.array([obs.wrist_wrench.wrench.torque.x,
-                          obs.wrist_wrench.wrench.torque.y,
-                          obs.wrist_wrench.wrench.torque.z]) - self._t_baseline
-        self._f_filtered = FORCE_ALPHA * f_raw + (1 - FORCE_ALPHA) * self._f_filtered
-        self._t_filtered = FORCE_ALPHA * t_raw + (1 - FORCE_ALPHA) * self._t_filtered
-        return self._f_filtered.copy(), self._t_filtered.copy()
-
-    def _calibrate_wrench_baseline(self, get_observation, n=10):
-        """현재 자세에서 F/T baseline 측정."""
-        f_sum, t_sum, count = np.zeros(3), np.zeros(3), 0
-        for _ in range(n):
-            obs = get_observation()
-            if obs:
-                f_sum += np.array([obs.wrist_wrench.wrench.force.x,
-                                   obs.wrist_wrench.wrench.force.y,
-                                   obs.wrist_wrench.wrench.force.z])
-                t_sum += np.array([obs.wrist_wrench.wrench.torque.x,
-                                   obs.wrist_wrench.wrench.torque.y,
-                                   obs.wrist_wrench.wrench.torque.z])
-                count += 1
-            self.sleep_for(0.02)
-        if count > 0:
-            self._f_baseline = f_sum / count
-            self._t_baseline = t_sum / count
-            self._f_filtered = np.zeros(3)
-            self._t_filtered = np.zeros(3)
-        self._log(f"  F/T baseline: force=({self._f_baseline[0]:.1f}, "
-                  f"{self._f_baseline[1]:.1f}, {self._f_baseline[2]:.1f})N")
-
-    # ══════════════════════════════════════════════════════════════════
-    # Phase 3: MotionUpdate velocity mode + F/T feedback
+    # Phase 3: Joint IK 삽입 + depth+force 완료 판정
     # ══════════════════════════════════════════════════════════════════
 
     def _force_insert(self, port_tf, plug_to_tcp_tf, plug_frame: str,
                       get_observation: GetObservationCallback,
                       move_robot: MoveRobotCallback, depth_threshold: float = 0.0):
-        """MotionUpdate velocity mode로 삽입. F/T feedback + stall detection."""
+        exit_reason = "timeout"
+        excessive_force_start: float | None = None
+        f_insert_history: list[float] = []
+
         port_z = self._port_insert_direction(port_tf)
         port_pos = np.array([port_tf.transform.translation.x,
                              port_tf.transform.translation.y,
                              port_tf.transform.translation.z])
         pr = port_tf.transform.rotation
         R_port = _quat_to_matrix(pr.x, pr.y, pr.z, pr.w)
-        port_x, port_y = R_port[:, 0], R_port[:, 1]
-
-        exit_reason = "timeout"
-        excessive_force_start = None
-        f_insert_history = []
-        stall_history = []
-        retry_count = 0
 
         self._log(f"  Phase 3 START: vel={INSERT_VELOCITY}, dt={DT}, max={MAX_LOOPS}, "
                   f"force_stop={FORCE_STOP_THRESHOLD}N/{FORCE_PENALTY_DURATION}s")
 
+        try:
+            tcp_tf = self._parent_node._tf_buffer.lookup_transform("world", "gripper/tcp", Time())
+            tcp_pos = np.array([tcp_tf.transform.translation.x,
+                                tcp_tf.transform.translation.y,
+                                tcp_tf.transform.translation.z])
+            tcp_ori = tcp_tf.transform.rotation
+        except TransformException as e:
+            self._log(f"  Phase 3: TCP TF failed: {e}")
+            return
+
+        obs = get_observation()
+        if not (obs and obs.joint_states and obs.joint_states.position):
+            self._log("  Phase 3: no joint state")
+            return
+        last_joints = list(obs.joint_states.position[:6])
+
         # 초기 depth
         try:
-            pf = self._parent_node._tf_buffer.lookup_transform("base_link", plug_frame, Time())
+            pf = self._parent_node._tf_buffer.lookup_transform("world", plug_frame, Time())
             pp = np.array([pf.transform.translation.x, pf.transform.translation.y, pf.transform.translation.z])
             d0 = np.dot(pp - port_pos, port_z)
-            xy_x = float(np.dot(pp - port_pos, port_x))
-            xy_y = float(np.dot(pp - port_pos, port_y))
+            xy_x = float(np.dot(pp - port_pos, R_port[:, 0]))
+            xy_y = float(np.dot(pp - port_pos, R_port[:, 1]))
             self._log(f"  Phase 3 init: depth={d0:.4f}m, xy_err=({xy_x:.4f},{xy_y:.4f})m")
         except TransformException:
             pass
 
+        psm = self._moveit.get_planning_scene_monitor()
+        ik_fails = 0
         depth = None
+
         for lc in range(1, MAX_LOOPS + 1):
             obs = get_observation()
             if obs is None:
                 self.sleep_for(DT)
                 continue
 
+            # wrench → 삽입 방향 투영 force
+            f_raw = np.array([obs.wrist_wrench.wrench.force.x,
+                              obs.wrist_wrench.wrench.force.y,
+                              obs.wrist_wrench.wrench.force.z])
+            f_insert = -float(np.dot(f_raw, port_z))  # 양수=삽입방향, 음수=반발 (FTS와 port_z 부호 반전)
+            f_abs = float(np.linalg.norm(f_raw))      # 전체 크기 (안전 정지용)
             now = self.time_now().nanoseconds * 1e-9
 
-            # F/T (baseline 보상 + EMA)
-            f, t = self._read_wrench(obs)
-            f_insert = float(np.dot(f, port_z))
-            f_lateral_x = float(np.dot(f, port_x))
-            f_lateral_y = float(np.dot(f, port_y))
-            f_abs = float(np.linalg.norm(f))
-
-            # depth
             try:
-                pf = self._parent_node._tf_buffer.lookup_transform("base_link", plug_frame, Time())
+                pf = self._parent_node._tf_buffer.lookup_transform("world", plug_frame, Time())
                 pp = np.array([pf.transform.translation.x, pf.transform.translation.y, pf.transform.translation.z])
                 depth = float(np.dot(pp - port_pos, port_z))
             except TransformException:
                 depth = None
 
-            # force slope
+            if lc % 10 == 0 or lc == 1:
+                ds = f"{depth:.5f}" if depth is not None else "N/A"
+                slope_str = f" slope={f_slope:.1f}N/s" if len(f_insert_history) >= FORCE_SLOPE_WINDOW else ""
+                self._log(f"  P3[{lc:4d}] depth={ds}m f_ins={f_insert:.1f}N |f|={f_abs:.1f}N{slope_str} f=({f_raw[0]:.1f},{f_raw[1]:.1f},{f_raw[2]:.1f})N")
+
+            # force 이력 기록 + 기울기 계산
             f_insert_history.append(f_insert)
             if len(f_insert_history) > FORCE_SLOPE_WINDOW:
                 f_insert_history.pop(0)
+
             f_slope = 0.0
             if len(f_insert_history) >= FORCE_SLOPE_WINDOW:
+                # 선형 회귀 기울기 (N/s): window 내 force 변화율
                 y = np.array(f_insert_history)
                 x = np.arange(len(y)) * DT
                 f_slope = float((len(y) * np.dot(x, y) - x.sum() * y.sum()) /
                                 (len(y) * np.dot(x, x) - x.sum()**2))
 
-            if lc % 10 == 0 or lc == 1:
-                ds = f"{depth:.5f}" if depth is not None else "N/A"
-                slope_str = f" slope={f_slope:.1f}N/s" if len(f_insert_history) >= FORCE_SLOPE_WINDOW else ""
-                self._log(f"  P3[{lc:4d}] depth={ds}m f_ins={f_insert:.1f}N |f|={f_abs:.1f}N "
-                          f"f_lat=({f_lateral_x:.1f},{f_lateral_y:.1f})N{slope_str} retries={retry_count}")
-
-            # ── 삽입 완료 ──
+            # 삽입 완료 조건: depth >= threshold AND f_insert <= 5N AND force 감소 중 → 즉시 종료
             depth_ok = depth is not None and depth >= depth_threshold
             if depth_ok and f_insert <= FORCE_LOW_THRESHOLD and f_slope < FORCE_SLOPE_THRESHOLD:
                 exit_reason = f"insert_complete: depth={depth:.5f}m f_ins={f_insert:.1f}N slope={f_slope:.1f}N/s"
                 self._log(f"  Phase 3 EXIT [{exit_reason}]")
                 break
 
-            # ── Stall detection ──
-            if depth is not None:
-                stall_history.append(depth)
-                if len(stall_history) > STALL_WINDOW:
-                    stall_history.pop(0)
-                if (len(stall_history) >= STALL_WINDOW and
-                        abs(max(stall_history) - min(stall_history)) < STALL_DEPTH_THRESHOLD
-                        and abs(f_insert) > 3.0):
-                    if retry_count < JAMMING_RETRIES:
-                        retry_count += 1
-                        self._log(f"  Phase 3: STALL (retry {retry_count}/{JAMMING_RETRIES})")
-                        # 정지 잠시 대기
-                        stop = MotionUpdate(
-                            header=Header(frame_id="base_link"),
-                            trajectory_generation_mode=TrajectoryGenerationMode(
-                                mode=TrajectoryGenerationMode.MODE_VELOCITY),
-                            target_stiffness=np.diag(INSERT_CART_STIFFNESS).flatten().tolist(),
-                            target_damping=np.diag(INSERT_CART_DAMPING).flatten().tolist(),
-                        )
-                        move_robot(motion_update=stop)
-                        self.sleep_for(0.5)
-                        stall_history.clear()
-                        continue
-                    else:
-                        exit_reason = f"stall_stop: depth={depth:.5f}m retries exhausted"
-                        self._log(f"  Phase 3 EXIT [{exit_reason}]")
-                        break
-
-            # ── 안전 정지 ──
+            # 조건 3: 안전 정지 (|force| > 20N)
             if f_abs > FORCE_STOP_THRESHOLD:
                 if excessive_force_start is None:
                     excessive_force_start = now
@@ -1048,29 +890,36 @@ class PilzPolicy(Policy):
             else:
                 excessive_force_start = None
 
-            # ── Force-adaptive velocity ──
-            v_scale = max(0.1, 1.0 - abs(f_insert) / 15.0)
-            vel = INSERT_VELOCITY * v_scale
+            # TCP 증분 + IK
+            prev = tcp_pos.copy()
+            tcp_pos += port_z * INSERT_VELOCITY * DT
 
-            # ── Velocity command + lateral admittance ──
-            vx = float(port_z[0] * vel - f_lateral_x * ADMITTANCE_GAIN)
-            vy = float(port_z[1] * vel - f_lateral_y * ADMITTANCE_GAIN)
-            vz = float(port_z[2] * vel)
-
-            motion_update = MotionUpdate(
-                header=Header(frame_id="base_link",
-                              stamp=self._parent_node.get_clock().now().to_msg()),
-                trajectory_generation_mode=TrajectoryGenerationMode(
-                    mode=TrajectoryGenerationMode.MODE_VELOCITY),
-                target_stiffness=np.diag(INSERT_CART_STIFFNESS).flatten().tolist(),
-                target_damping=np.diag(INSERT_CART_DAMPING).flatten().tolist(),
-                feedforward_wrench_at_tip=Wrench(),
-                wrench_feedback_gains_at_tip=[0.5, 0.5, 0.5, 0.0, 0.0, 0.0],
+            target_pose = Pose(
+                position=Point(x=float(tcp_pos[0]), y=float(tcp_pos[1]), z=float(tcp_pos[2])),
+                orientation=tcp_ori,
             )
-            motion_update.velocity.linear.x = vx
-            motion_update.velocity.linear.y = vy
-            motion_update.velocity.linear.z = vz
-            move_robot(motion_update=motion_update)
+            ik_ok = False
+            try:
+                with psm.read_only() as scene:
+                    rs = scene.current_state
+                    ik_ok = rs.set_from_ik("manipulator", target_pose, "gripper/tcp")
+                    if ik_ok:
+                        last_joints = list(rs.get_joint_group_positions("manipulator"))
+                        ik_fails = 0
+            except Exception:
+                pass
+            if not ik_ok:
+                ik_fails += 1
+                tcp_pos = prev
+                if ik_fails % 20 == 1:
+                    self._log(f"  Phase 3: IK failed (x{ik_fails})")
+
+            ju = JointMotionUpdate(
+                target_stiffness=EXEC_STIFFNESS, target_damping=EXEC_DAMPING,
+                trajectory_generation_mode=TrajectoryGenerationMode(mode=TrajectoryGenerationMode.MODE_POSITION),
+            )
+            ju.target_state.positions = last_joints
+            move_robot(joint_motion_update=ju)
             self.sleep_for(DT)
         else:
             exit_reason = f"max_loops={MAX_LOOPS}, depth={depth}"
@@ -1078,11 +927,11 @@ class PilzPolicy(Policy):
 
         # 최종 상태
         try:
-            pf = self._parent_node._tf_buffer.lookup_transform("base_link", plug_frame, Time())
+            pf = self._parent_node._tf_buffer.lookup_transform("world", plug_frame, Time())
             pp = np.array([pf.transform.translation.x, pf.transform.translation.y, pf.transform.translation.z])
             fd = float(np.dot(pp - port_pos, port_z))
-            xy_x = float(np.dot(pp - port_pos, port_x))
-            xy_y = float(np.dot(pp - port_pos, port_y))
+            xy_x = float(np.dot(pp - port_pos, R_port[:, 0]))
+            xy_y = float(np.dot(pp - port_pos, R_port[:, 1]))
             self._log(f"  Phase 3 FINAL: loops={lc}, exit=[{exit_reason}], depth={fd:.5f}m, xy_err=({xy_x:.4f},{xy_y:.4f})m")
         except (TransformException, UnboundLocalError):
             self._log(f"  Phase 3 FINAL: exit=[{exit_reason}]")
