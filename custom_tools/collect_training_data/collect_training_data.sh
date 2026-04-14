@@ -95,6 +95,7 @@ START_IDX=0
 END_IDX=999
 DATA_DIR="${HOME}/aic_data/raw"
 MONITOR="false"
+RECORD_ALL_TOPICS="true"  # 항상 true (학습 데이터 수집용)
 GROUND_TRUTH="true"
 SKIP_BUILD="false"
 
@@ -107,10 +108,11 @@ Options:
   --task-type <sfp|sc|all>  Config type to run (default: all)
   --start-idx <N>         Start config index (default: 0)
   --end-idx <N>           End config index (default: 999)
-  --data-dir <path>       Output directory (default: ~/aic_data/raw)
+  --data-dir <path>       Output directory (default: ~/aic_training_data)
   --no-ground-truth       Disable ground truth TF (default: enabled)
   --skip-build            Skip pixi build
   --max-retries <N>       Max retries per config (default: 3)
+  --no-record-all         Record only scoring topics (default: record all topics)
   --monitor               Show camera feed via cv2.imshow (useful with --headless)
 
 Example:
@@ -129,6 +131,7 @@ while [[ $# -gt 0 ]]; do
         --no-ground-truth) GROUND_TRUTH="false"; shift ;;
         --skip-build)     SKIP_BUILD="true"; shift ;;
         --max-retries)    MAX_RETRIES="$2"; shift 2 ;;
+        --no-record-all)  RECORD_ALL_TOPICS="false"; shift ;;
         --monitor)        MONITOR="true"; shift ;;
         --help|-h)        usage ;;
         -*)               echo "Unknown option: $1" >&2; usage ;;
@@ -180,21 +183,42 @@ log() {
 build_config_list() {
     local configs=()
 
-    # Layout: configs/{mode}/sfp/config_sfp_*.yaml, configs/{mode}/sc/config_sc_*.yaml
-    if [[ "$TASK_TYPE" == "sfp" || "$TASK_TYPE" == "all" ]]; then
-        for f in "${TRAIN_CONFIG_DIR}/sfp"/config_sfp_*.yaml; do
-            [[ -f "$f" ]] && configs+=("$f")
+    # Try single-folder layout first (config_XXXX.yaml)
+    local single_folder_configs=()
+    for f in "${TRAIN_CONFIG_DIR}"/config_*.yaml; do
+        [[ -f "$f" ]] && single_folder_configs+=("$f")
+    done
+
+    if (( ${#single_folder_configs[@]} > 0 )); then
+        # Single folder mode: filter by task type using even/odd index
+        for f in "${single_folder_configs[@]}"; do
+            local basename="$(basename "$f" .yaml)"
+            local idx="${basename#config_}"
+            idx=$((10#$idx))  # remove leading zeros
+
+            if [[ "$TASK_TYPE" == "all" ]]; then
+                configs+=("$f")
+            elif [[ "$TASK_TYPE" == "sfp" ]] && (( idx % 2 == 0 )); then
+                configs+=("$f")
+            elif [[ "$TASK_TYPE" == "sc" ]] && (( idx % 2 == 1 )); then
+                configs+=("$f")
+            fi
         done
-    fi
-    if [[ "$TASK_TYPE" == "sc" || "$TASK_TYPE" == "all" ]]; then
-        for f in "${TRAIN_CONFIG_DIR}/sc"/config_sc_*.yaml; do
-            [[ -f "$f" ]] && configs+=("$f")
-        done
+    else
+        # Legacy layout: sfp/ and sc/ subdirectories
+        if [[ "$TASK_TYPE" == "sfp" || "$TASK_TYPE" == "all" ]]; then
+            for f in "${TRAIN_CONFIG_DIR}/sfp"/config_sfp_*.yaml; do
+                [[ -f "$f" ]] && configs+=("$f")
+            done
+        fi
+        if [[ "$TASK_TYPE" == "sc" || "$TASK_TYPE" == "all" ]]; then
+            for f in "${TRAIN_CONFIG_DIR}/sc"/config_sc_*.yaml; do
+                [[ -f "$f" ]] && configs+=("$f")
+            done
+        fi
     fi
 
-    # Sort by numeric index (extract trailing digits before .yaml), then by type
-    # e.g. config_sfp_0000.yaml → key "0000_sfp", config_sc_0001.yaml → key "0001_sc"
-    # This interleaves SFP and SC by index number
+    # Sort by numeric index (interleave SFP/SC by number)
     IFS=$'\n' configs=($(for f in "${configs[@]}"; do
         base=$(basename "$f" .yaml)
         num=$(echo "$base" | grep -oP '\d+$')
@@ -328,10 +352,10 @@ start_policy() {
     local policy_log="${LOG_DIR}/${config_name}_policy.log"
 
     cd "$PIXI_DIR"
-    RMW_IMPLEMENTATION=rmw_zenoh_cpp pixi run ros2 daemon stop &>/dev/null || true
+    timeout 3 bash -c "RMW_IMPLEMENTATION=rmw_zenoh_cpp pixi run ros2 daemon stop" &>/dev/null || true
     bash -c "
         cd ${PIXI_DIR}
-        source ${WS_DIR}/install/setup.bash
+        source ${WS_DIR}/install/setup.bash 2>/dev/null || true
         export RMW_IMPLEMENTATION=rmw_zenoh_cpp
         export ZENOH_SESSION_CONFIG_URI=${BENCHMARK_DIR}/configs/zenoh_session_config.json5
         export ROS_DOMAIN_ID=0
@@ -360,8 +384,8 @@ start_engine() {
         ros2 run aic_engine aic_engine --ros-args \
             -p config_file_path:=${config_file} \
             -p ground_truth:=${GROUND_TRUTH} \
-            -p use_sim_time:=true \
-            -p record_all_topics:=true
+            -p record_all_topics:=${RECORD_ALL_TOPICS} \
+            -p use_sim_time:=true
     " &>"$engine_log" &
     echo $!
 }
@@ -453,6 +477,7 @@ log "Index range: ${START_IDX}-${END_IDX}"
 log "Data dir: ${DATA_DIR}"
 log "Headless: ${HEADLESS}"
 log "Ground truth: ${GROUND_TRUTH}"
+log "Record all topics: ${RECORD_ALL_TOPICS}"
 log ""
 
 if [[ "$SKIP_BUILD" == "true" ]]; then
@@ -542,7 +567,7 @@ for config_idx in "${!CONFIG_LIST[@]}"; do
                 cd "$PIXI_DIR"
                 bash -c "
                     cd ${PIXI_DIR}
-                    source ${WS_DIR}/install/setup.bash
+                    source ${WS_DIR}/install/setup.bash 2>/dev/null || true
                     export RMW_IMPLEMENTATION=rmw_zenoh_cpp
                     export ZENOH_SESSION_CONFIG_URI=${BENCHMARK_DIR}/configs/zenoh_session_config.json5
                     export ROS_DOMAIN_ID=0
@@ -557,11 +582,11 @@ for config_idx in "${!CONFIG_LIST[@]}"; do
         POLICY_PID=$(start_policy "$config_basename")
         sleep 10
 
-        # 6. Start aic_engine
+        # 6. Start aic_engine (records all topics internally via record_all_topics param)
         #    Engine flow: ModelReady → EndpointsReady → SimulatorReady (spawn)
-        #                 → ScoringReady (StartRecording) → TasksExecuting
+        #                 → ScoringReady (StartRecording with all topics) → TasksExecuting
         #                 → AllTasksCompleted → StopRecording → scoring.yaml
-        log "  Starting aic_engine..."
+        log "  Starting aic_engine (record_all_topics=${RECORD_ALL_TOPICS})..."
         ENGINE_PID=$(start_engine "$config_file" "$ENGINE_RESULTS_DIR" "${LOG_DIR}/${config_basename}_engine.log")
 
         # 7. Wait for scoring.yaml (engine handles all recording internally)
