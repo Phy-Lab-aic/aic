@@ -1,0 +1,14 @@
+# KDL kinematics solver for the "manipulator" planning group.
+#
+# KDL follows the full kinematic chain defined in the SRDF:
+#   base_link → ... (6 revolute joints) ... → wrist_3_link
+#   → flange → tool0 → cam_mount → ati → gripper → gripper/tcp
+#
+# Fixed joints are transparent to KDL; only the 6 revolute joints
+# contribute to the IK solution.
+
+manipulator:
+  kinematics_solver: kdl_kinematics_plugin/KDLKinematicsPlugin
+  kinematics_solver_search_resolution: 0.0005
+  kinematics_solver_timeout: 0.02
+  kinematics_solver_attempts: 100

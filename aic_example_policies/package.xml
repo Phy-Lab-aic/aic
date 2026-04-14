@@ -7,6 +7,9 @@
   <maintainer email="morganquigley@intrinsic.ai">Morgan Quigley</maintainer>
   <license>Apache-2.0</license>
 
+  <depend>python3-numpy</depend>
+  <depend>python3-scipy</depend>
+
   <depend>aic_control_interfaces</depend>
   <depend>aic_model</depend>
   <depend>aic_model_interfaces</depend>

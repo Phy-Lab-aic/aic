@@ -25,10 +25,17 @@ ros-kilted-aic-teleoperation = { path = "aic_utils/aic_teleoperation" }
 ros-kilted-control-msgs = "*"                                                          # lerobot_robot_ros
 ros-kilted-geometry-msgs = "*"                                                         # lerobot_robot_ros
 ros-kilted-lerobot-robot-aic = { path = "aic_utils/lerobot_robot_aic" }
+ros-kilted-moveit = "*"
 ros-kilted-moveit-msgs = "*"                                                           # lerobot_robot_ros
+ros-kilted-my-policy = { path = "my_policy" }
+ros-kilted-pilz-industrial-motion-planner = "*"
+python-orocos-kdl = "*"
+urdf-parser-py = "*"
 ros-kilted-rclpy = "*"
 ros-kilted-rmw-zenoh-cpp = "*"
 ros-kilted-ros-core = "*"
+ros-kilted-rosbag2-py = "*"
+ros-kilted-rosbag2-storage-mcap = "*"
 ros-kilted-sensor-msgs = "*"                                                           # lerobot_robot_ros
 ros-kilted-std-msgs = "*"                                                              # lerobot_robot_ros
 ros-kilted-std-srvs = "*"
