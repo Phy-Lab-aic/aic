@@ -15,10 +15,16 @@ services:
       AIC_MODEL_PASSWD: CHANGE_IN_PROD
       # AIC_ENABLE_ACL: true
   model:
-    image: my-solution:v1
+    # Track B (Phase 4 / Phase 7) submission image — built from
+    # docker/my_policy/Dockerfile which layers PaliGemma tokenizer pre-cache
+    # (B5) + lerobot ckpt + MyPi05Policy on top of the aic_model base.
+    # To swap back to the example policy, change dockerfile to
+    # docker/aic_model/Dockerfile and remove the command override.
+    image: my-pi05-solution:v1
     build:
-      dockerfile: docker/aic_model/Dockerfile
+      dockerfile: docker/my_policy/Dockerfile
       context: ..
+    command: --ros-args -p policy:=aic_example_policies.ros.MyPi05Policy
     gpus: all
     networks:
       - default
