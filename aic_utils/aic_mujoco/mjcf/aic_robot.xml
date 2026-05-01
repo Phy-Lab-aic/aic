@@ -260,14 +260,17 @@
     <exclude body1="gripper/hande_finger_link_l" body2="gripper/hande_finger_link_r"/>
   </contact>
 
+  <!-- ctrlrange added 2026-04-26 (Track A v1) — UR5e physical torque limits
+       (~150 Nm per joint, gripper much smaller). Enables Python impedance
+       controller to write torques via data.ctrl[i] with safe clipping. -->
   <actuator>
-    <general name="shoulder_pan_joint_motor" joint="shoulder_pan_joint"/>
-    <general name="shoulder_lift_joint_motor" joint="shoulder_lift_joint"/>
-    <general name="elbow_joint_motor" joint="elbow_joint"/>
-    <general name="wrist_1_joint_motor" joint="wrist_1_joint"/>
-    <general name="wrist_2_joint_motor" joint="wrist_2_joint"/>
-    <general name="wrist_3_joint_motor" joint="wrist_3_joint"/>
-    <general name="gripper/left_finger_joint_motor" joint="gripper/left_finger_joint"/>
+    <general name="shoulder_pan_joint_motor" joint="shoulder_pan_joint" ctrlrange="-150 150"/>
+    <general name="shoulder_lift_joint_motor" joint="shoulder_lift_joint" ctrlrange="-150 150"/>
+    <general name="elbow_joint_motor" joint="elbow_joint" ctrlrange="-150 150"/>
+    <general name="wrist_1_joint_motor" joint="wrist_1_joint" ctrlrange="-150 150"/>
+    <general name="wrist_2_joint_motor" joint="wrist_2_joint" ctrlrange="-150 150"/>
+    <general name="wrist_3_joint_motor" joint="wrist_3_joint" ctrlrange="-150 150"/>
+    <general name="gripper/left_finger_joint_motor" joint="gripper/left_finger_joint" ctrlrange="-50 50"/>
   </actuator>
 
   <equality>
