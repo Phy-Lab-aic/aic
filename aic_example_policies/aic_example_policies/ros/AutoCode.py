@@ -307,24 +307,42 @@ class AutoCode(Policy):
         descent_step = 0
         fx_buf = []
         fy_buf = []
+        fz_buf = []
         force_window = 5
         force_deadband = 3.0  # N - reject cable tension noise
         force_gain = 0.0005   # m/N - XY correction per newton
         force_correction_x = 0.0
         force_correction_y = 0.0
         descent_rate = 0.0008  # m/step
+        # SC seating force gate: once sustained vertical reaction force exceeds
+        # sc_seated_threshold past sc_seated_min_depth, hold position for
+        # sc_hold_steps and exit. Prevents prolonged >20N contact that triggers
+        # the scoring engine's insertion-force penalty (-12) on borderline cases
+        # like benchmark_06 trial_2.
+        sc_seated = False
+        sc_seated_steps = 0
+        sc_seated_threshold = 17.0  # N
+        sc_seated_min_depth = -0.010  # m, must be past initial impact
+        sc_hold_steps = 30
         port_z_axis = self._port_z_axis(port_transform)
         while True:
             if z_offset < break_z:
                 break
+            if sc_seated and sc_seated_steps >= sc_hold_steps:
+                break
 
             # Port-axis descent during insertion phase
             if z_offset < 0.02:
-                # Descend along port's local Z-axis (handles tilted ports)
-                z_offset -= descent_rate * abs(port_z_axis[2])
+                # Descend along port's local Z-axis (handles tilted ports).
+                # If SC plug is force-gated as seated, freeze z to bleed off
+                # contact force without driving it past the 20N threshold.
+                if not sc_seated:
+                    z_offset -= descent_rate * abs(port_z_axis[2])
             else:
                 z_offset -= descent_rate
             descent_step += 1
+            if sc_seated:
+                sc_seated_steps += 1
             self.get_logger().info(f"z_offset: {z_offset:0.5}")
 
             # Live TF re-lookup every 40 steps
@@ -344,10 +362,13 @@ class AutoCode(Policy):
                     if obs and obs.wrist_wrench:
                         fx_buf.append(obs.wrist_wrench.wrench.force.x)
                         fy_buf.append(obs.wrist_wrench.wrench.force.y)
+                        fz_buf.append(obs.wrist_wrench.wrench.force.z)
                         if len(fx_buf) > force_window:
                             fx_buf.pop(0)
                         if len(fy_buf) > force_window:
                             fy_buf.pop(0)
+                        if len(fz_buf) > force_window:
+                            fz_buf.pop(0)
                         fx_avg = sum(fx_buf) / len(fx_buf)
                         fy_avg = sum(fy_buf) / len(fy_buf)
                         if abs(fx_avg) > force_deadband:
@@ -363,6 +384,22 @@ class AutoCode(Policy):
                         if task.plug_type == "sc" and z_offset < 0.0:
                             force_correction_x = 0.0
                             force_correction_y = 0.0
+                        # SC seating detection: sustained reaction force past initial
+                        # impact means plug is bottomed-out. Require full window so
+                        # transient spikes (e.g., trial_3's 44N for 0.14s) don't latch.
+                        if (
+                            not sc_seated
+                            and task.plug_type == "sc"
+                            and z_offset < sc_seated_min_depth
+                            and len(fz_buf) >= force_window
+                        ):
+                            fz_avg = sum(fz_buf) / len(fz_buf)
+                            if abs(fz_avg) > sc_seated_threshold:
+                                sc_seated = True
+                                self.get_logger().info(
+                                    f"SC seating gated at z_offset={z_offset:.4f}, "
+                                    f"fz_avg={fz_avg:.2f}N, holding for {sc_hold_steps} steps"
+                                )
                 except Exception:
                     pass
 
@@ -377,10 +414,13 @@ class AutoCode(Policy):
                     # at -8N collapsed T3 (yaw=3.0 task_board).
                     feedforward_force = None
                     if task.plug_type == "sc" and z_offset < -0.005:
+                        # Halve push once seating is force-gated to prevent
+                        # contact force from climbing past the 20N penalty band.
+                        ff_magnitude = -2.5 if sc_seated else -5.0
                         feedforward_force = Vector3(
-                            x=float(-5.0 * port_z_axis[0]),
-                            y=float(-5.0 * port_z_axis[1]),
-                            z=float(-5.0 * port_z_axis[2]),
+                            x=float(ff_magnitude * port_z_axis[0]),
+                            y=float(ff_magnitude * port_z_axis[1]),
+                            z=float(ff_magnitude * port_z_axis[2]),
                         )
                     self._move_with_wrench_feedback(
                         move_robot=move_robot,
