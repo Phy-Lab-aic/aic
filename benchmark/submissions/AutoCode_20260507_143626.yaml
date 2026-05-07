@@ -1,0 +1,11 @@
+policy: aic_example_policies.ros.AutoCode
+avg_score: 70.29
+tier1_avg: 1.0
+tier2_avg: 18.55
+tier3_avg: 50.74
+min_score: 30.193577757173717
+max_score: 95.82217965604488
+date: '2026-05-07'
+github_id: weedmo
+trials_completed: 15
+trials_total: 15
