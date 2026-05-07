@@ -612,3 +612,15 @@ Started Zenoh router with id 7e57d1f34f870fcadbb41b451307073
 [component_container-3] (2026-05-07 06:05:58.926) [info] [CablePlugin.cc:247] Cable transitioning to CABLE_ATTACHED_TO_GRIPPER state.
 [component_container-3] (2026-05-07 06:05:58.926) [debug] [Physics.cc:2015] Creating detachable joint [422]
 [component_container-3] [INFO] [1778133958.955609983] [gz_server]: InitializeCanonicalLinks
+[component_container-3] [INFO] [1778133963.522297447] [aic_controller]: Controller is already in Cartesian target mode.
+[component_container-3] (2026-05-07 06:06:12.475) [debug] [TouchPlugin.cc:352] Model [nic_card_mount_0] started touching [sfp_tip_link/collision/contact_collision] at 24.368 s
+[component_container-3] (2026-05-07 06:06:13.477) [debug] [TouchPlugin.cc:366] Model [nic_card_mount_0] touched [sfp_tip_link/collision/contact_collision] exclusively for 1 s
+[component_container-3] (2026-05-07 06:06:13.477) [debug] [TouchPlugin.cc:273] Stopped touch plugin [nic_card_mount_0/sfp_port_0]
+[component_container-3] (2026-05-07 06:06:13.477) [debug] [CablePlugin.cc:271] Cable connection 0 touched: 1. Topic: /nic_card_mount_0/sfp_port_0/touched
+[component_container-3] (2026-05-07 06:06:13.478) [info] [CablePlugin.cc:281] Cable transitioning to ATTACH_CABLE_TO_PORT state.
+[component_container-3] (2026-05-07 06:06:13.479) [debug] [Physics.cc:2136] Detaching joint [422]
+[component_container-3] (2026-05-07 06:06:13.480) [info] [CablePlugin.cc:326] Cable transitioning to COMPLETED state.
+[component_container-3] (2026-05-07 06:06:13.480) [debug] [Physics.cc:2015] Creating detachable joint [423]
+[component_container-3] (2026-05-07 06:06:13.480) [debug] [Physics.cc:2015] Creating detachable joint [424]
+[component_container-3] (2026-05-07 06:06:13.481) [debug] [Physics.cc:2015] Creating detachable joint [427]
+[component_container-3] [INFO] [1778133973.482180804] [gz_server]: InitializeCanonicalLinks
