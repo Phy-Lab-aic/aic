@@ -613,3 +613,373 @@ Started Zenoh router with id b4ea23e18fa6199d03cef67d391e5dfd
 [component_container-3] (2026-05-07 00:30:43.637) [info] [CablePlugin.cc:247] Cable transitioning to CABLE_ATTACHED_TO_GRIPPER state.
 [component_container-3] (2026-05-07 00:30:43.637) [debug] [Physics.cc:2015] Creating detachable joint [422]
 [component_container-3] [INFO] [1778113843.671661531] [gz_server]: InitializeCanonicalLinks
+[component_container-3] [INFO] [1778113848.405564820] [aic_controller]: Controller is already in Cartesian target mode.
+[component_container-3] (2026-05-07 00:30:57.187) [debug] [TouchPlugin.cc:352] Model [nic_card_mount_0] started touching [sfp_tip_link/collision/contact_collision] at 23.704 s
+[component_container-3] (2026-05-07 00:30:58.189) [debug] [TouchPlugin.cc:366] Model [nic_card_mount_0] touched [sfp_tip_link/collision/contact_collision] exclusively for 1 s
+[component_container-3] (2026-05-07 00:30:58.189) [debug] [TouchPlugin.cc:273] Stopped touch plugin [nic_card_mount_0/sfp_port_0]
+[component_container-3] (2026-05-07 00:30:58.189) [debug] [CablePlugin.cc:271] Cable connection 0 touched: 1. Topic: /nic_card_mount_0/sfp_port_0/touched
+[component_container-3] (2026-05-07 00:30:58.190) [info] [CablePlugin.cc:281] Cable transitioning to ATTACH_CABLE_TO_PORT state.
+[component_container-3] (2026-05-07 00:30:58.191) [debug] [Physics.cc:2136] Detaching joint [422]
+[component_container-3] (2026-05-07 00:30:58.192) [info] [CablePlugin.cc:326] Cable transitioning to COMPLETED state.
+[component_container-3] (2026-05-07 00:30:58.192) [debug] [Physics.cc:2015] Creating detachable joint [423]
+[component_container-3] (2026-05-07 00:30:58.192) [debug] [Physics.cc:2015] Creating detachable joint [424]
+[component_container-3] (2026-05-07 00:30:58.192) [debug] [Physics.cc:2015] Creating detachable joint [427]
+[component_container-3] [INFO] [1778113858.194042464] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-05-07 00:31:08.724) [debug] [UserCommands.cc:1158] Requesting removal of entity [118]
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (7)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (9)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (8)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (10)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 8
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:08.740) [debug] [UserCommands.cc:1158] Requesting removal of entity [242]
+[component_container-3] (2026-05-07 00:31:08.741) [info] [CablePlugin.cc:162] Cable transitioning to CABLE_REMOVED state.
+[component_container-3] [INFO] [1778113868.741743582] [controller_manager]: Deactivating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113868.741812130] [controller_manager]: Switch controller timeout is set to 0, using default 1s!
+[component_container-3] [INFO] [1778113868.741815686] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1778113868.741886258] [controller_manager]: Deactivated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113868.741889114] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-05-07 00:31:08.742) [debug] [Physics.cc:2136] Detaching joint [423]
+[component_container-3] (2026-05-07 00:31:08.742) [debug] [Physics.cc:2136] Detaching joint [424]
+[component_container-3] (2026-05-07 00:31:08.742) [debug] [Physics.cc:2136] Detaching joint [427]
+[component_container-3] (2026-05-07 00:31:08.744) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_pan_joint
+[component_container-3] (2026-05-07 00:31:08.744) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_lift_joint
+[component_container-3] (2026-05-07 00:31:08.744) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: elbow_joint
+[component_container-3] (2026-05-07 00:31:08.744) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_1_joint
+[component_container-3] (2026-05-07 00:31:08.744) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_2_joint
+[component_container-3] (2026-05-07 00:31:08.744) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_3_joint
+[component_container-3] (2026-05-07 00:31:08.767) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:08.767) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:08.767) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:08.767) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:08.767) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:08.767) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:08.767) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:08.768) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 6
+[component_container-3] (2026-05-07 00:31:08.768) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:08.768) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:08.768) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:08.768) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:08.768) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:09.525) [info] [ResetJointsPlugin.cc:149] Joint wrist_3_joint reset to initial position: 1.411
+[component_container-3] (2026-05-07 00:31:09.525) [info] [ResetJointsPlugin.cc:149] Joint wrist_2_joint reset to initial position: 1.571
+[component_container-3] (2026-05-07 00:31:09.525) [info] [ResetJointsPlugin.cc:149] Joint wrist_1_joint reset to initial position: -1.6933
+[component_container-3] (2026-05-07 00:31:09.525) [info] [ResetJointsPlugin.cc:149] Joint elbow_joint reset to initial position: -1.6648
+[component_container-3] (2026-05-07 00:31:09.525) [info] [ResetJointsPlugin.cc:149] Joint shoulder_lift_joint reset to initial position: -1.3542
+[component_container-3] (2026-05-07 00:31:09.525) [info] [ResetJointsPlugin.cc:149] Joint shoulder_pan_joint reset to initial position: -0.1597
+[component_container-3] (2026-05-07 00:31:09.526) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_pan_joint(Entity=102]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:09.526) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_lift_joint(Entity=103]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:09.526) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [elbow_joint(Entity=104]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:09.526) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_1_joint(Entity=105]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:09.526) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_2_joint(Entity=106]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:09.526) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_3_joint(Entity=107]). Ignoring JointVelocityCmd component.
+[component_container-3] [INFO] [1778113869.526234808] [controller_manager]: Activating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113869.526319235] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1778113869.526385499] [controller_manager]: Activated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113869.526387974] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-05-07 00:31:09.605) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: sc_port_1::sc_port_link
+[component_container-3] (2026-05-07 00:31:09.605) [debug] [SdfEntityCreator.cc:549]   pose: 1.88554e-19 -0.00100271 0.000137321 0 0 0
+[component_container-3] (2026-05-07 00:31:09.605) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-05-07 00:31:09.605) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 1.86262e-06 5.50332e-06 6.55187e-06
+[component_container-3] (2026-05-07 00:31:09.605) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -7.41324e-15 4.19415e-23 -5.5077e-09
+[component_container-3] (2026-05-07 00:31:09.606) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [428]
+[component_container-3] (2026-05-07 00:31:09.606) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::TouchPlugin] for entity [465]
+[component_container-3] (2026-05-07 00:31:09.606) [debug] [UserCommands.cc:1108] Created entity [428] named [task_board]
+[component_container-3] (2026-05-07 00:31:09.610) [info] [Contact.cc:125] Contact system publishing on world/aic_world/model/task_board/model/sc_port_1/link/sc_port_link/sensor/sc_port_sensor/contact
+[component_container-3] [INFO] [1778113869.610446851] [aic_controller]: Received service request to tare force torque sensor!
+[component_container-3] [INFO] [1778113869.610468170] [aic_controller]: Successfully tared force torque sensor.
+[component_container-3] [INFO] [1778113869.611366449] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-05-07 00:31:09.611) [warning] [Component.hh:127] Trying to serialize component with data type [St10shared_ptrIN3sdf3v157ElementEE], which doesn't have `operator<<`. Component will not be serialized.
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 8
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:09.612) [debug] [TouchPlugin.cc:267] Started touch plugin [sc_port_1/sc_port_base]
+[component_container-3] (2026-05-07 00:31:09.761) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::sc_plug_link
+[component_container-3] (2026-05-07 00:31:09.761) [debug] [SdfEntityCreator.cc:549]   pose: -0.00907511 4.9566e-05 8.71699e-06 0 0 0
+[component_container-3] (2026-05-07 00:31:09.761) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-05-07 00:31:09.761) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 2.12257e-06 7.17318e-06 8.85404e-06
+[component_container-3] (2026-05-07 00:31:09.761) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 1.24369e-08 -3.73363e-09 1.72827e-11
+[component_container-3] (2026-05-07 00:31:09.761) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::lc_plug_link
+[component_container-3] (2026-05-07 00:31:09.761) [debug] [SdfEntityCreator.cc:549]   pose: 0 -0.00428702 8.58528e-05 0 0 0
+[component_container-3] (2026-05-07 00:31:09.761) [debug] [SdfEntityCreator.cc:550]   mass: 0.01
+[component_container-3] (2026-05-07 00:31:09.761) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 1.73585e-06 1.30886e-07 1.82579e-06
+[component_container-3] (2026-05-07 00:31:09.761) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -3.13192e-14 3.63653e-15 -5.82954e-09
+[component_container-3] (2026-05-07 00:31:09.762) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::sfp_module_link
+[component_container-3] (2026-05-07 00:31:09.762) [debug] [SdfEntityCreator.cc:549]   pose: 0.000140388 0.0140944 0.000755794 0 0 0
+[component_container-3] (2026-05-07 00:31:09.762) [debug] [SdfEntityCreator.cc:550]   mass: 0.02
+[component_container-3] (2026-05-07 00:31:09.762) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 3.52972e-06 5.95336e-07 3.76244e-06
+[component_container-3] (2026-05-07 00:31:09.762) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 3.87677e-08 3.1005e-09 9.04204e-09
+[component_container-3] (2026-05-07 00:31:09.763) [debug] [CablePlugin.cc:86] aic_gazebo::CablePlugin::Configure on entity: 488
+[component_container-3] (2026-05-07 00:31:09.763) [info] [CablePlugin.cc:150] Cable transitioning to HARNESS state.
+[component_container-3] (2026-05-07 00:31:09.763) [debug] [SystemManager.cc:80] Loaded system [aic_gazebo::CablePlugin] for entity [488]
+[component_container-3] (2026-05-07 00:31:09.763) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [488]
+[component_container-3] (2026-05-07 00:31:09.763) [debug] [UserCommands.cc:1108] Created entity [488] named [cable_1]
+[component_container-3] [INFO] [1778113869.770035370] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 10
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (7)
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (8)
+[component_container-3] (2026-05-07 00:31:09.772) [info] [CablePlugin.cc:201] Cable transitioning to WAITING state.
+[component_container-3] (2026-05-07 00:31:09.772) [info] [CablePlugin.cc:213] Cable transitioning to CREATE_CONNECTIONS state.
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [Physics.cc:2015] Creating detachable joint [686]
+[component_container-3] (2026-05-07 00:31:09.772) [debug] [Physics.cc:2015] Creating detachable joint [689]
+[component_container-3] (2026-05-07 00:31:09.773) [debug] [Physics.cc:2136] Detaching joint [686]
+[component_container-3] (2026-05-07 00:31:09.773) [debug] [Physics.cc:2136] Detaching joint [689]
+[component_container-3] (2026-05-07 00:31:09.774) [info] [CablePlugin.cc:247] Cable transitioning to CABLE_ATTACHED_TO_GRIPPER state.
+[component_container-3] (2026-05-07 00:31:09.774) [debug] [Physics.cc:2015] Creating detachable joint [690]
+[component_container-3] [INFO] [1778113869.795101736] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-05-07 00:31:25.107) [debug] [TouchPlugin.cc:352] Model [sc_port_1] started touching [sc_plug] at 51.234 s
+[component_container-3] (2026-05-07 00:31:26.109) [debug] [TouchPlugin.cc:366] Model [sc_port_1] touched [sc_plug] exclusively for 1 s
+[component_container-3] (2026-05-07 00:31:26.109) [debug] [TouchPlugin.cc:273] Stopped touch plugin [sc_port_1/sc_port_base]
+[component_container-3] (2026-05-07 00:31:26.109) [debug] [CablePlugin.cc:271] Cable connection 0 touched: 1. Topic: /sc_port_1/sc_port_base/touched
+[component_container-3] (2026-05-07 00:31:26.110) [info] [CablePlugin.cc:281] Cable transitioning to ATTACH_CABLE_TO_PORT state.
+[component_container-3] (2026-05-07 00:31:26.111) [debug] [Physics.cc:2136] Detaching joint [690]
+[component_container-3] (2026-05-07 00:31:26.112) [info] [CablePlugin.cc:326] Cable transitioning to COMPLETED state.
+[component_container-3] (2026-05-07 00:31:26.113) [debug] [Physics.cc:2015] Creating detachable joint [691]
+[component_container-3] (2026-05-07 00:31:26.113) [debug] [Physics.cc:2015] Creating detachable joint [692]
+[component_container-3] (2026-05-07 00:31:26.113) [debug] [Physics.cc:2015] Creating detachable joint [695]
+[component_container-3] [INFO] [1778113886.114108672] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-05-07 00:31:32.380) [debug] [UserCommands.cc:1158] Requesting removal of entity [428]
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (8)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (7)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 8
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:32.389) [debug] [UserCommands.cc:1158] Requesting removal of entity [488]
+[component_container-3] (2026-05-07 00:31:32.390) [info] [CablePlugin.cc:162] Cable transitioning to CABLE_REMOVED state.
+[component_container-3] [INFO] [1778113892.390728679] [controller_manager]: Deactivating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113892.390797087] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1778113892.390873299] [controller_manager]: Deactivated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113892.390878980] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-05-07 00:31:32.391) [debug] [Physics.cc:2136] Detaching joint [691]
+[component_container-3] (2026-05-07 00:31:32.391) [debug] [Physics.cc:2136] Detaching joint [692]
+[component_container-3] (2026-05-07 00:31:32.391) [debug] [Physics.cc:2136] Detaching joint [695]
+[component_container-3] (2026-05-07 00:31:32.393) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_pan_joint
+[component_container-3] (2026-05-07 00:31:32.393) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_lift_joint
+[component_container-3] (2026-05-07 00:31:32.393) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: elbow_joint
+[component_container-3] (2026-05-07 00:31:32.393) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_1_joint
+[component_container-3] (2026-05-07 00:31:32.393) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_2_joint
+[component_container-3] (2026-05-07 00:31:32.393) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_3_joint
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 6
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:32.420) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:32.910) [info] [ResetJointsPlugin.cc:149] Joint wrist_3_joint reset to initial position: 1.411
+[component_container-3] (2026-05-07 00:31:32.910) [info] [ResetJointsPlugin.cc:149] Joint wrist_2_joint reset to initial position: 1.571
+[component_container-3] (2026-05-07 00:31:32.910) [info] [ResetJointsPlugin.cc:149] Joint wrist_1_joint reset to initial position: -1.6933
+[component_container-3] (2026-05-07 00:31:32.910) [info] [ResetJointsPlugin.cc:149] Joint elbow_joint reset to initial position: -1.6648
+[component_container-3] (2026-05-07 00:31:32.910) [info] [ResetJointsPlugin.cc:149] Joint shoulder_lift_joint reset to initial position: -1.3542
+[component_container-3] (2026-05-07 00:31:32.910) [info] [ResetJointsPlugin.cc:149] Joint shoulder_pan_joint reset to initial position: -0.1597
+[component_container-3] (2026-05-07 00:31:32.910) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_pan_joint(Entity=102]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:32.910) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_lift_joint(Entity=103]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:32.910) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [elbow_joint(Entity=104]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:32.910) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_1_joint(Entity=105]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:32.910) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_2_joint(Entity=106]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:32.910) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_3_joint(Entity=107]). Ignoring JointVelocityCmd component.
+[component_container-3] [INFO] [1778113892.911105756] [controller_manager]: Activating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113892.911193390] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1778113892.911260024] [controller_manager]: Activated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113892.911263100] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-05-07 00:31:32.991) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: sc_port_1::sc_port_link
+[component_container-3] (2026-05-07 00:31:32.991) [debug] [SdfEntityCreator.cc:549]   pose: 1.88554e-19 -0.00100271 0.000137321 0 0 0
+[component_container-3] (2026-05-07 00:31:32.991) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-05-07 00:31:32.991) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 1.86262e-06 5.50332e-06 6.55187e-06
+[component_container-3] (2026-05-07 00:31:32.991) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -7.41324e-15 4.19415e-23 -5.5077e-09
+[component_container-3] (2026-05-07 00:31:32.991) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [696]
+[component_container-3] (2026-05-07 00:31:32.991) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::TouchPlugin] for entity [733]
+[component_container-3] (2026-05-07 00:31:32.992) [debug] [UserCommands.cc:1108] Created entity [696] named [task_board]
+[component_container-3] (2026-05-07 00:31:32.994) [info] [Contact.cc:125] Contact system publishing on world/aic_world/model/task_board/model/sc_port_1/link/sc_port_link/sensor/sc_port_sensor/contact
+[component_container-3] [INFO] [1778113892.994822051] [aic_controller]: Received service request to tare force torque sensor!
+[component_container-3] [INFO] [1778113892.994844323] [aic_controller]: Successfully tared force torque sensor.
+[component_container-3] [INFO] [1778113892.995740258] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 8
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:32.996) [debug] [TouchPlugin.cc:267] Started touch plugin [sc_port_1/sc_port_base]
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::sc_plug_link
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:549]   pose: -0.00907511 4.9566e-05 8.71699e-06 0 0 0
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 2.12257e-06 7.17318e-06 8.85404e-06
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 1.24369e-08 -3.73363e-09 1.72827e-11
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::lc_plug_link
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:549]   pose: 0 -0.00428702 8.58528e-05 0 0 0
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:550]   mass: 0.01
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 1.73585e-06 1.30886e-07 1.82579e-06
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -3.13192e-14 3.63653e-15 -5.82954e-09
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_1::sfp_module_link
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:549]   pose: 0.000140388 0.0140944 0.000755794 0 0 0
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:550]   mass: 0.02
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 3.52972e-06 5.95336e-07 3.76244e-06
+[component_container-3] (2026-05-07 00:31:33.140) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 3.87677e-08 3.1005e-09 9.04204e-09
+[component_container-3] (2026-05-07 00:31:33.141) [debug] [CablePlugin.cc:86] aic_gazebo::CablePlugin::Configure on entity: 756
+[component_container-3] (2026-05-07 00:31:33.142) [info] [CablePlugin.cc:150] Cable transitioning to HARNESS state.
+[component_container-3] (2026-05-07 00:31:33.142) [debug] [SystemManager.cc:80] Loaded system [aic_gazebo::CablePlugin] for entity [756]
+[component_container-3] (2026-05-07 00:31:33.142) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [756]
+[component_container-3] (2026-05-07 00:31:33.142) [debug] [UserCommands.cc:1108] Created entity [756] named [cable_1]
+[component_container-3] [INFO] [1778113893.148629504] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 10
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (7)
+[component_container-3] (2026-05-07 00:31:33.150) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (8)
+[component_container-3] (2026-05-07 00:31:33.151) [info] [CablePlugin.cc:201] Cable transitioning to WAITING state.
+[component_container-3] (2026-05-07 00:31:33.151) [info] [CablePlugin.cc:213] Cable transitioning to CREATE_CONNECTIONS state.
+[component_container-3] (2026-05-07 00:31:33.151) [debug] [Physics.cc:2015] Creating detachable joint [954]
+[component_container-3] (2026-05-07 00:31:33.151) [debug] [Physics.cc:2015] Creating detachable joint [957]
+[component_container-3] (2026-05-07 00:31:33.151) [debug] [Physics.cc:2136] Detaching joint [954]
+[component_container-3] (2026-05-07 00:31:33.151) [debug] [Physics.cc:2136] Detaching joint [957]
+[component_container-3] (2026-05-07 00:31:33.152) [info] [CablePlugin.cc:247] Cable transitioning to CABLE_ATTACHED_TO_GRIPPER state.
+[component_container-3] (2026-05-07 00:31:33.152) [debug] [Physics.cc:2015] Creating detachable joint [958]
+[component_container-3] [INFO] [1778113893.173509871] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-05-07 00:31:48.380) [debug] [TouchPlugin.cc:352] Model [sc_port_1] started touching [sc_plug] at 74.138 s
+[component_container-3] (2026-05-07 00:31:49.388) [debug] [TouchPlugin.cc:366] Model [sc_port_1] touched [sc_plug] exclusively for 1 s
+[component_container-3] (2026-05-07 00:31:49.388) [debug] [TouchPlugin.cc:273] Stopped touch plugin [sc_port_1/sc_port_base]
+[component_container-3] (2026-05-07 00:31:49.388) [debug] [CablePlugin.cc:271] Cable connection 0 touched: 1. Topic: /sc_port_1/sc_port_base/touched
+[component_container-3] (2026-05-07 00:31:49.389) [info] [CablePlugin.cc:281] Cable transitioning to ATTACH_CABLE_TO_PORT state.
+[component_container-3] (2026-05-07 00:31:49.390) [debug] [Physics.cc:2136] Detaching joint [958]
+[component_container-3] (2026-05-07 00:31:49.391) [info] [CablePlugin.cc:326] Cable transitioning to COMPLETED state.
+[component_container-3] (2026-05-07 00:31:49.391) [debug] [Physics.cc:2015] Creating detachable joint [959]
+[component_container-3] (2026-05-07 00:31:49.391) [debug] [Physics.cc:2015] Creating detachable joint [960]
+[component_container-3] (2026-05-07 00:31:49.391) [debug] [Physics.cc:2015] Creating detachable joint [963]
+[component_container-3] [INFO] [1778113909.392807877] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-05-07 00:31:55.963) [debug] [UserCommands.cc:1158] Requesting removal of entity [696]
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (8)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (7)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 8
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:55.973) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:55.974) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:55.974) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:55.974) [debug] [UserCommands.cc:1158] Requesting removal of entity [756]
+[component_container-3] (2026-05-07 00:31:55.974) [info] [CablePlugin.cc:162] Cable transitioning to CABLE_REMOVED state.
+[component_container-3] [INFO] [1778113915.975049032] [controller_manager]: Deactivating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113915.975108854] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1778113915.975169537] [controller_manager]: Deactivated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113915.975173084] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-05-07 00:31:55.975) [debug] [Physics.cc:2136] Detaching joint [959]
+[component_container-3] (2026-05-07 00:31:55.975) [debug] [Physics.cc:2136] Detaching joint [960]
+[component_container-3] (2026-05-07 00:31:55.975) [debug] [Physics.cc:2136] Detaching joint [963]
+[component_container-3] (2026-05-07 00:31:55.977) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_pan_joint
+[component_container-3] (2026-05-07 00:31:55.977) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: shoulder_lift_joint
+[component_container-3] (2026-05-07 00:31:55.977) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: elbow_joint
+[component_container-3] (2026-05-07 00:31:55.977) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_1_joint
+[component_container-3] (2026-05-07 00:31:55.977) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_2_joint
+[component_container-3] (2026-05-07 00:31:55.977) [info] [ResetJointsPlugin.cc:105] Received reset request for joint: wrist_3_joint
+[component_container-3] (2026-05-07 00:31:56.001) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:56.001) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-05-07 00:31:56.001) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:56.001) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:56.001) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-05-07 00:31:56.001) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:56.001) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:56.002) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 6
+[component_container-3] (2026-05-07 00:31:56.002) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 00:31:56.002) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 00:31:56.002) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 00:31:56.002) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 00:31:56.002) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 00:31:56.281) [info] [ResetJointsPlugin.cc:149] Joint wrist_3_joint reset to initial position: 1.411
+[component_container-3] (2026-05-07 00:31:56.281) [info] [ResetJointsPlugin.cc:149] Joint wrist_2_joint reset to initial position: 1.571
+[component_container-3] (2026-05-07 00:31:56.281) [info] [ResetJointsPlugin.cc:149] Joint wrist_1_joint reset to initial position: -1.6933
+[component_container-3] (2026-05-07 00:31:56.281) [info] [ResetJointsPlugin.cc:149] Joint elbow_joint reset to initial position: -1.6648
+[component_container-3] (2026-05-07 00:31:56.281) [info] [ResetJointsPlugin.cc:149] Joint shoulder_lift_joint reset to initial position: -1.3542
+[component_container-3] (2026-05-07 00:31:56.281) [info] [ResetJointsPlugin.cc:149] Joint shoulder_pan_joint reset to initial position: -0.1597
+[component_container-3] (2026-05-07 00:31:56.282) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_pan_joint(Entity=102]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:56.282) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [shoulder_lift_joint(Entity=103]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:56.282) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [elbow_joint(Entity=104]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:56.282) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_1_joint(Entity=105]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:56.282) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_2_joint(Entity=106]). Ignoring JointVelocityCmd component.
+[component_container-3] (2026-05-07 00:31:56.282) [warning] [Physics.cc:2467] Found both JointVelocityReset and JointVelocityCmd components for Joint [wrist_3_joint(Entity=107]). Ignoring JointVelocityCmd component.
+[component_container-3] [INFO] [1778113916.282202632] [controller_manager]: Activating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113916.282294283] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1778113916.282364003] [controller_manager]: Activated controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778113916.282367219] [controller_manager]: Successfully switched controllers!
