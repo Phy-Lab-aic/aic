@@ -1900,3 +1900,87 @@ not found: "/opt/ros/kilted/local_setup.bash"
 [INFO] [1778134025.601200727] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000156   integrators: 0.0402 , -0.0283
 [INFO] [1778134025.650576977] [aic_model]: z_offset: -0.0048
 [INFO] [1778134025.650952880] [aic_model]: pfrac: 1.0 xy_error: 0.000392 -0.000156   integrators: 0.0406 , -0.0284
+[INFO] [1778134025.700940043] [aic_model]: z_offset: -0.0056
+[INFO] [1778134025.701317980] [aic_model]: pfrac: 1.0 xy_error: 0.000392 -0.000155   integrators: 0.041 , -0.0286
+[INFO] [1778134025.750945991] [aic_model]: z_offset: -0.0064
+[INFO] [1778134025.751324790] [aic_model]: pfrac: 1.0 xy_error: 0.000392 -0.000154   integrators: 0.0414 , -0.0287
+[INFO] [1778134025.801111759] [aic_model]: z_offset: -0.0072
+[INFO] [1778134025.802632385] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000154   integrators: 0.0418 , -0.0289
+[INFO] [1778134025.839586559] [aic_model]: insert_cable execute loop
+[INFO] [1778134025.853375893] [aic_model]: z_offset: -0.008
+[INFO] [1778134025.853838339] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000153   integrators: 0.0422 , -0.029
+[INFO] [1778134025.903045011] [aic_model]: z_offset: -0.0088
+[INFO] [1778134025.903465799] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000153   integrators: 0.0426 , -0.0292
+[INFO] [1778134025.952884007] [aic_model]: z_offset: -0.0096
+[INFO] [1778134025.953311296] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000153   integrators: 0.043 , -0.0293
+[INFO] [1778134026.002924360] [aic_model]: z_offset: -0.0104
+[INFO] [1778134026.003322465] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000152   integrators: 0.0434 , -0.0295
+[INFO] [1778134026.052988116] [aic_model]: z_offset: -0.0112
+[INFO] [1778134026.053379469] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000152   integrators: 0.0438 , -0.0296
+[INFO] [1778134026.102999445] [aic_model]: z_offset: -0.012
+[INFO] [1778134026.103404342] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000152   integrators: 0.0442 , -0.0298
+[INFO] [1778134026.153008990] [aic_model]: z_offset: -0.0128
+[INFO] [1778134026.153405742] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000152   integrators: 0.0446 , -0.0299
+[INFO] [1778134026.203002064] [aic_model]: z_offset: -0.0136
+[INFO] [1778134026.203426378] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000152   integrators: 0.0449 , -0.0301
+[INFO] [1778134026.253014054] [aic_model]: z_offset: -0.0144
+[INFO] [1778134026.253398914] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000151   integrators: 0.0453 , -0.0302
+[INFO] [1778134026.303076768] [aic_model]: z_offset: -0.0152
+[INFO] [1778134026.303575942] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000151   integrators: 0.0457 , -0.0304
+[INFO] [1778134026.352939929] [aic_model]: z_offset: -0.016
+[INFO] [1778134026.353331482] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000151   integrators: 0.0461 , -0.0305
+[INFO] [1778134026.403327682] [aic_model]: z_offset: -0.0168
+[INFO] [1778134026.404703968] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.00015   integrators: 0.0465 , -0.0307
+[INFO] [1778134026.454921612] [aic_model]: z_offset: -0.0176
+[INFO] [1778134026.455399737] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.00015   integrators: 0.0469 , -0.0308
+[INFO] [1778134026.504883769] [aic_model]: z_offset: -0.0184
+[INFO] [1778134026.505258911] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000149   integrators: 0.0473 , -0.031
+[INFO] [1778134026.554980186] [aic_model]: z_offset: -0.0192
+[INFO] [1778134026.555365958] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000149   integrators: 0.0477 , -0.0311
+[INFO] [1778134026.604951420] [aic_model]: z_offset: -0.02
+[INFO] [1778134026.605468928] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000148   integrators: 0.0481 , -0.0313
+[INFO] [1778134026.655108020] [aic_model]: z_offset: -0.0208
+[INFO] [1778134026.655510864] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000148   integrators: 0.0485 , -0.0314
+[INFO] [1778134026.705558159] [aic_model]: z_offset: -0.0216
+[INFO] [1778134026.707112168] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.00015   integrators: 0.0489 , -0.0316
+[INFO] [1778134026.756928802] [aic_model]: z_offset: -0.0224
+[INFO] [1778134026.757523675] [aic_model]: pfrac: 1.0 xy_error: 0.000392 -0.000152   integrators: 0.0493 , -0.0317
+[INFO] [1778134026.807187413] [aic_model]: z_offset: -0.0232
+[INFO] [1778134026.809054316] [aic_model]: pfrac: 1.0 xy_error: 0.000392 -0.000155   integrators: 0.0497 , -0.0319
+[INFO] [1778134026.839261134] [aic_model]: insert_cable execute loop
+[INFO] [1778134026.859775644] [aic_model]: z_offset: -0.024
+[INFO] [1778134026.861323590] [aic_model]: pfrac: 1.0 xy_error: 0.000392 -0.000156   integrators: 0.05 , -0.0321
+[INFO] [1778134026.910974174] [aic_model]: z_offset: -0.0248
+[INFO] [1778134026.911367580] [aic_model]: pfrac: 1.0 xy_error: 0.000392 -0.000156   integrators: 0.0504 , -0.0322
+[INFO] [1778134026.960880916] [aic_model]: z_offset: -0.0256
+[INFO] [1778134026.961420837] [aic_model]: pfrac: 1.0 xy_error: 0.000392 -0.000155   integrators: 0.0508 , -0.0324
+[INFO] [1778134027.011199600] [aic_model]: Waiting for connector to stabilize...
+[INFO] [1778134027.839191909] [aic_model]: insert_cable execute loop
+[INFO] [1778134028.839278477] [aic_model]: insert_cable execute loop
+[INFO] [1778134029.011156280] [aic_model]: AutoCode.insert_cable() exiting...
+[INFO] [1778134029.839247175] [aic_model]: insert_cable() returned True
+[INFO] [1778134030.563437596] [aic_model]: on_deactivate(LifecycleState(label='active', state_id=3))
+[INFO] [1778134030.890198199] [aic_model]: on_cleanup(LifecycleState(label='inactive', state_id=2))
+[INFO] [1778134030.890738510] [aic_model]: on_shutdown(LifecycleState(label='unconfigured', state_id=1))
+[ros2run]: Received signal:  Terminated
+Exception in thread Thread-1 (run_func):
+Traceback (most recent call last):
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/tf2_ros/transform_listener.py", line 115, in run_func
+    self.executor.spin()
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 374, in spin
+    self.spin_once()
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 968, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 951, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 921, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 827, in _wait_for_ready_callbacks
+    raise ExternalShutdownException()
+rclpy.executors.ExternalShutdownException
