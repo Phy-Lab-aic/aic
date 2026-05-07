@@ -485,3 +485,38 @@ Started Zenoh router with id dd9b5652148bb499c69e7cb28a44ffc6
 [component_container-3] (2026-05-07 06:09:14.619) [debug] [CameraSensor.cc:342] Camera images for [ur5e::right_camera/sensor_link::right_camera] advertised on [/right_camera/image]
 [component_container-3] (2026-05-07 06:09:14.619) [debug] [CameraSensor.cc:632] Camera info for [ur5e::right_camera/sensor_link::right_camera] advertised on [/right_camera/camera_info]
 [component_container-3] (2026-05-07 06:09:14.619) [warning] [Ogre2Camera.cc:423] Ogre2Camera::SetVisibilityMask: Mask bits c0000000 are set but will be ignored as they conflict with the reserved bits used internally by the ogre2 backend.
+[component_container-3] (2026-05-07 06:09:14.961) [debug] [CameraSensor.cc:441] Enabling camera sensor: 'ur5e::center_camera/sensor_link::center_camera' data generation.
+[component_container-3] (2026-05-07 06:09:14.981) [debug] [CameraSensor.cc:441] Enabling camera sensor: 'ur5e::left_camera/sensor_link::left_camera' data generation.
+[component_container-3] (2026-05-07 06:09:14.986) [debug] [CameraSensor.cc:441] Enabling camera sensor: 'ur5e::right_camera/sensor_link::right_camera' data generation.
+[component_container-3] [INFO] [1778134154.993693848] [controller_manager]: Activating controllers: [ joint_state_broadcaster ]
+[component_container-3] [INFO] [1778134154.993771614] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1778134154.993869186] [controller_manager]: Successfully switched controllers!
+[spawner-8] [INFO] [1778134154.996080354] [spawner_joint_state_broadcaster]: Configured and activated joint_state_broadcaster
+[INFO] [spawner-8]: process has finished cleanly [pid 254]
+[INFO] [spawner-10]: process started with pid [477]
+[2m2026-05-07T06:09:15.112267Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 2c9dad50da7c1db9f34cf02b3a0de8b7 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[component_container-3] [INFO] [1778134155.131978838] [controller_manager]: Loading controller : 'aic_controller' of type 'aic/Controller'
+[component_container-3] [INFO] [1778134155.132008553] [controller_manager]: Loading controller 'aic_controller'
+[component_container-3] [INFO] [1778134155.133681594] [controller_manager]: Controller 'aic_controller' node arguments: --ros-args --params-file /ws_aic/install/share/aic_bringup/config/aic_ros2_controllers.yaml -p use_sim_time:=true --param use_sim_time:=true 
+[component_container-3] (2026-05-07 06:09:15.213) [debug] [WorldSdfGeneratorPlugin.cc:79] Saving world: aic_world to: /tmp/aic.sdf
+[component_container-3] (2026-05-07 06:09:15.213) [info] [WorldSdfGeneratorPlugin.cc:86] File: /tmp/aic.sdf could not be opened for saving. Please check that the directory containg the file exists and the correct permissions are set.
+[spawner-10] [INFO] [1778134155.221055558] [spawner_aic_controller]: Loaded aic_controller
+[component_container-3] [INFO] [1778134155.221543531] [controller_manager]: Configuring controller: 'aic_controller'
+[component_container-3] [INFO] [1778134155.221599936] [aic_controller]: Control mode set to impedance
+[component_container-3] [INFO] [1778134155.221606408] [aic_controller]: Target mode set to Cartesian. Accepting MotionUpdate targets.
+[component_container-3] [INFO] [1778134155.226165360] [controller_manager]: Activating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778134155.226238206] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1778134155.226305242] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-05-07 06:09:15.227) [warning] [Component.hh:144] Trying to serialize component with data type [St6vectorIdSaIdEE], which doesn't have `operator<<`. Component will not be serialized.
+[component_container-3] (2026-05-07 06:09:15.227) [warning] [Component.hh:189] Trying to deserialize component with data type [St6vectorIdSaIdEE], which doesn't have `operator>>`. Component will not be deserialized.
+[spawner-10] [INFO] [1778134155.228254880] [spawner_aic_controller]: Configured and activated all the parsed controllers list : ['aic_controller']!
+[INFO] [spawner-10]: process has finished cleanly [pid 477]
+[INFO] [rviz2-11]: process started with pid [496]
+[rviz2-11] qt.qpa.xcb: could not connect to display 
+[rviz2-11] qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+[rviz2-11] This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+[rviz2-11] 
+[rviz2-11] Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, xcb.
+[rviz2-11] 
+[ERROR] [rviz2-11]: process has died [pid 496, exit code -6, cmd '/opt/ros/kilted/lib/rviz2/rviz2 -d /ws_aic/install/share/aic_bringup/rviz/aic.rviz --ros-args -r __node:=rviz2 --params-file /tmp/launch_params_q15kq__9'].
+[2m2026-05-07T06:09:17.932194Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m fcc8340bb9ef7cee25dda740e0d12a4b did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
