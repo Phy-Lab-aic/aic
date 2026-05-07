@@ -1,0 +1,232 @@
+#!/usr/bin/env python3
+"""Tests for collect_scores.py"""
+import os
+import tempfile
+import yaml
+import pytest
+from pathlib import Path
+
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
+from collect_scores import (
+    DEFAULT_GITHUB_IDS,
+    parse_scoring_yaml,
+    compute_averages,
+    update_leaderboard,
+    generate_markdown,
+    extract_class_name,
+    load_submission_history,
+    normalize_entry,
+)
+
+
+def test_extract_class_name():
+    assert extract_class_name("aic_example_policies.ros.CheatCode") == "CheatCode"
+    assert extract_class_name("my_pkg.ros.MyPolicy") == "MyPolicy"
+    assert extract_class_name("SimplePolicy") == "SimplePolicy"
+
+
+def test_parse_scoring_yaml_valid():
+    data = {
+        "total": 85.5,
+        "trial_1": {
+            "tier_1": {"score": 1.0, "message": "ok"},
+            "tier_2": {"score": 20.0, "message": "ok"},
+            "tier_3": {"score": 30.0, "message": "ok"},
+        },
+        "trial_2": {
+            "tier_1": {"score": 1.0, "message": "ok"},
+            "tier_2": {"score": 15.0, "message": "ok"},
+            "tier_3": {"score": 18.5, "message": "ok"},
+        },
+        "trial_3": {
+            "tier_1": {"score": 1.0, "message": "ok"},
+            "tier_2": {"score": 18.0, "message": "ok"},
+            "tier_3": {"score": 50.0, "message": "ok"},
+        },
+    }
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".yaml", delete=False) as f:
+        yaml.dump(data, f)
+        path = f.name
+    try:
+        trials = parse_scoring_yaml(path)
+        assert len(trials) == 3
+        assert trials[0]["tier1"] == 1.0
+        assert trials[0]["tier2"] == 20.0
+        assert trials[0]["tier3"] == 30.0
+        assert trials[0]["total"] == 51.0
+    finally:
+        os.unlink(path)
+
+
+def test_parse_scoring_yaml_missing_file():
+    trials = parse_scoring_yaml("/nonexistent/path.yaml")
+    assert trials == []
+
+
+def test_compute_averages():
+    trials = [
+        {"tier1": 1.0, "tier2": 20.0, "tier3": 60.0, "total": 81.0},
+        {"tier1": 1.0, "tier2": 15.0, "tier3": 50.0, "total": 66.0},
+        {"tier1": 0.0, "tier2": 10.0, "tier3": 70.0, "total": 80.0},
+    ]
+    avg = compute_averages(trials)
+    assert avg["trials_completed"] == 3
+    assert abs(avg["avg_score"] - 75.67) < 0.01
+    assert abs(avg["tier1_avg"] - 0.67) < 0.01
+    assert abs(avg["tier2_avg"] - 15.0) < 0.01
+    assert abs(avg["tier3_avg"] - 60.0) < 0.01
+    assert avg["min_score"] == 66.0
+    assert avg["max_score"] == 81.0
+
+
+def test_compute_averages_empty():
+    avg = compute_averages([])
+    assert avg["avg_score"] == 0.0
+    assert avg["trials_completed"] == 0
+
+
+def test_update_leaderboard_new_entry():
+    with tempfile.TemporaryDirectory() as tmpdir:
+        lb_path = os.path.join(tmpdir, "leaderboard.yaml")
+        entry = {
+            "policy": "pkg.ros.TestPolicy",
+            "avg_score": 80.0,
+            "tier1_avg": 1.0,
+            "tier2_avg": 19.0,
+            "tier3_avg": 60.0,
+            "min_score": 70.0,
+            "max_score": 90.0,
+            "date": "2026-04-04",
+            "trials_completed": 15,
+            "trials_total": 15,
+        }
+        update_leaderboard(lb_path, entry)
+        with open(lb_path) as f:
+            lb = yaml.safe_load(f)
+        assert len(lb["entries"]) == 1
+        assert lb["entries"][0]["policy"] == "pkg.ros.TestPolicy"
+
+
+def test_update_leaderboard_replaces_existing():
+    with tempfile.TemporaryDirectory() as tmpdir:
+        lb_path = os.path.join(tmpdir, "leaderboard.yaml")
+        entry1 = {
+            "policy": "pkg.ros.TestPolicy",
+            "avg_score": 80.0,
+            "tier1_avg": 1.0,
+            "tier2_avg": 19.0,
+            "tier3_avg": 60.0,
+            "min_score": 70.0,
+            "max_score": 90.0,
+            "date": "2026-04-04",
+            "trials_completed": 15,
+            "trials_total": 15,
+        }
+        entry2 = {**entry1, "avg_score": 90.0}
+        update_leaderboard(lb_path, entry1)
+        update_leaderboard(lb_path, entry2)
+        with open(lb_path) as f:
+            lb = yaml.safe_load(f)
+        assert len(lb["entries"]) == 1
+        assert lb["entries"][0]["avg_score"] == 90.0
+
+
+def test_update_leaderboard_keeps_higher_score():
+    """Lower score should NOT replace existing higher score."""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        lb_path = os.path.join(tmpdir, "leaderboard.yaml")
+        entry_high = {
+            "policy": "pkg.ros.TestPolicy",
+            "avg_score": 90.0,
+            "tier1_avg": 1.0,
+            "tier2_avg": 19.0,
+            "tier3_avg": 70.0,
+            "min_score": 80.0,
+            "max_score": 95.0,
+            "date": "2026-04-04",
+            "trials_completed": 15,
+            "trials_total": 15,
+        }
+        entry_low = {**entry_high, "avg_score": 50.0}
+        update_leaderboard(lb_path, entry_high)
+        update_leaderboard(lb_path, entry_low)
+        with open(lb_path) as f:
+            lb = yaml.safe_load(f)
+        assert len(lb["entries"]) == 1
+        assert lb["entries"][0]["avg_score"] == 90.0
+
+
+def test_generate_markdown():
+    lb = {
+        "baseline_score": 85.0,
+        "entries": [
+            {
+                "policy": "pkg.ros.CheatCode",
+                "avg_score": 85.0,
+                "tier1_avg": 1.0,
+                "tier2_avg": 19.0,
+                "tier3_avg": 65.0,
+                "min_score": 70.0,
+                "max_score": 95.0,
+                "date": "2026-04-04",
+                "trials_completed": 15,
+                "trials_total": 15,
+            }
+        ],
+    }
+    md = generate_markdown(lb, {})
+    assert "# Cheatcode Benchmark Leaderboard" in md
+    assert "| 1 |" in md
+    assert "CheatCode" in md
+    assert "85.0" in md
+    assert "Branch" not in md
+    assert "![Policy Score History](score_history.svg)" not in md
+
+
+def test_load_submission_history():
+    with tempfile.TemporaryDirectory() as tmpdir:
+        submissions_dir = Path(tmpdir)
+        for name, score in [
+            ("CheatCode_20260404_032039.yaml", 0.0),
+            ("CheatCode_20260404_034810.yaml", 58.98),
+            ("CheatCode.yaml", 99.0),
+        ]:
+            with open(submissions_dir / name, "w") as f:
+                yaml.dump({"policy": "pkg.ros.CheatCode", "avg_score": score}, f)
+        history = load_submission_history(submissions_dir)
+        assert history == {
+            "pkg.ros.CheatCode": [
+                {"label": "20260404-032039", "avg_score": 0.0},
+                {"label": "20260404-034810", "avg_score": 58.98},
+            ]
+        }
+
+
+def test_normalize_entry_sets_default_github_id():
+    entry = normalize_entry({"policy": "aic_example_policies.ros.AutoCode"})
+    assert entry["github_id"] == DEFAULT_GITHUB_IDS["aic_example_policies.ros.AutoCode"]
+
+
+def test_generate_markdown_includes_score_history_image():
+    lb = {
+        "baseline_score": 58.98,
+        "entries": [
+            {
+                "policy": "aic_example_policies.ros.AutoCode",
+                "avg_score": 63.64,
+                "tier1_avg": 1.0,
+                "tier2_avg": 17.3,
+                "tier3_avg": 45.34,
+                "min_score": 33.0,
+                "max_score": 93.9,
+                "date": "2026-04-04",
+                "github_id": "weedmo",
+                "trials_completed": 15,
+                "trials_total": 15,
+            }
+        ],
+    }
+    md = generate_markdown(lb, {})
+    assert "Score History" not in md
+    assert "score_history.svg" not in md
