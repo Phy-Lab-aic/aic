@@ -7,3 +7,1960 @@ not found: "/opt/ros/kilted/local_setup.bash"
 [INFO] [1778132068.275925703] [aic_model]: Policy.__init__()
 [ERROR] [1778132068.276755977] [aic_model]: aic_model lifecycle is not in the active state
 [INFO] [1778132069.275835169] [aic_model]: on_activate()
+[INFO] [1778132075.180551019] [aic_model]: Goal accepted
+[INFO] [1778132075.182090521] [aic_model]: Entering insert_cable_execute_callback()
+[INFO] [1778132075.183869311] [aic_model]: AutoCode.insert_cable() task: aic_task_interfaces.msg.Task(id='task_1', cable_type='sfp_sc', cable_name='cable_1', plug_type='sc', plug_name='sc_tip', port_type='sc', port_name='sc_port_base', target_module_name='sc_port_0', time_limit=180)
+[INFO] [1778132075.184088542] [aic_model]: insert_cable execute loop
+[INFO] [1778132075.185174264] [aic_model]: pfrac: 0.0 xy_error: -0.028 0.178   integrators: 0.0 , 0.0
+[INFO] [1778132075.185900003] [aic_model]: Setting cartesian mode...
+[INFO] [1778132075.187504016] [aic_model]: Successfully set target mode
+[INFO] [1778132075.237599824] [aic_model]: pfrac: 0.025 xy_error: -0.028 0.178   integrators: 0.0 , 0.0
+[INFO] [1778132075.287865861] [aic_model]: pfrac: 0.05 xy_error: -0.028 0.178   integrators: 0.0 , 0.0
+[INFO] [1778132075.337408033] [aic_model]: pfrac: 0.075 xy_error: -0.0279 0.179   integrators: 0.0 , 0.0
+[INFO] [1778132075.387168163] [aic_model]: pfrac: 0.1 xy_error: -0.0279 0.178   integrators: 0.0 , 0.0
+[INFO] [1778132075.437575825] [aic_model]: pfrac: 0.125 xy_error: -0.0278 0.178   integrators: 0.0 , 0.0
+[INFO] [1778132075.487581805] [aic_model]: pfrac: 0.15 xy_error: -0.0278 0.177   integrators: 0.0 , 0.0
+[INFO] [1778132075.537558731] [aic_model]: pfrac: 0.175 xy_error: -0.0277 0.176   integrators: 0.0 , 0.0
+[INFO] [1778132075.587588014] [aic_model]: pfrac: 0.2 xy_error: -0.0277 0.175   integrators: 0.0 , 0.0
+[INFO] [1778132075.638035080] [aic_model]: pfrac: 0.225 xy_error: -0.0277 0.173   integrators: 0.0 , 0.0
+[INFO] [1778132075.687631804] [aic_model]: pfrac: 0.25 xy_error: -0.0277 0.171   integrators: 0.0 , 0.0
+[INFO] [1778132075.737584835] [aic_model]: pfrac: 0.275 xy_error: -0.0276 0.169   integrators: 0.0 , 0.0
+[INFO] [1778132075.787505786] [aic_model]: pfrac: 0.3 xy_error: -0.0276 0.166   integrators: 0.0 , 0.0
+[INFO] [1778132075.837628495] [aic_model]: pfrac: 0.325 xy_error: -0.0275 0.163   integrators: 0.0 , 0.0
+[INFO] [1778132075.887564714] [aic_model]: pfrac: 0.35 xy_error: -0.0274 0.16   integrators: 0.0 , 0.0
+[INFO] [1778132075.937681161] [aic_model]: pfrac: 0.375 xy_error: -0.0273 0.156   integrators: 0.0 , 0.0
+[INFO] [1778132075.987839807] [aic_model]: pfrac: 0.4 xy_error: -0.0271 0.152   integrators: 0.0 , 0.0
+[INFO] [1778132076.037690707] [aic_model]: pfrac: 0.425 xy_error: -0.0269 0.148   integrators: 0.0 , 0.0
+[INFO] [1778132076.088718931] [aic_model]: pfrac: 0.45 xy_error: -0.0266 0.143   integrators: 0.0 , 0.0
+[INFO] [1778132076.139303815] [aic_model]: pfrac: 0.475 xy_error: -0.0263 0.138   integrators: 0.0 , 0.0
+[INFO] [1778132076.183435697] [aic_model]: insert_cable execute loop
+[INFO] [1778132076.188874780] [aic_model]: pfrac: 0.5 xy_error: -0.026 0.133   integrators: 0.0 , 0.0
+[INFO] [1778132076.239647125] [aic_model]: pfrac: 0.525 xy_error: -0.0256 0.128   integrators: 0.0 , 0.0
+[INFO] [1778132076.289637697] [aic_model]: pfrac: 0.55 xy_error: -0.0251 0.122   integrators: 0.0 , 0.0
+[INFO] [1778132076.339334187] [aic_model]: pfrac: 0.575 xy_error: -0.0245 0.117   integrators: 0.0 , 0.0
+[INFO] [1778132076.389544420] [aic_model]: pfrac: 0.6 xy_error: -0.0239 0.111   integrators: 0.0 , 0.0
+[INFO] [1778132076.439604221] [aic_model]: pfrac: 0.625 xy_error: -0.0231 0.106   integrators: 0.0 , 0.0
+[INFO] [1778132076.489562441] [aic_model]: pfrac: 0.65 xy_error: -0.0223 0.1   integrators: 0.0 , 0.0
+[INFO] [1778132076.539564945] [aic_model]: pfrac: 0.675 xy_error: -0.0214 0.0945   integrators: 0.0 , 0.0
+[INFO] [1778132076.589634254] [aic_model]: pfrac: 0.7 xy_error: -0.0204 0.0888   integrators: 0.0 , 0.0
+[INFO] [1778132076.639658528] [aic_model]: pfrac: 0.725 xy_error: -0.0194 0.0832   integrators: 0.0 , 0.0
+[INFO] [1778132076.689635273] [aic_model]: pfrac: 0.75 xy_error: -0.0183 0.0776   integrators: 0.0 , 0.0
+[INFO] [1778132076.739725181] [aic_model]: pfrac: 0.775 xy_error: -0.0171 0.0722   integrators: 0.0 , 0.0
+[INFO] [1778132076.789162817] [aic_model]: pfrac: 0.8 xy_error: -0.0158 0.0668   integrators: 0.0 , 0.0
+[INFO] [1778132076.839638817] [aic_model]: pfrac: 0.825 xy_error: -0.0146 0.0616   integrators: 0.0 , 0.0
+[INFO] [1778132076.889450062] [aic_model]: pfrac: 0.85 xy_error: -0.0133 0.0564   integrators: 0.0 , 0.0
+[INFO] [1778132076.939076332] [aic_model]: pfrac: 0.875 xy_error: -0.012 0.0515   integrators: 0.0 , 0.0
+[INFO] [1778132076.989541581] [aic_model]: pfrac: 0.9 xy_error: -0.0108 0.0467   integrators: 0.0 , 0.0
+[INFO] [1778132077.039446913] [aic_model]: pfrac: 0.925 xy_error: -0.00959 0.0421   integrators: 0.0 , 0.0
+[INFO] [1778132077.089888028] [aic_model]: pfrac: 0.95 xy_error: -0.00839 0.0377   integrators: 0.0 , 0.0
+[INFO] [1778132077.139696218] [aic_model]: pfrac: 0.975 xy_error: -0.00722 0.0336   integrators: 0.0 , 0.0
+[INFO] [1778132077.183845433] [aic_model]: insert_cable execute loop
+[INFO] [1778132077.188749615] [aic_model]: pfrac: 1.0 xy_error: -0.0061 0.0296   integrators: -0.0061 , 0.0296
+[INFO] [1778132077.239656251] [aic_model]: pfrac: 1.0 xy_error: -0.005 0.0259   integrators: -0.0111 , 0.0555
+[INFO] [1778132077.289698008] [aic_model]: pfrac: 1.0 xy_error: -0.00398 0.0222   integrators: -0.0151 , 0.0777
+[INFO] [1778132077.339721371] [aic_model]: pfrac: 1.0 xy_error: -0.00305 0.0186   integrators: -0.0181 , 0.08
+[INFO] [1778132077.389546062] [aic_model]: pfrac: 1.0 xy_error: -0.00217 0.0152   integrators: -0.0203 , 0.08
+[INFO] [1778132077.439547112] [aic_model]: pfrac: 1.0 xy_error: -0.00134 0.012   integrators: -0.0216 , 0.08
+[INFO] [1778132077.489571086] [aic_model]: pfrac: 1.0 xy_error: -0.000552 0.00899   integrators: -0.0222 , 0.08
+[INFO] [1778132077.539630526] [aic_model]: pfrac: 1.0 xy_error: 0.000146 0.00624   integrators: -0.0221 , 0.08
+[INFO] [1778132077.589162539] [aic_model]: pfrac: 1.0 xy_error: 0.000795 0.00375   integrators: -0.0213 , 0.08
+[INFO] [1778132077.639507945] [aic_model]: pfrac: 1.0 xy_error: 0.00138 0.00151   integrators: -0.0199 , 0.08
+[INFO] [1778132077.689658035] [aic_model]: pfrac: 1.0 xy_error: 0.0019 -0.000486   integrators: -0.018 , 0.0795
+[INFO] [1778132077.738819704] [aic_model]: pfrac: 1.0 xy_error: 0.00231 -0.00226   integrators: -0.0157 , 0.0773
+[INFO] [1778132077.789502161] [aic_model]: pfrac: 1.0 xy_error: 0.00265 -0.0038   integrators: -0.013 , 0.0734
+[INFO] [1778132077.838925951] [aic_model]: pfrac: 1.0 xy_error: 0.00291 -0.00514   integrators: -0.0101 , 0.0683
+[INFO] [1778132077.888819811] [aic_model]: pfrac: 1.0 xy_error: 0.0031 -0.00626   integrators: -0.00701 , 0.062
+[INFO] [1778132077.938813709] [aic_model]: pfrac: 1.0 xy_error: 0.00322 -0.00717   integrators: -0.00379 , 0.0549
+[INFO] [1778132077.988918143] [aic_model]: pfrac: 1.0 xy_error: 0.00328 -0.00788   integrators: -0.000513 , 0.047
+[INFO] [1778132078.039158853] [aic_model]: pfrac: 1.0 xy_error: 0.00327 -0.0084   integrators: 0.00276 , 0.0386
+[INFO] [1778132078.088904656] [aic_model]: pfrac: 1.0 xy_error: 0.0032 -0.00875   integrators: 0.00596 , 0.0299
+[INFO] [1778132078.138772979] [aic_model]: pfrac: 1.0 xy_error: 0.00304 -0.00892   integrators: 0.009 , 0.0209
+[INFO] [1778132078.182980283] [aic_model]: insert_cable execute loop
+[INFO] [1778132078.188597339] [aic_model]: z_offset: 0.1992
+[INFO] [1778132078.188987750] [aic_model]: pfrac: 1.0 xy_error: 0.00284 -0.00892   integrators: 0.0118 , 0.012
+[INFO] [1778132078.238639186] [aic_model]: z_offset: 0.1984
+[INFO] [1778132078.239861655] [aic_model]: pfrac: 1.0 xy_error: 0.00257 -0.00877   integrators: 0.0144 , 0.00324
+[INFO] [1778132078.288725867] [aic_model]: z_offset: 0.1976
+[INFO] [1778132078.289965097] [aic_model]: pfrac: 1.0 xy_error: 0.00228 -0.00847   integrators: 0.0167 , -0.00523
+[INFO] [1778132078.339899413] [aic_model]: z_offset: 0.1968
+[INFO] [1778132078.340545723] [aic_model]: pfrac: 1.0 xy_error: 0.00191 -0.008   integrators: 0.0186 , -0.0132
+[INFO] [1778132078.390604082] [aic_model]: z_offset: 0.196
+[INFO] [1778132078.391740800] [aic_model]: pfrac: 1.0 xy_error: 0.00155 -0.00744   integrators: 0.0201 , -0.0207
+[INFO] [1778132078.440595474] [aic_model]: z_offset: 0.1952
+[INFO] [1778132078.441851746] [aic_model]: pfrac: 1.0 xy_error: 0.00113 -0.00677   integrators: 0.0213 , -0.0274
+[INFO] [1778132078.490591947] [aic_model]: z_offset: 0.1944
+[INFO] [1778132078.491868447] [aic_model]: pfrac: 1.0 xy_error: 0.000706 -0.00602   integrators: 0.022 , -0.0335
+[INFO] [1778132078.540677396] [aic_model]: z_offset: 0.1936
+[INFO] [1778132078.541865530] [aic_model]: pfrac: 1.0 xy_error: 0.000254 -0.0052   integrators: 0.0222 , -0.0387
+[INFO] [1778132078.590615359] [aic_model]: z_offset: 0.1928
+[INFO] [1778132078.591810015] [aic_model]: pfrac: 1.0 xy_error: -0.000174 -0.00431   integrators: 0.0221 , -0.043
+[INFO] [1778132078.640717970] [aic_model]: z_offset: 0.192
+[INFO] [1778132078.641880005] [aic_model]: pfrac: 1.0 xy_error: -0.000596 -0.00341   integrators: 0.0215 , -0.0464
+[INFO] [1778132078.690660070] [aic_model]: z_offset: 0.1912
+[INFO] [1778132078.691894241] [aic_model]: pfrac: 1.0 xy_error: -0.000994 -0.00248   integrators: 0.0205 , -0.0489
+[INFO] [1778132078.740612931] [aic_model]: z_offset: 0.1904
+[INFO] [1778132078.741869644] [aic_model]: pfrac: 1.0 xy_error: -0.00139 -0.00154   integrators: 0.0191 , -0.0504
+[INFO] [1778132078.790610596] [aic_model]: z_offset: 0.1896
+[INFO] [1778132078.791773292] [aic_model]: pfrac: 1.0 xy_error: -0.00177 -0.000631   integrators: 0.0173 , -0.051
+[INFO] [1778132078.840593202] [aic_model]: z_offset: 0.1888
+[INFO] [1778132078.841893847] [aic_model]: pfrac: 1.0 xy_error: -0.0021 0.00025   integrators: 0.0152 , -0.0508
+[INFO] [1778132078.890591678] [aic_model]: z_offset: 0.188
+[INFO] [1778132078.891987401] [aic_model]: pfrac: 1.0 xy_error: -0.00241 0.00109   integrators: 0.0128 , -0.0497
+[INFO] [1778132078.940609841] [aic_model]: z_offset: 0.1872
+[INFO] [1778132078.941791062] [aic_model]: pfrac: 1.0 xy_error: -0.00266 0.00187   integrators: 0.0102 , -0.0478
+[INFO] [1778132078.990712242] [aic_model]: z_offset: 0.1864
+[INFO] [1778132078.991910836] [aic_model]: pfrac: 1.0 xy_error: -0.00287 0.00258   integrators: 0.00728 , -0.0452
+[INFO] [1778132079.040625929] [aic_model]: z_offset: 0.1856
+[INFO] [1778132079.041798995] [aic_model]: pfrac: 1.0 xy_error: -0.00305 0.00322   integrators: 0.00423 , -0.042
+[INFO] [1778132079.090719764] [aic_model]: z_offset: 0.1848
+[INFO] [1778132079.092059342] [aic_model]: pfrac: 1.0 xy_error: -0.0032 0.00381   integrators: 0.00104 , -0.0382
+[INFO] [1778132079.140840860] [aic_model]: z_offset: 0.184
+[INFO] [1778132079.142129843] [aic_model]: pfrac: 1.0 xy_error: -0.00329 0.0043   integrators: -0.00225 , -0.0339
+[INFO] [1778132079.183777945] [aic_model]: insert_cable execute loop
+[INFO] [1778132079.190656954] [aic_model]: z_offset: 0.1832
+[INFO] [1778132079.191851280] [aic_model]: pfrac: 1.0 xy_error: -0.00334 0.00469   integrators: -0.00559 , -0.0292
+[INFO] [1778132079.240608542] [aic_model]: z_offset: 0.1824
+[INFO] [1778132079.241817756] [aic_model]: pfrac: 1.0 xy_error: -0.00334 0.00498   integrators: -0.00894 , -0.0242
+[INFO] [1778132079.290608812] [aic_model]: z_offset: 0.1816
+[INFO] [1778132079.291938672] [aic_model]: pfrac: 1.0 xy_error: -0.00333 0.00518   integrators: -0.0123 , -0.0191
+[INFO] [1778132079.340674424] [aic_model]: z_offset: 0.1808
+[INFO] [1778132079.341900068] [aic_model]: pfrac: 1.0 xy_error: -0.00325 0.00531   integrators: -0.0155 , -0.0137
+[INFO] [1778132079.390603781] [aic_model]: z_offset: 0.18
+[INFO] [1778132079.391907752] [aic_model]: pfrac: 1.0 xy_error: -0.00311 0.00538   integrators: -0.0186 , -0.00835
+[INFO] [1778132079.440603800] [aic_model]: z_offset: 0.1792
+[INFO] [1778132079.441837660] [aic_model]: pfrac: 1.0 xy_error: -0.00293 0.00536   integrators: -0.0216 , -0.00299
+[INFO] [1778132079.490615170] [aic_model]: z_offset: 0.1784
+[INFO] [1778132079.491795430] [aic_model]: pfrac: 1.0 xy_error: -0.00273 0.00527   integrators: -0.0243 , 0.00228
+[INFO] [1778132079.540679079] [aic_model]: z_offset: 0.1776
+[INFO] [1778132079.541943496] [aic_model]: pfrac: 1.0 xy_error: -0.00248 0.00509   integrators: -0.0268 , 0.00737
+[INFO] [1778132079.590649613] [aic_model]: z_offset: 0.1768
+[INFO] [1778132079.591959675] [aic_model]: pfrac: 1.0 xy_error: -0.00221 0.00486   integrators: -0.029 , 0.0122
+[INFO] [1778132079.640607422] [aic_model]: z_offset: 0.176
+[INFO] [1778132079.641787181] [aic_model]: pfrac: 1.0 xy_error: -0.0019 0.00457   integrators: -0.0309 , 0.0168
+[INFO] [1778132079.690643880] [aic_model]: z_offset: 0.1752
+[INFO] [1778132079.692049782] [aic_model]: pfrac: 1.0 xy_error: -0.00158 0.00422   integrators: -0.0325 , 0.021
+[INFO] [1778132079.740646774] [aic_model]: z_offset: 0.1744
+[INFO] [1778132079.741598846] [aic_model]: pfrac: 1.0 xy_error: -0.0012 0.00379   integrators: -0.0337 , 0.0248
+[INFO] [1778132079.790609894] [aic_model]: z_offset: 0.1736
+[INFO] [1778132079.791811504] [aic_model]: pfrac: 1.0 xy_error: -0.000838 0.00334   integrators: -0.0345 , 0.0282
+[INFO] [1778132079.840623849] [aic_model]: z_offset: 0.1728
+[INFO] [1778132079.841860144] [aic_model]: pfrac: 1.0 xy_error: -0.000493 0.00286   integrators: -0.035 , 0.031
+[INFO] [1778132079.890601376] [aic_model]: z_offset: 0.172
+[INFO] [1778132079.891885260] [aic_model]: pfrac: 1.0 xy_error: -0.000176 0.00233   integrators: -0.0352 , 0.0333
+[INFO] [1778132079.940629848] [aic_model]: z_offset: 0.1712
+[INFO] [1778132079.941258405] [aic_model]: pfrac: 1.0 xy_error: 0.000138 0.00179   integrators: -0.035 , 0.0351
+[INFO] [1778132079.990639005] [aic_model]: z_offset: 0.1704
+[INFO] [1778132079.991776544] [aic_model]: pfrac: 1.0 xy_error: 0.000438 0.00125   integrators: -0.0346 , 0.0364
+[INFO] [1778132080.040653561] [aic_model]: z_offset: 0.1696
+[INFO] [1778132080.041741468] [aic_model]: pfrac: 1.0 xy_error: 0.000746 0.00071   integrators: -0.0338 , 0.0371
+[INFO] [1778132080.090717780] [aic_model]: z_offset: 0.1688
+[INFO] [1778132080.091974783] [aic_model]: pfrac: 1.0 xy_error: 0.00104 0.000195   integrators: -0.0328 , 0.0373
+[INFO] [1778132080.140599097] [aic_model]: z_offset: 0.168
+[INFO] [1778132080.141941490] [aic_model]: pfrac: 1.0 xy_error: 0.00135 -0.000311   integrators: -0.0315 , 0.037
+[INFO] [1778132080.182839689] [aic_model]: insert_cable execute loop
+[INFO] [1778132080.190575532] [aic_model]: z_offset: 0.1672
+[INFO] [1778132080.191807899] [aic_model]: pfrac: 1.0 xy_error: 0.00162 -0.000798   integrators: -0.0298 , 0.0362
+[INFO] [1778132080.240686418] [aic_model]: z_offset: 0.1664
+[INFO] [1778132080.241977546] [aic_model]: pfrac: 1.0 xy_error: 0.00187 -0.00125   integrators: -0.028 , 0.0349
+[INFO] [1778132080.290629260] [aic_model]: z_offset: 0.1656
+[INFO] [1778132080.291807276] [aic_model]: pfrac: 1.0 xy_error: 0.00208 -0.00167   integrators: -0.0259 , 0.0333
+[INFO] [1778132080.340618189] [aic_model]: z_offset: 0.1648
+[INFO] [1778132080.341862779] [aic_model]: pfrac: 1.0 xy_error: 0.00227 -0.00206   integrators: -0.0236 , 0.0312
+[INFO] [1778132080.390600064] [aic_model]: z_offset: 0.164
+[INFO] [1778132080.391770004] [aic_model]: pfrac: 1.0 xy_error: 0.00243 -0.00239   integrators: -0.0212 , 0.0288
+[INFO] [1778132080.440607567] [aic_model]: z_offset: 0.1632
+[INFO] [1778132080.441827090] [aic_model]: pfrac: 1.0 xy_error: 0.00252 -0.00269   integrators: -0.0187 , 0.0261
+[INFO] [1778132080.490622274] [aic_model]: z_offset: 0.1624
+[INFO] [1778132080.491853739] [aic_model]: pfrac: 1.0 xy_error: 0.00257 -0.00297   integrators: -0.0161 , 0.0231
+[INFO] [1778132080.540616241] [aic_model]: z_offset: 0.1616
+[INFO] [1778132080.541019526] [aic_model]: pfrac: 1.0 xy_error: 0.00258 -0.00318   integrators: -0.0135 , 0.02
+[INFO] [1778132080.590607053] [aic_model]: z_offset: 0.1608
+[INFO] [1778132080.591392093] [aic_model]: pfrac: 1.0 xy_error: 0.00256 -0.00337   integrators: -0.0109 , 0.0166
+[INFO] [1778132080.640659761] [aic_model]: z_offset: 0.16
+[INFO] [1778132080.641864526] [aic_model]: pfrac: 1.0 xy_error: 0.00252 -0.0035   integrators: -0.00843 , 0.0131
+[INFO] [1778132080.690612872] [aic_model]: z_offset: 0.1592
+[INFO] [1778132080.691810404] [aic_model]: pfrac: 1.0 xy_error: 0.00244 -0.00353   integrators: -0.00599 , 0.00957
+[INFO] [1778132080.740700655] [aic_model]: z_offset: 0.1584
+[INFO] [1778132080.741886115] [aic_model]: pfrac: 1.0 xy_error: 0.00232 -0.00354   integrators: -0.00366 , 0.00603
+[INFO] [1778132080.790706215] [aic_model]: z_offset: 0.1576
+[INFO] [1778132080.791866086] [aic_model]: pfrac: 1.0 xy_error: 0.00217 -0.00349   integrators: -0.0015 , 0.00254
+[INFO] [1778132080.840617127] [aic_model]: z_offset: 0.1568
+[INFO] [1778132080.841856998] [aic_model]: pfrac: 1.0 xy_error: 0.00199 -0.00339   integrators: 0.000498 , -0.000854
+[INFO] [1778132080.890617446] [aic_model]: z_offset: 0.156
+[INFO] [1778132080.891811091] [aic_model]: pfrac: 1.0 xy_error: 0.00182 -0.00323   integrators: 0.00231 , -0.00409
+[INFO] [1778132080.940586588] [aic_model]: z_offset: 0.1552
+[INFO] [1778132080.941238538] [aic_model]: pfrac: 1.0 xy_error: 0.00162 -0.00303   integrators: 0.00393 , -0.00712
+[INFO] [1778132080.990633825] [aic_model]: z_offset: 0.1544
+[INFO] [1778132080.991844702] [aic_model]: pfrac: 1.0 xy_error: 0.00138 -0.0028   integrators: 0.00532 , -0.00993
+[INFO] [1778132081.040615861] [aic_model]: z_offset: 0.1536
+[INFO] [1778132081.041609030] [aic_model]: pfrac: 1.0 xy_error: 0.00114 -0.00254   integrators: 0.00646 , -0.0125
+[INFO] [1778132081.090770589] [aic_model]: z_offset: 0.1528
+[INFO] [1778132081.092226746] [aic_model]: pfrac: 1.0 xy_error: 0.000886 -0.00225   integrators: 0.00734 , -0.0147
+[INFO] [1778132081.142603300] [aic_model]: z_offset: 0.152
+[INFO] [1778132081.143263175] [aic_model]: pfrac: 1.0 xy_error: 0.00062 -0.00191   integrators: 0.00796 , -0.0166
+[INFO] [1778132081.182837405] [aic_model]: insert_cable execute loop
+[INFO] [1778132081.192609470] [aic_model]: z_offset: 0.1512
+[INFO] [1778132081.193797835] [aic_model]: pfrac: 1.0 xy_error: 0.000361 -0.00158   integrators: 0.00832 , -0.0182
+[INFO] [1778132081.242713143] [aic_model]: z_offset: 0.1504
+[INFO] [1778132081.243977330] [aic_model]: pfrac: 1.0 xy_error: 0.00014 -0.00122   integrators: 0.00846 , -0.0194
+[INFO] [1778132081.292771602] [aic_model]: z_offset: 0.1496
+[INFO] [1778132081.294003759] [aic_model]: pfrac: 1.0 xy_error: -7.89e-05 -0.000881   integrators: 0.00838 , -0.0203
+[INFO] [1778132081.342605881] [aic_model]: z_offset: 0.1488
+[INFO] [1778132081.343817329] [aic_model]: pfrac: 1.0 xy_error: -0.000279 -0.000521   integrators: 0.0081 , -0.0208
+[INFO] [1778132081.393864216] [aic_model]: z_offset: 0.148
+[INFO] [1778132081.394418914] [aic_model]: pfrac: 1.0 xy_error: -0.000462 -0.000153   integrators: 0.00764 , -0.021
+[INFO] [1778132081.444635168] [aic_model]: z_offset: 0.1472
+[INFO] [1778132081.445891841] [aic_model]: pfrac: 1.0 xy_error: -0.000643 0.000194   integrators: 0.007 , -0.0208
+[INFO] [1778132081.494617424] [aic_model]: z_offset: 0.1464
+[INFO] [1778132081.495887942] [aic_model]: pfrac: 1.0 xy_error: -0.000796 0.000534   integrators: 0.0062 , -0.0202
+[INFO] [1778132081.544587867] [aic_model]: z_offset: 0.1456
+[INFO] [1778132081.545837317] [aic_model]: pfrac: 1.0 xy_error: -0.00095 0.000835   integrators: 0.00525 , -0.0194
+[INFO] [1778132081.594742997] [aic_model]: z_offset: 0.1448
+[INFO] [1778132081.596151253] [aic_model]: pfrac: 1.0 xy_error: -0.00111 0.00107   integrators: 0.00414 , -0.0183
+[INFO] [1778132081.644682262] [aic_model]: z_offset: 0.144
+[INFO] [1778132081.645897437] [aic_model]: pfrac: 1.0 xy_error: -0.00123 0.00131   integrators: 0.00291 , -0.017
+[INFO] [1778132081.694768232] [aic_model]: z_offset: 0.1432
+[INFO] [1778132081.696417891] [aic_model]: pfrac: 1.0 xy_error: -0.00134 0.0015   integrators: 0.00157 , -0.0155
+[INFO] [1778132081.746594110] [aic_model]: z_offset: 0.1424
+[INFO] [1778132081.747144750] [aic_model]: pfrac: 1.0 xy_error: -0.00141 0.00166   integrators: 0.000154 , -0.0139
+[INFO] [1778132081.796821404] [aic_model]: z_offset: 0.1416
+[INFO] [1778132081.798525174] [aic_model]: pfrac: 1.0 xy_error: -0.00144 0.00179   integrators: -0.00129 , -0.0121
+[INFO] [1778132081.848673361] [aic_model]: z_offset: 0.1408
+[INFO] [1778132081.850101985] [aic_model]: pfrac: 1.0 xy_error: -0.00146 0.00188   integrators: -0.00275 , -0.0102
+[INFO] [1778132081.898670003] [aic_model]: z_offset: 0.14
+[INFO] [1778132081.899907620] [aic_model]: pfrac: 1.0 xy_error: -0.00145 0.00195   integrators: -0.0042 , -0.00825
+[INFO] [1778132081.948618997] [aic_model]: z_offset: 0.1392
+[INFO] [1778132081.949903371] [aic_model]: pfrac: 1.0 xy_error: -0.00143 0.00198   integrators: -0.00564 , -0.00628
+[INFO] [1778132081.998630117] [aic_model]: z_offset: 0.1384
+[INFO] [1778132081.999794527] [aic_model]: pfrac: 1.0 xy_error: -0.00138 0.00198   integrators: -0.00702 , -0.00429
+[INFO] [1778132082.048665672] [aic_model]: z_offset: 0.1376
+[INFO] [1778132082.049312022] [aic_model]: pfrac: 1.0 xy_error: -0.00131 0.00197   integrators: -0.00833 , -0.00233
+[INFO] [1778132082.098761902] [aic_model]: z_offset: 0.1368
+[INFO] [1778132082.099310418] [aic_model]: pfrac: 1.0 xy_error: -0.00122 0.00191   integrators: -0.00954 , -0.000421
+[INFO] [1778132082.148684826] [aic_model]: z_offset: 0.136
+[INFO] [1778132082.150073636] [aic_model]: pfrac: 1.0 xy_error: -0.00112 0.00182   integrators: -0.0107 , 0.0014
+[INFO] [1778132082.182872963] [aic_model]: insert_cable execute loop
+[INFO] [1778132082.198571664] [aic_model]: z_offset: 0.1352
+[INFO] [1778132082.199825972] [aic_model]: pfrac: 1.0 xy_error: -0.00102 0.00169   integrators: -0.0117 , 0.00309
+[INFO] [1778132082.248604194] [aic_model]: z_offset: 0.1344
+[INFO] [1778132082.249708381] [aic_model]: pfrac: 1.0 xy_error: -0.000885 0.00154   integrators: -0.0126 , 0.00463
+[INFO] [1778132082.298665778] [aic_model]: z_offset: 0.1336
+[INFO] [1778132082.299055718] [aic_model]: pfrac: 1.0 xy_error: -0.000722 0.00138   integrators: -0.0133 , 0.006
+[INFO] [1778132082.348602258] [aic_model]: z_offset: 0.1328
+[INFO] [1778132082.349252074] [aic_model]: pfrac: 1.0 xy_error: -0.000528 0.00121   integrators: -0.0138 , 0.00722
+[INFO] [1778132082.398668331] [aic_model]: z_offset: 0.132
+[INFO] [1778132082.399880590] [aic_model]: pfrac: 1.0 xy_error: -0.000333 0.00102   integrators: -0.0141 , 0.00824
+[INFO] [1778132082.448623446] [aic_model]: z_offset: 0.1312
+[INFO] [1778132082.449889256] [aic_model]: pfrac: 1.0 xy_error: -0.00016 0.000812   integrators: -0.0143 , 0.00905
+[INFO] [1778132082.498630228] [aic_model]: z_offset: 0.1304
+[INFO] [1778132082.499005620] [aic_model]: pfrac: 1.0 xy_error: 2.86e-05 0.000578   integrators: -0.0143 , 0.00963
+[INFO] [1778132082.548603687] [aic_model]: z_offset: 0.1296
+[INFO] [1778132082.548981775] [aic_model]: pfrac: 1.0 xy_error: 0.000225 0.000367   integrators: -0.0141 , 0.01
+[INFO] [1778132082.598705076] [aic_model]: z_offset: 0.1288
+[INFO] [1778132082.599923317] [aic_model]: pfrac: 1.0 xy_error: 0.000378 0.000147   integrators: -0.0137 , 0.0101
+[INFO] [1778132082.650008826] [aic_model]: z_offset: 0.128
+[INFO] [1778132082.650706953] [aic_model]: pfrac: 1.0 xy_error: 0.000543 -6.69e-05   integrators: -0.0131 , 0.0101
+[INFO] [1778132082.700609589] [aic_model]: z_offset: 0.1272
+[INFO] [1778132082.701420277] [aic_model]: pfrac: 1.0 xy_error: 0.000677 -0.000285   integrators: -0.0125 , 0.00979
+[INFO] [1778132082.750732038] [aic_model]: z_offset: 0.1264
+[INFO] [1778132082.751401050] [aic_model]: pfrac: 1.0 xy_error: 0.000804 -0.000495   integrators: -0.0117 , 0.0093
+[INFO] [1778132082.800596303] [aic_model]: z_offset: 0.1256
+[INFO] [1778132082.801071022] [aic_model]: pfrac: 1.0 xy_error: 0.000914 -0.000704   integrators: -0.0107 , 0.00859
+[INFO] [1778132082.850594689] [aic_model]: z_offset: 0.1248
+[INFO] [1778132082.851088644] [aic_model]: pfrac: 1.0 xy_error: 0.000993 -0.000897   integrators: -0.00975 , 0.0077
+[INFO] [1778132082.900631948] [aic_model]: z_offset: 0.124
+[INFO] [1778132082.901593197] [aic_model]: pfrac: 1.0 xy_error: 0.00103 -0.00107   integrators: -0.00871 , 0.00663
+[INFO] [1778132082.950729870] [aic_model]: z_offset: 0.1232
+[INFO] [1778132082.951557930] [aic_model]: pfrac: 1.0 xy_error: 0.00111 -0.00118   integrators: -0.00761 , 0.00545
+[INFO] [1778132083.000770586] [aic_model]: z_offset: 0.1224
+[INFO] [1778132083.002362736] [aic_model]: pfrac: 1.0 xy_error: 0.00115 -0.00129   integrators: -0.00645 , 0.00416
+[INFO] [1778132083.052588698] [aic_model]: z_offset: 0.1216
+[INFO] [1778132083.052983347] [aic_model]: pfrac: 1.0 xy_error: 0.00119 -0.00141   integrators: -0.00527 , 0.00275
+[INFO] [1778132083.102765809] [aic_model]: z_offset: 0.1208
+[INFO] [1778132083.103302995] [aic_model]: pfrac: 1.0 xy_error: 0.00121 -0.00148   integrators: -0.00406 , 0.00127
+[INFO] [1778132083.152618612] [aic_model]: z_offset: 0.12
+[INFO] [1778132083.154363780] [aic_model]: pfrac: 1.0 xy_error: 0.0012 -0.00148   integrators: -0.00286 , -0.000206
+[INFO] [1778132083.182830354] [aic_model]: insert_cable execute loop
+[INFO] [1778132083.204730425] [aic_model]: z_offset: 0.1192
+[INFO] [1778132083.205872213] [aic_model]: pfrac: 1.0 xy_error: 0.00121 -0.00139   integrators: -0.00165 , -0.0016
+[INFO] [1778132083.254793462] [aic_model]: z_offset: 0.1184
+[INFO] [1778132083.256004169] [aic_model]: pfrac: 1.0 xy_error: 0.0012 -0.00127   integrators: -0.000444 , -0.00287
+[INFO] [1778132083.304826964] [aic_model]: z_offset: 0.1176
+[INFO] [1778132083.306080110] [aic_model]: pfrac: 1.0 xy_error: 0.00119 -0.00115   integrators: 0.000743 , -0.00401
+[INFO] [1778132083.354819279] [aic_model]: z_offset: 0.1168
+[INFO] [1778132083.356296304] [aic_model]: pfrac: 1.0 xy_error: 0.00115 -0.00101   integrators: 0.00189 , -0.00502
+[INFO] [1778132083.406712502] [aic_model]: z_offset: 0.116
+[INFO] [1778132083.408256714] [aic_model]: pfrac: 1.0 xy_error: 0.00107 -0.000878   integrators: 0.00296 , -0.0059
+[INFO] [1778132083.456611312] [aic_model]: z_offset: 0.1152
+[INFO] [1778132083.457410889] [aic_model]: pfrac: 1.0 xy_error: 0.00099 -0.000711   integrators: 0.00395 , -0.00661
+[INFO] [1778132083.506634495] [aic_model]: z_offset: 0.1144
+[INFO] [1778132083.507558825] [aic_model]: pfrac: 1.0 xy_error: 0.000898 -0.000556   integrators: 0.00485 , -0.00717
+[INFO] [1778132083.556654371] [aic_model]: z_offset: 0.1136
+[INFO] [1778132083.557056113] [aic_model]: pfrac: 1.0 xy_error: 0.000779 -0.000388   integrators: 0.00563 , -0.00756
+[INFO] [1778132083.606740301] [aic_model]: z_offset: 0.1128
+[INFO] [1778132083.608218709] [aic_model]: pfrac: 1.0 xy_error: 0.000665 -0.000233   integrators: 0.00629 , -0.00779
+[INFO] [1778132083.656662234] [aic_model]: z_offset: 0.112
+[INFO] [1778132083.657842363] [aic_model]: pfrac: 1.0 xy_error: 0.000554 -8.44e-05   integrators: 0.00685 , -0.00787
+[INFO] [1778132083.706677141] [aic_model]: z_offset: 0.1112
+[INFO] [1778132083.707468963] [aic_model]: pfrac: 1.0 xy_error: 0.000443 6.65e-05   integrators: 0.00729 , -0.00781
+[INFO] [1778132083.756693210] [aic_model]: z_offset: 0.1104
+[INFO] [1778132083.757373494] [aic_model]: pfrac: 1.0 xy_error: 0.000326 0.000161   integrators: 0.00762 , -0.00765
+[INFO] [1778132083.806645209] [aic_model]: z_offset: 0.1096
+[INFO] [1778132083.807064695] [aic_model]: pfrac: 1.0 xy_error: 0.000198 0.000242   integrators: 0.00781 , -0.0074
+[INFO] [1778132083.856609972] [aic_model]: z_offset: 0.1088
+[INFO] [1778132083.857025751] [aic_model]: pfrac: 1.0 xy_error: 0.000106 0.000303   integrators: 0.00792 , -0.0071
+[INFO] [1778132083.906642142] [aic_model]: z_offset: 0.108
+[INFO] [1778132083.907055416] [aic_model]: pfrac: 1.0 xy_error: -4.88e-07 0.000344   integrators: 0.00792 , -0.00676
+[INFO] [1778132083.956632413] [aic_model]: z_offset: 0.1072
+[INFO] [1778132083.957052449] [aic_model]: pfrac: 1.0 xy_error: -9.95e-05 0.00036   integrators: 0.00782 , -0.0064
+[INFO] [1778132084.006624697] [aic_model]: z_offset: 0.1064
+[INFO] [1778132084.007003587] [aic_model]: pfrac: 1.0 xy_error: -0.000209 0.000378   integrators: 0.00761 , -0.00602
+[INFO] [1778132084.056729903] [aic_model]: z_offset: 0.1056
+[INFO] [1778132084.057289260] [aic_model]: pfrac: 1.0 xy_error: -0.000301 0.000393   integrators: 0.00731 , -0.00563
+[INFO] [1778132084.106906613] [aic_model]: z_offset: 0.1048
+[INFO] [1778132084.107389177] [aic_model]: pfrac: 1.0 xy_error: -0.000381 0.000383   integrators: 0.00693 , -0.00524
+[INFO] [1778132084.156584169] [aic_model]: z_offset: 0.104
+[INFO] [1778132084.156996000] [aic_model]: pfrac: 1.0 xy_error: -0.00044 0.000356   integrators: 0.00649 , -0.00489
+[INFO] [1778132084.184502216] [aic_model]: insert_cable execute loop
+[INFO] [1778132084.206562297] [aic_model]: z_offset: 0.1032
+[INFO] [1778132084.206931648] [aic_model]: pfrac: 1.0 xy_error: -0.000485 0.000342   integrators: 0.006 , -0.00455
+[INFO] [1778132084.256688853] [aic_model]: z_offset: 0.1024
+[INFO] [1778132084.257085546] [aic_model]: pfrac: 1.0 xy_error: -0.00053 0.000319   integrators: 0.00547 , -0.00423
+[INFO] [1778132084.307063063] [aic_model]: z_offset: 0.1016
+[INFO] [1778132084.308791318] [aic_model]: pfrac: 1.0 xy_error: -0.000575 0.000278   integrators: 0.0049 , -0.00395
+[INFO] [1778132084.362594427] [aic_model]: z_offset: 0.1008
+[INFO] [1778132084.363094554] [aic_model]: pfrac: 1.0 xy_error: -0.000616 0.000218   integrators: 0.00428 , -0.00373
+[INFO] [1778132084.412865354] [aic_model]: z_offset: 0.1
+[INFO] [1778132084.413863723] [aic_model]: pfrac: 1.0 xy_error: -0.000634 0.000173   integrators: 0.00365 , -0.00356
+[INFO] [1778132084.462723598] [aic_model]: z_offset: 0.0992
+[INFO] [1778132084.463244994] [aic_model]: pfrac: 1.0 xy_error: -0.000641 0.00012   integrators: 0.00301 , -0.00344
+[INFO] [1778132084.512917239] [aic_model]: z_offset: 0.0984
+[INFO] [1778132084.514768886] [aic_model]: pfrac: 1.0 xy_error: -0.000627 6.21e-05   integrators: 0.00238 , -0.00338
+[INFO] [1778132084.562650389] [aic_model]: z_offset: 0.0976
+[INFO] [1778132084.563618962] [aic_model]: pfrac: 1.0 xy_error: -0.000602 1.79e-05   integrators: 0.00178 , -0.00336
+[INFO] [1778132084.616558765] [aic_model]: z_offset: 0.0968
+[INFO] [1778132084.616954806] [aic_model]: pfrac: 1.0 xy_error: -0.000582 -5.87e-05   integrators: 0.0012 , -0.00342
+[INFO] [1778132084.666764119] [aic_model]: z_offset: 0.096
+[INFO] [1778132084.667287689] [aic_model]: pfrac: 1.0 xy_error: -0.000533 -0.00012   integrators: 0.000663 , -0.00354
+[INFO] [1778132084.716734953] [aic_model]: z_offset: 0.0952
+[INFO] [1778132084.717149700] [aic_model]: pfrac: 1.0 xy_error: -0.000468 -0.000171   integrators: 0.000195 , -0.00371
+[INFO] [1778132084.766640085] [aic_model]: z_offset: 0.0944
+[INFO] [1778132084.767502439] [aic_model]: pfrac: 1.0 xy_error: -0.000411 -0.000237   integrators: -0.000216 , -0.00395
+[INFO] [1778132084.816829739] [aic_model]: z_offset: 0.0936
+[INFO] [1778132084.817340195] [aic_model]: pfrac: 1.0 xy_error: -0.000351 -0.000317   integrators: -0.000567 , -0.00426
+[INFO] [1778132084.866630795] [aic_model]: z_offset: 0.0928
+[INFO] [1778132084.867038158] [aic_model]: pfrac: 1.0 xy_error: -0.00028 -0.000395   integrators: -0.000847 , -0.00466
+[INFO] [1778132084.916631606] [aic_model]: z_offset: 0.092
+[INFO] [1778132084.917032186] [aic_model]: pfrac: 1.0 xy_error: -0.000219 -0.00046   integrators: -0.00107 , -0.00512
+[INFO] [1778132084.966662894] [aic_model]: z_offset: 0.0912
+[INFO] [1778132084.967386308] [aic_model]: pfrac: 1.0 xy_error: -0.000144 -0.000517   integrators: -0.00121 , -0.00563
+[INFO] [1778132085.016812283] [aic_model]: z_offset: 0.0904
+[INFO] [1778132085.017670539] [aic_model]: pfrac: 1.0 xy_error: -8.41e-05 -0.000541   integrators: -0.00129 , -0.00618
+[INFO] [1778132085.066636422] [aic_model]: z_offset: 0.0896
+[INFO] [1778132085.067052331] [aic_model]: pfrac: 1.0 xy_error: -1.73e-07 -0.000565   integrators: -0.00129 , -0.00674
+[INFO] [1778132085.117206950] [aic_model]: z_offset: 0.0888
+[INFO] [1778132085.118925908] [aic_model]: pfrac: 1.0 xy_error: 7.09e-05 -0.000554   integrators: -0.00122 , -0.00729
+[INFO] [1778132085.170479656] [aic_model]: z_offset: 0.088
+[INFO] [1778132085.170897819] [aic_model]: pfrac: 1.0 xy_error: 0.000137 -0.000522   integrators: -0.00109 , -0.00782
+[INFO] [1778132085.184838348] [aic_model]: insert_cable execute loop
+[INFO] [1778132085.220621140] [aic_model]: z_offset: 0.0872
+[INFO] [1778132085.221435394] [aic_model]: pfrac: 1.0 xy_error: 0.000195 -0.000481   integrators: -0.000892 , -0.0083
+[INFO] [1778132085.270740392] [aic_model]: z_offset: 0.0864
+[INFO] [1778132085.271997406] [aic_model]: pfrac: 1.0 xy_error: 0.000287 -0.000437   integrators: -0.000605 , -0.00874
+[INFO] [1778132085.320665050] [aic_model]: z_offset: 0.0856
+[INFO] [1778132085.322436667] [aic_model]: pfrac: 1.0 xy_error: 0.000381 -0.000413   integrators: -0.000224 , -0.00915
+[INFO] [1778132085.376978920] [aic_model]: z_offset: 0.0848
+[INFO] [1778132085.378515257] [aic_model]: pfrac: 1.0 xy_error: 0.000462 -0.000396   integrators: 0.000237 , -0.00954
+[INFO] [1778132085.428806451] [aic_model]: z_offset: 0.084
+[INFO] [1778132085.430090395] [aic_model]: pfrac: 1.0 xy_error: 0.000505 -0.000384   integrators: 0.000742 , -0.00993
+[INFO] [1778132085.478618097] [aic_model]: z_offset: 0.0832
+[INFO] [1778132085.479493186] [aic_model]: pfrac: 1.0 xy_error: 0.00054 -0.000368   integrators: 0.00128 , -0.0103
+[INFO] [1778132085.528672368] [aic_model]: z_offset: 0.0824
+[INFO] [1778132085.530370407] [aic_model]: pfrac: 1.0 xy_error: 0.000586 -0.000325   integrators: 0.00187 , -0.0106
+[INFO] [1778132085.583631101] [aic_model]: z_offset: 0.0816
+[INFO] [1778132085.584683611] [aic_model]: pfrac: 1.0 xy_error: 0.000602 -0.000277   integrators: 0.00247 , -0.0109
+[INFO] [1778132085.634646671] [aic_model]: z_offset: 0.0808
+[INFO] [1778132085.635035159] [aic_model]: pfrac: 1.0 xy_error: 0.000631 -0.000206   integrators: 0.0031 , -0.0111
+[INFO] [1778132085.685017475] [aic_model]: z_offset: 0.08
+[INFO] [1778132085.686413879] [aic_model]: pfrac: 1.0 xy_error: 0.000679 -0.000121   integrators: 0.00378 , -0.0112
+[INFO] [1778132085.736585981] [aic_model]: z_offset: 0.0792
+[INFO] [1778132085.737856850] [aic_model]: pfrac: 1.0 xy_error: 0.00071 -4.76e-05   integrators: 0.00449 , -0.0113
+[INFO] [1778132085.786746480] [aic_model]: z_offset: 0.0784
+[INFO] [1778132085.787585832] [aic_model]: pfrac: 1.0 xy_error: 0.000701 -3.25e-05   integrators: 0.00519 , -0.0113
+[INFO] [1778132085.836592832] [aic_model]: z_offset: 0.0776
+[INFO] [1778132085.837363254] [aic_model]: pfrac: 1.0 xy_error: 0.000674 -1.53e-05   integrators: 0.00587 , -0.0113
+[INFO] [1778132085.886611716] [aic_model]: z_offset: 0.0768
+[INFO] [1778132085.887417875] [aic_model]: pfrac: 1.0 xy_error: 0.00065 2.21e-06   integrators: 0.00652 , -0.0113
+[INFO] [1778132085.936620702] [aic_model]: z_offset: 0.076
+[INFO] [1778132085.937844563] [aic_model]: pfrac: 1.0 xy_error: 0.000576 2.54e-05   integrators: 0.00709 , -0.0113
+[INFO] [1778132085.986730106] [aic_model]: z_offset: 0.0752
+[INFO] [1778132085.987572273] [aic_model]: pfrac: 1.0 xy_error: 0.000504 2.35e-05   integrators: 0.0076 , -0.0113
+[INFO] [1778132086.036641319] [aic_model]: z_offset: 0.0744
+[INFO] [1778132086.037911326] [aic_model]: pfrac: 1.0 xy_error: 0.000453 3.45e-05   integrators: 0.00805 , -0.0112
+[INFO] [1778132086.086675552] [aic_model]: z_offset: 0.0736
+[INFO] [1778132086.087799296] [aic_model]: pfrac: 1.0 xy_error: 0.000378 3.17e-05   integrators: 0.00843 , -0.0112
+[INFO] [1778132086.136691301] [aic_model]: z_offset: 0.0728
+[INFO] [1778132086.138155011] [aic_model]: pfrac: 1.0 xy_error: 0.000316 3.52e-05   integrators: 0.00874 , -0.0112
+[INFO] [1778132086.184910306] [aic_model]: insert_cable execute loop
+[INFO] [1778132086.187997485] [aic_model]: z_offset: 0.072
+[INFO] [1778132086.188637784] [aic_model]: pfrac: 1.0 xy_error: 0.000243 7.12e-05   integrators: 0.00899 , -0.0111
+[INFO] [1778132086.238713896] [aic_model]: z_offset: 0.0712
+[INFO] [1778132086.239287440] [aic_model]: pfrac: 1.0 xy_error: 0.000166 0.000102   integrators: 0.00915 , -0.011
+[INFO] [1778132086.288617394] [aic_model]: z_offset: 0.0704
+[INFO] [1778132086.289012554] [aic_model]: pfrac: 1.0 xy_error: 0.000116 0.000132   integrators: 0.00927 , -0.0109
+[INFO] [1778132086.338659412] [aic_model]: z_offset: 0.0696
+[INFO] [1778132086.339059291] [aic_model]: pfrac: 1.0 xy_error: 5.5e-05 0.000169   integrators: 0.00932 , -0.0107
+[INFO] [1778132086.388595361] [aic_model]: z_offset: 0.0688
+[INFO] [1778132086.389266668] [aic_model]: pfrac: 1.0 xy_error: 4.03e-07 0.000211   integrators: 0.00932 , -0.0105
+[INFO] [1778132086.438610459] [aic_model]: z_offset: 0.068
+[INFO] [1778132086.438981003] [aic_model]: pfrac: 1.0 xy_error: -7.16e-05 0.000212   integrators: 0.00925 , -0.0103
+[INFO] [1778132086.488620517] [aic_model]: z_offset: 0.0672
+[INFO] [1778132086.489155027] [aic_model]: pfrac: 1.0 xy_error: -0.000113 0.000202   integrators: 0.00914 , -0.0101
+[INFO] [1778132086.538617180] [aic_model]: z_offset: 0.0664
+[INFO] [1778132086.539440100] [aic_model]: pfrac: 1.0 xy_error: -0.000153 0.000186   integrators: 0.00899 , -0.00988
+[INFO] [1778132086.588602972] [aic_model]: z_offset: 0.0656
+[INFO] [1778132086.589255945] [aic_model]: pfrac: 1.0 xy_error: -0.000207 0.000174   integrators: 0.00878 , -0.00971
+[INFO] [1778132086.638627698] [aic_model]: z_offset: 0.0648
+[INFO] [1778132086.639117845] [aic_model]: pfrac: 1.0 xy_error: -0.00023 0.000169   integrators: 0.00855 , -0.00954
+[INFO] [1778132086.688675196] [aic_model]: z_offset: 0.064
+[INFO] [1778132086.689962566] [aic_model]: pfrac: 1.0 xy_error: -0.00024 0.000164   integrators: 0.00831 , -0.00938
+[INFO] [1778132086.738630050] [aic_model]: z_offset: 0.0632
+[INFO] [1778132086.739280167] [aic_model]: pfrac: 1.0 xy_error: -0.000249 0.000171   integrators: 0.00806 , -0.0092
+[INFO] [1778132086.788602288] [aic_model]: z_offset: 0.0624
+[INFO] [1778132086.789003839] [aic_model]: pfrac: 1.0 xy_error: -0.000256 0.00017   integrators: 0.0078 , -0.00903
+[INFO] [1778132086.838615902] [aic_model]: z_offset: 0.0616
+[INFO] [1778132086.839454913] [aic_model]: pfrac: 1.0 xy_error: -0.000256 0.000166   integrators: 0.00755 , -0.00887
+[INFO] [1778132086.888659814] [aic_model]: z_offset: 0.0608
+[INFO] [1778132086.889072997] [aic_model]: pfrac: 1.0 xy_error: -0.000257 0.000162   integrators: 0.00729 , -0.00871
+[INFO] [1778132086.938613797] [aic_model]: z_offset: 0.06
+[INFO] [1778132086.939254186] [aic_model]: pfrac: 1.0 xy_error: -0.000274 0.000157   integrators: 0.00702 , -0.00855
+[INFO] [1778132086.988612393] [aic_model]: z_offset: 0.0592
+[INFO] [1778132086.989157484] [aic_model]: pfrac: 1.0 xy_error: -0.000264 0.000155   integrators: 0.00675 , -0.00839
+[INFO] [1778132087.038678536] [aic_model]: z_offset: 0.0584
+[INFO] [1778132087.040044213] [aic_model]: pfrac: 1.0 xy_error: -0.000258 0.000147   integrators: 0.00649 , -0.00825
+[INFO] [1778132087.088705566] [aic_model]: z_offset: 0.0576
+[INFO] [1778132087.090095809] [aic_model]: pfrac: 1.0 xy_error: -0.000247 0.000131   integrators: 0.00625 , -0.00812
+[INFO] [1778132087.138721094] [aic_model]: z_offset: 0.0568
+[INFO] [1778132087.140047247] [aic_model]: pfrac: 1.0 xy_error: -0.000216 9.65e-05   integrators: 0.00603 , -0.00802
+[INFO] [1778132087.184943361] [aic_model]: insert_cable execute loop
+[INFO] [1778132087.188565683] [aic_model]: z_offset: 0.056
+[INFO] [1778132087.188928612] [aic_model]: pfrac: 1.0 xy_error: -0.000183 6.25e-05   integrators: 0.00585 , -0.00796
+[INFO] [1778132087.238673974] [aic_model]: z_offset: 0.0552
+[INFO] [1778132087.239971754] [aic_model]: pfrac: 1.0 xy_error: -0.000166 1.9e-05   integrators: 0.00568 , -0.00794
+[INFO] [1778132087.288610264] [aic_model]: z_offset: 0.0544
+[INFO] [1778132087.289844535] [aic_model]: pfrac: 1.0 xy_error: -0.00016 6.95e-06   integrators: 0.00552 , -0.00793
+[INFO] [1778132087.338621414] [aic_model]: z_offset: 0.0536
+[INFO] [1778132087.339750488] [aic_model]: pfrac: 1.0 xy_error: -0.000124 -8.32e-06   integrators: 0.0054 , -0.00794
+[INFO] [1778132087.389160082] [aic_model]: z_offset: 0.0528
+[INFO] [1778132087.390653779] [aic_model]: pfrac: 1.0 xy_error: -9.33e-05 -2.73e-05   integrators: 0.00531 , -0.00797
+[INFO] [1778132087.440633870] [aic_model]: z_offset: 0.052
+[INFO] [1778132087.441609146] [aic_model]: pfrac: 1.0 xy_error: -7.29e-05 -6.48e-05   integrators: 0.00523 , -0.00803
+[INFO] [1778132087.490834696] [aic_model]: z_offset: 0.0512
+[INFO] [1778132087.492131012] [aic_model]: pfrac: 1.0 xy_error: -5.14e-05 -8.14e-05   integrators: 0.00518 , -0.00811
+[INFO] [1778132087.540616937] [aic_model]: z_offset: 0.0504
+[INFO] [1778132087.541111092] [aic_model]: pfrac: 1.0 xy_error: -9.07e-06 -8.33e-05   integrators: 0.00517 , -0.0082
+[INFO] [1778132087.590607499] [aic_model]: z_offset: 0.0496
+[INFO] [1778132087.591098959] [aic_model]: pfrac: 1.0 xy_error: 5.18e-05 -0.000102   integrators: 0.00522 , -0.0083
+[INFO] [1778132087.640620723] [aic_model]: z_offset: 0.0488
+[INFO] [1778132087.641033465] [aic_model]: pfrac: 1.0 xy_error: 0.000103 -0.000141   integrators: 0.00533 , -0.00844
+[INFO] [1778132087.690632323] [aic_model]: z_offset: 0.048
+[INFO] [1778132087.691721643] [aic_model]: pfrac: 1.0 xy_error: 0.000151 -0.000178   integrators: 0.00548 , -0.00862
+[INFO] [1778132087.740613858] [aic_model]: z_offset: 0.0472
+[INFO] [1778132087.741842909] [aic_model]: pfrac: 1.0 xy_error: 0.000179 -0.000204   integrators: 0.00566 , -0.00882
+[INFO] [1778132087.790655074] [aic_model]: z_offset: 0.0464
+[INFO] [1778132087.791815467] [aic_model]: pfrac: 1.0 xy_error: 0.000195 -0.000219   integrators: 0.00585 , -0.00904
+[INFO] [1778132087.840608867] [aic_model]: z_offset: 0.0456
+[INFO] [1778132087.841291996] [aic_model]: pfrac: 1.0 xy_error: 0.000223 -0.000227   integrators: 0.00608 , -0.00927
+[INFO] [1778132087.890631218] [aic_model]: z_offset: 0.0448
+[INFO] [1778132087.891036998] [aic_model]: pfrac: 1.0 xy_error: 0.000249 -0.000216   integrators: 0.00632 , -0.00948
+[INFO] [1778132087.940674128] [aic_model]: z_offset: 0.044
+[INFO] [1778132087.941305019] [aic_model]: pfrac: 1.0 xy_error: 0.000274 -0.000201   integrators: 0.0066 , -0.00968
+[INFO] [1778132087.990619665] [aic_model]: z_offset: 0.0432
+[INFO] [1778132087.991453205] [aic_model]: pfrac: 1.0 xy_error: 0.000306 -0.000201   integrators: 0.0069 , -0.00989
+[INFO] [1778132088.040576063] [aic_model]: z_offset: 0.0424
+[INFO] [1778132088.040993444] [aic_model]: pfrac: 1.0 xy_error: 0.000305 -0.000211   integrators: 0.00721 , -0.0101
+[INFO] [1778132088.090667453] [aic_model]: z_offset: 0.0416
+[INFO] [1778132088.091576785] [aic_model]: pfrac: 1.0 xy_error: 0.000275 -0.000174   integrators: 0.00748 , -0.0103
+[INFO] [1778132088.140770615] [aic_model]: z_offset: 0.0408
+[INFO] [1778132088.141179050] [aic_model]: pfrac: 1.0 xy_error: 0.000257 -0.000145   integrators: 0.00774 , -0.0104
+[INFO] [1778132088.184883132] [aic_model]: insert_cable execute loop
+[INFO] [1778132088.190720430] [aic_model]: z_offset: 0.04
+[INFO] [1778132088.191834306] [aic_model]: pfrac: 1.0 xy_error: 0.000249 -0.000112   integrators: 0.00799 , -0.0105
+[INFO] [1778132088.240668452] [aic_model]: z_offset: 0.0392
+[INFO] [1778132088.241298091] [aic_model]: pfrac: 1.0 xy_error: 0.000271 -9.29e-05   integrators: 0.00826 , -0.0106
+[INFO] [1778132088.290617706] [aic_model]: z_offset: 0.0384
+[INFO] [1778132088.291805981] [aic_model]: pfrac: 1.0 xy_error: 0.00029 -7.15e-05   integrators: 0.00855 , -0.0107
+[INFO] [1778132088.340596867] [aic_model]: z_offset: 0.0376
+[INFO] [1778132088.340999631] [aic_model]: pfrac: 1.0 xy_error: 0.000307 -4.17e-05   integrators: 0.00886 , -0.0107
+[INFO] [1778132088.390603588] [aic_model]: z_offset: 0.0368
+[INFO] [1778132088.390970696] [aic_model]: pfrac: 1.0 xy_error: 0.000307 -1.56e-05   integrators: 0.00917 , -0.0107
+[INFO] [1778132088.440732569] [aic_model]: z_offset: 0.036
+[INFO] [1778132088.441237304] [aic_model]: pfrac: 1.0 xy_error: 0.000315 -7.51e-05   integrators: 0.00948 , -0.0108
+[INFO] [1778132088.490654362] [aic_model]: z_offset: 0.0352
+[INFO] [1778132088.491038421] [aic_model]: pfrac: 1.0 xy_error: 0.000312 -9.21e-05   integrators: 0.00979 , -0.0109
+[INFO] [1778132088.540605349] [aic_model]: z_offset: 0.0344
+[INFO] [1778132088.540999788] [aic_model]: pfrac: 1.0 xy_error: 0.000313 -9.14e-05   integrators: 0.0101 , -0.011
+[INFO] [1778132088.590613123] [aic_model]: z_offset: 0.0336
+[INFO] [1778132088.590982294] [aic_model]: pfrac: 1.0 xy_error: 0.000315 -9.01e-05   integrators: 0.0104 , -0.0111
+[INFO] [1778132088.640656003] [aic_model]: z_offset: 0.0328
+[INFO] [1778132088.641046574] [aic_model]: pfrac: 1.0 xy_error: 0.000317 -8.81e-05   integrators: 0.0107 , -0.0112
+[INFO] [1778132088.690663716] [aic_model]: z_offset: 0.032
+[INFO] [1778132088.691046613] [aic_model]: pfrac: 1.0 xy_error: 0.000319 -8.66e-05   integrators: 0.0111 , -0.0113
+[INFO] [1778132088.740604815] [aic_model]: z_offset: 0.0312
+[INFO] [1778132088.740970079] [aic_model]: pfrac: 1.0 xy_error: 0.000322 -8.45e-05   integrators: 0.0114 , -0.0114
+[INFO] [1778132088.790718006] [aic_model]: z_offset: 0.0304
+[INFO] [1778132088.791088169] [aic_model]: pfrac: 1.0 xy_error: 0.000324 -8.23e-05   integrators: 0.0117 , -0.0114
+[INFO] [1778132088.840681818] [aic_model]: z_offset: 0.0296
+[INFO] [1778132088.841342605] [aic_model]: pfrac: 1.0 xy_error: 0.000326 -8.1e-05   integrators: 0.012 , -0.0115
+[INFO] [1778132088.890650538] [aic_model]: z_offset: 0.0288
+[INFO] [1778132088.891032734] [aic_model]: pfrac: 1.0 xy_error: 0.000329 -7.94e-05   integrators: 0.0124 , -0.0116
+[INFO] [1778132088.940634618] [aic_model]: z_offset: 0.028
+[INFO] [1778132088.941008418] [aic_model]: pfrac: 1.0 xy_error: 0.000331 -7.78e-05   integrators: 0.0127 , -0.0117
+[INFO] [1778132088.990589372] [aic_model]: z_offset: 0.0272
+[INFO] [1778132088.990982689] [aic_model]: pfrac: 1.0 xy_error: 0.000334 -7.57e-05   integrators: 0.013 , -0.0118
+[INFO] [1778132089.040624006] [aic_model]: z_offset: 0.0264
+[INFO] [1778132089.041000331] [aic_model]: pfrac: 1.0 xy_error: 0.000337 -7.37e-05   integrators: 0.0134 , -0.0118
+[INFO] [1778132089.090747407] [aic_model]: z_offset: 0.0256
+[INFO] [1778132089.092327335] [aic_model]: pfrac: 1.0 xy_error: 0.000341 -7.14e-05   integrators: 0.0137 , -0.0119
+[INFO] [1778132089.140639323] [aic_model]: z_offset: 0.0248
+[INFO] [1778132089.141497590] [aic_model]: pfrac: 1.0 xy_error: 0.000344 -6.9e-05   integrators: 0.014 , -0.012
+[INFO] [1778132089.184993934] [aic_model]: insert_cable execute loop
+[INFO] [1778132089.190568270] [aic_model]: z_offset: 0.024
+[INFO] [1778132089.191759891] [aic_model]: pfrac: 1.0 xy_error: 0.000348 -6.67e-05   integrators: 0.0144 , -0.012
+[INFO] [1778132089.240664289] [aic_model]: z_offset: 0.0232
+[INFO] [1778132089.241132726] [aic_model]: pfrac: 1.0 xy_error: 0.000351 -6.44e-05   integrators: 0.0147 , -0.0121
+[INFO] [1778132089.290676771] [aic_model]: z_offset: 0.0224
+[INFO] [1778132089.291095375] [aic_model]: pfrac: 1.0 xy_error: 0.000355 -6.18e-05   integrators: 0.0151 , -0.0122
+[INFO] [1778132089.340607801] [aic_model]: z_offset: 0.0216
+[INFO] [1778132089.341483301] [aic_model]: pfrac: 1.0 xy_error: 0.000359 -5.88e-05   integrators: 0.0155 , -0.0122
+[INFO] [1778132089.390714490] [aic_model]: z_offset: 0.0208
+[INFO] [1778132089.391098399] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.65e-05   integrators: 0.0158 , -0.0123
+[INFO] [1778132089.440640471] [aic_model]: z_offset: 0.02
+[INFO] [1778132089.441010434] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.69e-05   integrators: 0.0162 , -0.0123
+[INFO] [1778132089.490627967] [aic_model]: z_offset: 0.0192
+[INFO] [1778132089.491003360] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.72e-05   integrators: 0.0165 , -0.0124
+[INFO] [1778132089.540635600] [aic_model]: z_offset: 0.0184
+[INFO] [1778132089.541048994] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.75e-05   integrators: 0.0169 , -0.0124
+[INFO] [1778132089.590617636] [aic_model]: z_offset: 0.0176
+[INFO] [1778132089.592612931] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.75e-05   integrators: 0.0173 , -0.0125
+[INFO] [1778132089.642615385] [aic_model]: z_offset: 0.0168
+[INFO] [1778132089.643001558] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.74e-05   integrators: 0.0176 , -0.0126
+[INFO] [1778132089.692690515] [aic_model]: z_offset: 0.016
+[INFO] [1778132089.693132583] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.74e-05   integrators: 0.018 , -0.0126
+[INFO] [1778132089.742681428] [aic_model]: z_offset: 0.0152
+[INFO] [1778132089.744855478] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.72e-05   integrators: 0.0184 , -0.0127
+[INFO] [1778132089.794646466] [aic_model]: z_offset: 0.0144
+[INFO] [1778132089.795045803] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.69e-05   integrators: 0.0187 , -0.0127
+[INFO] [1778132089.844745570] [aic_model]: z_offset: 0.0136
+[INFO] [1778132089.845146972] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.66e-05   integrators: 0.0191 , -0.0128
+[INFO] [1778132089.894618041] [aic_model]: z_offset: 0.0128
+[INFO] [1778132089.894995107] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.64e-05   integrators: 0.0195 , -0.0128
+[INFO] [1778132089.944639220] [aic_model]: z_offset: 0.012
+[INFO] [1778132089.945017197] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.6e-05   integrators: 0.0198 , -0.0129
+[INFO] [1778132089.994644108] [aic_model]: z_offset: 0.0112
+[INFO] [1778132089.995036443] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.58e-05   integrators: 0.0202 , -0.013
+[INFO] [1778132090.044695554] [aic_model]: z_offset: 0.0104
+[INFO] [1778132090.045070345] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.55e-05   integrators: 0.0205 , -0.013
+[INFO] [1778132090.094892792] [aic_model]: z_offset: 0.0096
+[INFO] [1778132090.095369705] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.54e-05   integrators: 0.0209 , -0.0131
+[INFO] [1778132090.144750625] [aic_model]: z_offset: 0.0088
+[INFO] [1778132090.145260059] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.54e-05   integrators: 0.0213 , -0.0131
+[INFO] [1778132090.185030988] [aic_model]: insert_cable execute loop
+[INFO] [1778132090.194564135] [aic_model]: z_offset: 0.008
+[INFO] [1778132090.194938106] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.55e-05   integrators: 0.0216 , -0.0132
+[INFO] [1778132090.244623215] [aic_model]: z_offset: 0.0072
+[INFO] [1778132090.245002245] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.54e-05   integrators: 0.022 , -0.0132
+[INFO] [1778132090.294602686] [aic_model]: z_offset: 0.0064
+[INFO] [1778132090.294982066] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.54e-05   integrators: 0.0224 , -0.0133
+[INFO] [1778132090.344619527] [aic_model]: z_offset: 0.0056
+[INFO] [1778132090.344993798] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.54e-05   integrators: 0.0227 , -0.0133
+[INFO] [1778132090.396365505] [aic_model]: z_offset: 0.0048
+[INFO] [1778132090.399181727] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.53e-05   integrators: 0.0231 , -0.0134
+[INFO] [1778132090.448693663] [aic_model]: z_offset: 0.004
+[INFO] [1778132090.449122245] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.54e-05   integrators: 0.0235 , -0.0135
+[INFO] [1778132090.498667894] [aic_model]: z_offset: 0.0032
+[INFO] [1778132090.499050190] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.53e-05   integrators: 0.0238 , -0.0135
+[INFO] [1778132090.548708870] [aic_model]: z_offset: 0.0024
+[INFO] [1778132090.549085375] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.52e-05   integrators: 0.0242 , -0.0136
+[INFO] [1778132090.599120971] [aic_model]: z_offset: 0.0016
+[INFO] [1778132090.600704666] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.52e-05   integrators: 0.0246 , -0.0136
+[INFO] [1778132090.650650103] [aic_model]: z_offset: 0.00080001
+[INFO] [1778132090.651026297] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.51e-05   integrators: 0.0249 , -0.0137
+[INFO] [1778132090.700669538] [aic_model]: z_offset: 1.2487e-08
+[INFO] [1778132090.701045352] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.51e-05   integrators: 0.0253 , -0.0137
+[INFO] [1778132090.750628100] [aic_model]: z_offset: -0.00079999
+[INFO] [1778132090.751020845] [aic_model]: pfrac: 1.0 xy_error: 0.000364 -5.51e-05   integrators: 0.0256 , -0.0138
+[INFO] [1778132090.800630694] [aic_model]: z_offset: -0.0016
+[INFO] [1778132090.801013811] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.52e-05   integrators: 0.026 , -0.0138
+[INFO] [1778132090.850633158] [aic_model]: z_offset: -0.0024
+[INFO] [1778132090.851013540] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.53e-05   integrators: 0.0264 , -0.0139
+[INFO] [1778132090.900619882] [aic_model]: z_offset: -0.0032
+[INFO] [1778132090.900996067] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.52e-05   integrators: 0.0267 , -0.014
+[INFO] [1778132090.950594574] [aic_model]: z_offset: -0.004
+[INFO] [1778132090.950991558] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.56e-05   integrators: 0.0271 , -0.014
+[INFO] [1778132091.000611125] [aic_model]: z_offset: -0.0048
+[INFO] [1778132091.000987239] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.55e-05   integrators: 0.0275 , -0.0141
+[INFO] [1778132091.050637153] [aic_model]: z_offset: -0.0056
+[INFO] [1778132091.051022384] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.55e-05   integrators: 0.0278 , -0.0141
+[INFO] [1778132091.100688268] [aic_model]: z_offset: -0.0064
+[INFO] [1778132091.101129313] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.56e-05   integrators: 0.0282 , -0.0142
+[INFO] [1778132091.150655525] [aic_model]: z_offset: -0.0072
+[INFO] [1778132091.151039214] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.58e-05   integrators: 0.0286 , -0.0142
+[INFO] [1778132091.185109069] [aic_model]: insert_cable execute loop
+[INFO] [1778132091.200552422] [aic_model]: z_offset: -0.008
+[INFO] [1778132091.200915181] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.58e-05   integrators: 0.0289 , -0.0143
+[INFO] [1778132091.250672807] [aic_model]: z_offset: -0.0088
+[INFO] [1778132091.251058849] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.58e-05   integrators: 0.0293 , -0.0143
+[INFO] [1778132091.300679178] [aic_model]: z_offset: -0.0096
+[INFO] [1778132091.301057917] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.59e-05   integrators: 0.0296 , -0.0144
+[INFO] [1778132091.350653248] [aic_model]: z_offset: -0.0104
+[INFO] [1778132091.351045172] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.59e-05   integrators: 0.03 , -0.0145
+[INFO] [1778132091.400706057] [aic_model]: z_offset: -0.0112
+[INFO] [1778132091.401229847] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.6e-05   integrators: 0.0304 , -0.0145
+[INFO] [1778132091.450610918] [aic_model]: z_offset: -0.012
+[INFO] [1778132091.450998864] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.59e-05   integrators: 0.0307 , -0.0146
+[INFO] [1778132091.500651323] [aic_model]: z_offset: -0.0128
+[INFO] [1778132091.501031044] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.6e-05   integrators: 0.0311 , -0.0146
+[INFO] [1778132091.550596529] [aic_model]: z_offset: -0.0136
+[INFO] [1778132091.550982432] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.6e-05   integrators: 0.0314 , -0.0147
+[INFO] [1778132091.600713067] [aic_model]: z_offset: -0.0144
+[INFO] [1778132091.601102626] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.61e-05   integrators: 0.0318 , -0.0147
+[INFO] [1778132091.650614111] [aic_model]: z_offset: -0.0152
+[INFO] [1778132091.650986258] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.64e-05   integrators: 0.0322 , -0.0148
+[INFO] [1778132091.700592650] [aic_model]: z_offset: -0.016
+[INFO] [1778132091.700975567] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.68e-05   integrators: 0.0325 , -0.0148
+[INFO] [1778132091.750672278] [aic_model]: z_offset: -0.0168
+[INFO] [1778132091.751051929] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.67e-05   integrators: 0.0329 , -0.0149
+[INFO] [1778132091.800655456] [aic_model]: z_offset: -0.0176
+[INFO] [1778132091.801042841] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.68e-05   integrators: 0.0333 , -0.015
+[INFO] [1778132091.850636620] [aic_model]: z_offset: -0.0184
+[INFO] [1778132091.851021991] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.77e-05   integrators: 0.0336 , -0.015
+[INFO] [1778132091.900579342] [aic_model]: z_offset: -0.0192
+[INFO] [1778132091.900974302] [aic_model]: pfrac: 1.0 xy_error: 0.000362 -5.86e-05   integrators: 0.034 , -0.0151
+[INFO] [1778132091.950639835] [aic_model]: z_offset: -0.02
+[INFO] [1778132091.951022411] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.95e-05   integrators: 0.0343 , -0.0151
+[INFO] [1778132092.000614296] [aic_model]: z_offset: -0.0208
+[INFO] [1778132092.000988757] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -5.99e-05   integrators: 0.0347 , -0.0152
+[INFO] [1778132092.050588547] [aic_model]: z_offset: -0.0216
+[INFO] [1778132092.050957628] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -6.05e-05   integrators: 0.0351 , -0.0153
+[INFO] [1778132092.100669899] [aic_model]: z_offset: -0.0224
+[INFO] [1778132092.101058256] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -6.07e-05   integrators: 0.0354 , -0.0153
+[INFO] [1778132092.150652315] [aic_model]: z_offset: -0.0232
+[INFO] [1778132092.152829191] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -6.09e-05   integrators: 0.0358 , -0.0154
+[INFO] [1778132092.184967951] [aic_model]: insert_cable execute loop
+[INFO] [1778132092.202572309] [aic_model]: z_offset: -0.024
+[INFO] [1778132092.203006893] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -6.09e-05   integrators: 0.0362 , -0.0154
+[INFO] [1778132092.252734352] [aic_model]: z_offset: -0.0248
+[INFO] [1778132092.253109264] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -6.09e-05   integrators: 0.0365 , -0.0155
+[INFO] [1778132092.302609127] [aic_model]: z_offset: -0.0256
+[INFO] [1778132092.302990230] [aic_model]: pfrac: 1.0 xy_error: 0.000363 -6.11e-05   integrators: 0.0369 , -0.0156
+[INFO] [1778132092.352754388] [aic_model]: Waiting for connector to stabilize...
+[INFO] [1778132093.184924746] [aic_model]: insert_cable execute loop
+[INFO] [1778132094.185035179] [aic_model]: insert_cable execute loop
+[INFO] [1778132094.352787372] [aic_model]: AutoCode.insert_cable() exiting...
+[INFO] [1778132095.184906856] [aic_model]: insert_cable() returned True
+[INFO] [1778132095.507256234] [aic_model]: on_deactivate(LifecycleState(label='active', state_id=3))
+[INFO] [1778132096.544505630] [aic_model]: on_activate()
+[INFO] [1778132099.727523139] [aic_model]: Goal accepted
+[INFO] [1778132099.729349017] [aic_model]: Entering insert_cable_execute_callback()
+[INFO] [1778132099.730085145] [aic_model]: insert_cable execute loop
+[INFO] [1778132099.730149486] [aic_model]: AutoCode.insert_cable() task: aic_task_interfaces.msg.Task(id='task_1', cable_type='sfp_sc', cable_name='cable_0', plug_type='sfp', plug_name='sfp_tip', port_type='sfp', port_name='sfp_port_0', target_module_name='nic_card_mount_1', time_limit=180)
+[INFO] [1778132099.731509021] [aic_model]: pfrac: 0.0 xy_error: -0.0397 0.0162   integrators: 0.0 , 0.0
+[INFO] [1778132099.781301171] [aic_model]: pfrac: 0.025 xy_error: -0.0396 0.0163   integrators: 0.0 , 0.0
+[INFO] [1778132099.831311390] [aic_model]: pfrac: 0.05 xy_error: -0.0397 0.0164   integrators: 0.0 , 0.0
+[INFO] [1778132099.881343379] [aic_model]: pfrac: 0.075 xy_error: -0.0397 0.0167   integrators: 0.0 , 0.0
+[INFO] [1778132099.931360972] [aic_model]: pfrac: 0.1 xy_error: -0.0398 0.0169   integrators: 0.0 , 0.0
+[INFO] [1778132099.980547969] [aic_model]: pfrac: 0.125 xy_error: -0.04 0.0172   integrators: 0.0 , 0.0
+[INFO] [1778132100.031059737] [aic_model]: pfrac: 0.15 xy_error: -0.0401 0.0174   integrators: 0.0 , 0.0
+[INFO] [1778132100.080561263] [aic_model]: pfrac: 0.175 xy_error: -0.0402 0.0176   integrators: 0.0 , 0.0
+[INFO] [1778132100.131142661] [aic_model]: pfrac: 0.2 xy_error: -0.0403 0.0178   integrators: 0.0 , 0.0
+[INFO] [1778132100.181112003] [aic_model]: pfrac: 0.225 xy_error: -0.0404 0.0179   integrators: 0.0 , 0.0
+[INFO] [1778132100.230856033] [aic_model]: pfrac: 0.25 xy_error: -0.0405 0.018   integrators: 0.0 , 0.0
+[INFO] [1778132100.280857265] [aic_model]: pfrac: 0.275 xy_error: -0.0404 0.018   integrators: 0.0 , 0.0
+[INFO] [1778132100.331121479] [aic_model]: pfrac: 0.3 xy_error: -0.0403 0.0179   integrators: 0.0 , 0.0
+[INFO] [1778132100.381198723] [aic_model]: pfrac: 0.325 xy_error: -0.0402 0.0178   integrators: 0.0 , 0.0
+[INFO] [1778132100.431123051] [aic_model]: pfrac: 0.35 xy_error: -0.04 0.0175   integrators: 0.0 , 0.0
+[INFO] [1778132100.481312405] [aic_model]: pfrac: 0.375 xy_error: -0.0396 0.0172   integrators: 0.0 , 0.0
+[INFO] [1778132100.531289842] [aic_model]: pfrac: 0.4 xy_error: -0.0392 0.0169   integrators: 0.0 , 0.0
+[INFO] [1778132100.581334405] [aic_model]: pfrac: 0.425 xy_error: -0.0387 0.0164   integrators: 0.0 , 0.0
+[INFO] [1778132100.630420774] [aic_model]: pfrac: 0.45 xy_error: -0.0381 0.0159   integrators: 0.0 , 0.0
+[INFO] [1778132100.681224959] [aic_model]: pfrac: 0.475 xy_error: -0.0375 0.0153   integrators: 0.0 , 0.0
+[INFO] [1778132100.731576707] [aic_model]: pfrac: 0.5 xy_error: -0.0367 0.0146   integrators: 0.0 , 0.0
+[INFO] [1778132100.732067686] [aic_model]: insert_cable execute loop
+[INFO] [1778132100.780987273] [aic_model]: pfrac: 0.525 xy_error: -0.0359 0.0139   integrators: 0.0 , 0.0
+[INFO] [1778132100.831167430] [aic_model]: pfrac: 0.55 xy_error: -0.035 0.0131   integrators: 0.0 , 0.0
+[INFO] [1778132100.881247860] [aic_model]: pfrac: 0.575 xy_error: -0.034 0.0123   integrators: 0.0 , 0.0
+[INFO] [1778132100.931264611] [aic_model]: pfrac: 0.6 xy_error: -0.0329 0.0114   integrators: 0.0 , 0.0
+[INFO] [1778132100.981238532] [aic_model]: pfrac: 0.625 xy_error: -0.0317 0.0105   integrators: 0.0 , 0.0
+[INFO] [1778132101.031290879] [aic_model]: pfrac: 0.65 xy_error: -0.0305 0.00957   integrators: 0.0 , 0.0
+[INFO] [1778132101.081397468] [aic_model]: pfrac: 0.675 xy_error: -0.0292 0.00862   integrators: 0.0 , 0.0
+[INFO] [1778132101.131721975] [aic_model]: pfrac: 0.7 xy_error: -0.028 0.00762   integrators: 0.0 , 0.0
+[INFO] [1778132101.181200639] [aic_model]: pfrac: 0.725 xy_error: -0.0267 0.00657   integrators: 0.0 , 0.0
+[INFO] [1778132101.231334449] [aic_model]: pfrac: 0.75 xy_error: -0.0254 0.00551   integrators: 0.0 , 0.0
+[INFO] [1778132101.280448249] [aic_model]: pfrac: 0.775 xy_error: -0.024 0.0045   integrators: 0.0 , 0.0
+[INFO] [1778132101.331314681] [aic_model]: pfrac: 0.8 xy_error: -0.0227 0.0035   integrators: 0.0 , 0.0
+[INFO] [1778132101.380436216] [aic_model]: pfrac: 0.825 xy_error: -0.0213 0.00253   integrators: 0.0 , 0.0
+[INFO] [1778132101.431167434] [aic_model]: pfrac: 0.85 xy_error: -0.02 0.00157   integrators: 0.0 , 0.0
+[INFO] [1778132101.480997345] [aic_model]: pfrac: 0.875 xy_error: -0.0187 0.000647   integrators: 0.0 , 0.0
+[INFO] [1778132101.531101971] [aic_model]: pfrac: 0.9 xy_error: -0.0174 -0.000231   integrators: 0.0 , 0.0
+[INFO] [1778132101.581138438] [aic_model]: pfrac: 0.925 xy_error: -0.0161 -0.00108   integrators: 0.0 , 0.0
+[INFO] [1778132101.631263372] [aic_model]: pfrac: 0.95 xy_error: -0.0149 -0.00189   integrators: 0.0 , 0.0
+[INFO] [1778132101.681611423] [aic_model]: pfrac: 0.975 xy_error: -0.0138 -0.00266   integrators: 0.0 , 0.0
+[INFO] [1778132101.731271386] [aic_model]: pfrac: 1.0 xy_error: -0.0128 -0.00333   integrators: -0.0128 , -0.00333
+[INFO] [1778132101.733354095] [aic_model]: insert_cable execute loop
+[INFO] [1778132101.781431144] [aic_model]: pfrac: 1.0 xy_error: -0.0117 -0.00392   integrators: -0.0245 , -0.00725
+[INFO] [1778132101.830519217] [aic_model]: pfrac: 1.0 xy_error: -0.0107 -0.00449   integrators: -0.0351 , -0.0117
+[INFO] [1778132101.881556869] [aic_model]: pfrac: 1.0 xy_error: -0.00963 -0.00494   integrators: -0.0447 , -0.0167
+[INFO] [1778132101.930678895] [aic_model]: pfrac: 1.0 xy_error: -0.0086 -0.00529   integrators: -0.0533 , -0.022
+[INFO] [1778132101.981263288] [aic_model]: pfrac: 1.0 xy_error: -0.00758 -0.00552   integrators: -0.0609 , -0.0275
+[INFO] [1778132102.030987702] [aic_model]: pfrac: 1.0 xy_error: -0.00659 -0.0057   integrators: -0.0675 , -0.0332
+[INFO] [1778132102.081460456] [aic_model]: pfrac: 1.0 xy_error: -0.0056 -0.00578   integrators: -0.0731 , -0.039
+[INFO] [1778132102.131644651] [aic_model]: pfrac: 1.0 xy_error: -0.00464 -0.00575   integrators: -0.0778 , -0.0447
+[INFO] [1778132102.180858969] [aic_model]: pfrac: 1.0 xy_error: -0.00372 -0.00561   integrators: -0.08 , -0.0503
+[INFO] [1778132102.230508783] [aic_model]: pfrac: 1.0 xy_error: -0.0028 -0.0054   integrators: -0.08 , -0.0557
+[INFO] [1778132102.280395821] [aic_model]: pfrac: 1.0 xy_error: -0.00194 -0.00506   integrators: -0.08 , -0.0608
+[INFO] [1778132102.330522448] [aic_model]: pfrac: 1.0 xy_error: -0.00114 -0.00466   integrators: -0.08 , -0.0654
+[INFO] [1778132102.380520934] [aic_model]: pfrac: 1.0 xy_error: -0.000418 -0.00423   integrators: -0.08 , -0.0697
+[INFO] [1778132102.430509082] [aic_model]: pfrac: 1.0 xy_error: 0.000265 -0.00376   integrators: -0.0797 , -0.0734
+[INFO] [1778132102.480442547] [aic_model]: pfrac: 1.0 xy_error: 0.00085 -0.00325   integrators: -0.0789 , -0.0767
+[INFO] [1778132102.530389387] [aic_model]: pfrac: 1.0 xy_error: 0.00135 -0.00274   integrators: -0.0775 , -0.0794
+[INFO] [1778132102.580434581] [aic_model]: pfrac: 1.0 xy_error: 0.00178 -0.00224   integrators: -0.0758 , -0.08
+[INFO] [1778132102.630452684] [aic_model]: pfrac: 1.0 xy_error: 0.00215 -0.00171   integrators: -0.0736 , -0.08
+[INFO] [1778132102.680455239] [aic_model]: pfrac: 1.0 xy_error: 0.00246 -0.00119   integrators: -0.0711 , -0.08
+[INFO] [1778132102.730233784] [aic_model]: z_offset: 0.1992
+[INFO] [1778132102.730925328] [aic_model]: pfrac: 1.0 xy_error: 0.00268 -0.000711   integrators: -0.0685 , -0.08
+[INFO] [1778132102.733187604] [aic_model]: insert_cable execute loop
+[INFO] [1778132102.780355140] [aic_model]: z_offset: 0.1984
+[INFO] [1778132102.781300660] [aic_model]: pfrac: 1.0 xy_error: 0.00278 -0.000259   integrators: -0.0657 , -0.08
+[INFO] [1778132102.830214026] [aic_model]: z_offset: 0.1976
+[INFO] [1778132102.831418250] [aic_model]: pfrac: 1.0 xy_error: 0.00288 0.00019   integrators: -0.0628 , -0.0798
+[INFO] [1778132102.880251465] [aic_model]: z_offset: 0.1968
+[INFO] [1778132102.881511855] [aic_model]: pfrac: 1.0 xy_error: 0.00289 0.000603   integrators: -0.0599 , -0.0792
+[INFO] [1778132102.930238320] [aic_model]: z_offset: 0.196
+[INFO] [1778132102.931489302] [aic_model]: pfrac: 1.0 xy_error: 0.00284 0.000963   integrators: -0.0571 , -0.0782
+[INFO] [1778132102.980248268] [aic_model]: z_offset: 0.1952
+[INFO] [1778132102.981404984] [aic_model]: pfrac: 1.0 xy_error: 0.00273 0.0013   integrators: -0.0543 , -0.0769
+[INFO] [1778132103.030265360] [aic_model]: z_offset: 0.1944
+[INFO] [1778132103.031487518] [aic_model]: pfrac: 1.0 xy_error: 0.00258 0.00159   integrators: -0.0518 , -0.0753
+[INFO] [1778132103.080281099] [aic_model]: z_offset: 0.1936
+[INFO] [1778132103.081593045] [aic_model]: pfrac: 1.0 xy_error: 0.00238 0.00186   integrators: -0.0494 , -0.0735
+[INFO] [1778132103.130471194] [aic_model]: z_offset: 0.1928
+[INFO] [1778132103.130931606] [aic_model]: pfrac: 1.0 xy_error: 0.00215 0.00209   integrators: -0.0472 , -0.0714
+[INFO] [1778132103.180374523] [aic_model]: z_offset: 0.192
+[INFO] [1778132103.181646534] [aic_model]: pfrac: 1.0 xy_error: 0.00191 0.00227   integrators: -0.0453 , -0.0691
+[INFO] [1778132103.230352441] [aic_model]: z_offset: 0.1912
+[INFO] [1778132103.231208624] [aic_model]: pfrac: 1.0 xy_error: 0.00164 0.00242   integrators: -0.0437 , -0.0667
+[INFO] [1778132103.280279284] [aic_model]: z_offset: 0.1904
+[INFO] [1778132103.281466316] [aic_model]: pfrac: 1.0 xy_error: 0.00134 0.00249   integrators: -0.0423 , -0.0642
+[INFO] [1778132103.330249628] [aic_model]: z_offset: 0.1896
+[INFO] [1778132103.331462208] [aic_model]: pfrac: 1.0 xy_error: 0.001 0.00255   integrators: -0.0413 , -0.0617
+[INFO] [1778132103.380251681] [aic_model]: z_offset: 0.1888
+[INFO] [1778132103.381509215] [aic_model]: pfrac: 1.0 xy_error: 0.000662 0.00257   integrators: -0.0407 , -0.0591
+[INFO] [1778132103.430355395] [aic_model]: z_offset: 0.188
+[INFO] [1778132103.431580288] [aic_model]: pfrac: 1.0 xy_error: 0.000346 0.00255   integrators: -0.0403 , -0.0565
+[INFO] [1778132103.480253794] [aic_model]: z_offset: 0.1872
+[INFO] [1778132103.481493305] [aic_model]: pfrac: 1.0 xy_error: 3.15e-05 0.00249   integrators: -0.0403 , -0.0541
+[INFO] [1778132103.530245879] [aic_model]: z_offset: 0.1864
+[INFO] [1778132103.531452528] [aic_model]: pfrac: 1.0 xy_error: -0.000259 0.0024   integrators: -0.0406 , -0.0517
+[INFO] [1778132103.580227614] [aic_model]: z_offset: 0.1856
+[INFO] [1778132103.581444452] [aic_model]: pfrac: 1.0 xy_error: -0.000525 0.0023   integrators: -0.0411 , -0.0494
+[INFO] [1778132103.630371574] [aic_model]: z_offset: 0.1848
+[INFO] [1778132103.631646991] [aic_model]: pfrac: 1.0 xy_error: -0.000799 0.00217   integrators: -0.0419 , -0.0472
+[INFO] [1778132103.680275243] [aic_model]: z_offset: 0.184
+[INFO] [1778132103.680677065] [aic_model]: pfrac: 1.0 xy_error: -0.00103 0.00201   integrators: -0.0429 , -0.0452
+[INFO] [1778132103.730345874] [aic_model]: z_offset: 0.1832
+[INFO] [1778132103.731551932] [aic_model]: pfrac: 1.0 xy_error: -0.00125 0.0018   integrators: -0.0442 , -0.0434
+[INFO] [1778132103.733384503] [aic_model]: insert_cable execute loop
+[INFO] [1778132103.780270503] [aic_model]: z_offset: 0.1824
+[INFO] [1778132103.781529420] [aic_model]: pfrac: 1.0 xy_error: -0.00144 0.00159   integrators: -0.0456 , -0.0418
+[INFO] [1778132103.830254673] [aic_model]: z_offset: 0.1816
+[INFO] [1778132103.831476510] [aic_model]: pfrac: 1.0 xy_error: -0.00159 0.00137   integrators: -0.0472 , -0.0404
+[INFO] [1778132103.880318482] [aic_model]: z_offset: 0.1808
+[INFO] [1778132103.881542544] [aic_model]: pfrac: 1.0 xy_error: -0.00171 0.00116   integrators: -0.0489 , -0.0393
+[INFO] [1778132103.930270602] [aic_model]: z_offset: 0.18
+[INFO] [1778132103.931469416] [aic_model]: pfrac: 1.0 xy_error: -0.0018 0.000931   integrators: -0.0507 , -0.0383
+[INFO] [1778132103.980251726] [aic_model]: z_offset: 0.1792
+[INFO] [1778132103.981058797] [aic_model]: pfrac: 1.0 xy_error: -0.00184 0.000722   integrators: -0.0525 , -0.0376
+[INFO] [1778132104.030258037] [aic_model]: z_offset: 0.1784
+[INFO] [1778132104.031493380] [aic_model]: pfrac: 1.0 xy_error: -0.00187 0.000519   integrators: -0.0544 , -0.0371
+[INFO] [1778132104.080298613] [aic_model]: z_offset: 0.1776
+[INFO] [1778132104.081633592] [aic_model]: pfrac: 1.0 xy_error: -0.00185 0.000309   integrators: -0.0562 , -0.0368
+[INFO] [1778132104.130421322] [aic_model]: z_offset: 0.1768
+[INFO] [1778132104.132295140] [aic_model]: pfrac: 1.0 xy_error: -0.00174 0.000128   integrators: -0.058 , -0.0367
+[INFO] [1778132104.182276304] [aic_model]: z_offset: 0.176
+[INFO] [1778132104.183533418] [aic_model]: pfrac: 1.0 xy_error: -0.00165 -3.71e-05   integrators: -0.0596 , -0.0367
+[INFO] [1778132104.232251658] [aic_model]: z_offset: 0.1752
+[INFO] [1778132104.233509112] [aic_model]: pfrac: 1.0 xy_error: -0.00154 -0.00021   integrators: -0.0612 , -0.0369
+[INFO] [1778132104.282260835] [aic_model]: z_offset: 0.1744
+[INFO] [1778132104.283494414] [aic_model]: pfrac: 1.0 xy_error: -0.00139 -0.000345   integrators: -0.0626 , -0.0372
+[INFO] [1778132104.332283086] [aic_model]: z_offset: 0.1736
+[INFO] [1778132104.333432177] [aic_model]: pfrac: 1.0 xy_error: -0.00124 -0.000487   integrators: -0.0638 , -0.0377
+[INFO] [1778132104.382266104] [aic_model]: z_offset: 0.1728
+[INFO] [1778132104.383600312] [aic_model]: pfrac: 1.0 xy_error: -0.00106 -0.000604   integrators: -0.0649 , -0.0383
+[INFO] [1778132104.432475596] [aic_model]: z_offset: 0.172
+[INFO] [1778132104.434183724] [aic_model]: pfrac: 1.0 xy_error: -0.00088 -0.000714   integrators: -0.0657 , -0.039
+[INFO] [1778132104.484353381] [aic_model]: z_offset: 0.1712
+[INFO] [1778132104.485655709] [aic_model]: pfrac: 1.0 xy_error: -0.00071 -0.000827   integrators: -0.0664 , -0.0399
+[INFO] [1778132104.534347790] [aic_model]: z_offset: 0.1704
+[INFO] [1778132104.535648375] [aic_model]: pfrac: 1.0 xy_error: -0.000525 -0.000923   integrators: -0.067 , -0.0408
+[INFO] [1778132104.584314908] [aic_model]: z_offset: 0.1696
+[INFO] [1778132104.585599322] [aic_model]: pfrac: 1.0 xy_error: -0.000325 -0.00101   integrators: -0.0673 , -0.0418
+[INFO] [1778132104.635474488] [aic_model]: z_offset: 0.1688
+[INFO] [1778132104.636245292] [aic_model]: pfrac: 1.0 xy_error: -0.000133 -0.00107   integrators: -0.0674 , -0.0429
+[INFO] [1778132104.686238178] [aic_model]: z_offset: 0.168
+[INFO] [1778132104.687596751] [aic_model]: pfrac: 1.0 xy_error: 9.4e-05 -0.0011   integrators: -0.0673 , -0.044
+[INFO] [1778132104.732525446] [aic_model]: insert_cable execute loop
+[INFO] [1778132104.736195347] [aic_model]: z_offset: 0.1672
+[INFO] [1778132104.737275489] [aic_model]: pfrac: 1.0 xy_error: 0.000307 -0.00113   integrators: -0.067 , -0.0451
+[INFO] [1778132104.786242745] [aic_model]: z_offset: 0.1664
+[INFO] [1778132104.787481855] [aic_model]: pfrac: 1.0 xy_error: 0.000499 -0.00116   integrators: -0.0665 , -0.0463
+[INFO] [1778132104.836814024] [aic_model]: z_offset: 0.1656
+[INFO] [1778132104.838004924] [aic_model]: pfrac: 1.0 xy_error: 0.000672 -0.0012   integrators: -0.0659 , -0.0475
+[INFO] [1778132104.889428509] [aic_model]: z_offset: 0.1648
+[INFO] [1778132104.890045193] [aic_model]: pfrac: 1.0 xy_error: 0.000854 -0.00122   integrators: -0.065 , -0.0487
+[INFO] [1778132104.940236291] [aic_model]: z_offset: 0.164
+[INFO] [1778132104.941406361] [aic_model]: pfrac: 1.0 xy_error: 0.001 -0.00121   integrators: -0.064 , -0.0499
+[INFO] [1778132104.990248423] [aic_model]: z_offset: 0.1632
+[INFO] [1778132104.991372067] [aic_model]: pfrac: 1.0 xy_error: 0.00113 -0.0012   integrators: -0.0629 , -0.0511
+[INFO] [1778132105.040237632] [aic_model]: z_offset: 0.1624
+[INFO] [1778132105.041436036] [aic_model]: pfrac: 1.0 xy_error: 0.00124 -0.00115   integrators: -0.0616 , -0.0522
+[INFO] [1778132105.092110278] [aic_model]: z_offset: 0.1616
+[INFO] [1778132105.092684593] [aic_model]: pfrac: 1.0 xy_error: 0.00134 -0.00107   integrators: -0.0603 , -0.0533
+[INFO] [1778132105.142260419] [aic_model]: z_offset: 0.1608
+[INFO] [1778132105.143553470] [aic_model]: pfrac: 1.0 xy_error: 0.0014 -0.000979   integrators: -0.0589 , -0.0543
+[INFO] [1778132105.192226204] [aic_model]: z_offset: 0.16
+[INFO] [1778132105.193412195] [aic_model]: pfrac: 1.0 xy_error: 0.00144 -0.000896   integrators: -0.0575 , -0.0552
+[INFO] [1778132105.243435598] [aic_model]: z_offset: 0.1592
+[INFO] [1778132105.244058795] [aic_model]: pfrac: 1.0 xy_error: 0.00145 -0.000823   integrators: -0.056 , -0.056
+[INFO] [1778132105.294259610] [aic_model]: z_offset: 0.1584
+[INFO] [1778132105.295507927] [aic_model]: pfrac: 1.0 xy_error: 0.00146 -0.000759   integrators: -0.0546 , -0.0568
+[INFO] [1778132105.344227149] [aic_model]: z_offset: 0.1576
+[INFO] [1778132105.345375249] [aic_model]: pfrac: 1.0 xy_error: 0.00146 -0.000671   integrators: -0.0531 , -0.0574
+[INFO] [1778132105.394231817] [aic_model]: z_offset: 0.1568
+[INFO] [1778132105.395425713] [aic_model]: pfrac: 1.0 xy_error: 0.00143 -0.000585   integrators: -0.0517 , -0.058
+[INFO] [1778132105.444359636] [aic_model]: z_offset: 0.156
+[INFO] [1778132105.445636447] [aic_model]: pfrac: 1.0 xy_error: 0.00137 -0.000494   integrators: -0.0503 , -0.0585
+[INFO] [1778132105.494297039] [aic_model]: z_offset: 0.1552
+[INFO] [1778132105.495582055] [aic_model]: pfrac: 1.0 xy_error: 0.0013 -0.000409   integrators: -0.049 , -0.0589
+[INFO] [1778132105.544236375] [aic_model]: z_offset: 0.1544
+[INFO] [1778132105.545484932] [aic_model]: pfrac: 1.0 xy_error: 0.00121 -0.000323   integrators: -0.0478 , -0.0592
+[INFO] [1778132105.594413736] [aic_model]: z_offset: 0.1536
+[INFO] [1778132105.595064615] [aic_model]: pfrac: 1.0 xy_error: 0.00112 -0.00022   integrators: -0.0467 , -0.0595
+[INFO] [1778132105.644220715] [aic_model]: z_offset: 0.1528
+[INFO] [1778132105.645384794] [aic_model]: pfrac: 1.0 xy_error: 0.00103 -0.000134   integrators: -0.0456 , -0.0596
+[INFO] [1778132105.694236063] [aic_model]: z_offset: 0.152
+[INFO] [1778132105.695496863] [aic_model]: pfrac: 1.0 xy_error: 0.000909 -3.18e-05   integrators: -0.0447 , -0.0596
+[INFO] [1778132105.734140472] [aic_model]: insert_cable execute loop
+[INFO] [1778132105.744213581] [aic_model]: z_offset: 0.1512
+[INFO] [1778132105.745451568] [aic_model]: pfrac: 1.0 xy_error: 0.000778 9.45e-05   integrators: -0.044 , -0.0595
+[INFO] [1778132105.794281057] [aic_model]: z_offset: 0.1504
+[INFO] [1778132105.795661261] [aic_model]: pfrac: 1.0 xy_error: 0.000642 0.000191   integrators: -0.0433 , -0.0593
+[INFO] [1778132105.844395180] [aic_model]: z_offset: 0.1496
+[INFO] [1778132105.845657202] [aic_model]: pfrac: 1.0 xy_error: 0.000499 0.000282   integrators: -0.0428 , -0.0591
+[INFO] [1778132105.894252512] [aic_model]: z_offset: 0.1488
+[INFO] [1778132105.895541546] [aic_model]: pfrac: 1.0 xy_error: 0.000347 0.00036   integrators: -0.0425 , -0.0587
+[INFO] [1778132105.944324607] [aic_model]: z_offset: 0.148
+[INFO] [1778132105.944724806] [aic_model]: pfrac: 1.0 xy_error: 0.000215 0.000406   integrators: -0.0422 , -0.0583
+[INFO] [1778132105.994234468] [aic_model]: z_offset: 0.1472
+[INFO] [1778132105.994604480] [aic_model]: pfrac: 1.0 xy_error: 0.000206 0.000566   integrators: -0.042 , -0.0577
+[INFO] [1778132106.044376473] [aic_model]: z_offset: 0.1464
+[INFO] [1778132106.044771974] [aic_model]: pfrac: 1.0 xy_error: 0.000192 0.000671   integrators: -0.0419 , -0.0571
+[INFO] [1778132106.094423821] [aic_model]: z_offset: 0.1456
+[INFO] [1778132106.094897408] [aic_model]: pfrac: 1.0 xy_error: 0.000197 0.000807   integrators: -0.0417 , -0.0562
+[INFO] [1778132106.144375611] [aic_model]: z_offset: 0.1448
+[INFO] [1778132106.145106349] [aic_model]: pfrac: 1.0 xy_error: 0.000214 0.00093   integrators: -0.0414 , -0.0553
+[INFO] [1778132106.194377624] [aic_model]: z_offset: 0.144
+[INFO] [1778132106.195005199] [aic_model]: pfrac: 1.0 xy_error: 0.000229 0.00102   integrators: -0.0412 , -0.0543
+[INFO] [1778132106.244245076] [aic_model]: z_offset: 0.1432
+[INFO] [1778132106.244871298] [aic_model]: pfrac: 1.0 xy_error: 0.000259 0.0011   integrators: -0.041 , -0.0532
+[INFO] [1778132106.294237611] [aic_model]: z_offset: 0.1424
+[INFO] [1778132106.294646116] [aic_model]: pfrac: 1.0 xy_error: 0.000294 0.00116   integrators: -0.0407 , -0.052
+[INFO] [1778132106.344257538] [aic_model]: z_offset: 0.1416
+[INFO] [1778132106.345038520] [aic_model]: pfrac: 1.0 xy_error: 0.000325 0.00122   integrators: -0.0403 , -0.0508
+[INFO] [1778132106.394240155] [aic_model]: z_offset: 0.1408
+[INFO] [1778132106.395057105] [aic_model]: pfrac: 1.0 xy_error: 0.000354 0.00125   integrators: -0.04 , -0.0496
+[INFO] [1778132106.444269941] [aic_model]: z_offset: 0.14
+[INFO] [1778132106.444939294] [aic_model]: pfrac: 1.0 xy_error: 0.000368 0.00126   integrators: -0.0396 , -0.0483
+[INFO] [1778132106.494253349] [aic_model]: z_offset: 0.1392
+[INFO] [1778132106.495331828] [aic_model]: pfrac: 1.0 xy_error: 0.000384 0.00127   integrators: -0.0392 , -0.047
+[INFO] [1778132106.544289066] [aic_model]: z_offset: 0.1384
+[INFO] [1778132106.544695637] [aic_model]: pfrac: 1.0 xy_error: 0.000414 0.00128   integrators: -0.0388 , -0.0458
+[INFO] [1778132106.594221128] [aic_model]: z_offset: 0.1376
+[INFO] [1778132106.594621347] [aic_model]: pfrac: 1.0 xy_error: 0.000442 0.00129   integrators: -0.0384 , -0.0445
+[INFO] [1778132106.644305656] [aic_model]: z_offset: 0.1368
+[INFO] [1778132106.645554314] [aic_model]: pfrac: 1.0 xy_error: 0.000487 0.00131   integrators: -0.0379 , -0.0432
+[INFO] [1778132106.694333788] [aic_model]: z_offset: 0.136
+[INFO] [1778132106.695638351] [aic_model]: pfrac: 1.0 xy_error: 0.000523 0.00132   integrators: -0.0374 , -0.0419
+[INFO] [1778132106.734441147] [aic_model]: insert_cable execute loop
+[INFO] [1778132106.744238289] [aic_model]: z_offset: 0.1352
+[INFO] [1778132106.744594526] [aic_model]: pfrac: 1.0 xy_error: 0.000576 0.00133   integrators: -0.0368 , -0.0405
+[INFO] [1778132106.794356560] [aic_model]: z_offset: 0.1344
+[INFO] [1778132106.794835136] [aic_model]: pfrac: 1.0 xy_error: 0.000634 0.00133   integrators: -0.0361 , -0.0392
+[INFO] [1778132106.844245351] [aic_model]: z_offset: 0.1336
+[INFO] [1778132106.845247067] [aic_model]: pfrac: 1.0 xy_error: 0.000699 0.00133   integrators: -0.0355 , -0.0379
+[INFO] [1778132106.894282250] [aic_model]: z_offset: 0.1328
+[INFO] [1778132106.895588456] [aic_model]: pfrac: 1.0 xy_error: 0.000766 0.00133   integrators: -0.0347 , -0.0365
+[INFO] [1778132106.944259908] [aic_model]: z_offset: 0.132
+[INFO] [1778132106.945424639] [aic_model]: pfrac: 1.0 xy_error: 0.000814 0.00133   integrators: -0.0339 , -0.0352
+[INFO] [1778132106.994330300] [aic_model]: z_offset: 0.1312
+[INFO] [1778132106.994896500] [aic_model]: pfrac: 1.0 xy_error: 0.000849 0.00133   integrators: -0.033 , -0.0339
+[INFO] [1778132107.044278332] [aic_model]: z_offset: 0.1304
+[INFO] [1778132107.045125197] [aic_model]: pfrac: 1.0 xy_error: 0.000882 0.00132   integrators: -0.0321 , -0.0325
+[INFO] [1778132107.094331070] [aic_model]: z_offset: 0.1296
+[INFO] [1778132107.095208653] [aic_model]: pfrac: 1.0 xy_error: 0.000903 0.00132   integrators: -0.0312 , -0.0312
+[INFO] [1778132107.144505226] [aic_model]: z_offset: 0.1288
+[INFO] [1778132107.145984736] [aic_model]: pfrac: 1.0 xy_error: 0.000921 0.00131   integrators: -0.0303 , -0.0299
+[INFO] [1778132107.196298793] [aic_model]: z_offset: 0.128
+[INFO] [1778132107.196688563] [aic_model]: pfrac: 1.0 xy_error: 0.000919 0.0013   integrators: -0.0294 , -0.0286
+[INFO] [1778132107.246356521] [aic_model]: z_offset: 0.1272
+[INFO] [1778132107.246836510] [aic_model]: pfrac: 1.0 xy_error: 0.000899 0.00129   integrators: -0.0285 , -0.0273
+[INFO] [1778132107.296271201] [aic_model]: z_offset: 0.1264
+[INFO] [1778132107.296995597] [aic_model]: pfrac: 1.0 xy_error: 0.00085 0.00127   integrators: -0.0276 , -0.0261
+[INFO] [1778132107.346255221] [aic_model]: z_offset: 0.1256
+[INFO] [1778132107.346637587] [aic_model]: pfrac: 1.0 xy_error: 0.000794 0.00124   integrators: -0.0269 , -0.0248
+[INFO] [1778132107.396253748] [aic_model]: z_offset: 0.1248
+[INFO] [1778132107.396655570] [aic_model]: pfrac: 1.0 xy_error: 0.000756 0.00122   integrators: -0.0261 , -0.0236
+[INFO] [1778132107.446252575] [aic_model]: z_offset: 0.124
+[INFO] [1778132107.446631625] [aic_model]: pfrac: 1.0 xy_error: 0.000724 0.00121   integrators: -0.0254 , -0.0224
+[INFO] [1778132107.496223490] [aic_model]: z_offset: 0.1232
+[INFO] [1778132107.496622157] [aic_model]: pfrac: 1.0 xy_error: 0.000688 0.00119   integrators: -0.0247 , -0.0212
+[INFO] [1778132107.546269055] [aic_model]: z_offset: 0.1224
+[INFO] [1778132107.546667561] [aic_model]: pfrac: 1.0 xy_error: 0.000649 0.00118   integrators: -0.024 , -0.02
+[INFO] [1778132107.596254458] [aic_model]: z_offset: 0.1216
+[INFO] [1778132107.596646912] [aic_model]: pfrac: 1.0 xy_error: 0.000613 0.00116   integrators: -0.0234 , -0.0189
+[INFO] [1778132107.646264807] [aic_model]: z_offset: 0.1208
+[INFO] [1778132107.646645680] [aic_model]: pfrac: 1.0 xy_error: 0.000578 0.00115   integrators: -0.0228 , -0.0177
+[INFO] [1778132107.696253665] [aic_model]: z_offset: 0.12
+[INFO] [1778132107.696676778] [aic_model]: pfrac: 1.0 xy_error: 0.000536 0.00113   integrators: -0.0223 , -0.0166
+[INFO] [1778132107.734596881] [aic_model]: insert_cable execute loop
+[INFO] [1778132107.746202950] [aic_model]: z_offset: 0.1192
+[INFO] [1778132107.746572001] [aic_model]: pfrac: 1.0 xy_error: 0.000489 0.00111   integrators: -0.0218 , -0.0155
+[INFO] [1778132107.796258664] [aic_model]: z_offset: 0.1184
+[INFO] [1778132107.796636321] [aic_model]: pfrac: 1.0 xy_error: 0.000464 0.0011   integrators: -0.0214 , -0.0144
+[INFO] [1778132107.846222977] [aic_model]: z_offset: 0.1176
+[INFO] [1778132107.846608348] [aic_model]: pfrac: 1.0 xy_error: 0.000436 0.00106   integrators: -0.0209 , -0.0133
+[INFO] [1778132107.896223317] [aic_model]: z_offset: 0.1168
+[INFO] [1778132107.896610873] [aic_model]: pfrac: 1.0 xy_error: 0.000389 0.000981   integrators: -0.0205 , -0.0123
+[INFO] [1778132107.946235219] [aic_model]: z_offset: 0.116
+[INFO] [1778132107.946693156] [aic_model]: pfrac: 1.0 xy_error: 0.000338 0.000944   integrators: -0.0202 , -0.0114
+[INFO] [1778132107.996235609] [aic_model]: z_offset: 0.1152
+[INFO] [1778132107.996680913] [aic_model]: pfrac: 1.0 xy_error: 0.000287 0.000919   integrators: -0.0199 , -0.0105
+[INFO] [1778132108.046275995] [aic_model]: z_offset: 0.1144
+[INFO] [1778132108.046687335] [aic_model]: pfrac: 1.0 xy_error: 0.000253 0.000905   integrators: -0.0197 , -0.00956
+[INFO] [1778132108.096316430] [aic_model]: z_offset: 0.1136
+[INFO] [1778132108.096736797] [aic_model]: pfrac: 1.0 xy_error: 0.000232 0.0009   integrators: -0.0194 , -0.00866
+[INFO] [1778132108.146309787] [aic_model]: z_offset: 0.1128
+[INFO] [1778132108.146740844] [aic_model]: pfrac: 1.0 xy_error: 0.000228 0.000884   integrators: -0.0192 , -0.00778
+[INFO] [1778132108.196244024] [aic_model]: z_offset: 0.112
+[INFO] [1778132108.196621951] [aic_model]: pfrac: 1.0 xy_error: 0.000227 0.000858   integrators: -0.019 , -0.00692
+[INFO] [1778132108.246359770] [aic_model]: z_offset: 0.1112
+[INFO] [1778132108.246806146] [aic_model]: pfrac: 1.0 xy_error: 0.000235 0.000829   integrators: -0.0187 , -0.00609
+[INFO] [1778132108.296275672] [aic_model]: z_offset: 0.1104
+[INFO] [1778132108.296665432] [aic_model]: pfrac: 1.0 xy_error: 0.000238 0.000795   integrators: -0.0185 , -0.0053
+[INFO] [1778132108.346338620] [aic_model]: z_offset: 0.1096
+[INFO] [1778132108.347094675] [aic_model]: pfrac: 1.0 xy_error: 0.000246 0.000762   integrators: -0.0182 , -0.00453
+[INFO] [1778132108.396290489] [aic_model]: z_offset: 0.1088
+[INFO] [1778132108.396723229] [aic_model]: pfrac: 1.0 xy_error: 0.000236 0.000723   integrators: -0.018 , -0.00381
+[INFO] [1778132108.446235276] [aic_model]: z_offset: 0.108
+[INFO] [1778132108.446640224] [aic_model]: pfrac: 1.0 xy_error: 0.000226 0.000693   integrators: -0.0178 , -0.00312
+[INFO] [1778132108.496241597] [aic_model]: z_offset: 0.1072
+[INFO] [1778132108.496627820] [aic_model]: pfrac: 1.0 xy_error: 0.00021 0.000643   integrators: -0.0176 , -0.00248
+[INFO] [1778132108.546287182] [aic_model]: z_offset: 0.1064
+[INFO] [1778132108.546704533] [aic_model]: pfrac: 1.0 xy_error: 0.000199 0.000599   integrators: -0.0174 , -0.00188
+[INFO] [1778132108.596235535] [aic_model]: z_offset: 0.1056
+[INFO] [1778132108.596632639] [aic_model]: pfrac: 1.0 xy_error: 0.000186 0.000572   integrators: -0.0172 , -0.0013
+[INFO] [1778132108.646231447] [aic_model]: z_offset: 0.1048
+[INFO] [1778132108.646610787] [aic_model]: pfrac: 1.0 xy_error: 0.000174 0.000541   integrators: -0.017 , -0.000763
+[INFO] [1778132108.696253628] [aic_model]: z_offset: 0.104
+[INFO] [1778132108.696657214] [aic_model]: pfrac: 1.0 xy_error: 0.000152 0.000513   integrators: -0.0169 , -0.00025
+[INFO] [1778132108.734566097] [aic_model]: insert_cable execute loop
+[INFO] [1778132108.746200579] [aic_model]: z_offset: 0.1032
+[INFO] [1778132108.746591741] [aic_model]: pfrac: 1.0 xy_error: 0.000142 0.000477   integrators: -0.0167 , 0.000227
+[INFO] [1778132108.796264498] [aic_model]: z_offset: 0.1024
+[INFO] [1778132108.796659728] [aic_model]: pfrac: 1.0 xy_error: 0.000136 0.000413   integrators: -0.0166 , 0.00064
+[INFO] [1778132108.846232909] [aic_model]: z_offset: 0.1016
+[INFO] [1778132108.846601779] [aic_model]: pfrac: 1.0 xy_error: 0.000131 0.000316   integrators: -0.0165 , 0.000956
+[INFO] [1778132108.896229041] [aic_model]: z_offset: 0.1008
+[INFO] [1778132108.896605115] [aic_model]: pfrac: 1.0 xy_error: 0.000129 0.000231   integrators: -0.0163 , 0.00119
+[INFO] [1778132108.946245692] [aic_model]: z_offset: 0.1
+[INFO] [1778132108.946618901] [aic_model]: pfrac: 1.0 xy_error: 0.000142 0.000168   integrators: -0.0162 , 0.00136
+[INFO] [1778132108.996349536] [aic_model]: z_offset: 0.0992
+[INFO] [1778132108.996747962] [aic_model]: pfrac: 1.0 xy_error: 0.000159 0.000118   integrators: -0.016 , 0.00147
+[INFO] [1778132109.046358172] [aic_model]: z_offset: 0.0984
+[INFO] [1778132109.046827130] [aic_model]: pfrac: 1.0 xy_error: 0.00018 7.64e-05   integrators: -0.0158 , 0.00155
+[INFO] [1778132109.096334036] [aic_model]: z_offset: 0.0976
+[INFO] [1778132109.096724107] [aic_model]: pfrac: 1.0 xy_error: 0.000196 -6.75e-06   integrators: -0.0157 , 0.00154
+[INFO] [1778132109.146371216] [aic_model]: z_offset: 0.0968
+[INFO] [1778132109.146753281] [aic_model]: pfrac: 1.0 xy_error: 0.000214 -7.32e-05   integrators: -0.0154 , 0.00147
+[INFO] [1778132109.196378349] [aic_model]: z_offset: 0.096
+[INFO] [1778132109.196776214] [aic_model]: pfrac: 1.0 xy_error: 0.000214 -0.00015   integrators: -0.0152 , 0.00132
+[INFO] [1778132109.246270066] [aic_model]: z_offset: 0.0952
+[INFO] [1778132109.246650718] [aic_model]: pfrac: 1.0 xy_error: 0.000198 -0.000218   integrators: -0.015 , 0.0011
+[INFO] [1778132109.296273812] [aic_model]: z_offset: 0.0944
+[INFO] [1778132109.296655547] [aic_model]: pfrac: 1.0 xy_error: 0.000173 -0.000266   integrators: -0.0149 , 0.000835
+[INFO] [1778132109.346290784] [aic_model]: z_offset: 0.0936
+[INFO] [1778132109.346677438] [aic_model]: pfrac: 1.0 xy_error: 0.000169 -0.000278   integrators: -0.0147 , 0.000557
+[INFO] [1778132109.396301824] [aic_model]: z_offset: 0.0928
+[INFO] [1778132109.396673410] [aic_model]: pfrac: 1.0 xy_error: 0.000168 -0.000275   integrators: -0.0145 , 0.000283
+[INFO] [1778132109.446251890] [aic_model]: z_offset: 0.092
+[INFO] [1778132109.446623296] [aic_model]: pfrac: 1.0 xy_error: 0.000155 -0.000278   integrators: -0.0144 , 4.67e-06
+[INFO] [1778132109.496368859] [aic_model]: z_offset: 0.0912
+[INFO] [1778132109.497372648] [aic_model]: pfrac: 1.0 xy_error: 0.000142 -0.000283   integrators: -0.0142 , -0.000278
+[INFO] [1778132109.546240378] [aic_model]: z_offset: 0.0904
+[INFO] [1778132109.546607696] [aic_model]: pfrac: 1.0 xy_error: 0.000142 -0.000282   integrators: -0.0141 , -0.00056
+[INFO] [1778132109.596239967] [aic_model]: z_offset: 0.0896
+[INFO] [1778132109.596609489] [aic_model]: pfrac: 1.0 xy_error: 0.000135 -0.000286   integrators: -0.0139 , -0.000846
+[INFO] [1778132109.646226181] [aic_model]: z_offset: 0.0888
+[INFO] [1778132109.646603928] [aic_model]: pfrac: 1.0 xy_error: 0.000122 -0.000287   integrators: -0.0138 , -0.00113
+[INFO] [1778132109.696356925] [aic_model]: z_offset: 0.088
+[INFO] [1778132109.696806006] [aic_model]: pfrac: 1.0 xy_error: 0.000107 -0.00029   integrators: -0.0137 , -0.00142
+[INFO] [1778132109.734432821] [aic_model]: insert_cable execute loop
+[INFO] [1778132109.746196755] [aic_model]: z_offset: 0.0872
+[INFO] [1778132109.746559354] [aic_model]: pfrac: 1.0 xy_error: 0.000109 -0.000289   integrators: -0.0136 , -0.00171
+[INFO] [1778132109.796370771] [aic_model]: z_offset: 0.0864
+[INFO] [1778132109.796752626] [aic_model]: pfrac: 1.0 xy_error: 0.000106 -0.000288   integrators: -0.0135 , -0.002
+[INFO] [1778132109.846229456] [aic_model]: z_offset: 0.0856
+[INFO] [1778132109.846594028] [aic_model]: pfrac: 1.0 xy_error: 9.32e-05 -0.000289   integrators: -0.0134 , -0.00229
+[INFO] [1778132109.896237771] [aic_model]: z_offset: 0.0848
+[INFO] [1778132109.896615218] [aic_model]: pfrac: 1.0 xy_error: 8.57e-05 -0.000291   integrators: -0.0133 , -0.00258
+[INFO] [1778132109.946301460] [aic_model]: z_offset: 0.084
+[INFO] [1778132109.946710055] [aic_model]: pfrac: 1.0 xy_error: 7.76e-05 -0.000293   integrators: -0.0132 , -0.00287
+[INFO] [1778132109.996266895] [aic_model]: z_offset: 0.0832
+[INFO] [1778132109.996661694] [aic_model]: pfrac: 1.0 xy_error: 6.57e-05 -0.000296   integrators: -0.0132 , -0.00317
+[INFO] [1778132110.046263789] [aic_model]: z_offset: 0.0824
+[INFO] [1778132110.046632189] [aic_model]: pfrac: 1.0 xy_error: 6.2e-05 -0.000296   integrators: -0.0131 , -0.00346
+[INFO] [1778132110.096644461] [aic_model]: z_offset: 0.0816
+[INFO] [1778132110.098410828] [aic_model]: pfrac: 1.0 xy_error: 6.94e-05 -0.000293   integrators: -0.013 , -0.00376
+[INFO] [1778132110.148460882] [aic_model]: z_offset: 0.0808
+[INFO] [1778132110.149047730] [aic_model]: pfrac: 1.0 xy_error: 8.06e-05 -0.000288   integrators: -0.013 , -0.00404
+[INFO] [1778132110.198251149] [aic_model]: z_offset: 0.08
+[INFO] [1778132110.198938576] [aic_model]: pfrac: 1.0 xy_error: 7.88e-05 -0.000289   integrators: -0.0129 , -0.00433
+[INFO] [1778132110.248261057] [aic_model]: z_offset: 0.0792
+[INFO] [1778132110.248648903] [aic_model]: pfrac: 1.0 xy_error: 7.73e-05 -0.000287   integrators: -0.0128 , -0.00462
+[INFO] [1778132110.298250206] [aic_model]: z_offset: 0.0784
+[INFO] [1778132110.298707773] [aic_model]: pfrac: 1.0 xy_error: 8.6e-05 -0.000289   integrators: -0.0127 , -0.00491
+[INFO] [1778132110.348275023] [aic_model]: z_offset: 0.0776
+[INFO] [1778132110.348647280] [aic_model]: pfrac: 1.0 xy_error: 8.69e-05 -0.000288   integrators: -0.0126 , -0.0052
+[INFO] [1778132110.398237752] [aic_model]: z_offset: 0.0768
+[INFO] [1778132110.398620469] [aic_model]: pfrac: 1.0 xy_error: 8.63e-05 -0.000288   integrators: -0.0125 , -0.00548
+[INFO] [1778132110.448243703] [aic_model]: z_offset: 0.076
+[INFO] [1778132110.448622192] [aic_model]: pfrac: 1.0 xy_error: 9.48e-05 -0.000284   integrators: -0.0125 , -0.00577
+[INFO] [1778132110.500351770] [aic_model]: z_offset: 0.0752
+[INFO] [1778132110.500759072] [aic_model]: pfrac: 1.0 xy_error: 8.91e-05 -0.000286   integrators: -0.0124 , -0.00605
+[INFO] [1778132110.550429385] [aic_model]: z_offset: 0.0744
+[INFO] [1778132110.551860815] [aic_model]: pfrac: 1.0 xy_error: 7.49e-05 -0.000292   integrators: -0.0123 , -0.00635
+[INFO] [1778132110.600405379] [aic_model]: z_offset: 0.0736
+[INFO] [1778132110.601424467] [aic_model]: pfrac: 1.0 xy_error: 5.93e-05 -0.000299   integrators: -0.0122 , -0.00665
+[INFO] [1778132110.650561221] [aic_model]: z_offset: 0.0728
+[INFO] [1778132110.651003669] [aic_model]: pfrac: 1.0 xy_error: 5.68e-05 -0.000302   integrators: -0.0122 , -0.00695
+[INFO] [1778132110.700409116] [aic_model]: z_offset: 0.072
+[INFO] [1778132110.700858217] [aic_model]: pfrac: 1.0 xy_error: 5.71e-05 -0.000302   integrators: -0.0121 , -0.00725
+[INFO] [1778132110.734519407] [aic_model]: insert_cable execute loop
+[INFO] [1778132110.750441105] [aic_model]: z_offset: 0.0712
+[INFO] [1778132110.750816098] [aic_model]: pfrac: 1.0 xy_error: 5.12e-05 -0.000306   integrators: -0.0121 , -0.00756
+[INFO] [1778132110.800453128] [aic_model]: z_offset: 0.0704
+[INFO] [1778132110.801552827] [aic_model]: pfrac: 1.0 xy_error: 5.36e-05 -0.000306   integrators: -0.012 , -0.00786
+[INFO] [1778132110.850505385] [aic_model]: z_offset: 0.0696
+[INFO] [1778132110.850909311] [aic_model]: pfrac: 1.0 xy_error: 6.03e-05 -0.000306   integrators: -0.012 , -0.00817
+[INFO] [1778132110.900547514] [aic_model]: z_offset: 0.0688
+[INFO] [1778132110.901209884] [aic_model]: pfrac: 1.0 xy_error: 7.03e-05 -0.000304   integrators: -0.0119 , -0.00847
+[INFO] [1778132110.950510274] [aic_model]: z_offset: 0.068
+[INFO] [1778132110.950982508] [aic_model]: pfrac: 1.0 xy_error: 7.85e-05 -0.000299   integrators: -0.0118 , -0.00877
+[INFO] [1778132111.000403834] [aic_model]: z_offset: 0.0672
+[INFO] [1778132111.000797982] [aic_model]: pfrac: 1.0 xy_error: 8.08e-05 -0.000298   integrators: -0.0117 , -0.00907
+[INFO] [1778132111.050443959] [aic_model]: z_offset: 0.0664
+[INFO] [1778132111.050873343] [aic_model]: pfrac: 1.0 xy_error: 8.86e-05 -0.000293   integrators: -0.0116 , -0.00936
+[INFO] [1778132111.100864496] [aic_model]: z_offset: 0.0656
+[INFO] [1778132111.102346871] [aic_model]: pfrac: 1.0 xy_error: 8.45e-05 -0.000294   integrators: -0.0115 , -0.00966
+[INFO] [1778132111.152337844] [aic_model]: z_offset: 0.0648
+[INFO] [1778132111.152708077] [aic_model]: pfrac: 1.0 xy_error: 7.92e-05 -0.000296   integrators: -0.0115 , -0.00995
+[INFO] [1778132111.202226966] [aic_model]: z_offset: 0.064
+[INFO] [1778132111.203468300] [aic_model]: pfrac: 1.0 xy_error: 7.91e-05 -0.000296   integrators: -0.0114 , -0.0102
+[INFO] [1778132111.252371507] [aic_model]: z_offset: 0.0632
+[INFO] [1778132111.253651814] [aic_model]: pfrac: 1.0 xy_error: 7.97e-05 -0.000297   integrators: -0.0113 , -0.0105
+[INFO] [1778132111.304276052] [aic_model]: z_offset: 0.0624
+[INFO] [1778132111.304699515] [aic_model]: pfrac: 1.0 xy_error: 7.89e-05 -0.000298   integrators: -0.0112 , -0.0108
+[INFO] [1778132111.354234444] [aic_model]: z_offset: 0.0616
+[INFO] [1778132111.354635565] [aic_model]: pfrac: 1.0 xy_error: 8.53e-05 -0.000297   integrators: -0.0111 , -0.0111
+[INFO] [1778132111.404372582] [aic_model]: z_offset: 0.0608
+[INFO] [1778132111.404790595] [aic_model]: pfrac: 1.0 xy_error: 9.45e-05 -0.000296   integrators: -0.0111 , -0.0114
+[INFO] [1778132111.454285459] [aic_model]: z_offset: 0.06
+[INFO] [1778132111.454663857] [aic_model]: pfrac: 1.0 xy_error: 0.000103 -0.000295   integrators: -0.0109 , -0.0117
+[INFO] [1778132111.505455259] [aic_model]: z_offset: 0.0592
+[INFO] [1778132111.507343824] [aic_model]: pfrac: 1.0 xy_error: 0.000113 -0.000292   integrators: -0.0108 , -0.012
+[INFO] [1778132111.558222930] [aic_model]: z_offset: 0.0584
+[INFO] [1778132111.558606348] [aic_model]: pfrac: 1.0 xy_error: 0.000119 -0.000291   integrators: -0.0107 , -0.0123
+[INFO] [1778132111.608304773] [aic_model]: z_offset: 0.0576
+[INFO] [1778132111.608679194] [aic_model]: pfrac: 1.0 xy_error: 0.000112 -0.000296   integrators: -0.0106 , -0.0126
+[INFO] [1778132111.658391385] [aic_model]: z_offset: 0.0568
+[INFO] [1778132111.659699364] [aic_model]: pfrac: 1.0 xy_error: 0.000102 -0.000301   integrators: -0.0105 , -0.0129
+[INFO] [1778132111.708365276] [aic_model]: z_offset: 0.056
+[INFO] [1778132111.708744836] [aic_model]: pfrac: 1.0 xy_error: 9.13e-05 -0.000306   integrators: -0.0104 , -0.0132
+[INFO] [1778132111.735755115] [aic_model]: insert_cable execute loop
+[INFO] [1778132111.758287350] [aic_model]: z_offset: 0.0552
+[INFO] [1778132111.758667842] [aic_model]: pfrac: 1.0 xy_error: 8.53e-05 -0.00031   integrators: -0.0103 , -0.0135
+[INFO] [1778132111.808323006] [aic_model]: z_offset: 0.0544
+[INFO] [1778132111.808894376] [aic_model]: pfrac: 1.0 xy_error: 7.95e-05 -0.00031   integrators: -0.0102 , -0.0138
+[INFO] [1778132111.858363442] [aic_model]: z_offset: 0.0536
+[INFO] [1778132111.858784720] [aic_model]: pfrac: 1.0 xy_error: 7.71e-05 -0.000313   integrators: -0.0102 , -0.0142
+[INFO] [1778132111.908285014] [aic_model]: z_offset: 0.0528
+[INFO] [1778132111.908669334] [aic_model]: pfrac: 1.0 xy_error: 7.96e-05 -0.000315   integrators: -0.0101 , -0.0145
+[INFO] [1778132111.958414126] [aic_model]: z_offset: 0.052
+[INFO] [1778132111.958921886] [aic_model]: pfrac: 1.0 xy_error: 8.64e-05 -0.000315   integrators: -0.01 , -0.0148
+[INFO] [1778132112.008360656] [aic_model]: z_offset: 0.0512
+[INFO] [1778132112.008741619] [aic_model]: pfrac: 1.0 xy_error: 0.000102 -0.000311   integrators: -0.0099 , -0.0151
+[INFO] [1778132112.058455403] [aic_model]: z_offset: 0.0504
+[INFO] [1778132112.059171874] [aic_model]: pfrac: 1.0 xy_error: 0.000123 -0.000307   integrators: -0.00978 , -0.0154
+[INFO] [1778132112.108700161] [aic_model]: z_offset: 0.0496
+[INFO] [1778132112.110364296] [aic_model]: pfrac: 1.0 xy_error: 0.000128 -0.000309   integrators: -0.00965 , -0.0157
+[INFO] [1778132112.160256104] [aic_model]: z_offset: 0.0488
+[INFO] [1778132112.160730722] [aic_model]: pfrac: 1.0 xy_error: 0.000135 -0.000309   integrators: -0.00952 , -0.016
+[INFO] [1778132112.210395003] [aic_model]: z_offset: 0.048
+[INFO] [1778132112.211324664] [aic_model]: pfrac: 1.0 xy_error: 0.000143 -0.00031   integrators: -0.00937 , -0.0163
+[INFO] [1778132112.260390735] [aic_model]: z_offset: 0.0472
+[INFO] [1778132112.262111707] [aic_model]: pfrac: 1.0 xy_error: 0.000153 -0.000309   integrators: -0.00922 , -0.0166
+[INFO] [1778132112.310294194] [aic_model]: z_offset: 0.0464
+[INFO] [1778132112.310771408] [aic_model]: pfrac: 1.0 xy_error: 0.000153 -0.000311   integrators: -0.00907 , -0.0169
+[INFO] [1778132112.360258647] [aic_model]: z_offset: 0.0456
+[INFO] [1778132112.360685106] [aic_model]: pfrac: 1.0 xy_error: 0.000155 -0.000314   integrators: -0.00891 , -0.0173
+[INFO] [1778132112.410281660] [aic_model]: z_offset: 0.0448
+[INFO] [1778132112.410801954] [aic_model]: pfrac: 1.0 xy_error: 0.000165 -0.000313   integrators: -0.00875 , -0.0176
+[INFO] [1778132112.460291829] [aic_model]: z_offset: 0.044
+[INFO] [1778132112.461390426] [aic_model]: pfrac: 1.0 xy_error: 0.000183 -0.000309   integrators: -0.00856 , -0.0179
+[INFO] [1778132112.510340510] [aic_model]: z_offset: 0.0432
+[INFO] [1778132112.510759284] [aic_model]: pfrac: 1.0 xy_error: 0.000197 -0.000307   integrators: -0.00837 , -0.0182
+[INFO] [1778132112.560315743] [aic_model]: z_offset: 0.0424
+[INFO] [1778132112.561699554] [aic_model]: pfrac: 1.0 xy_error: 0.000198 -0.000308   integrators: -0.00817 , -0.0185
+[INFO] [1778132112.610451407] [aic_model]: z_offset: 0.0416
+[INFO] [1778132112.612484754] [aic_model]: pfrac: 1.0 xy_error: 0.000185 -0.000304   integrators: -0.00799 , -0.0188
+[INFO] [1778132112.662674198] [aic_model]: z_offset: 0.0408
+[INFO] [1778132112.664236072] [aic_model]: pfrac: 1.0 xy_error: 0.000144 -0.000294   integrators: -0.00784 , -0.0191
+[INFO] [1778132112.714287067] [aic_model]: z_offset: 0.04
+[INFO] [1778132112.714713466] [aic_model]: pfrac: 1.0 xy_error: 0.000107 -0.000291   integrators: -0.00773 , -0.0194
+[INFO] [1778132112.734473400] [aic_model]: insert_cable execute loop
+[INFO] [1778132112.764313056] [aic_model]: z_offset: 0.0392
+[INFO] [1778132112.764701734] [aic_model]: pfrac: 1.0 xy_error: 9.08e-05 -0.000296   integrators: -0.00764 , -0.0197
+[INFO] [1778132112.814319367] [aic_model]: z_offset: 0.0384
+[INFO] [1778132112.815648576] [aic_model]: pfrac: 1.0 xy_error: 8.95e-05 -0.000295   integrators: -0.00755 , -0.02
+[INFO] [1778132112.864327352] [aic_model]: z_offset: 0.0376
+[INFO] [1778132112.864710780] [aic_model]: pfrac: 1.0 xy_error: 9.63e-05 -0.000295   integrators: -0.00746 , -0.0203
+[INFO] [1778132112.914323064] [aic_model]: z_offset: 0.0368
+[INFO] [1778132112.914898932] [aic_model]: pfrac: 1.0 xy_error: 0.000114 -0.000287   integrators: -0.00734 , -0.0206
+[INFO] [1778132112.964493072] [aic_model]: z_offset: 0.036
+[INFO] [1778132112.965826629] [aic_model]: pfrac: 1.0 xy_error: 0.000137 -0.000282   integrators: -0.00721 , -0.0208
+[INFO] [1778132113.014322422] [aic_model]: z_offset: 0.0352
+[INFO] [1778132113.014802601] [aic_model]: pfrac: 1.0 xy_error: 0.000138 -0.00027   integrators: -0.00707 , -0.0211
+[INFO] [1778132113.064654674] [aic_model]: z_offset: 0.0344
+[INFO] [1778132113.066328167] [aic_model]: pfrac: 1.0 xy_error: 0.000128 -0.000263   integrators: -0.00694 , -0.0214
+[INFO] [1778132113.116301417] [aic_model]: z_offset: 0.0336
+[INFO] [1778132113.116712076] [aic_model]: pfrac: 1.0 xy_error: 0.000129 -0.000252   integrators: -0.00681 , -0.0216
+[INFO] [1778132113.166296026] [aic_model]: z_offset: 0.0328
+[INFO] [1778132113.166697378] [aic_model]: pfrac: 1.0 xy_error: 0.000132 -0.000232   integrators: -0.00668 , -0.0219
+[INFO] [1778132113.218141832] [aic_model]: z_offset: 0.032
+[INFO] [1778132113.218547612] [aic_model]: pfrac: 1.0 xy_error: 0.00014 -0.000212   integrators: -0.00654 , -0.0221
+[INFO] [1778132113.268356724] [aic_model]: z_offset: 0.0312
+[INFO] [1778132113.268773554] [aic_model]: pfrac: 1.0 xy_error: 0.00015 -0.000202   integrators: -0.00639 , -0.0223
+[INFO] [1778132113.318381170] [aic_model]: z_offset: 0.0304
+[INFO] [1778132113.318924367] [aic_model]: pfrac: 1.0 xy_error: 0.00018 -0.000188   integrators: -0.00621 , -0.0225
+[INFO] [1778132113.370479007] [aic_model]: z_offset: 0.0296
+[INFO] [1778132113.370923840] [aic_model]: pfrac: 1.0 xy_error: 0.000206 -0.000175   integrators: -0.006 , -0.0226
+[INFO] [1778132113.420383327] [aic_model]: z_offset: 0.0288
+[INFO] [1778132113.420886209] [aic_model]: pfrac: 1.0 xy_error: 0.000201 -0.000169   integrators: -0.0058 , -0.0228
+[INFO] [1778132113.470401341] [aic_model]: z_offset: 0.028
+[INFO] [1778132113.470844761] [aic_model]: pfrac: 1.0 xy_error: 0.000167 -0.000156   integrators: -0.00564 , -0.023
+[INFO] [1778132113.520480780] [aic_model]: z_offset: 0.0272
+[INFO] [1778132113.520920583] [aic_model]: pfrac: 1.0 xy_error: 0.000119 -0.000117   integrators: -0.00552 , -0.0231
+[INFO] [1778132113.570593901] [aic_model]: z_offset: 0.0264
+[INFO] [1778132113.571035528] [aic_model]: pfrac: 1.0 xy_error: 6.65e-05 -6.29e-05   integrators: -0.00545 , -0.0231
+[INFO] [1778132113.620560909] [aic_model]: z_offset: 0.0256
+[INFO] [1778132113.621037000] [aic_model]: pfrac: 1.0 xy_error: 2.71e-05 -1.05e-05   integrators: -0.00542 , -0.0231
+[INFO] [1778132113.670453077] [aic_model]: z_offset: 0.0248
+[INFO] [1778132113.671038713] [aic_model]: pfrac: 1.0 xy_error: -6.89e-06 2.28e-05   integrators: -0.00543 , -0.0231
+[INFO] [1778132113.720435294] [aic_model]: z_offset: 0.024
+[INFO] [1778132113.720900304] [aic_model]: pfrac: 1.0 xy_error: -4.49e-05 6.88e-05   integrators: -0.00548 , -0.0231
+[INFO] [1778132113.734529501] [aic_model]: insert_cable execute loop
+[INFO] [1778132113.770347669] [aic_model]: z_offset: 0.0232
+[INFO] [1778132113.770776903] [aic_model]: pfrac: 1.0 xy_error: -8.31e-05 0.000101   integrators: -0.00556 , -0.023
+[INFO] [1778132113.820545700] [aic_model]: z_offset: 0.0224
+[INFO] [1778132113.821050104] [aic_model]: pfrac: 1.0 xy_error: -0.000106 0.000126   integrators: -0.00566 , -0.0228
+[INFO] [1778132113.870321620] [aic_model]: z_offset: 0.0216
+[INFO] [1778132113.870881388] [aic_model]: pfrac: 1.0 xy_error: -0.000133 0.000136   integrators: -0.0058 , -0.0227
+[INFO] [1778132113.920263010] [aic_model]: z_offset: 0.0208
+[INFO] [1778132113.920703956] [aic_model]: pfrac: 1.0 xy_error: -0.000158 0.000148   integrators: -0.00596 , -0.0225
+[INFO] [1778132113.970565606] [aic_model]: z_offset: 0.02
+[INFO] [1778132113.971078056] [aic_model]: pfrac: 1.0 xy_error: -0.000183 0.000151   integrators: -0.00614 , -0.0224
+[INFO] [1778132114.020316470] [aic_model]: z_offset: 0.0192
+[INFO] [1778132114.020758147] [aic_model]: pfrac: 1.0 xy_error: -0.000209 0.000164   integrators: -0.00635 , -0.0222
+[INFO] [1778132114.070658710] [aic_model]: z_offset: 0.018422
+[INFO] [1778132114.071209902] [aic_model]: pfrac: 1.0 xy_error: -0.000208 0.000214   integrators: -0.00656 , -0.022
+[INFO] [1778132114.123281500] [aic_model]: z_offset: 0.017645
+[INFO] [1778132114.130244316] [aic_model]: pfrac: 1.0 xy_error: -0.000102 0.00037   integrators: -0.00666 , -0.0216
+[INFO] [1778132114.180407281] [aic_model]: z_offset: 0.016867
+[INFO] [1778132114.180952101] [aic_model]: pfrac: 1.0 xy_error: 0.000103 0.000551   integrators: -0.00655 , -0.0211
+[INFO] [1778132114.230282026] [aic_model]: z_offset: 0.01609
+[INFO] [1778132114.230662809] [aic_model]: pfrac: 1.0 xy_error: 0.000314 0.0007   integrators: -0.00624 , -0.0204
+[INFO] [1778132114.280352077] [aic_model]: z_offset: 0.015312
+[INFO] [1778132114.280742218] [aic_model]: pfrac: 1.0 xy_error: 0.000567 0.000863   integrators: -0.00567 , -0.0195
+[INFO] [1778132114.330264663] [aic_model]: z_offset: 0.014535
+[INFO] [1778132114.330653592] [aic_model]: pfrac: 1.0 xy_error: 0.000828 0.00102   integrators: -0.00485 , -0.0185
+[INFO] [1778132114.380267058] [aic_model]: z_offset: 0.013757
+[INFO] [1778132114.383043656] [aic_model]: pfrac: 1.0 xy_error: 0.0011 0.00119   integrators: -0.00375 , -0.0173
+[INFO] [1778132114.432418876] [aic_model]: z_offset: 0.01298
+[INFO] [1778132114.432941685] [aic_model]: pfrac: 1.0 xy_error: 0.0014 0.00138   integrators: -0.00234 , -0.0159
+[INFO] [1778132114.482237967] [aic_model]: z_offset: 0.012202
+[INFO] [1778132114.482626334] [aic_model]: pfrac: 1.0 xy_error: 0.00171 0.00156   integrators: -0.000637 , -0.0144
+[INFO] [1778132114.532851816] [aic_model]: z_offset: 0.011424
+[INFO] [1778132114.533244481] [aic_model]: pfrac: 1.0 xy_error: 0.002 0.00173   integrators: 0.00137 , -0.0126
+[INFO] [1778132114.582304391] [aic_model]: z_offset: 0.010647
+[INFO] [1778132114.582688761] [aic_model]: pfrac: 1.0 xy_error: 0.00229 0.00191   integrators: 0.00366 , -0.0107
+[INFO] [1778132114.632237386] [aic_model]: z_offset: 0.0098694
+[INFO] [1778132114.632701034] [aic_model]: pfrac: 1.0 xy_error: 0.00255 0.00206   integrators: 0.00621 , -0.00869
+[INFO] [1778132114.682235542] [aic_model]: z_offset: 0.0090918
+[INFO] [1778132114.682708457] [aic_model]: pfrac: 1.0 xy_error: 0.00279 0.0022   integrators: 0.009 , -0.00649
+[INFO] [1778132114.732269866] [aic_model]: z_offset: 0.0083143
+[INFO] [1778132114.734782991] [aic_model]: pfrac: 1.0 xy_error: 0.00299 0.00232   integrators: 0.012 , -0.00417
+[INFO] [1778132114.736175999] [aic_model]: insert_cable execute loop
+[INFO] [1778132114.784301580] [aic_model]: z_offset: 0.0075367
+[INFO] [1778132114.784692251] [aic_model]: pfrac: 1.0 xy_error: 0.00319 0.00239   integrators: 0.0152 , -0.00178
+[INFO] [1778132114.836115746] [aic_model]: z_offset: 0.0067591
+[INFO] [1778132114.836525733] [aic_model]: pfrac: 1.0 xy_error: 0.00337 0.00247   integrators: 0.0186 , 0.000682
+[INFO] [1778132114.886239417] [aic_model]: z_offset: 0.0059816
+[INFO] [1778132114.886626883] [aic_model]: pfrac: 1.0 xy_error: 0.00356 0.00257   integrators: 0.0221 , 0.00325
+[INFO] [1778132114.936254886] [aic_model]: z_offset: 0.005204
+[INFO] [1778132114.936642942] [aic_model]: pfrac: 1.0 xy_error: 0.00374 0.00267   integrators: 0.0259 , 0.00592
+[INFO] [1778132114.986263081] [aic_model]: z_offset: 0.0044265
+[INFO] [1778132114.986648102] [aic_model]: pfrac: 1.0 xy_error: 0.0039 0.00276   integrators: 0.0297 , 0.00868
+[INFO] [1778132115.036286465] [aic_model]: z_offset: 0.0036489
+[INFO] [1778132115.036754852] [aic_model]: pfrac: 1.0 xy_error: 0.00405 0.00285   integrators: 0.0338 , 0.0115
+[INFO] [1778132115.086524971] [aic_model]: z_offset: 0.0028714
+[INFO] [1778132115.088179188] [aic_model]: pfrac: 1.0 xy_error: 0.00418 0.00292   integrators: 0.038 , 0.0144
+[INFO] [1778132115.138462819] [aic_model]: z_offset: 0.0020938
+[INFO] [1778132115.138912962] [aic_model]: pfrac: 1.0 xy_error: 0.0043 0.00298   integrators: 0.0423 , 0.0174
+[INFO] [1778132115.188319100] [aic_model]: z_offset: 0.0013163
+[INFO] [1778132115.188709200] [aic_model]: pfrac: 1.0 xy_error: 0.00441 0.00304   integrators: 0.0467 , 0.0205
+[INFO] [1778132115.238313228] [aic_model]: z_offset: 0.00053872
+[INFO] [1778132115.238754134] [aic_model]: pfrac: 1.0 xy_error: 0.00452 0.00309   integrators: 0.0512 , 0.0236
+[INFO] [1778132115.288324830] [aic_model]: z_offset: -0.00023883
+[INFO] [1778132115.288738725] [aic_model]: pfrac: 1.0 xy_error: 0.00462 0.00314   integrators: 0.0558 , 0.0267
+[INFO] [1778132115.338273834] [aic_model]: z_offset: -0.0010164
+[INFO] [1778132115.338742241] [aic_model]: pfrac: 1.0 xy_error: 0.00469 0.00315   integrators: 0.0605 , 0.0298
+[INFO] [1778132115.388261411] [aic_model]: z_offset: -0.0017939
+[INFO] [1778132115.388650960] [aic_model]: pfrac: 1.0 xy_error: 0.00475 0.00317   integrators: 0.0653 , 0.033
+[INFO] [1778132115.438247034] [aic_model]: z_offset: -0.0025715
+[INFO] [1778132115.438626464] [aic_model]: pfrac: 1.0 xy_error: 0.00479 0.00319   integrators: 0.07 , 0.0362
+[INFO] [1778132115.488356008] [aic_model]: z_offset: -0.003349
+[INFO] [1778132115.488739526] [aic_model]: pfrac: 1.0 xy_error: 0.00484 0.00321   integrators: 0.0749 , 0.0394
+[INFO] [1778132115.538450865] [aic_model]: z_offset: -0.0041266
+[INFO] [1778132115.538856344] [aic_model]: pfrac: 1.0 xy_error: 0.00489 0.00322   integrators: 0.0798 , 0.0426
+[INFO] [1778132115.588238086] [aic_model]: z_offset: -0.0049042
+[INFO] [1778132115.588625782] [aic_model]: pfrac: 1.0 xy_error: 0.00494 0.00325   integrators: 0.08 , 0.0459
+[INFO] [1778132115.638401322] [aic_model]: z_offset: -0.0056817
+[INFO] [1778132115.638925754] [aic_model]: pfrac: 1.0 xy_error: 0.00496 0.00329   integrators: 0.08 , 0.0492
+[INFO] [1778132115.688343253] [aic_model]: z_offset: -0.0064593
+[INFO] [1778132115.688806771] [aic_model]: pfrac: 1.0 xy_error: 0.00496 0.00337   integrators: 0.08 , 0.0525
+[INFO] [1778132115.736424340] [aic_model]: insert_cable execute loop
+[INFO] [1778132115.738208140] [aic_model]: z_offset: -0.0072368
+[INFO] [1778132115.738661689] [aic_model]: pfrac: 1.0 xy_error: 0.00496 0.00344   integrators: 0.08 , 0.056
+[INFO] [1778132115.788266609] [aic_model]: z_offset: -0.0080144
+[INFO] [1778132115.788677609] [aic_model]: pfrac: 1.0 xy_error: 0.00495 0.00349   integrators: 0.08 , 0.0595
+[INFO] [1778132115.838661518] [aic_model]: z_offset: -0.0087919
+[INFO] [1778132115.840204257] [aic_model]: pfrac: 1.0 xy_error: 0.00491 0.00351   integrators: 0.08 , 0.063
+[INFO] [1778132115.890416464] [aic_model]: z_offset: -0.0095695
+[INFO] [1778132115.890833495] [aic_model]: pfrac: 1.0 xy_error: 0.00489 0.00352   integrators: 0.08 , 0.0665
+[INFO] [1778132115.940381067] [aic_model]: z_offset: -0.010347
+[INFO] [1778132115.940778822] [aic_model]: pfrac: 1.0 xy_error: 0.00487 0.00353   integrators: 0.08 , 0.07
+[INFO] [1778132115.990263477] [aic_model]: z_offset: -0.011125
+[INFO] [1778132115.990653467] [aic_model]: pfrac: 1.0 xy_error: 0.00483 0.00354   integrators: 0.08 , 0.0736
+[INFO] [1778132116.040271341] [aic_model]: z_offset: -0.011902
+[INFO] [1778132116.040664517] [aic_model]: pfrac: 1.0 xy_error: 0.00478 0.00353   integrators: 0.08 , 0.0771
+[INFO] [1778132116.092469156] [aic_model]: z_offset: -0.01268
+[INFO] [1778132116.092870988] [aic_model]: pfrac: 1.0 xy_error: 0.00476 0.00353   integrators: 0.08 , 0.08
+[INFO] [1778132116.142441244] [aic_model]: z_offset: -0.013457
+[INFO] [1778132116.142856291] [aic_model]: pfrac: 1.0 xy_error: 0.00474 0.00353   integrators: 0.08 , 0.08
+[INFO] [1778132116.192260916] [aic_model]: z_offset: -0.014235
+[INFO] [1778132116.192646888] [aic_model]: pfrac: 1.0 xy_error: 0.00472 0.00352   integrators: 0.08 , 0.08
+[INFO] [1778132116.242257600] [aic_model]: z_offset: -0.015012
+[INFO] [1778132116.242637932] [aic_model]: pfrac: 1.0 xy_error: 0.00469 0.0035   integrators: 0.08 , 0.08
+[INFO] [1778132116.292353369] [aic_model]: Waiting for connector to stabilize...
+[INFO] [1778132116.736494108] [aic_model]: insert_cable execute loop
+[INFO] [1778132117.736433231] [aic_model]: insert_cable execute loop
+[INFO] [1778132118.292432281] [aic_model]: AutoCode.insert_cable() exiting...
+[INFO] [1778132118.736455901] [aic_model]: insert_cable() returned True
+[INFO] [1778132119.236360822] [aic_model]: on_deactivate(LifecycleState(label='active', state_id=3))
+[INFO] [1778132119.842571789] [aic_model]: on_activate()
+[INFO] [1778132122.287875183] [aic_model]: Goal accepted
+[INFO] [1778132122.289002033] [aic_model]: Entering insert_cable_execute_callback()
+[INFO] [1778132122.290132259] [aic_model]: AutoCode.insert_cable() task: aic_task_interfaces.msg.Task(id='task_1', cable_type='sfp_sc', cable_name='cable_1', plug_type='sc', plug_name='sc_tip', port_type='sc', port_name='sc_port_base', target_module_name='sc_port_1', time_limit=180)
+[INFO] [1778132122.290746870] [aic_model]: insert_cable execute loop
+[INFO] [1778132122.291898325] [aic_model]: pfrac: 0.0 xy_error: 0.00708 0.166   integrators: 0.0 , 0.0
+[INFO] [1778132122.341777389] [aic_model]: pfrac: 0.025 xy_error: 0.00707 0.166   integrators: 0.0 , 0.0
+[INFO] [1778132122.391660520] [aic_model]: pfrac: 0.05 xy_error: 0.00701 0.166   integrators: 0.0 , 0.0
+[INFO] [1778132122.441281490] [aic_model]: pfrac: 0.075 xy_error: 0.00693 0.166   integrators: 0.0 , 0.0
+[INFO] [1778132122.490896229] [aic_model]: pfrac: 0.1 xy_error: 0.00678 0.166   integrators: 0.0 , 0.0
+[INFO] [1778132122.541326104] [aic_model]: pfrac: 0.125 xy_error: 0.00659 0.166   integrators: 0.0 , 0.0
+[INFO] [1778132122.592075417] [aic_model]: pfrac: 0.15 xy_error: 0.00631 0.165   integrators: 0.0 , 0.0
+[INFO] [1778132122.641736011] [aic_model]: pfrac: 0.175 xy_error: 0.00598 0.164   integrators: 0.0 , 0.0
+[INFO] [1778132122.691734729] [aic_model]: pfrac: 0.2 xy_error: 0.00559 0.163   integrators: 0.0 , 0.0
+[INFO] [1778132122.741774894] [aic_model]: pfrac: 0.225 xy_error: 0.00513 0.161   integrators: 0.0 , 0.0
+[INFO] [1778132122.791833664] [aic_model]: pfrac: 0.25 xy_error: 0.00464 0.159   integrators: 0.0 , 0.0
+[INFO] [1778132122.841691488] [aic_model]: pfrac: 0.275 xy_error: 0.00409 0.157   integrators: 0.0 , 0.0
+[INFO] [1778132122.891779663] [aic_model]: pfrac: 0.3 xy_error: 0.0035 0.154   integrators: 0.0 , 0.0
+[INFO] [1778132122.941562286] [aic_model]: pfrac: 0.325 xy_error: 0.00286 0.151   integrators: 0.0 , 0.0
+[INFO] [1778132122.991747803] [aic_model]: pfrac: 0.35 xy_error: 0.0022 0.148   integrators: 0.0 , 0.0
+[INFO] [1778132123.041639761] [aic_model]: pfrac: 0.375 xy_error: 0.00149 0.144   integrators: 0.0 , 0.0
+[INFO] [1778132123.091492866] [aic_model]: pfrac: 0.4 xy_error: 0.000744 0.14   integrators: 0.0 , 0.0
+[INFO] [1778132123.141915036] [aic_model]: pfrac: 0.425 xy_error: -1.12e-05 0.136   integrators: 0.0 , 0.0
+[INFO] [1778132123.191423566] [aic_model]: pfrac: 0.45 xy_error: -0.000784 0.131   integrators: 0.0 , 0.0
+[INFO] [1778132123.241759465] [aic_model]: pfrac: 0.475 xy_error: -0.00152 0.127   integrators: 0.0 , 0.0
+[INFO] [1778132123.292142131] [aic_model]: insert_cable execute loop
+[INFO] [1778132123.292342366] [aic_model]: pfrac: 0.5 xy_error: -0.00227 0.122   integrators: 0.0 , 0.0
+[INFO] [1778132123.341729599] [aic_model]: pfrac: 0.525 xy_error: -0.00299 0.117   integrators: 0.0 , 0.0
+[INFO] [1778132123.391576162] [aic_model]: pfrac: 0.55 xy_error: -0.00365 0.112   integrators: 0.0 , 0.0
+[INFO] [1778132123.441446128] [aic_model]: pfrac: 0.575 xy_error: -0.00428 0.107   integrators: 0.0 , 0.0
+[INFO] [1778132123.491762641] [aic_model]: pfrac: 0.6 xy_error: -0.00486 0.102   integrators: 0.0 , 0.0
+[INFO] [1778132123.540992108] [aic_model]: pfrac: 0.625 xy_error: -0.00537 0.0964   integrators: 0.0 , 0.0
+[INFO] [1778132123.591776617] [aic_model]: pfrac: 0.65 xy_error: -0.00578 0.0912   integrators: 0.0 , 0.0
+[INFO] [1778132123.641559090] [aic_model]: pfrac: 0.675 xy_error: -0.00612 0.0859   integrators: 0.0 , 0.0
+[INFO] [1778132123.691763021] [aic_model]: pfrac: 0.7 xy_error: -0.00638 0.0806   integrators: 0.0 , 0.0
+[INFO] [1778132123.741239842] [aic_model]: pfrac: 0.725 xy_error: -0.00654 0.0753   integrators: 0.0 , 0.0
+[INFO] [1778132123.791671390] [aic_model]: pfrac: 0.75 xy_error: -0.00662 0.0702   integrators: 0.0 , 0.0
+[INFO] [1778132123.841693551] [aic_model]: pfrac: 0.775 xy_error: -0.00662 0.0651   integrators: 0.0 , 0.0
+[INFO] [1778132123.891564329] [aic_model]: pfrac: 0.8 xy_error: -0.00654 0.06   integrators: 0.0 , 0.0
+[INFO] [1778132123.941653035] [aic_model]: pfrac: 0.825 xy_error: -0.00642 0.0552   integrators: 0.0 , 0.0
+[INFO] [1778132123.990900857] [aic_model]: pfrac: 0.85 xy_error: -0.00622 0.0504   integrators: 0.0 , 0.0
+[INFO] [1778132124.040985987] [aic_model]: pfrac: 0.875 xy_error: -0.00595 0.0458   integrators: 0.0 , 0.0
+[INFO] [1778132124.091438825] [aic_model]: pfrac: 0.9 xy_error: -0.00563 0.0414   integrators: 0.0 , 0.0
+[INFO] [1778132124.141785383] [aic_model]: pfrac: 0.925 xy_error: -0.00527 0.0371   integrators: 0.0 , 0.0
+[INFO] [1778132124.190895187] [aic_model]: pfrac: 0.95 xy_error: -0.00488 0.0331   integrators: 0.0 , 0.0
+[INFO] [1778132124.241650831] [aic_model]: pfrac: 0.975 xy_error: -0.00446 0.0293   integrators: 0.0 , 0.0
+[INFO] [1778132124.292264090] [aic_model]: pfrac: 1.0 xy_error: -0.00402 0.0257   integrators: -0.00402 , 0.0257
+[INFO] [1778132124.292486506] [aic_model]: insert_cable execute loop
+[INFO] [1778132124.341652995] [aic_model]: pfrac: 1.0 xy_error: -0.00358 0.0223   integrators: -0.0076 , 0.048
+[INFO] [1778132124.390994603] [aic_model]: pfrac: 1.0 xy_error: -0.00316 0.0189   integrators: -0.0108 , 0.0669
+[INFO] [1778132124.441808677] [aic_model]: pfrac: 1.0 xy_error: -0.00277 0.0156   integrators: -0.0135 , 0.08
+[INFO] [1778132124.491790353] [aic_model]: pfrac: 1.0 xy_error: -0.0024 0.0123   integrators: -0.0159 , 0.08
+[INFO] [1778132124.541775946] [aic_model]: pfrac: 1.0 xy_error: -0.00207 0.00928   integrators: -0.018 , 0.08
+[INFO] [1778132124.590873676] [aic_model]: pfrac: 1.0 xy_error: -0.00174 0.0064   integrators: -0.0197 , 0.08
+[INFO] [1778132124.640882333] [aic_model]: pfrac: 1.0 xy_error: -0.00137 0.00381   integrators: -0.0211 , 0.08
+[INFO] [1778132124.690897772] [aic_model]: pfrac: 1.0 xy_error: -0.000966 0.00148   integrators: -0.0221 , 0.08
+[INFO] [1778132124.740906518] [aic_model]: pfrac: 1.0 xy_error: -0.000584 -0.000644   integrators: -0.0227 , 0.0794
+[INFO] [1778132124.791074242] [aic_model]: pfrac: 1.0 xy_error: -0.000221 -0.00255   integrators: -0.0229 , 0.0768
+[INFO] [1778132124.842102227] [aic_model]: pfrac: 1.0 xy_error: 0.000106 -0.00423   integrators: -0.0228 , 0.0726
+[INFO] [1778132124.891093077] [aic_model]: pfrac: 1.0 xy_error: 0.000411 -0.00572   integrators: -0.0224 , 0.0668
+[INFO] [1778132124.940912499] [aic_model]: pfrac: 1.0 xy_error: 0.000689 -0.007   integrators: -0.0217 , 0.0599
+[INFO] [1778132124.990935422] [aic_model]: pfrac: 1.0 xy_error: 0.000945 -0.00807   integrators: -0.0207 , 0.0518
+[INFO] [1778132125.041038255] [aic_model]: pfrac: 1.0 xy_error: 0.00115 -0.00894   integrators: -0.0196 , 0.0428
+[INFO] [1778132125.090928650] [aic_model]: pfrac: 1.0 xy_error: 0.00132 -0.00959   integrators: -0.0183 , 0.0332
+[INFO] [1778132125.140951462] [aic_model]: pfrac: 1.0 xy_error: 0.00148 -0.01   integrators: -0.0168 , 0.0232
+[INFO] [1778132125.191520137] [aic_model]: pfrac: 1.0 xy_error: 0.00159 -0.0103   integrators: -0.0152 , 0.013
+[INFO] [1778132125.241035750] [aic_model]: pfrac: 1.0 xy_error: 0.00166 -0.0104   integrators: -0.0135 , 0.00261
+[INFO] [1778132125.292118528] [aic_model]: z_offset: 0.1992
+[INFO] [1778132125.292561908] [aic_model]: pfrac: 1.0 xy_error: 0.00168 -0.0102   integrators: -0.0119 , -0.00764
+[INFO] [1778132125.294007905] [aic_model]: insert_cable execute loop
+[INFO] [1778132125.341881353] [aic_model]: z_offset: 0.1984
+[INFO] [1778132125.342643350] [aic_model]: pfrac: 1.0 xy_error: 0.00163 -0.00999   integrators: -0.0102 , -0.0176
+[INFO] [1778132125.392749899] [aic_model]: z_offset: 0.1976
+[INFO] [1778132125.394037360] [aic_model]: pfrac: 1.0 xy_error: 0.00156 -0.00959   integrators: -0.00867 , -0.0272
+[INFO] [1778132125.442714333] [aic_model]: z_offset: 0.1968
+[INFO] [1778132125.443841002] [aic_model]: pfrac: 1.0 xy_error: 0.00147 -0.00903   integrators: -0.0072 , -0.0363
+[INFO] [1778132125.492768695] [aic_model]: z_offset: 0.196
+[INFO] [1778132125.494004248] [aic_model]: pfrac: 1.0 xy_error: 0.00133 -0.00836   integrators: -0.00587 , -0.0446
+[INFO] [1778132125.542700617] [aic_model]: z_offset: 0.1952
+[INFO] [1778132125.543121906] [aic_model]: pfrac: 1.0 xy_error: 0.00112 -0.00757   integrators: -0.00475 , -0.0522
+[INFO] [1778132125.592772963] [aic_model]: z_offset: 0.1944
+[INFO] [1778132125.594104676] [aic_model]: pfrac: 1.0 xy_error: 0.000874 -0.0067   integrators: -0.00388 , -0.0589
+[INFO] [1778132125.642700938] [aic_model]: z_offset: 0.1936
+[INFO] [1778132125.643998367] [aic_model]: pfrac: 1.0 xy_error: 0.000634 -0.00575   integrators: -0.00324 , -0.0646
+[INFO] [1778132125.692732177] [aic_model]: z_offset: 0.1928
+[INFO] [1778132125.693931682] [aic_model]: pfrac: 1.0 xy_error: 0.000377 -0.00477   integrators: -0.00287 , -0.0694
+[INFO] [1778132125.742712350] [aic_model]: z_offset: 0.192
+[INFO] [1778132125.743887830] [aic_model]: pfrac: 1.0 xy_error: 8.8e-05 -0.00375   integrators: -0.00278 , -0.0731
+[INFO] [1778132125.792770078] [aic_model]: z_offset: 0.1912
+[INFO] [1778132125.794046828] [aic_model]: pfrac: 1.0 xy_error: -0.000199 -0.00272   integrators: -0.00298 , -0.0759
+[INFO] [1778132125.842773364] [aic_model]: z_offset: 0.1904
+[INFO] [1778132125.843983800] [aic_model]: pfrac: 1.0 xy_error: -0.000424 -0.00166   integrators: -0.0034 , -0.0775
+[INFO] [1778132125.892758737] [aic_model]: z_offset: 0.1896
+[INFO] [1778132125.894152987] [aic_model]: pfrac: 1.0 xy_error: -0.000683 -0.000614   integrators: -0.00409 , -0.0781
+[INFO] [1778132125.944098705] [aic_model]: z_offset: 0.1888
+[INFO] [1778132125.944757859] [aic_model]: pfrac: 1.0 xy_error: -0.000947 0.000439   integrators: -0.00503 , -0.0777
+[INFO] [1778132125.994819996] [aic_model]: z_offset: 0.188
+[INFO] [1778132125.996042945] [aic_model]: pfrac: 1.0 xy_error: -0.00121 0.00141   integrators: -0.00625 , -0.0763
+[INFO] [1778132126.044737531] [aic_model]: z_offset: 0.1872
+[INFO] [1778132126.045989355] [aic_model]: pfrac: 1.0 xy_error: -0.00144 0.00232   integrators: -0.00769 , -0.074
+[INFO] [1778132126.094794227] [aic_model]: z_offset: 0.1864
+[INFO] [1778132126.096603264] [aic_model]: pfrac: 1.0 xy_error: -0.00164 0.00315   integrators: -0.00933 , -0.0708
+[INFO] [1778132126.146758986] [aic_model]: z_offset: 0.1856
+[INFO] [1778132126.147199962] [aic_model]: pfrac: 1.0 xy_error: -0.00183 0.00393   integrators: -0.0112 , -0.0669
+[INFO] [1778132126.196717348] [aic_model]: z_offset: 0.1848
+[INFO] [1778132126.197930189] [aic_model]: pfrac: 1.0 xy_error: -0.002 0.00458   integrators: -0.0132 , -0.0623
+[INFO] [1778132126.246757363] [aic_model]: z_offset: 0.184
+[INFO] [1778132126.247973891] [aic_model]: pfrac: 1.0 xy_error: -0.00216 0.00511   integrators: -0.0153 , -0.0572
+[INFO] [1778132126.293927114] [aic_model]: insert_cable execute loop
+[INFO] [1778132126.296706298] [aic_model]: z_offset: 0.1832
+[INFO] [1778132126.297947271] [aic_model]: pfrac: 1.0 xy_error: -0.00224 0.00557   integrators: -0.0176 , -0.0516
+[INFO] [1778132126.346719012] [aic_model]: z_offset: 0.1824
+[INFO] [1778132126.348030447] [aic_model]: pfrac: 1.0 xy_error: -0.00226 0.00594   integrators: -0.0198 , -0.0457
+[INFO] [1778132126.396718120] [aic_model]: z_offset: 0.1816
+[INFO] [1778132126.397986084] [aic_model]: pfrac: 1.0 xy_error: -0.00227 0.00615   integrators: -0.0221 , -0.0395
+[INFO] [1778132126.446819910] [aic_model]: z_offset: 0.1808
+[INFO] [1778132126.448098244] [aic_model]: pfrac: 1.0 xy_error: -0.00228 0.00622   integrators: -0.0244 , -0.0333
+[INFO] [1778132126.496706839] [aic_model]: z_offset: 0.18
+[INFO] [1778132126.497701691] [aic_model]: pfrac: 1.0 xy_error: -0.00226 0.0062   integrators: -0.0266 , -0.0271
+[INFO] [1778132126.546715164] [aic_model]: z_offset: 0.1792
+[INFO] [1778132126.547957691] [aic_model]: pfrac: 1.0 xy_error: -0.00217 0.00613   integrators: -0.0288 , -0.021
+[INFO] [1778132126.596764918] [aic_model]: z_offset: 0.1784
+[INFO] [1778132126.597992757] [aic_model]: pfrac: 1.0 xy_error: -0.00206 0.00596   integrators: -0.0309 , -0.015
+[INFO] [1778132126.646736805] [aic_model]: z_offset: 0.1776
+[INFO] [1778132126.647955216] [aic_model]: pfrac: 1.0 xy_error: -0.0019 0.00569   integrators: -0.0328 , -0.00933
+[INFO] [1778132126.696783072] [aic_model]: z_offset: 0.1768
+[INFO] [1778132126.697986395] [aic_model]: pfrac: 1.0 xy_error: -0.00169 0.00537   integrators: -0.0345 , -0.00395
+[INFO] [1778132126.746704926] [aic_model]: z_offset: 0.176
+[INFO] [1778132126.747928667] [aic_model]: pfrac: 1.0 xy_error: -0.00145 0.005   integrators: -0.0359 , 0.00105
+[INFO] [1778132126.796742686] [aic_model]: z_offset: 0.1752
+[INFO] [1778132126.798024165] [aic_model]: pfrac: 1.0 xy_error: -0.00121 0.00458   integrators: -0.0371 , 0.00562
+[INFO] [1778132126.846731205] [aic_model]: z_offset: 0.1744
+[INFO] [1778132126.847934628] [aic_model]: pfrac: 1.0 xy_error: -0.000953 0.00407   integrators: -0.0381 , 0.0097
+[INFO] [1778132126.896731936] [aic_model]: z_offset: 0.1736
+[INFO] [1778132126.897746977] [aic_model]: pfrac: 1.0 xy_error: -0.000709 0.00351   integrators: -0.0388 , 0.0132
+[INFO] [1778132126.946826453] [aic_model]: z_offset: 0.1728
+[INFO] [1778132126.947480608] [aic_model]: pfrac: 1.0 xy_error: -0.000454 0.00293   integrators: -0.0392 , 0.0161
+[INFO] [1778132126.996756923] [aic_model]: z_offset: 0.172
+[INFO] [1778132126.997916224] [aic_model]: pfrac: 1.0 xy_error: -0.000181 0.00234   integrators: -0.0394 , 0.0185
+[INFO] [1778132127.046761332] [aic_model]: z_offset: 0.1712
+[INFO] [1778132127.048025228] [aic_model]: pfrac: 1.0 xy_error: 7.84e-05 0.00174   integrators: -0.0393 , 0.0202
+[INFO] [1778132127.096799142] [aic_model]: z_offset: 0.1704
+[INFO] [1778132127.098611505] [aic_model]: pfrac: 1.0 xy_error: 0.000339 0.00113   integrators: -0.039 , 0.0213
+[INFO] [1778132127.148750816] [aic_model]: z_offset: 0.1696
+[INFO] [1778132127.150348518] [aic_model]: pfrac: 1.0 xy_error: 0.00059 0.000524   integrators: -0.0384 , 0.0219
+[INFO] [1778132127.199792256] [aic_model]: z_offset: 0.1688
+[INFO] [1778132127.200566586] [aic_model]: pfrac: 1.0 xy_error: 0.000851 -6.01e-05   integrators: -0.0376 , 0.0218
+[INFO] [1778132127.250718671] [aic_model]: z_offset: 0.168
+[INFO] [1778132127.251941019] [aic_model]: pfrac: 1.0 xy_error: 0.00108 -0.000616   integrators: -0.0365 , 0.0212
+[INFO] [1778132127.294064052] [aic_model]: insert_cable execute loop
+[INFO] [1778132127.300815322] [aic_model]: z_offset: 0.1672
+[INFO] [1778132127.301286464] [aic_model]: pfrac: 1.0 xy_error: 0.00128 -0.00116   integrators: -0.0352 , 0.02
+[INFO] [1778132127.350720384] [aic_model]: z_offset: 0.1664
+[INFO] [1778132127.351102470] [aic_model]: pfrac: 1.0 xy_error: 0.00146 -0.00169   integrators: -0.0337 , 0.0183
+[INFO] [1778132127.400718210] [aic_model]: z_offset: 0.1656
+[INFO] [1778132127.402018555] [aic_model]: pfrac: 1.0 xy_error: 0.00162 -0.00215   integrators: -0.0321 , 0.0162
+[INFO] [1778132127.450728439] [aic_model]: z_offset: 0.1648
+[INFO] [1778132127.451674631] [aic_model]: pfrac: 1.0 xy_error: 0.00176 -0.00257   integrators: -0.0304 , 0.0136
+[INFO] [1778132127.500716006] [aic_model]: z_offset: 0.164
+[INFO] [1778132127.501920712] [aic_model]: pfrac: 1.0 xy_error: 0.00187 -0.00292   integrators: -0.0285 , 0.0107
+[INFO] [1778132127.550743698] [aic_model]: z_offset: 0.1632
+[INFO] [1778132127.552020539] [aic_model]: pfrac: 1.0 xy_error: 0.00195 -0.00322   integrators: -0.0265 , 0.00748
+[INFO] [1778132127.600859405] [aic_model]: z_offset: 0.1624
+[INFO] [1778132127.601412370] [aic_model]: pfrac: 1.0 xy_error: 0.00197 -0.00345   integrators: -0.0246 , 0.00403
+[INFO] [1778132127.650706178] [aic_model]: z_offset: 0.1616
+[INFO] [1778132127.651949145] [aic_model]: pfrac: 1.0 xy_error: 0.00198 -0.00363   integrators: -0.0226 , 0.000402
+[INFO] [1778132127.700698904] [aic_model]: z_offset: 0.1608
+[INFO] [1778132127.701325217] [aic_model]: pfrac: 1.0 xy_error: 0.00196 -0.00374   integrators: -0.0206 , -0.00333
+[INFO] [1778132127.750838055] [aic_model]: z_offset: 0.16
+[INFO] [1778132127.751492390] [aic_model]: pfrac: 1.0 xy_error: 0.00193 -0.00375   integrators: -0.0187 , -0.00709
+[INFO] [1778132127.802168947] [aic_model]: z_offset: 0.1592
+[INFO] [1778132127.802958174] [aic_model]: pfrac: 1.0 xy_error: 0.00185 -0.0037   integrators: -0.0168 , -0.0108
+[INFO] [1778132127.852734887] [aic_model]: z_offset: 0.1584
+[INFO] [1778132127.853481544] [aic_model]: pfrac: 1.0 xy_error: 0.00177 -0.00359   integrators: -0.0151 , -0.0144
+[INFO] [1778132127.902735698] [aic_model]: z_offset: 0.1576
+[INFO] [1778132127.904052954] [aic_model]: pfrac: 1.0 xy_error: 0.00165 -0.00348   integrators: -0.0134 , -0.0179
+[INFO] [1778132127.952688109] [aic_model]: z_offset: 0.1568
+[INFO] [1778132127.953073801] [aic_model]: pfrac: 1.0 xy_error: 0.00152 -0.00328   integrators: -0.0119 , -0.0211
+[INFO] [1778132128.002695453] [aic_model]: z_offset: 0.156
+[INFO] [1778132128.003873388] [aic_model]: pfrac: 1.0 xy_error: 0.00142 -0.00305   integrators: -0.0105 , -0.0242
+[INFO] [1778132128.052736520] [aic_model]: z_offset: 0.1552
+[INFO] [1778132128.054004945] [aic_model]: pfrac: 1.0 xy_error: 0.00129 -0.00278   integrators: -0.00919 , -0.027
+[INFO] [1778132128.102790220] [aic_model]: z_offset: 0.1544
+[INFO] [1778132128.104427265] [aic_model]: pfrac: 1.0 xy_error: 0.00116 -0.00251   integrators: -0.00803 , -0.0295
+[INFO] [1778132128.154851460] [aic_model]: z_offset: 0.1536
+[INFO] [1778132128.156150592] [aic_model]: pfrac: 1.0 xy_error: 0.000985 -0.00217   integrators: -0.00705 , -0.0316
+[INFO] [1778132128.204691931] [aic_model]: z_offset: 0.1528
+[INFO] [1778132128.205973110] [aic_model]: pfrac: 1.0 xy_error: 0.000798 -0.00184   integrators: -0.00625 , -0.0335
+[INFO] [1778132128.254773794] [aic_model]: z_offset: 0.152
+[INFO] [1778132128.256226504] [aic_model]: pfrac: 1.0 xy_error: 0.0006 -0.00152   integrators: -0.00565 , -0.035
+[INFO] [1778132128.292999531] [aic_model]: insert_cable execute loop
+[INFO] [1778132128.304783152] [aic_model]: z_offset: 0.1512
+[INFO] [1778132128.305284781] [aic_model]: pfrac: 1.0 xy_error: 0.00039 -0.00116   integrators: -0.00526 , -0.0362
+[INFO] [1778132128.354685309] [aic_model]: z_offset: 0.1504
+[INFO] [1778132128.355904912] [aic_model]: pfrac: 1.0 xy_error: 0.000209 -0.000812   integrators: -0.00505 , -0.037
+[INFO] [1778132128.404693895] [aic_model]: z_offset: 0.1496
+[INFO] [1778132128.406196939] [aic_model]: pfrac: 1.0 xy_error: 2.45e-05 -0.000469   integrators: -0.00502 , -0.0374
+[INFO] [1778132128.454705166] [aic_model]: z_offset: 0.1488
+[INFO] [1778132128.455600843] [aic_model]: pfrac: 1.0 xy_error: -0.000154 -0.000127   integrators: -0.00518 , -0.0376
+[INFO] [1778132128.504702582] [aic_model]: z_offset: 0.148
+[INFO] [1778132128.505302665] [aic_model]: pfrac: 1.0 xy_error: -0.000305 0.000199   integrators: -0.00548 , -0.0374
+[INFO] [1778132128.554716979] [aic_model]: z_offset: 0.1472
+[INFO] [1778132128.555380521] [aic_model]: pfrac: 1.0 xy_error: -0.000475 0.000501   integrators: -0.00596 , -0.0369
+[INFO] [1778132128.604702942] [aic_model]: z_offset: 0.1464
+[INFO] [1778132128.605989181] [aic_model]: pfrac: 1.0 xy_error: -0.000623 0.000795   integrators: -0.00658 , -0.0361
+[INFO] [1778132128.654753016] [aic_model]: z_offset: 0.1456
+[INFO] [1778132128.656729878] [aic_model]: pfrac: 1.0 xy_error: -0.000741 0.00106   integrators: -0.00732 , -0.035
+[INFO] [1778132128.706837739] [aic_model]: z_offset: 0.1448
+[INFO] [1778132128.707229182] [aic_model]: pfrac: 1.0 xy_error: -0.000847 0.00129   integrators: -0.00817 , -0.0337
+[INFO] [1778132128.756937346] [aic_model]: z_offset: 0.144
+[INFO] [1778132128.758087670] [aic_model]: pfrac: 1.0 xy_error: -0.000909 0.00149   integrators: -0.00908 , -0.0322
+[INFO] [1778132128.806962553] [aic_model]: z_offset: 0.1432
+[INFO] [1778132128.807447010] [aic_model]: pfrac: 1.0 xy_error: -0.000953 0.00168   integrators: -0.01 , -0.0306
+[INFO] [1778132128.856938669] [aic_model]: z_offset: 0.1424
+[INFO] [1778132128.858692893] [aic_model]: pfrac: 1.0 xy_error: -0.000996 0.00184   integrators: -0.011 , -0.0287
+[INFO] [1778132128.908740452] [aic_model]: z_offset: 0.1416
+[INFO] [1778132128.909699097] [aic_model]: pfrac: 1.0 xy_error: -0.00103 0.00193   integrators: -0.0121 , -0.0268
+[INFO] [1778132128.958753607] [aic_model]: z_offset: 0.1408
+[INFO] [1778132128.959134901] [aic_model]: pfrac: 1.0 xy_error: -0.00103 0.00199   integrators: -0.0131 , -0.0248
+[INFO] [1778132129.008790977] [aic_model]: z_offset: 0.14
+[INFO] [1778132129.009195514] [aic_model]: pfrac: 1.0 xy_error: -0.00102 0.00204   integrators: -0.0141 , -0.0228
+[INFO] [1778132129.058716658] [aic_model]: z_offset: 0.1392
+[INFO] [1778132129.059141734] [aic_model]: pfrac: 1.0 xy_error: -0.000944 0.00204   integrators: -0.0151 , -0.0207
+[INFO] [1778132129.108827035] [aic_model]: z_offset: 0.1384
+[INFO] [1778132129.109386171] [aic_model]: pfrac: 1.0 xy_error: -0.000876 0.00198   integrators: -0.0159 , -0.0187
+[INFO] [1778132129.159004627] [aic_model]: z_offset: 0.1376
+[INFO] [1778132129.160820106] [aic_model]: pfrac: 1.0 xy_error: -0.000832 0.00188   integrators: -0.0168 , -0.0169
+[INFO] [1778132129.210761226] [aic_model]: z_offset: 0.1368
+[INFO] [1778132129.211164311] [aic_model]: pfrac: 1.0 xy_error: -0.000778 0.00173   integrators: -0.0175 , -0.0151
+[INFO] [1778132129.260892412] [aic_model]: z_offset: 0.136
+[INFO] [1778132129.262018911] [aic_model]: pfrac: 1.0 xy_error: -0.000714 0.00157   integrators: -0.0183 , -0.0136
+[INFO] [1778132129.292965018] [aic_model]: insert_cable execute loop
+[INFO] [1778132129.310991838] [aic_model]: Alignment degraded (0.0183 > 0.0135), re-aligning...
+[INFO] [1778132129.312336205] [aic_model]: pfrac: 1.0 xy_error: -0.000616 0.00138   integrators: -0.0189 , -0.0122
+[INFO] [1778132129.360990776] [aic_model]: pfrac: 1.0 xy_error: -0.000519 0.00118   integrators: -0.0194 , -0.011
+[INFO] [1778132129.411134315] [aic_model]: pfrac: 1.0 xy_error: -0.000424 0.000955   integrators: -0.0198 , -0.01
+[INFO] [1778132129.461209246] [aic_model]: pfrac: 1.0 xy_error: -0.000299 0.000715   integrators: -0.0201 , -0.00932
+[INFO] [1778132129.511031653] [aic_model]: pfrac: 1.0 xy_error: -0.00017 0.00047   integrators: -0.0203 , -0.00885
+[INFO] [1778132129.560965069] [aic_model]: pfrac: 1.0 xy_error: -6.42e-05 0.000243   integrators: -0.0203 , -0.00861
+[INFO] [1778132129.610940713] [aic_model]: pfrac: 1.0 xy_error: 5.47e-05 4.33e-06   integrators: -0.0203 , -0.00861
+[INFO] [1778132129.663276116] [aic_model]: pfrac: 1.0 xy_error: 0.000148 -0.000222   integrators: -0.0201 , -0.00883
+[INFO] [1778132129.713642762] [aic_model]: pfrac: 1.0 xy_error: 0.00023 -0.000451   integrators: -0.0199 , -0.00928
+[INFO] [1778132129.764637675] [aic_model]: pfrac: 1.0 xy_error: 0.00033 -0.000646   integrators: -0.0196 , -0.00992
+[INFO] [1778132129.814791723] [aic_model]: z_offset: 0.1352
+[INFO] [1778132129.815213213] [aic_model]: pfrac: 1.0 xy_error: 0.000437 -0.000842   integrators: -0.0191 , -0.0108
+[INFO] [1778132129.864898534] [aic_model]: z_offset: 0.1344
+[INFO] [1778132129.865952517] [aic_model]: pfrac: 1.0 xy_error: 0.00053 -0.000994   integrators: -0.0186 , -0.0118
+[INFO] [1778132129.914812733] [aic_model]: z_offset: 0.1336
+[INFO] [1778132129.916112797] [aic_model]: pfrac: 1.0 xy_error: 0.000616 -0.00113   integrators: -0.018 , -0.0129
+[INFO] [1778132129.964772738] [aic_model]: z_offset: 0.1328
+[INFO] [1778132129.965208895] [aic_model]: pfrac: 1.0 xy_error: 0.0007 -0.00123   integrators: -0.0173 , -0.0141
+[INFO] [1778132130.014741640] [aic_model]: z_offset: 0.132
+[INFO] [1778132130.015129947] [aic_model]: pfrac: 1.0 xy_error: 0.000771 -0.0013   integrators: -0.0165 , -0.0154
+[INFO] [1778132130.064806622] [aic_model]: z_offset: 0.1312
+[INFO] [1778132130.066272166] [aic_model]: pfrac: 1.0 xy_error: 0.000795 -0.00134   integrators: -0.0157 , -0.0168
+[INFO] [1778132130.114827121] [aic_model]: z_offset: 0.1304
+[INFO] [1778132130.115349409] [aic_model]: pfrac: 1.0 xy_error: 0.000806 -0.00138   integrators: -0.0149 , -0.0181
+[INFO] [1778132130.166997915] [aic_model]: z_offset: 0.1296
+[INFO] [1778132130.168607538] [aic_model]: pfrac: 1.0 xy_error: 0.000805 -0.00138   integrators: -0.0141 , -0.0195
+[INFO] [1778132130.218906829] [aic_model]: z_offset: 0.1288
+[INFO] [1778132130.220179642] [aic_model]: pfrac: 1.0 xy_error: 0.000786 -0.00136   integrators: -0.0133 , -0.0209
+[INFO] [1778132130.268804377] [aic_model]: z_offset: 0.128
+[INFO] [1778132130.269835728] [aic_model]: pfrac: 1.0 xy_error: 0.000736 -0.00134   integrators: -0.0126 , -0.0222
+[INFO] [1778132130.292995087] [aic_model]: insert_cable execute loop
+[INFO] [1778132130.318728726] [aic_model]: z_offset: 0.1272
+[INFO] [1778132130.319114107] [aic_model]: pfrac: 1.0 xy_error: 0.000687 -0.0013   integrators: -0.0119 , -0.0235
+[INFO] [1778132130.368728465] [aic_model]: z_offset: 0.1264
+[INFO] [1778132130.369620676] [aic_model]: pfrac: 1.0 xy_error: 0.000633 -0.00124   integrators: -0.0113 , -0.0248
+[INFO] [1778132130.418726081] [aic_model]: z_offset: 0.1256
+[INFO] [1778132130.420033258] [aic_model]: pfrac: 1.0 xy_error: 0.000567 -0.00117   integrators: -0.0107 , -0.026
+[INFO] [1778132130.468858509] [aic_model]: z_offset: 0.1248
+[INFO] [1778132130.469365078] [aic_model]: pfrac: 1.0 xy_error: 0.000528 -0.00108   integrators: -0.0102 , -0.027
+[INFO] [1778132130.518778179] [aic_model]: z_offset: 0.124
+[INFO] [1778132130.519352424] [aic_model]: pfrac: 1.0 xy_error: 0.000469 -0.000984   integrators: -0.00972 , -0.028
+[INFO] [1778132130.568847008] [aic_model]: z_offset: 0.1232
+[INFO] [1778132130.569311928] [aic_model]: pfrac: 1.0 xy_error: 0.000398 -0.000891   integrators: -0.00932 , -0.0289
+[INFO] [1778132130.618895629] [aic_model]: z_offset: 0.1224
+[INFO] [1778132130.619409802] [aic_model]: pfrac: 1.0 xy_error: 0.00032 -0.000761   integrators: -0.009 , -0.0297
+[INFO] [1778132130.668794300] [aic_model]: z_offset: 0.1216
+[INFO] [1778132130.670432527] [aic_model]: pfrac: 1.0 xy_error: 0.00026 -0.000632   integrators: -0.00874 , -0.0303
+[INFO] [1778132130.718855885] [aic_model]: z_offset: 0.1208
+[INFO] [1778132130.720414834] [aic_model]: pfrac: 1.0 xy_error: 0.000196 -0.000494   integrators: -0.00854 , -0.0308
+[INFO] [1778132130.768760947] [aic_model]: z_offset: 0.12
+[INFO] [1778132130.770300490] [aic_model]: pfrac: 1.0 xy_error: 0.000138 -0.000387   integrators: -0.00841 , -0.0312
+[INFO] [1778132130.818807785] [aic_model]: z_offset: 0.1192
+[INFO] [1778132130.820549085] [aic_model]: pfrac: 1.0 xy_error: 9.69e-05 -0.000233   integrators: -0.00831 , -0.0314
+[INFO] [1778132130.868774914] [aic_model]: z_offset: 0.1184
+[INFO] [1778132130.869956686] [aic_model]: pfrac: 1.0 xy_error: 7.55e-05 -8.36e-05   integrators: -0.00823 , -0.0315
+[INFO] [1778132130.918774934] [aic_model]: z_offset: 0.1176
+[INFO] [1778132130.919198747] [aic_model]: pfrac: 1.0 xy_error: 7.72e-05 7.04e-05   integrators: -0.00816 , -0.0314
+[INFO] [1778132130.968887485] [aic_model]: z_offset: 0.1168
+[INFO] [1778132130.969757333] [aic_model]: pfrac: 1.0 xy_error: 5.88e-05 0.000197   integrators: -0.0081 , -0.0312
+[INFO] [1778132131.018916219] [aic_model]: z_offset: 0.116
+[INFO] [1778132131.020590794] [aic_model]: pfrac: 1.0 xy_error: 3.66e-05 0.000322   integrators: -0.00806 , -0.0309
+[INFO] [1778132131.068807135] [aic_model]: z_offset: 0.1152
+[INFO] [1778132131.070322802] [aic_model]: pfrac: 1.0 xy_error: 1.14e-05 0.000438   integrators: -0.00805 , -0.0305
+[INFO] [1778132131.119114430] [aic_model]: z_offset: 0.1144
+[INFO] [1778132131.121062147] [aic_model]: pfrac: 1.0 xy_error: -1.74e-05 0.000531   integrators: -0.00807 , -0.0299
+[INFO] [1778132131.177955112] [aic_model]: z_offset: 0.1136
+[INFO] [1778132131.179245508] [aic_model]: pfrac: 1.0 xy_error: -7.1e-05 0.000614   integrators: -0.00814 , -0.0293
+[INFO] [1778132131.228793251] [aic_model]: z_offset: 0.1128
+[INFO] [1778132131.230108554] [aic_model]: pfrac: 1.0 xy_error: -0.000147 0.00068   integrators: -0.00829 , -0.0286
+[INFO] [1778132131.278741024] [aic_model]: z_offset: 0.112
+[INFO] [1778132131.279312654] [aic_model]: pfrac: 1.0 xy_error: -0.00021 0.000703   integrators: -0.0085 , -0.0279
+[INFO] [1778132131.293068317] [aic_model]: insert_cable execute loop
+[INFO] [1778132131.328857582] [aic_model]: z_offset: 0.1112
+[INFO] [1778132131.329274282] [aic_model]: pfrac: 1.0 xy_error: -0.00027 0.000711   integrators: -0.00877 , -0.0272
+[INFO] [1778132131.379723333] [aic_model]: z_offset: 0.1104
+[INFO] [1778132131.380780212] [aic_model]: pfrac: 1.0 xy_error: -0.000304 0.000719   integrators: -0.00907 , -0.0265
+[INFO] [1778132131.430715511] [aic_model]: z_offset: 0.1096
+[INFO] [1778132131.431118115] [aic_model]: pfrac: 1.0 xy_error: -0.000321 0.000723   integrators: -0.00939 , -0.0258
+[INFO] [1778132131.480699060] [aic_model]: z_offset: 0.1088
+[INFO] [1778132131.481085614] [aic_model]: pfrac: 1.0 xy_error: -0.000332 0.000709   integrators: -0.00972 , -0.0251
+[INFO] [1778132131.531122713] [aic_model]: z_offset: 0.108
+[INFO] [1778132131.532559002] [aic_model]: pfrac: 1.0 xy_error: -0.000304 0.000679   integrators: -0.01 , -0.0244
+[INFO] [1778132131.582766030] [aic_model]: z_offset: 0.1072
+[INFO] [1778132131.583137967] [aic_model]: pfrac: 1.0 xy_error: -0.000269 0.000649   integrators: -0.0103 , -0.0238
+[INFO] [1778132131.632799112] [aic_model]: z_offset: 0.1064
+[INFO] [1778132131.633180967] [aic_model]: pfrac: 1.0 xy_error: -0.000253 0.000612   integrators: -0.0105 , -0.0231
+[INFO] [1778132131.682769597] [aic_model]: z_offset: 0.1056
+[INFO] [1778132131.683165258] [aic_model]: pfrac: 1.0 xy_error: -0.000204 0.000579   integrators: -0.0108 , -0.0226
+[INFO] [1778132131.732731586] [aic_model]: z_offset: 0.1048
+[INFO] [1778132131.733110967] [aic_model]: pfrac: 1.0 xy_error: -0.000152 0.00054   integrators: -0.0109 , -0.022
+[INFO] [1778132131.782727920] [aic_model]: z_offset: 0.104
+[INFO] [1778132131.783143287] [aic_model]: pfrac: 1.0 xy_error: -0.000112 0.000486   integrators: -0.011 , -0.0215
+[INFO] [1778132131.832714715] [aic_model]: z_offset: 0.1032
+[INFO] [1778132131.833112510] [aic_model]: pfrac: 1.0 xy_error: -7.53e-05 0.00041   integrators: -0.0111 , -0.0211
+[INFO] [1778132131.882953122] [aic_model]: z_offset: 0.1024
+[INFO] [1778132131.883817690] [aic_model]: pfrac: 1.0 xy_error: -3.74e-05 0.000349   integrators: -0.0111 , -0.0208
+[INFO] [1778132131.932710538] [aic_model]: z_offset: 0.1016
+[INFO] [1778132131.933127659] [aic_model]: pfrac: 1.0 xy_error: 8.91e-06 0.000285   integrators: -0.0111 , -0.0205
+[INFO] [1778132131.982881137] [aic_model]: z_offset: 0.1008
+[INFO] [1778132131.983359413] [aic_model]: pfrac: 1.0 xy_error: 1.52e-05 0.000216   integrators: -0.0111 , -0.0203
+[INFO] [1778132132.032720727] [aic_model]: z_offset: 0.1
+[INFO] [1778132132.033147446] [aic_model]: pfrac: 1.0 xy_error: 2.64e-05 0.000137   integrators: -0.0111 , -0.0201
+[INFO] [1778132132.082864807] [aic_model]: z_offset: 0.0992
+[INFO] [1778132132.083329036] [aic_model]: pfrac: 1.0 xy_error: 4.54e-05 4.89e-05   integrators: -0.011 , -0.0201
+[INFO] [1778132132.135001157] [aic_model]: z_offset: 0.0984
+[INFO] [1778132132.136735814] [aic_model]: pfrac: 1.0 xy_error: 7.57e-05 -2.7e-05   integrators: -0.011 , -0.0201
+[INFO] [1778132132.186711870] [aic_model]: z_offset: 0.0976
+[INFO] [1778132132.187097422] [aic_model]: pfrac: 1.0 xy_error: 0.000147 -0.000153   integrators: -0.0108 , -0.0203
+[INFO] [1778132132.236741095] [aic_model]: z_offset: 0.0968
+[INFO] [1778132132.237292778] [aic_model]: pfrac: 1.0 xy_error: 0.000185 -0.000262   integrators: -0.0106 , -0.0205
+[INFO] [1778132132.286702312] [aic_model]: z_offset: 0.096
+[INFO] [1778132132.287726349] [aic_model]: pfrac: 1.0 xy_error: 0.00023 -0.000364   integrators: -0.0104 , -0.0209
+[INFO] [1778132132.293039537] [aic_model]: insert_cable execute loop
+[INFO] [1778132132.336732218] [aic_model]: z_offset: 0.0952
+[INFO] [1778132132.337127859] [aic_model]: pfrac: 1.0 xy_error: 0.000268 -0.000462   integrators: -0.0101 , -0.0214
+[INFO] [1778132132.386815164] [aic_model]: z_offset: 0.0944
+[INFO] [1778132132.387285084] [aic_model]: pfrac: 1.0 xy_error: 0.000311 -0.000531   integrators: -0.00982 , -0.0219
+[INFO] [1778132132.436868694] [aic_model]: z_offset: 0.0936
+[INFO] [1778132132.437631032] [aic_model]: pfrac: 1.0 xy_error: 0.000361 -0.000573   integrators: -0.00946 , -0.0225
+[INFO] [1778132132.486772815] [aic_model]: z_offset: 0.0928
+[INFO] [1778132132.487162755] [aic_model]: pfrac: 1.0 xy_error: 0.000393 -0.000617   integrators: -0.00906 , -0.0231
+[INFO] [1778132132.536707493] [aic_model]: z_offset: 0.092
+[INFO] [1778132132.537111249] [aic_model]: pfrac: 1.0 xy_error: 0.000423 -0.000644   integrators: -0.00864 , -0.0237
+[INFO] [1778132132.586724926] [aic_model]: z_offset: 0.0912
+[INFO] [1778132132.587119474] [aic_model]: pfrac: 1.0 xy_error: 0.000443 -0.000658   integrators: -0.0082 , -0.0244
+[INFO] [1778132132.636687756] [aic_model]: z_offset: 0.0904
+[INFO] [1778132132.637065043] [aic_model]: pfrac: 1.0 xy_error: 0.000458 -0.00064   integrators: -0.00774 , -0.025
+[INFO] [1778132132.686715048] [aic_model]: z_offset: 0.0896
+[INFO] [1778132132.687132519] [aic_model]: pfrac: 1.0 xy_error: 0.000458 -0.000613   integrators: -0.00728 , -0.0256
+[INFO] [1778132132.736747388] [aic_model]: z_offset: 0.0888
+[INFO] [1778132132.737279064] [aic_model]: pfrac: 1.0 xy_error: 0.000435 -0.000593   integrators: -0.00685 , -0.0262
+[INFO] [1778132132.786711441] [aic_model]: z_offset: 0.088
+[INFO] [1778132132.787250931] [aic_model]: pfrac: 1.0 xy_error: 0.000417 -0.000568   integrators: -0.00643 , -0.0268
+[INFO] [1778132132.836850812] [aic_model]: z_offset: 0.0872
+[INFO] [1778132132.838062521] [aic_model]: pfrac: 1.0 xy_error: 0.000421 -0.000522   integrators: -0.00601 , -0.0273
+[INFO] [1778132132.886795148] [aic_model]: z_offset: 0.0864
+[INFO] [1778132132.887996828] [aic_model]: pfrac: 1.0 xy_error: 0.000402 -0.00049   integrators: -0.00561 , -0.0278
+[INFO] [1778132132.936738552] [aic_model]: z_offset: 0.0856
+[INFO] [1778132132.937631685] [aic_model]: pfrac: 1.0 xy_error: 0.000344 -0.000433   integrators: -0.00526 , -0.0282
+[INFO] [1778132132.986728414] [aic_model]: z_offset: 0.0848
+[INFO] [1778132132.987280177] [aic_model]: pfrac: 1.0 xy_error: 0.000289 -0.000405   integrators: -0.00497 , -0.0287
+[INFO] [1778132133.036787965] [aic_model]: z_offset: 0.084
+[INFO] [1778132133.037190669] [aic_model]: pfrac: 1.0 xy_error: 0.000233 -0.000334   integrators: -0.00474 , -0.029
+[INFO] [1778132133.086857396] [aic_model]: z_offset: 0.0832
+[INFO] [1778132133.087833884] [aic_model]: pfrac: 1.0 xy_error: 0.000176 -0.000293   integrators: -0.00456 , -0.0293
+[INFO] [1778132133.136993240] [aic_model]: z_offset: 0.0824
+[INFO] [1778132133.138876997] [aic_model]: pfrac: 1.0 xy_error: 0.000129 -0.000234   integrators: -0.00443 , -0.0295
+[INFO] [1778132133.188724522] [aic_model]: z_offset: 0.0816
+[INFO] [1778132133.189239466] [aic_model]: pfrac: 1.0 xy_error: 8.62e-05 -0.000194   integrators: -0.00435 , -0.0297
+[INFO] [1778132133.238674989] [aic_model]: z_offset: 0.0808
+[INFO] [1778132133.239086099] [aic_model]: pfrac: 1.0 xy_error: 3.63e-05 -0.000158   integrators: -0.00431 , -0.0299
+[INFO] [1778132133.288726706] [aic_model]: z_offset: 0.08
+[INFO] [1778132133.289157382] [aic_model]: pfrac: 1.0 xy_error: 1.42e-06 -9.06e-05   integrators: -0.00431 , -0.03
+[INFO] [1778132133.292897395] [aic_model]: insert_cable execute loop
+[INFO] [1778132133.338814821] [aic_model]: z_offset: 0.0792
+[INFO] [1778132133.339227223] [aic_model]: pfrac: 1.0 xy_error: -7.59e-06 -2.28e-05   integrators: -0.00432 , -0.03
+[INFO] [1778132133.388762193] [aic_model]: z_offset: 0.0784
+[INFO] [1778132133.389163394] [aic_model]: pfrac: 1.0 xy_error: -2.47e-05 3.11e-05   integrators: -0.00434 , -0.0299
+[INFO] [1778132133.438724252] [aic_model]: z_offset: 0.0776
+[INFO] [1778132133.439135402] [aic_model]: pfrac: 1.0 xy_error: -1.05e-05 8.34e-05   integrators: -0.00435 , -0.0299
+[INFO] [1778132133.488730304] [aic_model]: z_offset: 0.0768
+[INFO] [1778132133.489159247] [aic_model]: pfrac: 1.0 xy_error: -1.58e-05 0.000132   integrators: -0.00437 , -0.0297
+[INFO] [1778132133.539037629] [aic_model]: z_offset: 0.076
+[INFO] [1778132133.540621675] [aic_model]: pfrac: 1.0 xy_error: -3.54e-05 0.000152   integrators: -0.0044 , -0.0296
+[INFO] [1778132133.590728295] [aic_model]: z_offset: 0.0752
+[INFO] [1778132133.591117213] [aic_model]: pfrac: 1.0 xy_error: -8.82e-05 0.000167   integrators: -0.00449 , -0.0294
+[INFO] [1778132133.641084943] [aic_model]: z_offset: 0.0744
+[INFO] [1778132133.642496926] [aic_model]: pfrac: 1.0 xy_error: -0.00016 0.000193   integrators: -0.00465 , -0.0292
+[INFO] [1778132133.693175928] [aic_model]: z_offset: 0.0736
+[INFO] [1778132133.694642493] [aic_model]: pfrac: 1.0 xy_error: -0.000182 0.000228   integrators: -0.00483 , -0.029
+[INFO] [1778132133.744694751] [aic_model]: z_offset: 0.0728
+[INFO] [1778132133.745111782] [aic_model]: pfrac: 1.0 xy_error: -0.000202 0.000265   integrators: -0.00504 , -0.0287
+[INFO] [1778132133.794718486] [aic_model]: z_offset: 0.072
+[INFO] [1778132133.795280368] [aic_model]: pfrac: 1.0 xy_error: -0.000234 0.000273   integrators: -0.00527 , -0.0285
+[INFO] [1778132133.844810068] [aic_model]: Alignment degraded (0.0285 > 0.0196), re-aligning...
+[INFO] [1778132133.845951224] [aic_model]: pfrac: 1.0 xy_error: -0.00024 0.000281   integrators: -0.00551 , -0.0282
+[INFO] [1778132133.894854842] [aic_model]: pfrac: 1.0 xy_error: -0.00024 0.000271   integrators: -0.00575 , -0.0279
+[INFO] [1778132133.944986198] [aic_model]: pfrac: 1.0 xy_error: -0.000221 0.000257   integrators: -0.00597 , -0.0276
+[INFO] [1778132133.994871784] [aic_model]: pfrac: 1.0 xy_error: -0.000189 0.000209   integrators: -0.00616 , -0.0274
+[INFO] [1778132134.045024971] [aic_model]: pfrac: 1.0 xy_error: -0.00016 0.000188   integrators: -0.00632 , -0.0272
+[INFO] [1778132134.094933510] [aic_model]: pfrac: 1.0 xy_error: -0.000116 0.000165   integrators: -0.00644 , -0.0271
+[INFO] [1778132134.144926006] [aic_model]: pfrac: 1.0 xy_error: -6.11e-05 0.000136   integrators: -0.0065 , -0.0269
+[INFO] [1778132134.196667687] [aic_model]: pfrac: 1.0 xy_error: 1.36e-05 0.000103   integrators: -0.00648 , -0.0268
+[INFO] [1778132134.246982517] [aic_model]: pfrac: 1.0 xy_error: 0.000113 5.88e-05   integrators: -0.00637 , -0.0268
+[INFO] [1778132134.292964715] [aic_model]: insert_cable execute loop
+[INFO] [1778132134.296808892] [aic_model]: pfrac: 1.0 xy_error: 0.000211 3.25e-05   integrators: -0.00616 , -0.0268
+[INFO] [1778132134.346726157] [aic_model]: z_offset: 0.0712
+[INFO] [1778132134.347127589] [aic_model]: pfrac: 1.0 xy_error: 0.000312 2e-05   integrators: -0.00585 , -0.0267
+[INFO] [1778132134.396776231] [aic_model]: z_offset: 0.0704
+[INFO] [1778132134.397311884] [aic_model]: pfrac: 1.0 xy_error: 0.000404 2.05e-05   integrators: -0.00544 , -0.0267
+[INFO] [1778132134.446742198] [aic_model]: z_offset: 0.0696
+[INFO] [1778132134.447424295] [aic_model]: pfrac: 1.0 xy_error: 0.000474 3.23e-05   integrators: -0.00497 , -0.0267
+[INFO] [1778132134.496733321] [aic_model]: z_offset: 0.0688
+[INFO] [1778132134.497105388] [aic_model]: pfrac: 1.0 xy_error: 0.000518 4.76e-05   integrators: -0.00445 , -0.0266
+[INFO] [1778132134.546720678] [aic_model]: z_offset: 0.068
+[INFO] [1778132134.547093396] [aic_model]: pfrac: 1.0 xy_error: 0.000563 5.18e-05   integrators: -0.00389 , -0.0266
+[INFO] [1778132134.596808122] [aic_model]: z_offset: 0.0672
+[INFO] [1778132134.597182162] [aic_model]: pfrac: 1.0 xy_error: 0.000579 2.89e-05   integrators: -0.00331 , -0.0265
+[INFO] [1778132134.646723634] [aic_model]: z_offset: 0.0664
+[INFO] [1778132134.647124094] [aic_model]: pfrac: 1.0 xy_error: 0.000557 2.17e-05   integrators: -0.00275 , -0.0265
+[INFO] [1778132134.696725708] [aic_model]: z_offset: 0.0656
+[INFO] [1778132134.697383570] [aic_model]: pfrac: 1.0 xy_error: 0.000536 1.87e-06   integrators: -0.00222 , -0.0265
+[INFO] [1778132134.746718575] [aic_model]: z_offset: 0.0648
+[INFO] [1778132134.747120207] [aic_model]: pfrac: 1.0 xy_error: 0.000502 -8.87e-06   integrators: -0.00171 , -0.0265
+[INFO] [1778132134.796710410] [aic_model]: z_offset: 0.064
+[INFO] [1778132134.797112372] [aic_model]: pfrac: 1.0 xy_error: 0.000449 -6.47e-06   integrators: -0.00127 , -0.0265
+[INFO] [1778132134.846741007] [aic_model]: z_offset: 0.0632
+[INFO] [1778132134.847132400] [aic_model]: pfrac: 1.0 xy_error: 0.000396 4.29e-06   integrators: -0.00087 , -0.0265
+[INFO] [1778132134.896737681] [aic_model]: z_offset: 0.0624
+[INFO] [1778132134.897161465] [aic_model]: pfrac: 1.0 xy_error: 0.00034 3.18e-05   integrators: -0.00053 , -0.0265
+[INFO] [1778132134.946702596] [aic_model]: z_offset: 0.0616
+[INFO] [1778132134.947099279] [aic_model]: pfrac: 1.0 xy_error: 0.00028 3.88e-05   integrators: -0.00025 , -0.0265
+[INFO] [1778132134.996719628] [aic_model]: z_offset: 0.0608
+[INFO] [1778132134.997092967] [aic_model]: pfrac: 1.0 xy_error: 0.000234 3.64e-05   integrators: -1.62e-05 , -0.0264
+[INFO] [1778132135.046697246] [aic_model]: z_offset: 0.06
+[INFO] [1778132135.047897343] [aic_model]: pfrac: 1.0 xy_error: 0.000201 4.29e-05   integrators: 0.000185 , -0.0264
+[INFO] [1778132135.096770664] [aic_model]: z_offset: 0.0592
+[INFO] [1778132135.097178337] [aic_model]: pfrac: 1.0 xy_error: 0.000156 3.73e-05   integrators: 0.000341 , -0.0263
+[INFO] [1778132135.146809858] [aic_model]: z_offset: 0.0584
+[INFO] [1778132135.147226117] [aic_model]: pfrac: 1.0 xy_error: 0.000127 4.39e-05   integrators: 0.000468 , -0.0263
+[INFO] [1778132135.196697498] [aic_model]: z_offset: 0.0576
+[INFO] [1778132135.197070075] [aic_model]: pfrac: 1.0 xy_error: 8.92e-05 4.88e-05   integrators: 0.000557 , -0.0263
+[INFO] [1778132135.246729227] [aic_model]: z_offset: 0.0568
+[INFO] [1778132135.247126711] [aic_model]: pfrac: 1.0 xy_error: 5.91e-05 5.16e-05   integrators: 0.000616 , -0.0262
+[INFO] [1778132135.292956234] [aic_model]: insert_cable execute loop
+[INFO] [1778132135.296681809] [aic_model]: z_offset: 0.056
+[INFO] [1778132135.297038086] [aic_model]: pfrac: 1.0 xy_error: 3.6e-05 2.63e-05   integrators: 0.000652 , -0.0262
+[INFO] [1778132135.346694222] [aic_model]: z_offset: 0.0552
+[INFO] [1778132135.347086887] [aic_model]: pfrac: 1.0 xy_error: -3.5e-07 1.84e-05   integrators: 0.000652 , -0.0262
+[INFO] [1778132135.396737002] [aic_model]: z_offset: 0.0544
+[INFO] [1778132135.397125139] [aic_model]: pfrac: 1.0 xy_error: -5.82e-05 -2.61e-05   integrators: 0.000594 , -0.0262
+[INFO] [1778132135.446759094] [aic_model]: z_offset: 0.0536
+[INFO] [1778132135.447131952] [aic_model]: pfrac: 1.0 xy_error: -0.000117 -6.04e-05   integrators: 0.000477 , -0.0262
+[INFO] [1778132135.496728217] [aic_model]: z_offset: 0.0528
+[INFO] [1778132135.497101646] [aic_model]: pfrac: 1.0 xy_error: -0.000175 -7.9e-05   integrators: 0.000302 , -0.0263
+[INFO] [1778132135.546720903] [aic_model]: z_offset: 0.052
+[INFO] [1778132135.547091998] [aic_model]: pfrac: 1.0 xy_error: -0.000224 -0.000101   integrators: 7.73e-05 , -0.0264
+[INFO] [1778132135.596698502] [aic_model]: z_offset: 0.0512
+[INFO] [1778132135.597218896] [aic_model]: pfrac: 1.0 xy_error: -0.000256 -0.000122   integrators: -0.000179 , -0.0265
+[INFO] [1778132135.646726895] [aic_model]: z_offset: 0.0504
+[INFO] [1778132135.647113378] [aic_model]: pfrac: 1.0 xy_error: -0.000273 -0.000122   integrators: -0.000451 , -0.0267
+[INFO] [1778132135.696814830] [aic_model]: z_offset: 0.0496
+[INFO] [1778132135.697269271] [aic_model]: pfrac: 1.0 xy_error: -0.000285 -0.00012   integrators: -0.000736 , -0.0268
+[INFO] [1778132135.746731143] [aic_model]: z_offset: 0.0488
+[INFO] [1778132135.747104963] [aic_model]: pfrac: 1.0 xy_error: -0.000289 -9.74e-05   integrators: -0.00103 , -0.0269
+[INFO] [1778132135.796741663] [aic_model]: z_offset: 0.048
+[INFO] [1778132135.797313484] [aic_model]: pfrac: 1.0 xy_error: -0.000256 -8.8e-05   integrators: -0.00128 , -0.027
+[INFO] [1778132135.846696930] [aic_model]: z_offset: 0.0472
+[INFO] [1778132135.847165698] [aic_model]: pfrac: 1.0 xy_error: -0.000212 -8.74e-05   integrators: -0.00149 , -0.0271
+[INFO] [1778132135.896766711] [aic_model]: z_offset: 0.0464
+[INFO] [1778132135.897146522] [aic_model]: pfrac: 1.0 xy_error: -0.000136 -5.73e-05   integrators: -0.00163 , -0.0271
+[INFO] [1778132135.946727458] [aic_model]: z_offset: 0.0456
+[INFO] [1778132135.947109292] [aic_model]: pfrac: 1.0 xy_error: -8.83e-05 -4.69e-05   integrators: -0.00172 , -0.0272
+[INFO] [1778132135.996727127] [aic_model]: z_offset: 0.0448
+[INFO] [1778132135.997110254] [aic_model]: pfrac: 1.0 xy_error: -6.36e-05 -6.4e-05   integrators: -0.00178 , -0.0272
+[INFO] [1778132136.046755891] [aic_model]: z_offset: 0.044
+[INFO] [1778132136.047117288] [aic_model]: pfrac: 1.0 xy_error: -5.73e-05 -7.81e-05   integrators: -0.00184 , -0.0273
+[INFO] [1778132136.096855488] [aic_model]: z_offset: 0.0432
+[INFO] [1778132136.097869536] [aic_model]: pfrac: 1.0 xy_error: -2.06e-05 -7.43e-05   integrators: -0.00186 , -0.0274
+[INFO] [1778132136.146735033] [aic_model]: z_offset: 0.0424
+[INFO] [1778132136.147122528] [aic_model]: pfrac: 1.0 xy_error: 1.72e-05 -5.6e-05   integrators: -0.00184 , -0.0274
+[INFO] [1778132136.196765159] [aic_model]: z_offset: 0.0416
+[INFO] [1778132136.197152394] [aic_model]: pfrac: 1.0 xy_error: 5.78e-05 -4.61e-05   integrators: -0.00178 , -0.0275
+[INFO] [1778132136.246725075] [aic_model]: z_offset: 0.0408
+[INFO] [1778132136.247092663] [aic_model]: pfrac: 1.0 xy_error: 0.000105 -4.82e-05   integrators: -0.00168 , -0.0275
+[INFO] [1778132136.293015400] [aic_model]: insert_cable execute loop
+[INFO] [1778132136.296700970] [aic_model]: z_offset: 0.04
+[INFO] [1778132136.297073657] [aic_model]: pfrac: 1.0 xy_error: 0.000144 -3.48e-05   integrators: -0.00153 , -0.0276
+[INFO] [1778132136.346786610] [aic_model]: z_offset: 0.0392
+[INFO] [1778132136.347221625] [aic_model]: pfrac: 1.0 xy_error: 0.000193 -2.09e-05   integrators: -0.00134 , -0.0276
+[INFO] [1778132136.396696642] [aic_model]: z_offset: 0.0384
+[INFO] [1778132136.397080250] [aic_model]: pfrac: 1.0 xy_error: 0.000204 -2.63e-05   integrators: -0.00114 , -0.0276
+[INFO] [1778132136.446724986] [aic_model]: z_offset: 0.0376
+[INFO] [1778132136.447124173] [aic_model]: pfrac: 1.0 xy_error: 0.000197 -5.44e-05   integrators: -0.00094 , -0.0277
+[INFO] [1778132136.496786711] [aic_model]: z_offset: 0.0368
+[INFO] [1778132136.497173676] [aic_model]: pfrac: 1.0 xy_error: 0.000198 -8.94e-05   integrators: -0.000742 , -0.0278
+[INFO] [1778132136.547915244] [aic_model]: z_offset: 0.036
+[INFO] [1778132136.548553900] [aic_model]: pfrac: 1.0 xy_error: 0.000178 -0.000174   integrators: -0.000564 , -0.0279
+[INFO] [1778132136.598225596] [aic_model]: z_offset: 0.0352
+[INFO] [1778132136.598926308] [aic_model]: pfrac: 1.0 xy_error: 0.000168 -0.000187   integrators: -0.000396 , -0.0281
+[INFO] [1778132136.648736042] [aic_model]: z_offset: 0.0344
+[INFO] [1778132136.649107627] [aic_model]: pfrac: 1.0 xy_error: 0.00017 -0.000184   integrators: -0.000226 , -0.0283
+[INFO] [1778132136.698733227] [aic_model]: z_offset: 0.0336
+[INFO] [1778132136.699110724] [aic_model]: pfrac: 1.0 xy_error: 0.000172 -0.000181   integrators: -5.45e-05 , -0.0285
+[INFO] [1778132136.748759466] [aic_model]: z_offset: 0.0328
+[INFO] [1778132136.749289799] [aic_model]: pfrac: 1.0 xy_error: 0.000174 -0.000177   integrators: 0.00012 , -0.0287
+[INFO] [1778132136.798775426] [aic_model]: z_offset: 0.032
+[INFO] [1778132136.799170065] [aic_model]: pfrac: 1.0 xy_error: 0.000177 -0.000173   integrators: 0.000297 , -0.0288
+[INFO] [1778132136.848748857] [aic_model]: z_offset: 0.0312
+[INFO] [1778132136.849177239] [aic_model]: pfrac: 1.0 xy_error: 0.000181 -0.000168   integrators: 0.000478 , -0.029
+[INFO] [1778132136.898705416] [aic_model]: z_offset: 0.0304
+[INFO] [1778132136.899071892] [aic_model]: pfrac: 1.0 xy_error: 0.000187 -0.000168   integrators: 0.000665 , -0.0292
+[INFO] [1778132136.948750711] [aic_model]: z_offset: 0.0296
+[INFO] [1778132136.949161460] [aic_model]: pfrac: 1.0 xy_error: 0.000189 -0.000165   integrators: 0.000854 , -0.0293
+[INFO] [1778132136.998780707] [aic_model]: z_offset: 0.0288
+[INFO] [1778132136.999180676] [aic_model]: pfrac: 1.0 xy_error: 0.000192 -0.000163   integrators: 0.00105 , -0.0295
+[INFO] [1778132137.048710206] [aic_model]: z_offset: 0.028
+[INFO] [1778132137.049832427] [aic_model]: pfrac: 1.0 xy_error: 0.000194 -0.000161   integrators: 0.00124 , -0.0297
+[INFO] [1778132137.099021959] [aic_model]: z_offset: 0.0272
+[INFO] [1778132137.099436576] [aic_model]: pfrac: 1.0 xy_error: 0.000197 -0.000159   integrators: 0.00144 , -0.0298
+[INFO] [1778132137.148742387] [aic_model]: z_offset: 0.0264
+[INFO] [1778132137.149118080] [aic_model]: pfrac: 1.0 xy_error: 0.0002 -0.000157   integrators: 0.00164 , -0.03
+[INFO] [1778132137.198740443] [aic_model]: z_offset: 0.0256
+[INFO] [1778132137.199120635] [aic_model]: pfrac: 1.0 xy_error: 0.000203 -0.000154   integrators: 0.00184 , -0.0301
+[INFO] [1778132137.248725185] [aic_model]: z_offset: 0.0248
+[INFO] [1778132137.249103132] [aic_model]: pfrac: 1.0 xy_error: 0.000206 -0.000151   integrators: 0.00205 , -0.0303
+[INFO] [1778132137.293012079] [aic_model]: insert_cable execute loop
+[INFO] [1778132137.298687334] [aic_model]: z_offset: 0.024
+[INFO] [1778132137.299049723] [aic_model]: pfrac: 1.0 xy_error: 0.000209 -0.000148   integrators: 0.00226 , -0.0304
+[INFO] [1778132137.348769388] [aic_model]: z_offset: 0.0232
+[INFO] [1778132137.349143569] [aic_model]: pfrac: 1.0 xy_error: 0.000213 -0.000146   integrators: 0.00247 , -0.0306
+[INFO] [1778132137.398815475] [aic_model]: z_offset: 0.0224
+[INFO] [1778132137.399692016] [aic_model]: pfrac: 1.0 xy_error: 0.000215 -0.000143   integrators: 0.00268 , -0.0307
+[INFO] [1778132137.448778426] [aic_model]: z_offset: 0.0216
+[INFO] [1778132137.449164959] [aic_model]: pfrac: 1.0 xy_error: 0.000219 -0.00014   integrators: 0.0029 , -0.0309
+[INFO] [1778132137.498711731] [aic_model]: z_offset: 0.0208
+[INFO] [1778132137.499069160] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000139   integrators: 0.00312 , -0.031
+[INFO] [1778132137.548752608] [aic_model]: z_offset: 0.02
+[INFO] [1778132137.549115357] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00335 , -0.0311
+[INFO] [1778132137.598917307] [aic_model]: z_offset: 0.0192
+[INFO] [1778132137.599288842] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00357 , -0.0313
+[INFO] [1778132137.648743762] [aic_model]: z_offset: 0.0184
+[INFO] [1778132137.649129464] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00379 , -0.0314
+[INFO] [1778132137.698735687] [aic_model]: z_offset: 0.0176
+[INFO] [1778132137.699107573] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00401 , -0.0316
+[INFO] [1778132137.748712494] [aic_model]: z_offset: 0.0168
+[INFO] [1778132137.749087346] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00423 , -0.0317
+[INFO] [1778132137.798686455] [aic_model]: z_offset: 0.016
+[INFO] [1778132137.799064764] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00445 , -0.0318
+[INFO] [1778132137.848741930] [aic_model]: z_offset: 0.0152
+[INFO] [1778132137.849120709] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.000141   integrators: 0.00468 , -0.032
+[INFO] [1778132137.898831919] [aic_model]: z_offset: 0.0144
+[INFO] [1778132137.899201761] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.0049 , -0.0321
+[INFO] [1778132137.948749685] [aic_model]: z_offset: 0.0136
+[INFO] [1778132137.949140406] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00512 , -0.0323
+[INFO] [1778132137.998736711] [aic_model]: z_offset: 0.0128
+[INFO] [1778132137.999117534] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00534 , -0.0324
+[INFO] [1778132138.048872926] [aic_model]: z_offset: 0.012
+[INFO] [1778132138.049249771] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00556 , -0.0325
+[INFO] [1778132138.098869480] [aic_model]: z_offset: 0.0112
+[INFO] [1778132138.099258208] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00579 , -0.0327
+[INFO] [1778132138.148873939] [aic_model]: z_offset: 0.0104
+[INFO] [1778132138.149273837] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00601 , -0.0328
+[INFO] [1778132138.198723046] [aic_model]: z_offset: 0.0096
+[INFO] [1778132138.199108909] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00623 , -0.033
+[INFO] [1778132138.248954440] [aic_model]: z_offset: 0.0088
+[INFO] [1778132138.249473792] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00645 , -0.0331
+[INFO] [1778132138.293104217] [aic_model]: insert_cable execute loop
+[INFO] [1778132138.298736202] [aic_model]: z_offset: 0.008
+[INFO] [1778132138.299108919] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00667 , -0.0332
+[INFO] [1778132138.348798709] [aic_model]: z_offset: 0.0072
+[INFO] [1778132138.349186525] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.0069 , -0.0334
+[INFO] [1778132138.398691829] [aic_model]: z_offset: 0.0064
+[INFO] [1778132138.399059848] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.00014   integrators: 0.00712 , -0.0335
+[INFO] [1778132138.448809279] [aic_model]: z_offset: 0.0056
+[INFO] [1778132138.452169380] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.00014   integrators: 0.00734 , -0.0337
+[INFO] [1778132138.500762487] [aic_model]: z_offset: 0.0048
+[INFO] [1778132138.501137829] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.00014   integrators: 0.00756 , -0.0338
+[INFO] [1778132138.550740105] [aic_model]: z_offset: 0.004
+[INFO] [1778132138.551121930] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.00014   integrators: 0.00778 , -0.0339
+[INFO] [1778132138.600743792] [aic_model]: z_offset: 0.0032
+[INFO] [1778132138.601120026] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.00014   integrators: 0.008 , -0.0341
+[INFO] [1778132138.650801671] [aic_model]: z_offset: 0.0024
+[INFO] [1778132138.651179689] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.00014   integrators: 0.00822 , -0.0342
+[INFO] [1778132138.700712184] [aic_model]: z_offset: 0.0016
+[INFO] [1778132138.701092646] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.00844 , -0.0344
+[INFO] [1778132138.750995965] [aic_model]: z_offset: 0.0008
+[INFO] [1778132138.751381547] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.00867 , -0.0345
+[INFO] [1778132138.800791703] [aic_model]: z_offset: 4.5046e-09
+[INFO] [1778132138.801162117] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.00889 , -0.0346
+[INFO] [1778132138.850774902] [aic_model]: z_offset: -0.0008
+[INFO] [1778132138.851167998] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.00911 , -0.0348
+[INFO] [1778132138.900707797] [aic_model]: z_offset: -0.0016
+[INFO] [1778132138.901097436] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.00933 , -0.0349
+[INFO] [1778132138.950729327] [aic_model]: z_offset: -0.0024
+[INFO] [1778132138.951106994] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.00955 , -0.0351
+[INFO] [1778132139.000710552] [aic_model]: z_offset: -0.0032
+[INFO] [1778132139.001086867] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.00977 , -0.0352
+[INFO] [1778132139.050806613] [aic_model]: z_offset: -0.004
+[INFO] [1778132139.051183879] [aic_model]: pfrac: 1.0 xy_error: 0.00022 -0.000141   integrators: 0.00999 , -0.0353
+[INFO] [1778132139.101319143] [aic_model]: z_offset: -0.0048
+[INFO] [1778132139.103194283] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0102 , -0.0355
+[INFO] [1778132139.152822848] [aic_model]: z_offset: -0.0056
+[INFO] [1778132139.153210804] [aic_model]: pfrac: 1.0 xy_error: 0.00022 -0.000141   integrators: 0.0104 , -0.0356
+[INFO] [1778132139.204792817] [aic_model]: z_offset: -0.0064
+[INFO] [1778132139.205192124] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0107 , -0.0358
+[INFO] [1778132139.255317139] [aic_model]: z_offset: -0.0072
+[INFO] [1778132139.257090689] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0109 , -0.0359
+[INFO] [1778132139.293078856] [aic_model]: insert_cable execute loop
+[INFO] [1778132139.307094647] [aic_model]: z_offset: -0.008
+[INFO] [1778132139.307468086] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0111 , -0.0361
+[INFO] [1778132139.357105698] [aic_model]: z_offset: -0.0088
+[INFO] [1778132139.357558626] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0113 , -0.0362
+[INFO] [1778132139.407139291] [aic_model]: z_offset: -0.0096
+[INFO] [1778132139.407574516] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0115 , -0.0363
+[INFO] [1778132139.456910433] [aic_model]: z_offset: -0.0104
+[INFO] [1778132139.457416140] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0118 , -0.0365
+[INFO] [1778132139.507076694] [aic_model]: z_offset: -0.0112
+[INFO] [1778132139.507495218] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.012 , -0.0366
+[INFO] [1778132139.557109396] [aic_model]: z_offset: -0.012
+[INFO] [1778132139.557505197] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0122 , -0.0368
+[INFO] [1778132139.607194055] [aic_model]: z_offset: -0.0128
+[INFO] [1778132139.607643376] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0124 , -0.0369
+[INFO] [1778132139.657035138] [aic_model]: z_offset: -0.0136
+[INFO] [1778132139.657499768] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0126 , -0.037
+[INFO] [1778132139.706965788] [aic_model]: z_offset: -0.0144
+[INFO] [1778132139.709260364] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0129 , -0.0372
+[INFO] [1778132139.759031987] [aic_model]: z_offset: -0.0152
+[INFO] [1778132139.759499743] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0131 , -0.0373
+[INFO] [1778132139.808900852] [aic_model]: z_offset: -0.016
+[INFO] [1778132139.809273049] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000141   integrators: 0.0133 , -0.0375
+[INFO] [1778132139.860798755] [aic_model]: z_offset: -0.0168
+[INFO] [1778132139.861310133] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000142   integrators: 0.0135 , -0.0376
+[INFO] [1778132139.910879206] [aic_model]: z_offset: -0.0176
+[INFO] [1778132139.911257054] [aic_model]: pfrac: 1.0 xy_error: 0.000221 -0.000143   integrators: 0.0137 , -0.0377
+[INFO] [1778132139.960862335] [aic_model]: z_offset: -0.0184
+[INFO] [1778132139.961234051] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.000143   integrators: 0.014 , -0.0379
+[INFO] [1778132140.010886521] [aic_model]: z_offset: -0.0192
+[INFO] [1778132140.011284666] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.000144   integrators: 0.0142 , -0.038
+[INFO] [1778132140.060960409] [aic_model]: z_offset: -0.02
+[INFO] [1778132140.061340260] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.000144   integrators: 0.0144 , -0.0382
+[INFO] [1778132140.111228301] [aic_model]: z_offset: -0.0208
+[INFO] [1778132140.111727316] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.000143   integrators: 0.0146 , -0.0383
+[INFO] [1778132140.160932528] [aic_model]: z_offset: -0.0216
+[INFO] [1778132140.161456639] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.000143   integrators: 0.0149 , -0.0385
+[INFO] [1778132140.210946104] [aic_model]: z_offset: -0.0224
+[INFO] [1778132140.211426463] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.000143   integrators: 0.0151 , -0.0386
+[INFO] [1778132140.260759945] [aic_model]: z_offset: -0.0232
+[INFO] [1778132140.261224104] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.000144   integrators: 0.0153 , -0.0388
+[INFO] [1778132140.292965000] [aic_model]: insert_cable execute loop
+[INFO] [1778132140.310921959] [aic_model]: z_offset: -0.024
+[INFO] [1778132140.311577677] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.000143   integrators: 0.0155 , -0.0389
+[INFO] [1778132140.360954611] [aic_model]: z_offset: -0.0248
+[INFO] [1778132140.361557309] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.000143   integrators: 0.0157 , -0.039
+[INFO] [1778132140.410913484] [aic_model]: z_offset: -0.0256
+[INFO] [1778132140.411492578] [aic_model]: pfrac: 1.0 xy_error: 0.000222 -0.000144   integrators: 0.016 , -0.0392
+[INFO] [1778132140.461036364] [aic_model]: Waiting for connector to stabilize...
+[INFO] [1778132141.293089019] [aic_model]: insert_cable execute loop
+[INFO] [1778132142.292978640] [aic_model]: insert_cable execute loop
+[INFO] [1778132142.461091653] [aic_model]: AutoCode.insert_cable() exiting...
+[INFO] [1778132143.292949584] [aic_model]: insert_cable() returned True
+[INFO] [1778132144.053250396] [aic_model]: on_deactivate(LifecycleState(label='active', state_id=3))
+[INFO] [1778132144.354370986] [aic_model]: on_cleanup(LifecycleState(label='inactive', state_id=2))
+[INFO] [1778132144.355120299] [aic_model]: on_shutdown(LifecycleState(label='unconfigured', state_id=1))
