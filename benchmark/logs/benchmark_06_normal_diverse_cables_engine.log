@@ -62,3 +62,51 @@
 [INFO] [1778133963.514555430] [aic_engine]: Sending InsertCable goal for task [task_1]
 [INFO] [1778133963.516369765] [aic_engine]: TrialState: TasksExecuting
 [INFO] [1778133963.516421702] [aic_engine]: Waiting for result...
+[INFO] [1778133983.524177543] [aic_engine]: Task [task_1] succeeded.
+[INFO] [1778133983.524225443] [aic_engine]: All tasks have been processed.
+[INFO] [1778133983.524229350] [aic_engine]: [1;36m  ⟳ Tasks Executing for trial 'trial_1'...[0m
+[INFO] [1778133983.524232907] [aic_engine]: Checking if all tasks were completed successfully...
+[INFO] [1778133983.524236183] [aic_engine]: [1;32m  ✓ All Tasks Completed for trial 'trial_1'![0m
+[INFO] [1778133983.848481257] [aic_engine]: Finished scoring trial, total score is: 95.716794
+[INFO] [1778133983.848515341] [aic_engine]: Resetting after trial completion...
+[INFO] [1778133983.848524058] [aic_engine]: Transitioning model node 'aic_model' to transition 'deactivate'...
+[INFO] [1778133983.849568362] [aic_engine]: Successfully transition model node 'aic_model' to state 'deactivate'
+[INFO] [1778133983.851068199] [aic_engine]: Successfully deleted entity 'task_board'
+[INFO] [1778133983.868682290] [aic_engine]: Successfully deleted entity 'cable_0'
+[INFO] [1778133983.868707648] [aic_engine]: Homing robot to initial positions...
+[INFO] [1778133983.871103030] [aic_engine]: aic_controller deactivated successfully.
+[INFO] [1778133984.153576206] [aic_engine]: aic_controller activated successfully.
+[INFO] [1778133984.153602776] [aic_engine]: Successfully reset joints to home position, robot homed successfully.
+[INFO] [1778133984.153611553] [aic_engine]: Reset after trial completed.
+[INFO] [1778133984.153621181] [aic_engine]: [1;32m✓ Trial 'trial_1' completed successfully! Score: 95.716794[0m
+[INFO] [1778133984.153628164] [aic_engine]:  
+[INFO] [1778133984.153631169] [aic_engine]: [1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[INFO] [1778133984.153634766] [aic_engine]: [1;33m  Trial 2/3: trial_2[0m
+[INFO] [1778133984.153638643] [aic_engine]: [1;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m
+[INFO] [1778133984.153641859] [aic_engine]: [1;36m→ Starting trial 'trial_2'...[0m
+[INFO] [1778133984.153645737] [aic_engine]: Checking participant model readiness...
+[INFO] [1778133984.153690440] [aic_engine]: Found 1 node(s) with name 'aic_model'. Checking if it is a lifecycle node...
+[INFO] [1778133984.153698916] [aic_engine]: Service '/aic_model/get_state' is available. Participant model discovered.
+[INFO] [1778133984.153704456] [aic_engine]: Transitioning model node 'aic_model' to transition 'activate'...
+[INFO] [1778133984.154353601] [aic_engine]: Successfully transition model node 'aic_model' to state 'activate'
+[INFO] [1778133984.154358610] [aic_engine]: [1;32m  ✓ Model Ready for trial 'trial_2'[0m
+[INFO] [1778133984.154361927] [aic_engine]: Checking required endpoints...
+[INFO] [1778133984.163209293] [aic_engine]: All required endpoints are available.
+[INFO] [1778133984.163236814] [aic_engine]: [1;32m  ✓ Endpoints Ready for trial 'trial_2'[0m
+[INFO] [1778133984.163240882] [aic_engine]: Readying simulator for trial 'trial_2'...
+[INFO] [1778133984.163247314] [aic_engine]: Spawning task board.
+[INFO] [1778133984.236422628] [aic_engine]: Successfully spawned task_board as 'task_board'
+[INFO] [1778133984.236456792] [aic_engine]: Task board spawned successfully.
+[INFO] [1778133984.236687444] [aic_engine]: Spawning cable.
+[INFO] [1778133984.236720786] [aic_engine]: Spawning cable 'cable_1'...
+[INFO] [1778133984.390479126] [aic_engine]: Successfully spawned cable_1 as 'cable_1'
+[INFO] [1778133984.390528368] [aic_engine]: Cable cable_1 spawned successfully.
+[INFO] [1778133984.703460323] [aic_engine]: Waiting for robot arm to stabilize.
+[INFO] [1778133986.359963003] [aic_engine]: [1;32m  ✓ Simulator Ready for trial 'trial_2'[0m
+[INFO] [1778133986.360005172] [aic_engine]: Checking scoring system readiness...
+[INFO] [1778133986.479463917] [aic_engine]: Started recording to '/root/aic_results/bag_trial_2_20260507_060626_360'.
+[INFO] [1778133986.479503932] [aic_engine]: [1;32m  ✓ Scoring Ready for trial 'trial_2'[0m
+[INFO] [1778133986.479507318] [aic_engine]: Starting tasks for active trial...
+[INFO] [1778133986.479512298] [aic_engine]: Sending InsertCable goal for task [task_1]
+[INFO] [1778133986.481319720] [aic_engine]: TrialState: TasksExecuting
+[INFO] [1778133986.481351449] [aic_engine]: Waiting for result...

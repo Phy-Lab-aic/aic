@@ -652,3 +652,70 @@ not found: "/opt/ros/kilted/local_setup.bash"
 [INFO] [1778133980.997666749] [aic_model]: pfrac: 1.0 xy_error: 0.000369 -0.000185   integrators: 0.0627 , -0.0293
 [INFO] [1778133981.047377263] [aic_model]: Waiting for connector to stabilize...
 [INFO] [1778133981.523615133] [aic_model]: insert_cable execute loop
+[INFO] [1778133982.523664359] [aic_model]: insert_cable execute loop
+[INFO] [1778133983.047322548] [aic_model]: AutoCode.insert_cable() exiting...
+[INFO] [1778133983.523641200] [aic_model]: insert_cable() returned True
+[INFO] [1778133983.849393164] [aic_model]: on_deactivate(LifecycleState(label='active', state_id=3))
+[INFO] [1778133984.154217827] [aic_model]: on_activate()
+[INFO] [1778133986.481120467] [aic_model]: Goal accepted
+[INFO] [1778133986.482910607] [aic_model]: Entering insert_cable_execute_callback()
+[INFO] [1778133986.483432384] [aic_model]: insert_cable execute loop
+[INFO] [1778133986.483839205] [aic_model]: AutoCode.insert_cable() task: aic_task_interfaces.msg.Task(id='task_1', cable_type='sfp_sc', cable_name='cable_1', plug_type='sc', plug_name='sc_tip', port_type='sc', port_name='sc_port_base', target_module_name='sc_port_1', time_limit=180)
+[INFO] [1778133986.485085517] [aic_model]: pfrac: 0.0 xy_error: -0.125 0.0636   integrators: 0.0 , 0.0
+[INFO] [1778133986.535858329] [aic_model]: pfrac: 0.025 xy_error: -0.125 0.0637   integrators: 0.0 , 0.0
+[INFO] [1778133986.586777825] [aic_model]: pfrac: 0.05 xy_error: -0.125 0.064   integrators: 0.0 , 0.0
+[INFO] [1778133986.636990650] [aic_model]: pfrac: 0.075 xy_error: -0.125 0.0645   integrators: 0.0 , 0.0
+[INFO] [1778133986.687070685] [aic_model]: pfrac: 0.1 xy_error: -0.124 0.0651   integrators: 0.0 , 0.0
+[INFO] [1778133986.737128028] [aic_model]: pfrac: 0.125 xy_error: -0.124 0.0656   integrators: 0.0 , 0.0
+[INFO] [1778133986.787117795] [aic_model]: pfrac: 0.15 xy_error: -0.123 0.066   integrators: 0.0 , 0.0
+[INFO] [1778133986.837396082] [aic_model]: pfrac: 0.175 xy_error: -0.123 0.0663   integrators: 0.0 , 0.0
+[INFO] [1778133986.887038589] [aic_model]: pfrac: 0.2 xy_error: -0.122 0.0665   integrators: 0.0 , 0.0
+[INFO] [1778133986.936993500] [aic_model]: pfrac: 0.225 xy_error: -0.121 0.0666   integrators: 0.0 , 0.0
+[INFO] [1778133986.986989148] [aic_model]: pfrac: 0.25 xy_error: -0.12 0.0666   integrators: 0.0 , 0.0
+[INFO] [1778133987.036985036] [aic_model]: pfrac: 0.275 xy_error: -0.118 0.0664   integrators: 0.0 , 0.0
+[INFO] [1778133987.086457975] [aic_model]: pfrac: 0.3 xy_error: -0.117 0.066   integrators: 0.0 , 0.0
+[INFO] [1778133987.137087780] [aic_model]: pfrac: 0.325 xy_error: -0.115 0.0654   integrators: 0.0 , 0.0
+[INFO] [1778133987.186547224] [aic_model]: pfrac: 0.35 xy_error: -0.113 0.0646   integrators: 0.0 , 0.0
+[INFO] [1778133987.236686721] [aic_model]: pfrac: 0.375 xy_error: -0.111 0.0637   integrators: 0.0 , 0.0
+[INFO] [1778133987.287145415] [aic_model]: pfrac: 0.4 xy_error: -0.109 0.0626   integrators: 0.0 , 0.0
+[INFO] [1778133987.337091791] [aic_model]: pfrac: 0.425 xy_error: -0.106 0.0613   integrators: 0.0 , 0.0
+[INFO] [1778133987.386519456] [aic_model]: pfrac: 0.45 xy_error: -0.104 0.0599   integrators: 0.0 , 0.0
+[INFO] [1778133987.436702644] [aic_model]: pfrac: 0.475 xy_error: -0.101 0.0583   integrators: 0.0 , 0.0
+[INFO] [1778133987.482987408] [aic_model]: insert_cable execute loop
+[INFO] [1778133987.486461679] [aic_model]: pfrac: 0.5 xy_error: -0.0976 0.0566   integrators: 0.0 , 0.0
+[INFO] [1778133987.537105009] [aic_model]: pfrac: 0.525 xy_error: -0.0944 0.0548   integrators: 0.0 , 0.0
+[INFO] [1778133987.587126806] [aic_model]: pfrac: 0.55 xy_error: -0.091 0.0529   integrators: 0.0 , 0.0
+[INFO] [1778133987.637164152] [aic_model]: pfrac: 0.575 xy_error: -0.0875 0.0508   integrators: 0.0 , 0.0
+[INFO] [1778133987.686958713] [aic_model]: pfrac: 0.6 xy_error: -0.0838 0.0487   integrators: 0.0 , 0.0
+[INFO] [1778133987.736654550] [aic_model]: pfrac: 0.625 xy_error: -0.0801 0.0465   integrators: 0.0 , 0.0
+[INFO] [1778133987.787207580] [aic_model]: pfrac: 0.65 xy_error: -0.0763 0.0443   integrators: 0.0 , 0.0
+[INFO] [1778133987.836998305] [aic_model]: pfrac: 0.675 xy_error: -0.0723 0.042   integrators: 0.0 , 0.0
+[INFO] [1778133987.886146797] [aic_model]: pfrac: 0.7 xy_error: -0.0684 0.0397   integrators: 0.0 , 0.0
+[INFO] [1778133987.937071153] [aic_model]: pfrac: 0.725 xy_error: -0.0644 0.0373   integrators: 0.0 , 0.0
+[INFO] [1778133987.986612000] [aic_model]: pfrac: 0.75 xy_error: -0.0604 0.0349   integrators: 0.0 , 0.0
+[INFO] [1778133988.036489025] [aic_model]: pfrac: 0.775 xy_error: -0.0564 0.0325   integrators: 0.0 , 0.0
+[INFO] [1778133988.086329553] [aic_model]: pfrac: 0.8 xy_error: -0.0524 0.0302   integrators: 0.0 , 0.0
+[INFO] [1778133988.136746880] [aic_model]: pfrac: 0.825 xy_error: -0.0485 0.0279   integrators: 0.0 , 0.0
+[INFO] [1778133988.187026439] [aic_model]: pfrac: 0.85 xy_error: -0.0446 0.0257   integrators: 0.0 , 0.0
+[INFO] [1778133988.237104110] [aic_model]: pfrac: 0.875 xy_error: -0.0408 0.0235   integrators: 0.0 , 0.0
+[INFO] [1778133988.287106961] [aic_model]: pfrac: 0.9 xy_error: -0.0371 0.0214   integrators: 0.0 , 0.0
+[INFO] [1778133988.336265993] [aic_model]: pfrac: 0.925 xy_error: -0.0336 0.0193   integrators: 0.0 , 0.0
+[INFO] [1778133988.386860061] [aic_model]: pfrac: 0.95 xy_error: -0.0302 0.0173   integrators: 0.0 , 0.0
+[INFO] [1778133988.436620719] [aic_model]: pfrac: 0.975 xy_error: -0.027 0.0154   integrators: 0.0 , 0.0
+[INFO] [1778133988.483089387] [aic_model]: insert_cable execute loop
+[INFO] [1778133988.486143311] [aic_model]: pfrac: 1.0 xy_error: -0.024 0.0136   integrators: -0.024 , 0.0136
+[INFO] [1778133988.536242643] [aic_model]: pfrac: 1.0 xy_error: -0.021 0.0118   integrators: -0.045 , 0.0254
+[INFO] [1778133988.586579670] [aic_model]: pfrac: 1.0 xy_error: -0.0182 0.0101   integrators: -0.0632 , 0.0356
+[INFO] [1778133988.636181551] [aic_model]: pfrac: 1.0 xy_error: -0.0154 0.00853   integrators: -0.0786 , 0.0441
+[INFO] [1778133988.687052667] [aic_model]: pfrac: 1.0 xy_error: -0.0126 0.00698   integrators: -0.08 , 0.0511
+[INFO] [1778133988.736185089] [aic_model]: pfrac: 1.0 xy_error: -0.01 0.0055   integrators: -0.08 , 0.0566
+[INFO] [1778133988.786981906] [aic_model]: pfrac: 1.0 xy_error: -0.0076 0.00407   integrators: -0.08 , 0.0606
+[INFO] [1778133988.837389996] [aic_model]: pfrac: 1.0 xy_error: -0.00534 0.00273   integrators: -0.08 , 0.0634
+[INFO] [1778133988.886282910] [aic_model]: pfrac: 1.0 xy_error: -0.00326 0.00144   integrators: -0.08 , 0.0648
+[INFO] [1778133988.936186145] [aic_model]: pfrac: 1.0 xy_error: -0.00136 0.000258   integrators: -0.08 , 0.0651
+[INFO] [1778133988.986372981] [aic_model]: pfrac: 1.0 xy_error: 0.000349 -0.000801   integrators: -0.0797 , 0.0643
+[INFO] [1778133989.036211544] [aic_model]: pfrac: 1.0 xy_error: 0.00188 -0.00173   integrators: -0.0778 , 0.0625
+[INFO] [1778133989.086481596] [aic_model]: pfrac: 1.0 xy_error: 0.00324 -0.00257   integrators: -0.0745 , 0.06
+[INFO] [1778133989.137271971] [aic_model]: pfrac: 1.0 xy_error: 0.00441 -0.00332   integrators: -0.0701 , 0.0566
+[INFO] [1778133989.186430302] [aic_model]: pfrac: 1.0 xy_error: 0.00539 -0.00394   integrators: -0.0647 , 0.0527
+[INFO] [1778133989.236184999] [aic_model]: pfrac: 1.0 xy_error: 0.0062 -0.00445   integrators: -0.0585 , 0.0482
