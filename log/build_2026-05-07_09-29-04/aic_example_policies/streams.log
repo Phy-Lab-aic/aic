@@ -1,0 +1,46 @@
+[0.378s] Invoking command in '/home/weed/ws_aic/src/aic/aic_example_policies': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(aic) PYTHONPATH=/home/weed/ws_aic/src/aic/build/aic_example_policies/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/aic_example_policies build --build-base /home/weed/ws_aic/src/aic/build/aic_example_policies/build install --record /home/weed/ws_aic/src/aic/build/aic_example_policies/install.log --single-version-externally-managed install_data
+[0.523s] running egg_info
+[0.535s] writing ../build/aic_example_policies/aic_example_policies.egg-info/PKG-INFO
+[0.537s] writing dependency_links to ../build/aic_example_policies/aic_example_policies.egg-info/dependency_links.txt
+[0.538s] writing requirements to ../build/aic_example_policies/aic_example_policies.egg-info/requires.txt
+[0.538s] writing top-level names to ../build/aic_example_policies/aic_example_policies.egg-info/top_level.txt
+[0.561s] reading manifest file '../build/aic_example_policies/aic_example_policies.egg-info/SOURCES.txt'
+[0.562s] writing manifest file '../build/aic_example_policies/aic_example_policies.egg-info/SOURCES.txt'
+[0.562s] running build
+[0.562s] running build_py
+[0.563s] copying aic_example_policies/__init__.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies
+[0.564s] copying aic_example_policies/ros/__init__.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+[0.564s] copying aic_example_policies/ros/CheatCode.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+[0.564s] copying aic_example_policies/ros/WallToucher.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+[0.564s] copying aic_example_policies/ros/AutoCode2.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+[0.564s] copying aic_example_policies/ros/WallPresser.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+[0.565s] copying aic_example_policies/ros/GentleGiant.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+[0.565s] copying aic_example_policies/ros/AutoCode.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+[0.565s] copying aic_example_policies/ros/SpeedDemon.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+[0.565s] copying aic_example_policies/ros/WaveArm.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+[0.565s] copying aic_example_policies/ros/RunACT.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+[0.565s] running install
+[0.567s] running install_lib
+[0.578s] copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/__init__.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies
+[0.578s] copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/__init__.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+[0.578s] copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/CheatCode.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+[0.578s] copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/WallToucher.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+[0.579s] copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/AutoCode2.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+[0.579s] copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/WallPresser.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+[0.579s] copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/GentleGiant.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+[0.579s] copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/AutoCode.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+[0.579s] copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/SpeedDemon.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+[0.579s] copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/WaveArm.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+[0.579s] copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/RunACT.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+[0.579s] byte-compiling /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros/AutoCode2.py to AutoCode2.cpython-312.pyc
+[0.581s] byte-compiling /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros/AutoCode.py to AutoCode.cpython-312.pyc
+[0.582s] running install_data
+[0.583s] creating /home/weed/ws_aic/src/aic/install/aic_example_policies/share/ament_index/resource_index/packages
+[0.583s] copying resource/aic_example_policies -> /home/weed/ws_aic/src/aic/install/aic_example_policies/share/ament_index/resource_index/packages
+[0.583s] copying package.xml -> /home/weed/ws_aic/src/aic/install/aic_example_policies/share/aic_example_policies
+[0.583s] running install_egg_info
+[0.594s] removing '/home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies-0.0.1-py3.12.egg-info' (and everything under it)
+[0.594s] Copying ../build/aic_example_policies/aic_example_policies.egg-info to /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies-0.0.1-py3.12.egg-info
+[0.595s] running install_scripts
+[0.617s] writing list of installed files to '/home/weed/ws_aic/src/aic/build/aic_example_policies/install.log'
+[0.630s] Invoked command in '/home/weed/ws_aic/src/aic/aic_example_policies' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PIXI_PROMPT=(aic) PYTHONPATH=/home/weed/ws_aic/src/aic/build/aic_example_policies/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/aic_example_policies build --build-base /home/weed/ws_aic/src/aic/build/aic_example_policies/build install --record /home/weed/ws_aic/src/aic/build/aic_example_policies/install.log --single-version-externally-managed install_data

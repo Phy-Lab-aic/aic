@@ -1,0 +1,44 @@
+running egg_info
+writing ../build/aic_example_policies/aic_example_policies.egg-info/PKG-INFO
+writing dependency_links to ../build/aic_example_policies/aic_example_policies.egg-info/dependency_links.txt
+writing requirements to ../build/aic_example_policies/aic_example_policies.egg-info/requires.txt
+writing top-level names to ../build/aic_example_policies/aic_example_policies.egg-info/top_level.txt
+reading manifest file '../build/aic_example_policies/aic_example_policies.egg-info/SOURCES.txt'
+writing manifest file '../build/aic_example_policies/aic_example_policies.egg-info/SOURCES.txt'
+running build
+running build_py
+copying aic_example_policies/__init__.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies
+copying aic_example_policies/ros/__init__.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+copying aic_example_policies/ros/CheatCode.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+copying aic_example_policies/ros/WallToucher.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+copying aic_example_policies/ros/AutoCode2.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+copying aic_example_policies/ros/WallPresser.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+copying aic_example_policies/ros/GentleGiant.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+copying aic_example_policies/ros/AutoCode.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+copying aic_example_policies/ros/SpeedDemon.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+copying aic_example_policies/ros/WaveArm.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+copying aic_example_policies/ros/RunACT.py -> /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros
+running install
+running install_lib
+copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/__init__.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies
+copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/__init__.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/CheatCode.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/WallToucher.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/AutoCode2.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/WallPresser.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/GentleGiant.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/AutoCode.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/SpeedDemon.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/WaveArm.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+copying /home/weed/ws_aic/src/aic/build/aic_example_policies/build/lib/aic_example_policies/ros/RunACT.py -> /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros
+byte-compiling /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros/AutoCode2.py to AutoCode2.cpython-312.pyc
+byte-compiling /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies/ros/AutoCode.py to AutoCode.cpython-312.pyc
+running install_data
+creating /home/weed/ws_aic/src/aic/install/aic_example_policies/share/ament_index/resource_index/packages
+copying resource/aic_example_policies -> /home/weed/ws_aic/src/aic/install/aic_example_policies/share/ament_index/resource_index/packages
+copying package.xml -> /home/weed/ws_aic/src/aic/install/aic_example_policies/share/aic_example_policies
+running install_egg_info
+removing '/home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies-0.0.1-py3.12.egg-info' (and everything under it)
+Copying ../build/aic_example_policies/aic_example_policies.egg-info to /home/weed/ws_aic/src/aic/install/aic_example_policies/lib/python3.12/site-packages/aic_example_policies-0.0.1-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/weed/ws_aic/src/aic/build/aic_example_policies/install.log'

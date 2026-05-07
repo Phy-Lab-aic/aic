@@ -1,0 +1,6 @@
+source;share/aic_example_policies/hook/pythonpath.ps1
+source;share/aic_example_policies/hook/pythonpath.dsv
+source;share/aic_example_policies/hook/pythonpath.sh
+source;share/aic_example_policies/hook/ament_prefix_path.ps1
+source;share/aic_example_policies/hook/ament_prefix_path.dsv
+source;share/aic_example_policies/hook/ament_prefix_path.sh

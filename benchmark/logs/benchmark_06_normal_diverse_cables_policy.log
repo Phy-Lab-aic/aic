@@ -1,0 +1,8 @@
+[INFO] [1778113830.522852362] [aic_model]: Loading policy module: aic_example_policies.ros.AutoCode2
+[INFO] [1778113830.527566233] [aic_model]: Loaded policy module aic_example_policies.ros.AutoCode2
+[INFO] [1778113830.527747873] [aic_model]: Using policy: AutoCode2
+[INFO] [1778113840.392925243] [aic_model]: on_configure(LifecycleState(label='unconfigured', state_id=1))
+[INFO] [1778113840.393087386] [aic_model]: Instantiating policy...
+[INFO] [1778113840.394698688] [aic_model]: Policy.__init__()
+[ERROR] [1778113840.397698406] [aic_model]: aic_model lifecycle is not in the active state
+[INFO] [1778113841.396465668] [aic_model]: on_activate()
