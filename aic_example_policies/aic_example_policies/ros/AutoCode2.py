@@ -49,7 +49,10 @@ class AutoCode2(Policy):
     def __init__(self, parent_node):
         self._tip_x_error_integrator = 0.0
         self._tip_y_error_integrator = 0.0
-        self._max_integrator_windup = 0.08
+        # 0.08 caps XY correction at ~1.2 cm. iter1 confirmed 0.16 reliably
+        # fixes b02_extreme_offset trial 2 (~95.0 with the wider cap, ~60
+        # without). Kept at 0.16 going forward.
+        self._max_integrator_windup = 0.16
         self._task = None
         super().__init__(parent_node)
 
@@ -322,7 +325,15 @@ class AutoCode2(Policy):
         force_gain = 0.0005   # m/N - XY correction per newton
         force_correction_x = 0.0
         force_correction_y = 0.0
-        descent_rate = 0.0008  # m/step
+        # iter4: 0.0008 -> 0.0005 (37% slower descent). Each step is 0.05 s,
+        # so descent velocity drops from 1.6 cm/s to 1.0 cm/s. The 4.5 cm
+        # full descent (z=0.02 -> break_z=-0.025) goes from ~2.8 s to ~4.5 s.
+        # Trade: trials get ~1.7 s longer (still inside the ~20 s task budget
+        # — duration penalty bounded), but force feedback and the XY
+        # integrator have meaningfully more time to react and align before
+        # the plug commits to the port lip — which is the main failure mode
+        # on b03/b04/b05 partial insertions (tier_3 ~24 = plug 1-2 mm in).
+        descent_rate = 0.0005  # m/step
         # SC seating force gate: once sustained vertical reaction force exceeds
         # sc_seated_threshold past sc_seated_min_depth, hold position for
         # sc_hold_steps and exit. Prevents prolonged >20N contact that triggers
