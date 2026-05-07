@@ -1,36 +1,10 @@
-total: 236.66111568927334
+total: 138.25656288619251
 trial_1:
   tier_1:
     score: 1
     message: Model validation succeeded.
   tier_2:
-    score: 19.617654816355987
-    message: Scoring succeeded.
-    categories:
-      contacts:
-        score: 0
-        message: No contact detected.
-      duration:
-        score: 8.7263999999999999
-        message: "Task duration: 20.00 seconds."
-      insertion force:
-        score: 0
-        message: No excessive force detected
-      trajectory efficiency:
-        score: 5.5712308245053563
-        message: "Total end-effector path length: 0.41 m, initial plug-port distance: 0.34 m"
-      trajectory smoothness:
-        score: 5.3200239918506309
-        message: "Average linear jerk magnitude of the end effector: 5.67 m/s^3"
-  tier_3:
-    score: 75
-    message: Cable insertion successful.
-trial_2:
-  tier_1:
-    score: 1
-    message: Model validation succeeded.
-  tier_2:
-    score: 20.184481537982542
+    score: 19.912276490359524
     message: Scoring succeeded.
     categories:
       contacts:
@@ -43,37 +17,63 @@ trial_2:
         score: 0
         message: No excessive force detected
       trajectory efficiency:
-        score: 6
-        message: "Total end-effector path length: 0.15 m, initial plug-port distance: 0.15 m"
+        score: 5.8207832309895711
+        message: "Total end-effector path length: 0.27 m, initial plug-port distance: 0.24 m"
       trajectory smoothness:
-        score: 5.2407724470734482
-        message: "Average linear jerk magnitude of the end effector: 6.33 m/s^3"
+        score: 5.147784168460861
+        message: "Average linear jerk magnitude of the end effector: 7.10 m/s^3"
   tier_3:
-    score: 24.457801911064593
+    score: 24.428524623164101
     message: "No insertion detected. Final plug port distance: 0.05m."
-trial_3:
+trial_2:
   tier_1:
     score: 1
     message: Model validation succeeded.
   tier_2:
-    score: 19.401177423870223
+    score: 7.2260300320072135
     message: Scoring succeeded.
     categories:
       contacts:
         score: 0
         message: No contact detected.
       duration:
-        score: 8.5077818181818188
-        message: "Task duration: 21.01 seconds."
+        score: 8.7259636363636357
+        message: "Task duration: 20.01 seconds."
+      insertion force:
+        score: -12
+        message: "Insertion force above 20.00 N, detected for a time of 4.14 seconds. Max detected force: 24.63N. This is above the threshold of 1.00 seconds. Penalty applied."
+      trajectory efficiency:
+        score: 5.220619799309687
+        message: "Total end-effector path length: 0.59 m, initial plug-port distance: 0.46 m"
+      trajectory smoothness:
+        score: 5.2794465963338908
+        message: "Average linear jerk magnitude of the end effector: 6.00 m/s^3"
+  tier_3:
+    score: 40.461930175169911
+    message: Partial insertion detected with distance of 0.01m.
+trial_3:
+  tier_1:
+    score: 1
+    message: Model validation succeeded.
+  tier_2:
+    score: 19.622465581302251
+    message: Scoring succeeded.
+    categories:
+      contacts:
+        score: 0
+        message: No contact detected.
+      duration:
+        score: 8.9450181818181829
+        message: "Task duration: 19.00 seconds."
       insertion force:
         score: 0
         message: No excessive force detected
       trajectory efficiency:
-        score: 5.598896671752124
-        message: "Total end-effector path length: 0.40 m, initial plug-port distance: 0.34 m"
+        score: 6
+        message: "Total end-effector path length: 0.15 m, initial plug-port distance: 0.15 m"
       trajectory smoothness:
-        score: 5.2944989339362802
-        message: "Average linear jerk magnitude of the end effector: 5.88 m/s^3"
+        score: 4.6774473994840688
+        message: "Average linear jerk magnitude of the end effector: 11.02 m/s^3"
   tier_3:
-    score: 75
-    message: Cable insertion successful.
+    score: 23.605335984189498
+    message: "No insertion detected. Final plug port distance: 0.05m."
