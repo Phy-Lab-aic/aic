@@ -1961,3 +1961,27 @@
 [INFO] [1778118402.040284615] [aic_model]: on_deactivate(LifecycleState(label='active', state_id=3))
 [INFO] [1778118402.360107548] [aic_model]: on_cleanup(LifecycleState(label='inactive', state_id=2))
 [INFO] [1778118402.360635902] [aic_model]: on_shutdown(LifecycleState(label='unconfigured', state_id=1))
+[ros2run]: Received signal:  Terminated
+[ros2run]: Received signal:  Terminated
+Exception in thread Thread-1 (run_func):
+Traceback (most recent call last):
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+    self.run()
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/threading.py", line 1012, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/tf2_ros/transform_listener.py", line 115, in run_func
+    self.executor.spin()
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 374, in spin
+    self.spin_once()
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 968, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 951, in _spin_once_impl
+    handler, entity, node = self.wait_for_ready_callbacks(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 921, in wait_for_ready_callbacks
+    return next(self._cb_iter)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/weed/ws_aic/src/aic/.pixi/envs/default/lib/python3.12/site-packages/rclpy/executors.py", line 799, in _wait_for_ready_callbacks
+    wait_set = _rclpy.WaitSet(
+               ^^^^^^^^^^^^^^^
+rclpy._rclpy_pybind11.RCLError: failed to initialize wait set: the given context is not valid, either rcl_init() was not called or rcl_shutdown() was called., at /home/runner/conda-bld/bld/rattler-build_ros-kilted-rcl_1769484624/work/ros-kilted-rcl/src/work/src/rcl/wait.c:105
