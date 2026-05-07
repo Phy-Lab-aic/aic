@@ -468,3 +468,55 @@ Started Zenoh router with id 5a98867bcae4f70779ea4c6f930fc93d
 [component_container-3] 
 [2m2026-05-07T05:39:00.320419Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 5cadf17dcd389d0598854fa2c78f944 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
 [component_container-3] (2026-05-07 05:39:00.350) [debug] [RenderUtil.cc:2646] Create scene [scene]
+[component_container-3] (2026-05-07 05:39:00.542) [debug] [Sensors.cc:391] Rendering Thread initialized
+[component_container-3] (2026-05-07 05:39:00.542) [debug] [Sensors.cc:953] Initialization needed
+[component_container-3] (2026-05-07 05:39:00.543) [debug] [ForceTorque.cc:162] Adding JointTransmittedWrench to: 110
+[component_container-3] [INFO] [1778132340.543982704] [ros_gz_container]: ForceTorque AtiForceTorqueSensor has a topic name: /axia80_m20/wrench
+[component_container-3] [INFO] [1778132340.544097569] [ros_gz_container]: ForceTorque AtiForceTorqueSensor has a topic name: /axia80_m20/wrench
+[spawner-9] [INFO] [1778132340.551102193] [spawner_fts_broadcaster]: Loaded fts_broadcaster
+[component_container-3] [INFO] [1778132340.551589145] [controller_manager]: Configuring controller: 'fts_broadcaster'
+[component_container-3] [INFO] [1778132340.552628862] [fts_broadcaster]: configure successful
+[2m2026-05-07T05:39:00.638287Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m d1cc906a5d948d5cd0af7f4c49e1f0bc did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[2m2026-05-07T05:39:00.729259Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m 7eb1994b6a82c1795a9d381c2dea3f32 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[component_container-3] (2026-05-07 05:39:00.869) [debug] [CameraSensor.cc:342] Camera images for [ur5e::center_camera/sensor_link::center_camera] advertised on [/center_camera/image]
+[component_container-3] (2026-05-07 05:39:00.869) [debug] [CameraSensor.cc:632] Camera info for [ur5e::center_camera/sensor_link::center_camera] advertised on [/center_camera/camera_info]
+[component_container-3] (2026-05-07 05:39:00.869) [warning] [Ogre2Camera.cc:423] Ogre2Camera::SetVisibilityMask: Mask bits c0000000 are set but will be ignored as they conflict with the reserved bits used internally by the ogre2 backend.
+[component_container-3] (2026-05-07 05:39:00.869) [debug] [CameraSensor.cc:342] Camera images for [ur5e::left_camera/sensor_link::left_camera] advertised on [/left_camera/image]
+[component_container-3] (2026-05-07 05:39:00.869) [debug] [CameraSensor.cc:632] Camera info for [ur5e::left_camera/sensor_link::left_camera] advertised on [/left_camera/camera_info]
+[component_container-3] (2026-05-07 05:39:00.869) [warning] [Ogre2Camera.cc:423] Ogre2Camera::SetVisibilityMask: Mask bits c0000000 are set but will be ignored as they conflict with the reserved bits used internally by the ogre2 backend.
+[component_container-3] (2026-05-07 05:39:00.869) [debug] [CameraSensor.cc:342] Camera images for [ur5e::right_camera/sensor_link::right_camera] advertised on [/right_camera/image]
+[component_container-3] (2026-05-07 05:39:00.869) [debug] [CameraSensor.cc:632] Camera info for [ur5e::right_camera/sensor_link::right_camera] advertised on [/right_camera/camera_info]
+[component_container-3] (2026-05-07 05:39:00.869) [warning] [Ogre2Camera.cc:423] Ogre2Camera::SetVisibilityMask: Mask bits c0000000 are set but will be ignored as they conflict with the reserved bits used internally by the ogre2 backend.
+[component_container-3] (2026-05-07 05:39:01.208) [debug] [CameraSensor.cc:441] Enabling camera sensor: 'ur5e::center_camera/sensor_link::center_camera' data generation.
+[component_container-3] (2026-05-07 05:39:01.227) [debug] [CameraSensor.cc:441] Enabling camera sensor: 'ur5e::left_camera/sensor_link::left_camera' data generation.
+[component_container-3] (2026-05-07 05:39:01.232) [debug] [CameraSensor.cc:441] Enabling camera sensor: 'ur5e::right_camera/sensor_link::right_camera' data generation.
+[component_container-3] [INFO] [1778132341.240654165] [controller_manager]: Activating controllers: [ fts_broadcaster ]
+[component_container-3] [INFO] [1778132341.240703608] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1778132341.240743182] [controller_manager]: Successfully switched controllers!
+[spawner-9] [INFO] [1778132341.241759244] [spawner_fts_broadcaster]: Configured and activated fts_broadcaster
+[INFO] [spawner-9]: process has finished cleanly [pid 251]
+[component_container-3] [INFO] [1778132341.297335689] [controller_manager]: Loading controller : 'aic_controller' of type 'aic/Controller'
+[component_container-3] [INFO] [1778132341.297363200] [controller_manager]: Loading controller 'aic_controller'
+[component_container-3] [INFO] [1778132341.299058755] [controller_manager]: Controller 'aic_controller' node arguments: --ros-args --params-file /ws_aic/install/share/aic_bringup/config/aic_ros2_controllers.yaml -p use_sim_time:=true --param use_sim_time:=true 
+[spawner-10] [INFO] [1778132341.307700034] [spawner_aic_controller]: Loaded aic_controller
+[component_container-3] [INFO] [1778132341.307971833] [controller_manager]: Configuring controller: 'aic_controller'
+[component_container-3] [INFO] [1778132341.308016336] [aic_controller]: Control mode set to impedance
+[component_container-3] [INFO] [1778132341.308022598] [aic_controller]: Target mode set to Cartesian. Accepting MotionUpdate targets.
+[component_container-3] [INFO] [1778132341.313457854] [controller_manager]: Activating controllers: [ aic_controller ]
+[component_container-3] [INFO] [1778132341.313538205] [controller_manager]: Requested controller switch from non-realtime loop
+[component_container-3] [INFO] [1778132341.313608606] [controller_manager]: Successfully switched controllers!
+[component_container-3] (2026-05-07 05:39:01.314) [warning] [Component.hh:144] Trying to serialize component with data type [St6vectorIdSaIdEE], which doesn't have `operator<<`. Component will not be serialized.
+[component_container-3] (2026-05-07 05:39:01.315) [warning] [Component.hh:189] Trying to deserialize component with data type [St6vectorIdSaIdEE], which doesn't have `operator>>`. Component will not be deserialized.
+[spawner-10] [INFO] [1778132341.315558066] [spawner_aic_controller]: Configured and activated all the parsed controllers list : ['aic_controller']!
+[INFO] [spawner-10]: process has finished cleanly [pid 328]
+[INFO] [rviz2-11]: process started with pid [486]
+[rviz2-11] qt.qpa.xcb: could not connect to display 
+[rviz2-11] qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+[rviz2-11] This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+[rviz2-11] 
+[rviz2-11] Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, xcb.
+[rviz2-11] 
+[ERROR] [rviz2-11]: process has died [pid 486, exit code -6, cmd '/opt/ros/kilted/lib/rviz2/rviz2 -d /ws_aic/install/share/aic_bringup/rviz/aic.rviz --ros-args -r __node:=rviz2 --params-file /tmp/launch_params_ytk5wi4v'].
+[component_container-3] (2026-05-07 05:39:01.461) [debug] [WorldSdfGeneratorPlugin.cc:79] Saving world: aic_world to: /tmp/aic.sdf
+[component_container-3] (2026-05-07 05:39:01.461) [info] [WorldSdfGeneratorPlugin.cc:86] File: /tmp/aic.sdf could not be opened for saving. Please check that the directory containg the file exists and the correct permissions are set.
+[2m2026-05-07T05:39:04.232448Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m f987c892892a86fe445237e58f550607 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
