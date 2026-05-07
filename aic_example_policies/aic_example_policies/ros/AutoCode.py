@@ -388,33 +388,36 @@ class AutoCode(Policy):
                         if task.plug_type == "sc" and z_offset < 0.0:
                             force_correction_x = 0.0
                             force_correction_y = 0.0
-                        # SC seating detection: require both window mean above
-                        # threshold AND sc_force_elevated_min consecutive samples
-                        # past initial impact. The consecutive-sample guard
-                        # rejects transient spikes (e.g., trial_3's 44N for
-                        # 0.14s) and avoids early-latching during difficult
-                        # engagement on extreme configs.
+                        # SC seating detection: only count consecutive elevated
+                        # samples that occur past sc_seated_min_depth, so an
+                        # initial-impact spike (cable bouncing against the port
+                        # lip while still above the seating depth) cannot
+                        # pre-charge the counter and bypass the guard. Reset
+                        # counter when above min depth so the guard always
+                        # measures a fresh sustained-force window.
                         if (
                             task.plug_type == "sc"
                             and len(fz_buf) >= force_window
                         ):
-                            fz_avg = sum(fz_buf) / len(fz_buf)
-                            if abs(fz_avg) > sc_seated_threshold:
-                                sc_force_elevated_count += 1
+                            if z_offset < sc_seated_min_depth:
+                                fz_avg = sum(fz_buf) / len(fz_buf)
+                                if abs(fz_avg) > sc_seated_threshold:
+                                    sc_force_elevated_count += 1
+                                else:
+                                    sc_force_elevated_count = 0
+                                if (
+                                    not sc_seated
+                                    and sc_force_elevated_count >= sc_force_elevated_min
+                                ):
+                                    sc_seated = True
+                                    self.get_logger().info(
+                                        f"SC seating gated at z_offset={z_offset:.4f}, "
+                                        f"fz_avg={fz_avg:.2f}N "
+                                        f"(elevated {sc_force_elevated_count} samples), "
+                                        f"holding for {sc_hold_steps} steps"
+                                    )
                             else:
                                 sc_force_elevated_count = 0
-                            if (
-                                not sc_seated
-                                and z_offset < sc_seated_min_depth
-                                and sc_force_elevated_count >= sc_force_elevated_min
-                            ):
-                                sc_seated = True
-                                self.get_logger().info(
-                                    f"SC seating gated at z_offset={z_offset:.4f}, "
-                                    f"fz_avg={fz_avg:.2f}N "
-                                    f"(elevated {sc_force_elevated_count} samples), "
-                                    f"holding for {sc_hold_steps} steps"
-                                )
                 except Exception:
                     pass
 
