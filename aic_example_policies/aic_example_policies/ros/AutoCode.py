@@ -328,6 +328,12 @@ class AutoCode(Policy):
         sc_hold_steps = 30
         sc_force_elevated_count = 0
         sc_force_elevated_min = 10  # ~0.5 s of sustained elevated fz
+        # Linear ramp over the first sc_ramp_steps after seating to bleed
+        # descent velocity and feedforward to zero, instead of stepping them
+        # immediately. Without this ramp, the velocity discontinuity at the
+        # gate trigger contributes ~6 m/s^3 to the average jerk metric and
+        # pulls trajectory smoothness scores below 95 on borderline runs.
+        sc_ramp_steps = 5
         port_z_axis = self._port_z_axis(port_transform)
         while True:
             if z_offset < break_z:
@@ -338,10 +344,14 @@ class AutoCode(Policy):
             # Port-axis descent during insertion phase
             if z_offset < 0.02:
                 # Descend along port's local Z-axis (handles tilted ports).
-                # If SC plug is force-gated as seated, freeze z to bleed off
-                # contact force without driving it past the 20N threshold.
+                # When the SC plug seats, taper the descent rate linearly to
+                # zero over sc_ramp_steps instead of clipping it instantly,
+                # which keeps end-effector jerk inside the smoothness budget.
                 if not sc_seated:
                     z_offset -= descent_rate * abs(port_z_axis[2])
+                elif sc_seated_steps < sc_ramp_steps:
+                    ramp = 1.0 - (sc_seated_steps / sc_ramp_steps)
+                    z_offset -= descent_rate * abs(port_z_axis[2]) * ramp
             else:
                 z_offset -= descent_rate
             descent_step += 1
@@ -433,8 +443,19 @@ class AutoCode(Policy):
                     feedforward_force = None
                     if task.plug_type == "sc" and z_offset < -0.005:
                         # Halve push once seating is force-gated to prevent
-                        # contact force from climbing past the 20N penalty band.
-                        ff_magnitude = -2.5 if sc_seated else -5.0
+                        # contact force from climbing past the 20N penalty
+                        # band. Linearly interpolate from -5 N to -2.5 N over
+                        # sc_ramp_steps to match the descent ramp; stepping
+                        # the feedforward instantly creates a torque
+                        # discontinuity that registers as end-effector jerk.
+                        if sc_seated:
+                            if sc_seated_steps < sc_ramp_steps:
+                                ramp = sc_seated_steps / sc_ramp_steps
+                                ff_magnitude = -5.0 + 2.5 * ramp
+                            else:
+                                ff_magnitude = -2.5
+                        else:
+                            ff_magnitude = -5.0
                         feedforward_force = Vector3(
                             x=float(ff_magnitude * port_z_axis[0]),
                             y=float(ff_magnitude * port_z_axis[1]),
