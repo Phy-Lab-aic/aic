@@ -520,3 +520,107 @@ Started Zenoh router with id dd9b5652148bb499c69e7cb28a44ffc6
 [rviz2-11] 
 [ERROR] [rviz2-11]: process has died [pid 496, exit code -6, cmd '/opt/ros/kilted/lib/rviz2/rviz2 -d /ws_aic/install/share/aic_bringup/rviz/aic.rviz --ros-args -r __node:=rviz2 --params-file /tmp/launch_params_q15kq__9'].
 [2m2026-05-07T06:09:17.932194Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m fcc8340bb9ef7cee25dda740e0d12a4b did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[2m2026-05-07T06:09:27.760630Z[0m [32m INFO[0m acc-0 ThreadId(04) [2mzenoh::net::routing::interceptor::access_control[0m[2m:[0m a6dfe9bf8cf9220d9965fc4d8a8d79b6 did not match any configured ACL subject. Default permission `Allow` will be applied on all messages
+[component_container-3] (2026-05-07 06:09:28.886) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: sc_port_0::sc_port_link
+[component_container-3] (2026-05-07 06:09:28.886) [debug] [SdfEntityCreator.cc:549]   pose: 1.88554e-19 -0.00100271 0.000137321 0 0 0
+[component_container-3] (2026-05-07 06:09:28.886) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-05-07 06:09:28.886) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 1.86262e-06 5.50332e-06 6.55187e-06
+[component_container-3] (2026-05-07 06:09:28.886) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -7.41324e-15 4.19415e-23 -5.5077e-09
+[component_container-3] (2026-05-07 06:09:28.887) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: nic_card_mount_0::nic_card_link
+[component_container-3] (2026-05-07 06:09:28.887) [debug] [SdfEntityCreator.cc:549]   pose: 0.00150732 -0.00850988 0.00340281 0 0 0
+[component_container-3] (2026-05-07 06:09:28.887) [debug] [SdfEntityCreator.cc:550]   mass: 0.15
+[component_container-3] (2026-05-07 06:09:28.887) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 0.000185176 4.95164e-05 0.000228127
+[component_container-3] (2026-05-07 06:09:28.887) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: -1.61776e-06 6.54063e-07 1.04636e-07
+[component_container-3] (2026-05-07 06:09:28.888) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [118]
+[component_container-3] (2026-05-07 06:09:28.888) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::TouchPlugin] for entity [165]
+[component_container-3] (2026-05-07 06:09:28.888) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::TouchPlugin] for entity [188]
+[component_container-3] (2026-05-07 06:09:28.888) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::TouchPlugin] for entity [188]
+[component_container-3] (2026-05-07 06:09:28.889) [debug] [UserCommands.cc:1108] Created entity [118] named [task_board]
+[component_container-3] (2026-05-07 06:09:28.892) [info] [Contact.cc:125] Contact system publishing on world/aic_world/model/task_board/model/sc_port_0/link/sc_port_link/sensor/sc_port_sensor/contact
+[component_container-3] (2026-05-07 06:09:28.892) [info] [Contact.cc:125] Contact system publishing on world/aic_world/model/task_board/model/nic_card_mount_0/link/nic_card_link/sensor/sfp_port_sensor/contact
+[component_container-3] [INFO] [1778134168.892518954] [aic_controller]: Received service request to tare force torque sensor!
+[component_container-3] [INFO] [1778134168.892546636] [aic_controller]: Successfully tared force torque sensor.
+[component_container-3] [INFO] [1778134168.894264591] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-05-07 06:09:28.894) [warning] [Component.hh:127] Trying to serialize component with data type [St10shared_ptrIN3sdf3v157ElementEE], which doesn't have `operator<<`. Component will not be serialized.
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 10
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (7)
+[component_container-3] (2026-05-07 06:09:28.895) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (8)
+[component_container-3] (2026-05-07 06:09:28.896) [debug] [TouchPlugin.cc:267] Started touch plugin [sc_port_0/sc_port_base]
+[component_container-3] (2026-05-07 06:09:28.896) [debug] [TouchPlugin.cc:267] Started touch plugin [nic_card_mount_0/sfp_port_0]
+[component_container-3] (2026-05-07 06:09:28.896) [debug] [TouchPlugin.cc:267] Started touch plugin [nic_card_mount_0/sfp_port_1]
+[component_container-3] (2026-05-07 06:09:28.904) [warning] [Component.hh:172] Trying to deserialize component with data type [St10shared_ptrIN3sdf3v157ElementEE], which doesn't have `operator>>`. Component will not be deserialized.
+[component_container-3] (2026-05-07 06:09:31.027) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_0::lc_plug_link
+[component_container-3] (2026-05-07 06:09:31.027) [debug] [SdfEntityCreator.cc:549]   pose: 0 0.0197 0 0 0 0
+[component_container-3] (2026-05-07 06:09:31.027) [debug] [SdfEntityCreator.cc:550]   mass: 0.01
+[component_container-3] (2026-05-07 06:09:31.027) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 8.49658e-09 9.96094e-08 1.06153e-07
+[component_container-3] (2026-05-07 06:09:31.027) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 0 0 2.13837e-15
+[component_container-3] (2026-05-07 06:09:31.027) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_0::sc_plug_link
+[component_container-3] (2026-05-07 06:09:31.027) [debug] [SdfEntityCreator.cc:549]   pose: -0.00907511 4.9566e-05 8.71699e-06 0 0 0
+[component_container-3] (2026-05-07 06:09:31.027) [debug] [SdfEntityCreator.cc:550]   mass: 0.04
+[component_container-3] (2026-05-07 06:09:31.027) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 2.12257e-06 7.17318e-06 8.85404e-06
+[component_container-3] (2026-05-07 06:09:31.027) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 1.24369e-08 -3.73363e-09 1.72827e-11
+[component_container-3] (2026-05-07 06:09:31.028) [debug] [SdfEntityCreator.cc:547] Link has auto-inertial enabled: cable_0::sfp_module_link
+[component_container-3] (2026-05-07 06:09:31.028) [debug] [SdfEntityCreator.cc:549]   pose: 0.00024115 0.00702224 0.000553372 0 0 0
+[component_container-3] (2026-05-07 06:09:31.028) [debug] [SdfEntityCreator.cc:550]   mass: 0.02
+[component_container-3] (2026-05-07 06:09:31.028) [debug] [SdfEntityCreator.cc:551]   ixx iyy izz: 2.81022e-06 5.74024e-07 3.07134e-06
+[component_container-3] (2026-05-07 06:09:31.028) [debug] [SdfEntityCreator.cc:553]   ixy ixz iyz: 2.90452e-08 2.66891e-09 9.66165e-08
+[component_container-3] (2026-05-07 06:09:31.029) [debug] [CablePlugin.cc:86] aic_gazebo::CablePlugin::Configure on entity: 242
+[component_container-3] (2026-05-07 06:09:31.030) [info] [CablePlugin.cc:150] Cable transitioning to HARNESS state.
+[component_container-3] (2026-05-07 06:09:31.030) [debug] [SystemManager.cc:80] Loaded system [aic_gazebo::CablePlugin] for entity [242]
+[component_container-3] (2026-05-07 06:09:31.030) [debug] [SystemManager.cc:80] Loaded system [gz::sim::systems::PosePublisher] for entity [242]
+[component_container-3] (2026-05-07 06:09:31.030) [debug] [UserCommands.cc:1108] Created entity [242] named [cable_0]
+[component_container-3] [INFO] [1778134171.036325032] [gz_server]: InitializeCanonicalLinks
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (3)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (1)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (8)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (6)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (0)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (4)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (2)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (5)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:600] Exiting postupdate worker thread (7)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:573] Creating PostUpdate worker threads: 12
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (0)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (1)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (2)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (3)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (4)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (5)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (6)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (7)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (8)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (9)
+[component_container-3] (2026-05-07 06:09:31.038) [debug] [SimulationRunner.cc:584] Creating postupdate worker thread (10)
+[component_container-3] (2026-05-07 06:09:31.042) [info] [CablePlugin.cc:201] Cable transitioning to WAITING state.
+[component_container-3] (2026-05-07 06:09:31.042) [info] [CablePlugin.cc:213] Cable transitioning to CREATE_CONNECTIONS state.
+[component_container-3] (2026-05-07 06:09:31.042) [debug] [Physics.cc:2015] Creating detachable joint [418]
+[component_container-3] (2026-05-07 06:09:31.042) [debug] [Physics.cc:2015] Creating detachable joint [421]
+[component_container-3] (2026-05-07 06:09:31.042) [debug] [Physics.cc:2136] Detaching joint [418]
+[component_container-3] (2026-05-07 06:09:31.042) [debug] [Physics.cc:2136] Detaching joint [421]
+[component_container-3] (2026-05-07 06:09:31.043) [info] [CablePlugin.cc:247] Cable transitioning to CABLE_ATTACHED_TO_GRIPPER state.
+[component_container-3] (2026-05-07 06:09:31.043) [debug] [Physics.cc:2015] Creating detachable joint [422]
+[component_container-3] [INFO] [1778134171.073301310] [gz_server]: InitializeCanonicalLinks
+[component_container-3] [INFO] [1778134175.649639563] [aic_controller]: Controller is already in Cartesian target mode.
+[component_container-3] (2026-05-07 06:09:44.310) [debug] [TouchPlugin.cc:352] Model [nic_card_mount_0] started touching [sfp_tip_link/collision/contact_collision] at 24.076 s
+[component_container-3] (2026-05-07 06:09:45.312) [debug] [TouchPlugin.cc:366] Model [nic_card_mount_0] touched [sfp_tip_link/collision/contact_collision] exclusively for 1 s
+[component_container-3] (2026-05-07 06:09:45.312) [debug] [TouchPlugin.cc:273] Stopped touch plugin [nic_card_mount_0/sfp_port_0]
+[component_container-3] (2026-05-07 06:09:45.312) [debug] [CablePlugin.cc:271] Cable connection 0 touched: 1. Topic: /nic_card_mount_0/sfp_port_0/touched
+[component_container-3] (2026-05-07 06:09:45.313) [info] [CablePlugin.cc:281] Cable transitioning to ATTACH_CABLE_TO_PORT state.
+[component_container-3] (2026-05-07 06:09:45.314) [debug] [Physics.cc:2136] Detaching joint [422]
+[component_container-3] (2026-05-07 06:09:45.315) [info] [CablePlugin.cc:326] Cable transitioning to COMPLETED state.
+[component_container-3] (2026-05-07 06:09:45.315) [debug] [Physics.cc:2015] Creating detachable joint [423]
+[component_container-3] (2026-05-07 06:09:45.315) [debug] [Physics.cc:2015] Creating detachable joint [424]
+[component_container-3] (2026-05-07 06:09:45.315) [debug] [Physics.cc:2015] Creating detachable joint [427]
+[component_container-3] [INFO] [1778134185.316552810] [gz_server]: InitializeCanonicalLinks
