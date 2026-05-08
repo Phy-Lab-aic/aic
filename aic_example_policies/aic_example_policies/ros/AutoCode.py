@@ -286,6 +286,7 @@ class AutoCode(Policy):
                         reset_xy_integrator=True,
                     ),
                 )
+                get_observation()
             except TransformException as ex:
                 self.get_logger().warn(f"TF lookup failed during interpolation: {ex}")
             self.sleep_for(0.05)
@@ -297,6 +298,7 @@ class AutoCode(Policy):
                     move_robot=move_robot,
                     pose=self.calc_gripper_pose(port_transform, z_offset=z_offset),
                 )
+                get_observation()
             except TransformException as ex:
                 self.get_logger().warn(f"TF lookup failed during hold: {ex}")
             self.sleep_for(0.05)
@@ -472,6 +474,7 @@ class AutoCode(Policy):
                     pose.position.x += force_correction_x
                     pose.position.y += force_correction_y
                     self.set_pose_target(move_robot=move_robot, pose=pose)
+                    get_observation()
             except TransformException as ex:
                 self.get_logger().warn(f"TF lookup failed during insertion: {ex}")
             self.sleep_for(0.05)
